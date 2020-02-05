@@ -1,0 +1,441 @@
+[?1h=[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+0 + 2 = 20 + 3 = 30 + 4 = 4 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+0 + 1 = 1[?1l>[?1l>[?1l>[?1l>[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+2 + 3 = 5[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+[?1h= 
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+3 + 6 = 9To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+4 + 5 = 91 + 3 = 4 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+1 + 2 = 32 + 6 = 8[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+ 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+2 + 5 = 7To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1l>3 + 5 = 83 + 4 = 72 + 4 = 6 
+[?1l>To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+3 + 7 = 10[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+1 + 4 = 5[?1l>[?1l> 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1l>1 + 5 = 64 + 8 = 12[?1l> 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+4 + 7 = 11[?1l>[?1l>[?1l>[?1l>[?1l>[?1l>[?1l> 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1l>4 + 6 = 10[?1l>[?1l>[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+[?1h=To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+5 + 8 = 13 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+6 + 8 = 14[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+5 + 9 = 14[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+6 + 10 = 16 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+6 + 7 = 13[?1l>[?1h=[?1l>
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+5 + 7 = 12[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+8 + 11 = 19[?1l> 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+8 + 12 = 20[?1l>[?1l> 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+7 + 9 = 16 
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+9 + 11 = 209 + 12 = 21 
+6 + 9 = 15 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+7 + 10 = 178 + 9 = 17 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+9 + 10 = 19[?1h=
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+[?1l> 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1l>To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1h= 
+
+                                                                                                        < M A T L A B (R) >
+                                                                                              Copyright 1984-2019 The MathWorks, Inc.
+                                                                                          R2019a Update 5 (9.6.0.1174912) 64-bit (glnxa64)
+                                                                                                           July 31, 2019
+
+9 + 13 = 22To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+8 + 10 = 18 
+[?1l>10 + 14 = 24To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+5 + 6 = 11 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+7 + 8 = 15[?1l>[?1l>[?1l>[?1l> 
+[?1l> 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1l> 
+10 + 11 = 217 + 11 = 18To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+10 + 12 = 22[?1l>[?1l>[?1l> 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+10 + 13 = 23[?1l>[?1l>[?1l>[?1l>[?1l>[?1l>[?1l>
