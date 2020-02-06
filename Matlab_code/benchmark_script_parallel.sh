@@ -2,33 +2,33 @@
 #
 #  Mathematica batch job
 #
-#SBATCH -J parallel_matlab_test        # Job name
-#SBATCH -o parallel_matlab_test-%j.txt # Standard Output output file (using same file for both)
-#SBATCH -e parallel_matlab_test-%j.txt # Standard Error output file (using same file for both)
+# SBATCH -J parallel_matlab_test        # Job name
+# SBATCH -o parallel_matlab_test-%j.txt # Standard Output output file (using same file for both)
+# SBATCH -e parallel_matlab_test-%j.txt # Standard Error output file (using same file for both)
 # SBATCH -p unsafe
 # SBATCH -p express      # Queue name
-#SBATCH -N 1            # Total number of nodes requested (16 cores/node)
+# SBATCH -N 1            # Total number of nodes requested (16 cores/node)
 # SBATCH -n 2           # Total number of mpi tasks requested
-#SBATCH -n 12           # Total number of mpi tasks requested
+# SBATCH -n 12           # Total number of mpi tasks requested
 # SBATCH -N 2            # Total number of nodes requested (16 cores/node)
 # SBATCH -n 1            # Total number of mpi tasks requested
 # SBATCH --mem 4000 #Megabytes of memory requested. Default is 2000/task.
-#SBATCH --mem 24000 #Megabytes of memory requested. Default is 2000/task.
+# SBATCH --mem 24000 #Megabytes of memory requested. Default is 2000/task.
 # SBATCH --mem 256000 # Megabytes of memory requested. Default is 2000/task.
 # SBATCH -n 1            # Total number of mpi tasks requested
-#SBATCH -t 24:00:00     # Run time (hh:mm:ss) - 24 hrs
+# SBATCH -t 24:00:00     # Run time (hh:mm:ss) - 24 hrs
 # SBATCH -t 40:00:00     # Run time (hh:mm:ss) - 24 hrs
 # SBATCH -t 00:30:00     # Run time (hh:mm:ss) - 24 hrs
 # SBATCH -t 5 # Runtime in days-hours:minutes:seconds. 
 # SBATCH -t 15     # Run time (hh:mm:ss) - 24 hrs
 ## 
-#SBATCH --mail-user ioannis.roudas@montana.edu # user to send emails to
+# SBATCH --mail-user ioannis.roudas@montana.edu # user to send emails to
 # BATCH --mail-type ALL                    # (equivalent to  BEGIN,  END,  FAIL  and REQUEUE)
 #
 # Note: run 'man sbatch' to get more information for the options above.
 
-#date
-#echo "Hello from $(hostname)."
+# date
+# echo "Hello from $(hostname)."
 
 date
 
