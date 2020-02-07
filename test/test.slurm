@@ -1,17 +1,13 @@
 #!/bin/bash
-#
-#  Test Matlab job
-#
-# SBATCH -J MATLAB test run        # Job name
-# SBATCH -o matlab_test-%j.out.txt # Standard Output output file (using same file for both)
-# SBATCH -e matlab_test-%j.err.txt # Standard Error output file (using same file for both)
-# SBATCH -p defq  	# Queue name
-# SBATCH -N 1        	# Total number of nodes requested (16 cores/node)
-# SBATCH -n 16          # Total number of mpi tasks requested
-# SBATCH --mem 32000 	# Megabytes of memory requested. Default is 2000/task.
-# SBATCH -t 02:00:00  # Run time (day-hh:mm:ss) - 24 hrs
-#
-# Note: run 'man sbatch' to get more information for the options above.
+#SBATCH -J matlab_test # Name for your job
+#SBATCH -n 8 # Number of tasks when using MPI. Default is 1, and SLURM assumes the usage of 1 cpu per task.
+#SBATCH -N 1 # Number of nodes to spread cores across - default is 1 - if you are not using MPI this should likely be 1
+#SBATCH --mem 32000 # Megabytes of memory requested. Default is 2000/task.
+#SBATCH -t 00:10:00 # Runtime in days-hours:minutes:seconds. 
+#SBATCH -p defq # Partition to submit to the standard compute node partition(defq) or the express node partition(express)
+#SBATCH -o matlab_test-%j.out.txt # Standard output (stdout) goes to this file (what would print to the screen if you were running the command locally)
+#SBATCH -e matlab_test-%j.err.txt # Standard error (stderr) goes to this file (errors that would print to the screen if you were running the command locally)
+
 
 date
 echo "Hello from $(hostname)."
