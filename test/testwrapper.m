@@ -1,6 +1,6 @@
 % test
 
-for l = 8:28
+for l = 8:32
     bit_pwr = l
     run_to = 2^bit_pwr
 
