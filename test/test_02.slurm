@@ -5,8 +5,8 @@
 #SBATCH --mem 2000 # Megabytes of memory requested. Default is 2000/task.
 #SBATCH -t 00:05:00 # Runtime in days-hours:minutes:seconds.
 #SBATCH -p express # Partition to submit to the standard compute node partition(defq) or the express node partition(express)
-#SBATCH -o matlab_test00-%j.out.txt # Standard output (stdout) goes to this file (what would print to the screen if you were running the command locally)
-#SBATCH -e matlab_test00-%j.err.txt # Standard error (stderr) goes to this file (errors that would print to the screen if you were running the command locally)
+#SBATCH -o matlab_test02-%j.out.txt # Standard output (stdout) goes to this file (what would print to the screen if you were running the command locally)
+#SBATCH -e matlab_test02-%j.err.txt # Standard error (stderr) goes to this file (errors that would print to the screen if you were running the command locally)
 #SBATCH --mail-user alexander.salois@student.montana.edu # this is the email you wish to be notified.
 #SBATCH --mail-type ALL # this specifies what events you should get an email about ALL will alert you of job beginning, completion, failure, etc.
 

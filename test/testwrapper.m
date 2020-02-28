@@ -1,6 +1,7 @@
 % test
 
-for l = 6:29
+tic
+for l = 6:28
     bit_pwr = l
     run_to = 2^bit_pwr
     % serial test
@@ -10,3 +11,4 @@ for l = 6:29
         test_divide(x,i);
     end
 end
+toc
