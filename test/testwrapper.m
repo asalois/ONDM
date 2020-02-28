@@ -1,6 +1,6 @@
 % test
 
-for l = 6:28
+for l = 6:29
     bit_pwr = l
     run_to = 2^bit_pwr
     % serial test
