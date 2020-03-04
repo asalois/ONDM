@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J <%= job.name %> # Name for your job
-#SBATCH -n 1 # Number of tasks when using MPI. Default is 1, and SLURM assumes the usage of 1 cpu per task.
-#SBATCH -N 1 # Number of nodes to spread cores across - default is 1 - if you are not using MPI this should likely be 1
+#SBATCH -n <%= job.tasks %> # Number of tasks when using MPI. Default is 1, and SLURM assumes the usage of 1 cpu per task.
+#SBATCH -N <%= job.nodes %> # Number of nodes to spread cores across - default is 1 - if you are not using MPI this should likely be 1
 #SBATCH --mem <%= job.mem %> # Megabytes of memory requested. Default is 2000/task.
-#SBATCH -t 00:04:00 # Runtime in days-hours:minutes:seconds.
+#SBATCH -t 00:05:00 # Runtime in days-hours:minutes:seconds.
 #SBATCH -p <%= job.queue %>  # Partition to submit to the standard compute node partition(defq) or the express node partition(express)
 #SBATCH -o <%= job.name %>-%j.out.txt # Standard output (stdout) goes to this file (what would print to the screen if you were running the command locally)
 #SBATCH -e <%= job.name %>-%j.err.txt # Standard error (stderr) goes to this file (errors that would print to the screen if you were running the command locally)
@@ -12,6 +12,7 @@
 
 date
 echo "Hello from $(hostname)."
+echo <%= job.param1 %> 
 
 module load matlab/R2017a
 
@@ -20,3 +21,4 @@ echo "Run a matlab script"
 matlab -nodesktop -nodisplay -nosplash -r 'testwrapper; exit;'
 
 echo "Ended batch processing at `date`."
+
