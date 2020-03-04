@@ -1,3 +1,0 @@
-matlab_test00-1269833.err.txt:slurmstepd: *** JOB 1269833 ON compute002 CANCELLED AT 2020-02-28T12:59:39 DUE TO TIME LIMIT ***
-matlab_test00-1269834.err.txt:slurmstepd: *** JOB 1269834 ON compute002 CANCELLED AT 2020-02-28T12:59:39 DUE TO TIME LIMIT ***
-matlab_test-1251042.err.txt:slurmstepd: *** JOB 1251042 ON compute005 CANCELLED AT 2020-02-07T14:23:29 DUE TO TIME LIMIT ***

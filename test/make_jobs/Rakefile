@@ -1,0 +1,29 @@
+require 'erb'
+require_relative 'job'
+
+name = "matlab_test_" # jobs name
+run_to = 999
+
+desc "make a number of job files"
+task :make_jobs do
+  Rake::Task["clean"].invoke
+  job = Job.new # make a job object
+  for i in  1..run_to
+    job.param1 = i
+    job.name = "%s%03d" % [name, i] # file name with leading zeros
+    slurm_template = File.read("test.slurm.erb") # read in template
+    file_name = job.name +  ".slurm"# file name
+    File.open(file_name, "w") do |f|
+      f.write ERB.new(slurm_template).result(binding)
+    end
+  end
+
+end
+
+desc "remove written file"
+task :clean do
+  for i in  1..run_to
+    file_name = "%s%03d%s" % [name, i, ".slurm"]
+    File.delete(file_name) if File.exists? file_name
+  end
+end
