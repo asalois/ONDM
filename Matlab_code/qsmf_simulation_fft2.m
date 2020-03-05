@@ -34,12 +34,12 @@ function  QdB = qsmf_simulation_fft2(indx)
 % folder = createDirectoryForResults();
 
 tic;   % start  a timer
-
-laserPowerdBmArray = 0; %-45.96:1.05:-30.96;   % Laser power [dBm] 
-%laserPowerdBm = 0  % Laser power [dBm}
 in_span = 0:5:100;
+in_power = -6:1:5;
+laserPowerdBmArray = in_power(indx)  %-45.96:1.05:-30.96;   % Laser power [dBm] 
+%laserPowerdBm = 0  % Laser power [dBm}
 totalLength = 6000   % total transmission length [km]
-spanLength =in_span(indx)     % span length [km]
+spanLength =in_span(21)     % span length [km]
 segmentLength_1 = 120  % first segement length,must < spanLengh [km]
 nblocksP = 32;  % phase equalizer nblockP, power of 2
 Nch = 9;   % WDM channels, must be an odd number
@@ -49,9 +49,9 @@ percComp = 40;    % percentage of MPI compensation.  0 - full MPI, 100 - MPI ful
 stepLength = 150; % 250;  % fiber step length  [m]
 
 fiberAeff_1 = 250   % QSM fiber effective area   [um^2]
-fiberAeff_2 = 150   % EX3000 fiber effective area   [um^2]
-fiberAlphadB_1 = 0.165  % QSM fiber attenuation [dB/km]
-fiberAlphadB_2 = 0.145  % EX3000 fiber attenuation [dB/km]
+fiberAeff_2 = 112   % EX3000 fiber effective area   [um^2]
+fiberAlphadB_1 = 0.16  % QSM fiber attenuation [dB/km]
+fiberAlphadB_2 = 0.158  % EX3000 fiber attenuation [dB/km]
 
 %% set simulation variables
 
