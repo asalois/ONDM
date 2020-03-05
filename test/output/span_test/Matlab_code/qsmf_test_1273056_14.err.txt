@@ -1,0 +1,5 @@
+{Subscript indices must either be real positive integers or logicals.
+
+Error in qsmf_simulation_fft2 (line 164)
+    Lh = length(filter.Hf);  % filter length in samples
+} 
