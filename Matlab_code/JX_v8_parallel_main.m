@@ -28,10 +28,10 @@ tic;   % start  a timer
 laserPowerdBmArray=-6:5;
 n=length(laserPowerdBmArray)
 QdB = [];
-parfor i = 1:n
-    QdB(i) = qsmf_simulation_fft2(laserPowerdBmArray(i));
-end
-
+%parfor i = 1:n
+%    QdB(i) = qsmf_simulation_fft2(laserPowerdBmArray(i));
+%end
+QdB = qsmf_simulation_fft2(1)
 % calculate running time
 
 toc;    % stop the timer 
