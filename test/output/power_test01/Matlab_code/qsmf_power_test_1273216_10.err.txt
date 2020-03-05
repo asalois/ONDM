@@ -1,0 +1,5 @@
+{Undefined function or variable 'Qdb'.
+
+Error in qsmf_simulation_fft2 (line 446)
+out = [laserPowerdBmArray, Qdb];
+} 
