@@ -1,5 +1,4 @@
 #!/bin/bash
-# get and print inputs
-# takes about 6 minutes to run on XPS laptop
+# runs a matlab script
 echo "Run a matlab script"
 time matlab -nodesktop -nodisplay -nosplash -r 'testwrapper; exit;'
