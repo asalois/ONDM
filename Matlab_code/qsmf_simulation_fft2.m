@@ -443,8 +443,8 @@ if (strcmp(figFlag7,'yes'))
 end
 
 %% calculate running time
-out = [laserPowerdBmArray, Qdb];
-file = "qsmf_output_" + in + ".csv";
+out = [laserPowerdBmArray, QdB];
+file = "qsmf_power_output_" + indx + ".csv";
 csvwrite(file, out);
 toc;    % stop the timer 
 %% Write data into Excel file
