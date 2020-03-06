@@ -36,10 +36,10 @@ function  QdB = qsmf_simulation_fft2(indx)
 tic;   % start  a timer
 in_span = 0:5:100;
 in_power = -6:1:5;
-laserPowerdBmArray = in_power(indx)  %-45.96:1.05:-30.96;   % Laser power [dBm] 
+laserPowerdBmArray = 0  %-45.96:1.05:-30.96;   % Laser power [dBm] 
 %laserPowerdBm = 0  % Laser power [dBm}
 totalLength = 6000   % total transmission length [km]
-spanLength =in_span(21)     % span length [km]
+spanLength =in_span(indx)     % span length [km]
 segmentLength_1 = 120  % first segement length,must < spanLengh [km]
 nblocksP = 32;  % phase equalizer nblockP, power of 2
 Nch = 9;   % WDM channels, must be an odd number
@@ -444,7 +444,7 @@ end
 
 %% calculate running time
 out = [laserPowerdBmArray, QdB];
-file = "qsmf_power_output_" + indx + ".csv";
+file = "qsmf_span_output_" + indx + ".csv";
 csvwrite(file, out);
 toc;    % stop the timer 
 %% Write data into Excel file
