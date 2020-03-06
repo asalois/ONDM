@@ -1,6 +1,6 @@
-Thu Mar  5 16:06:08 MST 2020
-Hello from compute013.
-3
+Thu Mar  5 15:56:28 MST 2020
+Hello from compute011.
+6
 Run a matlab script
 
                             < M A T L A B (R) >
@@ -15,7 +15,7 @@ For product information, visit www.mathworks.com.
 
 laserPowerdBmArray =
 
-    -4
+    -1
 
 
 totalLength =
@@ -55,7 +55,7 @@ fiberAlphadB_2 =
 
 ans =
 
-   -4.0000    3.8276
+   -1.0000    6.0034
 
-Elapsed time is 10370.963959 seconds.
-Ended batch processing at Thu Mar  5 19:00:45 MST 2020.
+Elapsed time is 11398.885124 seconds.
+Ended batch processing at Thu Mar  5 19:06:38 MST 2020.

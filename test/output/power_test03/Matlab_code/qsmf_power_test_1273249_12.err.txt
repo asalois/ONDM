@@ -1,0 +1,6 @@
+slurmstepd: *** JOB 1273249 ON compute011 CANCELLED AT 2020-03-05T15:56:25 DUE TO PREEMPTION ***
+/cm/local/apps/slurm/var/spool/job1273249/slurm_script: fork: retry: Resource temporarily unavailable
+/cm/local/apps/slurm/var/spool/job1273249/slurm_script: fork: retry: Resource temporarily unavailable
+/cm/local/apps/slurm/var/spool/job1273249/slurm_script: fork: retry: Resource temporarily unavailable
+/cm/local/apps/slurm/var/spool/job1273249/slurm_script: fork: retry: Resource temporarily unavailable
+/cm/local/apps/slurm/var/spool/job1273249/slurm_script: fork: Resource temporarily unavailable
