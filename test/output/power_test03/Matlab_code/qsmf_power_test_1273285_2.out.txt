@@ -52,3 +52,10 @@ fiberAlphadB_2 =
 
     0.1580
 
+
+ans =
+
+   -5.0000    3.0604
+
+Elapsed time is 10312.555366 seconds.
+Ended batch processing at Thu Mar  5 19:00:40 MST 2020.
