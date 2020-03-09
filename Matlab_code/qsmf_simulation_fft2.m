@@ -40,7 +40,7 @@ laserPowerdBmArray = 0  %-45.96:1.05:-30.96;   % Laser power [dBm]
 %laserPowerdBm = 0  % Laser power [dBm}
 totalLength = 6000   % total transmission length [km]
 spanLength =in_span(indx)     % span length [km]
-segmentLength_1 = 120  % first segement length,must < spanLengh [km]
+segmentLength_1 = 120  % first segement length,must < spanLength [km]
 nblocksP = 32;  % phase equalizer nblockP, power of 2
 Nch = 9;   % WDM channels, must be an odd number
 dataType = 'uniform';    % random data type, 'uniform' or 'prbs',ot 'prss',  prss pattern only support symbol length of 4096
@@ -442,7 +442,7 @@ if (strcmp(figFlag7,'yes'))
     hold off
 end
 
-out = [QdB, laserPowerdBmArray, span, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2];
+out = [QdB, laserPowerdBmArray, spanLength, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2];
 file = "qsmf_span_output_" + indx + ".csv";
 csvwrite(file, out);
 toc;    % stop the timer 
