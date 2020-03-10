@@ -36,22 +36,24 @@ function  QdB = qsmf_simulation_fft2(indx)
 tic;   % start  a timer
 in_span = 0:5:100;
 in_power = -6:1:5;
-laserPowerdBmArray = 0  %-45.96:1.05:-30.96;   % Laser power [dBm] 
+in_r = 0:20:100;
+in_m = combvec(in_power, in_span)
+laserPowerdBmArray = in_m(1,indx)  %-45.96:1.05:-30.96;   % Laser power [dBm] 
 %laserPowerdBm = 0  % Laser power [dBm}
-totalLength = 6000   % total transmission length [km]
-spanLength =in_span(indx)     % span length [km]
-segmentLength_1 = 120  % first segement length,must < spanLength [km]
+totalLength = 6000;   % total transmission length [km]
+spanLength = 100;   % span length [km]
+segmentLength_1 = in_m(2,indx);  % first segement length,must < spanLength [km]
 nblocksP = 32;  % phase equalizer nblockP, power of 2
 Nch = 9;   % WDM channels, must be an odd number
 dataType = 'uniform';    % random data type, 'uniform' or 'prbs',ot 'prss',  prss pattern only support symbol length of 4096
 MPIflag = 'yes';   % include MPI crosstalk or not - 'yes' or 'no'
-percComp = 40;    % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
+percComp = in_r(1);    % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
 stepLength = 150; % 250;  % fiber step length  [m]
 
-fiberAeff_1 = 250   % QSM fiber effective area   [um^2]
-fiberAeff_2 = 112   % EX3000 fiber effective area   [um^2]
-fiberAlphadB_1 = 0.16  % QSM fiber attenuation [dB/km]
-fiberAlphadB_2 = 0.158  % EX3000 fiber attenuation [dB/km]
+fiberAeff_1 = 250;   % QSM fiber effective area   [um^2]
+fiberAeff_2 = 112;   % EX3000 fiber effective area   [um^2]
+fiberAlphadB_1 = 0.16;  % QSM fiber attenuation [dB/km]
+fiberAlphadB_2 = 0.158;  % EX3000 fiber attenuation [dB/km]
 
 %% set simulation variables
 
@@ -442,7 +444,7 @@ if (strcmp(figFlag7,'yes'))
     hold off
 end
 
-out = [QdB, laserPowerdBmArray, spanLength, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2];
+out = [QdB, laserPowerdBmArray, segmentLength_1, percComp, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2];
 file = "qsmf_span_output_" + indx + ".csv";
 csvwrite(file, out);
 toc;    % stop the timer 
