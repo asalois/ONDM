@@ -1,0 +1,65 @@
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Mon Mar  9 16:47:58 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Default Encoding    : UTF-8
+  GNU C Library       : 2.12 stable
+  Host Name           : compute024
+  MATLAB Architecture : glnxa64
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 62 Stepping 4, GenuineIntel
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc306260  RBX = 0000000000000000
+  RCX = 0000000000000000  RDX = 00002aaadc3062d8
+  RSP = 00002aaad7fff7e8  RBP = 00002aaad7fff7f0
+  RSI = 0000000000000000  RDI = 00002aaad7fff7f0
+
+   R8 = 00002aaadc3062d8   R9 = 0000000000000000
+  R10 = 00002aaad7fff570  R11 = 00002aaaadd5ae60
+  R12 = 00002aaadc3062d8  R13 = 00002aaad7fff820
+  R14 = 00002aaad7fff970  R15 = 00002aaadc347cc0
+
+  RIP = 00002aaaadd5ae60  EFL = 0000000000010206
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaadd5ae60 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0+00069216 _ZNK5boost6thread15get_thread_infoEv+00000000
+[  1] 0x00002aaada79d600 bin/glnxa64/matlab_startup_plugins/lmgrimpl/libmwlmgrimpl.so+03773952
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.19310-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/cm/local/apps/slurm/var/spool/job1281101/slurm_script: line 21: 19310 Killed                  matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"
