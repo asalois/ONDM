@@ -37,8 +37,8 @@ tic;   % start  a timer
 in_span = 0:5:100;
 in_power = -6:1:5;
 in_r = 0:20:100;
-in_m = combvec(in_power, in_span)
-laserPowerdBmArray = in_m(1,indx)  %-45.96:1.05:-30.96;   % Laser power [dBm] 
+in_m = combvec(in_power, in_span);
+laserPowerdBmArray = in_m(1,indx);  %-45.96:1.05:-30.96;   % Laser power [dBm] 
 %laserPowerdBm = 0  % Laser power [dBm}
 totalLength = 6000;   % total transmission length [km]
 spanLength = 100;   % span length [km]
@@ -47,7 +47,7 @@ nblocksP = 32;  % phase equalizer nblockP, power of 2
 Nch = 9;   % WDM channels, must be an odd number
 dataType = 'uniform';    % random data type, 'uniform' or 'prbs',ot 'prss',  prss pattern only support symbol length of 4096
 MPIflag = 'yes';   % include MPI crosstalk or not - 'yes' or 'no'
-percComp = in_r(1);    % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
+percComp = in_r(6);    % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
 stepLength = 150; % 250;  % fiber step length  [m]
 
 fiberAeff_1 = 250;   % QSM fiber effective area   [um^2]
@@ -445,7 +445,7 @@ if (strcmp(figFlag7,'yes'))
 end
 
 out = [QdB, laserPowerdBmArray, segmentLength_1, percComp, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2];
-file = "qsmf_span_output_" + indx + ".csv";
+file = "qsmf_output_" + indx + ".csv";
 csvwrite(file, out);
 toc;    % stop the timer 
 %% Write data into Excel file
