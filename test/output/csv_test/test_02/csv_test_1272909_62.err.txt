@@ -1,5 +1,0 @@
-{Maximum variable size allowed by the program is exceeded.
-
-Error in test (line 6)
-M = 1:run_to;
-} 
