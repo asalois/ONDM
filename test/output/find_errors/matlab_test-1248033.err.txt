@@ -1,1 +1,0 @@
-/cm/local/apps/slurm/var/spool/job1248033/slurm_script: line 19: ./test.sh: Permission denied
