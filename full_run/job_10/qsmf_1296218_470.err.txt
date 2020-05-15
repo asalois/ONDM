@@ -1,0 +1,30 @@
+com.mathworks.jmi.MatlabException: boost::thread_resource_error: Resource temporarily unavailable
+	at com.mathworks.jmi.NativeMatlab.SendMatlabMessage(Native Method)
+	at com.mathworks.jmi.NativeMatlab.sendMatlabMessage(NativeMatlab.java:259)
+	at com.mathworks.jmi.MatlabLooper.sendMatlabMessage(MatlabLooper.java:120)
+	at com.mathworks.jmi.Matlab.mtFeval(Matlab.java:1712)
+	at com.mathworks.jmi.Matlab.mtEval(Matlab.java:1646)
+	at com.mathworks.jmi.Matlab.mtEval(Matlab.java:1627)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$2.run(AutoStartImpl.java:63)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$TaskListener.mvmChanged(AutoStartImpl.java:200)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$TaskListener.mvmChanged(AutoStartImpl.java:182)
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+*** glibc detected *** /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB: corrupted double-linked list: 0x00002aab48c6ba10 ***
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75dee)[0x2aaaacff6dee]
+/lib64/libc.so.6(+0x7a5a4)[0x2aaaacffb5a4]
+/lib64/libc.so.6(__libc_malloc+0x5c)[0x2aaaacffbaac]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6(_Znwm+0x18)[0x2aaaac5fcd68]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so(+0x25b28)[0x2aaaca378b28]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so(_ZNK9MathWorks3lxe12LxeTypesBase29InstantiateFunctionTypeSchemeERKNS_2ts10TypeSchemeERKNS2_4TypeE+0x120)[0x2aaaca379370]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa68d3)[0x2aaac55a28d3]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa91ba)[0x2aaac55a51ba]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa9225)[0x2aaac55a5225]
+thread_monitor Resource temporarily unavailable in pthread_create
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa944b)[0x2aaac55a544b]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa95c8)[0x2aaac55a55c8]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa9c4e)[0x2aaac55a5c4e]
+/cm/local/apps/slurm/var/spool/job1296218/slurm_script: line 21: 23604 Segmentation fault      matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"

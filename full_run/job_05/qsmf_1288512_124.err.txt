@@ -1,0 +1,5 @@
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+PostVMInit failed to initialize com.mathworks.mlwidgets.prefs.InitialWorkingFolder
+slurmstepd: *** JOB 1288568 ON compute008 CANCELLED AT 2020-03-13T15:28:58 ***

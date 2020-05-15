@@ -1,0 +1,5 @@
+Wed Mar 18 12:47:45 MDT 2020
+Hello from compute017.
+128
+Run a matlab script
+Ended batch processing at Wed Mar 18 12:47:46 MDT 2020.
