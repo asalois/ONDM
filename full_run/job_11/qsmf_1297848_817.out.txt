@@ -1,0 +1,10 @@
+Wed Mar 18 17:43:07 MDT 2020
+Hello from compute051.
+817
+Run a matlab script
+
+  matlab: No MATLAB executable for this machine architecture.
+
+           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/ does not exist!
+
+Ended batch processing at Wed Mar 18 17:43:38 MDT 2020.

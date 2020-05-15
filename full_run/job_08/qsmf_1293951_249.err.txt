@@ -1,0 +1,182 @@
+
+------------------------------------------------------------------------
+          std::terminate() detected at Sun Mar 15 01:57:07 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute030
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 62 Stepping 4, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+std::terminate()
+
+Register State (captured):
+  RAX = 00002aaa00000000  RBX = 00002aaab12742c8
+  RCX = 000000000000000a  RDX = 00002aaab1265260
+  RSP = 00002aaad7ff41b0  RBP = 00002aaad7ff4570
+  RSI = 00002aaab1029439  RDI = 00002aaad7ff41c0
+
+   R8 = 29286574616e696d   R9 = 0000000000007777
+  R10 = 000000000062eda0  R11 = 00002aaaacfa43a0
+  R12 = 00002aaab1284358  R13 = 00002aaad7ff4960
+  R14 = 0000000000000002  R15 = 00002aaad7ff5280
+
+  RIP = 00002aaab0fa13ae  EFL = 0000000000000119
+
+   CS = 9ca0   FS = 0079   GS = 0000
+
+Stack Trace (captured):
+[  0] 0x00002aaab0f9b7d3                             bin/glnxa64/libmwfl.so+00821203
+[  1] 0x00002aaab0f9b82c                             bin/glnxa64/libmwfl.so+00821292 _ZN2fl4diag15stacktrace_base7captureEm+00000028
+[  2] 0x00002aaab0f9de02                             bin/glnxa64/libmwfl.so+00830978
+[  3] 0x00002aaac20ad5ea                            bin/glnxa64/libmwmcr.so+00796138
+[  4] 0x00002aaac20af2e8                            bin/glnxa64/libmwmcr.so+00803560
+[  5] 0x00002aaac20af4ca                            bin/glnxa64/libmwmcr.so+00804042
+[  6] 0x00002aaac20afa2c                            bin/glnxa64/libmwmcr.so+00805420
+[  7] 0x00002aaac20b0597                            bin/glnxa64/libmwmcr.so+00808343
+[  8] 0x00002aaaac5fc646 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00386630
+[  9] 0x00002aaaac5fc691 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00386705
+[ 10] 0x00002aaaac5fc8a8 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00387240
+[ 11] 0x00002aaaac657d8f /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00761231 _ZSt20__throw_system_errori+00000127
+[ 12] 0x00002aaaac65996d /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00768365 _ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE+00000285
+[ 13] 0x00002aaaff036a58            bin/glnxa64/libmwconnectorbayeuximpl.so+00359000 _ZN9connector6bayeux18LocalBayeuxSessionC1ESt10shared_ptrINS0_12BayeuxServerEE+00000840
+[ 14] 0x00002aab077d66b8 bin/glnxa64/libmwconnectorjnimessageserviceimpl.so+00042680 _ZN9connector19jni_message_service23JniMessageServiceBridge5startEv+00000088
+[ 15] 0x00002aaae34fad98                                   <unknown-module>+00000000
+[ 16] 0x00002aaae34ee058                                   <unknown-module>+00000000
+[ 17] 0x00002aaae34ee058                                   <unknown-module>+00000000
+[ 18] 0x00002aaae34ee058                                   <unknown-module>+00000000
+[ 19] 0x00002aaae34ee058                                   <unknown-module>+00000000
+[ 20] 0x00002aaae34e84e7                                   <unknown-module>+00000000
+[ 21] 0x00002aaad9b8f8f5 /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06289653
+[ 22] 0x00002aaad9b8e358 /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06284120
+[ 23] 0x00002aaad9bc8099 /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06520985
+[ 24] 0x00002aaad9bcf6ed /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06551277
+[ 25] 0x00002aaad85949c9                            bin/glnxa64/libmwjmi.so+00879049
+[ 26] 0x00002aaad85c5b44                            bin/glnxa64/libmwjmi.so+01080132
+[ 27] 0x00002aaad85c5e57                            bin/glnxa64/libmwjmi.so+01080919
+[ 28] 0x00002aaad85dff34                            bin/glnxa64/libmwjmi.so+01187636
+[ 29] 0x00002aaad85e0087                            bin/glnxa64/libmwjmi.so+01187975
+[ 30] 0x00002aaac9e2664e                    bin/glnxa64/libmwlxeindexing.so+00747086
+[ 31] 0x00002aaac9e27180                    bin/glnxa64/libmwlxeindexing.so+00749952
+[ 32] 0x00002aaac9df2199                    bin/glnxa64/libmwlxeindexing.so+00532889 _ZN9MathWorks3lxe19at_class_dot_paren0EPvNS_2ts4TypeEPKvS1_+00000249
+[ 33] 0x00002aaac56b4371                          bin/glnxa64/libmwm_lxe.so+12288881
+[ 34] 0x00002aaac4fa97ed                          bin/glnxa64/libmwm_lxe.so+04904941
+[ 35] 0x00002aaac4fabc84                          bin/glnxa64/libmwm_lxe.so+04914308
+[ 36] 0x00002aaac4fa8224                          bin/glnxa64/libmwm_lxe.so+04899364
+[ 37] 0x00002aaac4fa3b21                          bin/glnxa64/libmwm_lxe.so+04881185
+[ 38] 0x00002aaac4fa3fb9                          bin/glnxa64/libmwm_lxe.so+04882361
+[ 39] 0x00002aaac4fa7a10                          bin/glnxa64/libmwm_lxe.so+04897296
+[ 40] 0x00002aaac4fa7adf                          bin/glnxa64/libmwm_lxe.so+04897503
+[ 41] 0x00002aaac50a1a1c                          bin/glnxa64/libmwm_lxe.so+05921308
+[ 42] 0x00002aaac50a6083                          bin/glnxa64/libmwm_lxe.so+05939331
+[ 43] 0x00002aaac5528b0e                          bin/glnxa64/libmwm_lxe.so+10668814
+[ 44] 0x00002aaac54f4dd4                          bin/glnxa64/libmwm_lxe.so+10456532
+[ 45] 0x00002aaac54f514a                          bin/glnxa64/libmwm_lxe.so+10457418
+[ 46] 0x00002aaac54f6919                          bin/glnxa64/libmwm_lxe.so+10463513
+[ 47] 0x00002aaac5578155                          bin/glnxa64/libmwm_lxe.so+10994005
+[ 48] 0x00002aaac55785c6                          bin/glnxa64/libmwm_lxe.so+10995142
+[ 49] 0x00002aaac2362ede                   bin/glnxa64/libmwm_dispatcher.so+00446174
+[ 50] 0x00002aaac2349628                   bin/glnxa64/libmwm_dispatcher.so+00341544 _ZN13Mfh_MATLAB_fn11dispatch_fhEiPP11mxArray_tagiS2_+00000616
+[ 51] 0x00002aaac5715e44                          bin/glnxa64/libmwm_lxe.so+12688964
+[ 52] 0x00002aaac5715ede                          bin/glnxa64/libmwm_lxe.so+12689118
+[ 53] 0x00002aaac54edcb6                          bin/glnxa64/libmwm_lxe.so+10427574
+[ 54] 0x00002aaac54ee132                          bin/glnxa64/libmwm_lxe.so+10428722
+[ 55] 0x00002aaac556a3c8                          bin/glnxa64/libmwm_lxe.so+10937288
+[ 56] 0x00002aaac556c1aa                          bin/glnxa64/libmwm_lxe.so+10944938
+[ 57] 0x00002aaac2ecd2e0                  bin/glnxa64/libmwm_interpreter.so+02405088 _Z44inCallFcnWithTrapInDesiredWSAndPublishEventsiPP11mxArray_tagiS1_PKcbP15inWorkSpace_tag+00000080
+[ 58] 0x00002aaac18f464c                            bin/glnxa64/libmwiqm.so+00681548 _ZN3iqm15BaseFEvalPlugin7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000460
+[ 59] 0x00002aab19202faf                        bin/glnxa64/libnativejmi.so+00864175 _ZN9nativejmi14JmiFEvalPlugin7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000319
+[ 60] 0x00002aab19226525                        bin/glnxa64/libnativejmi.so+01008933 _ZN3mcr3mvm27McrSwappingIqmPluginAdapterIN9nativejmi14JmiFEvalPluginEE7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000741
+[ 61] 0x00002aaac18e9fba                            bin/glnxa64/libmwiqm.so+00638906
+[ 62] 0x00002aaac18d5354                            bin/glnxa64/libmwiqm.so+00553812
+[ 63] 0x00002aaac18da966                            bin/glnxa64/libmwiqm.so+00575846
+[ 64] 0x00002aaab1ab12ec                         bin/glnxa64/libmwmlutil.so+04817644 _ZNK14cmddistributor16IIPRunNowMessage7deliverERKN10foundation7msg_svc8exchange7RoutingE+00000044
+[ 65] 0x00002aaab0892e4e                             bin/glnxa64/libmwms.so+03042894 _ZN10foundation7msg_svc8exchange12MessageQueue7deliverERKN5boost10shared_ptrIKNS1_8EnvelopeEEE+00000174
+[ 66] 0x00002aaab0894838                             bin/glnxa64/libmwms.so+03049528
+[ 67] 0x00002aaab08752d6                             bin/glnxa64/libmwms.so+02921174
+[ 68] 0x00002aaab087a041                             bin/glnxa64/libmwms.so+02940993
+[ 69] 0x00002aaab08751bc                             bin/glnxa64/libmwms.so+02920892
+[ 70] 0x00002aaab1a10240                         bin/glnxa64/libmwmlutil.so+04158016
+[ 71] 0x00002aaab1a104c1                         bin/glnxa64/libmwmlutil.so+04158657
+[ 72] 0x00002aab19212c51                        bin/glnxa64/libnativejmi.so+00928849 _ZN5boost6detail8function26void_function_obj_invoker0INS_3_bi6bind_tINS3_11unspecifiedENS4_IS5_NS_8functionIFvvEEENS3_5list0EEENS3_5list1INS_17reference_wrapperINS_7promiseINS_10shared_ptrI8_jobjectEEEEEEEEEEvE6invokeERNS1_15function_bufferE+00000033
+[ 73] 0x00002aaaab2328df                            bin/glnxa64/libmwmvm.so+02177247 _ZN5boost6detail17shared_state_base13wait_internalERNS_11unique_lockINS_5mutexEEEb+00000687
+[ 74] 0x00002aab1920b03c                        bin/glnxa64/libnativejmi.so+00897084 _Z17mtMessageDispatchP7JNIEnv_P8_jobject+00000540
+[ 75] 0x00002aab1920b4a4                        bin/glnxa64/libnativejmi.so+00898212 _Z17SendMatlabMessageP7JNIEnv_P8_jobjectS2_+00000052
+[ 76] 0x00002aaae34fad98                                   <unknown-module>+00000000
+[ 77] 0x00002aaae34ee233                                   <unknown-module>+00000000
+[ 78] 0x00002aaae34ee233                                   <unknown-module>+00000000
+[ 79] 0x00002aaae34ee233                                   <unknown-module>+00000000
+[ 80] 0x00002aaae34ee233                                   <unknown-module>+00000000
+[ 81] 0x00002aaae34ee233                                   <unknown-module>+00000000
+[ 82] 0x00002aaae34ee058                                   <unknown-module>+00000000
+[ 83] 0x00002aaae34ee706                                   <unknown-module>+00000000
+[ 84] 0x00002aaae34ee058                                   <unknown-module>+00000000
+[ 85] 0x00002aaae34e84e7                                   <unknown-module>+00000000
+[ 86] 0x00002aaad9b8f8f5 /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06289653
+[ 87] 0x00002aaad9b8e358 /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06284120
+[ 88] 0x00002aaad9bc8b64 /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06523748
+[ 89] 0x00002aaad9bd77dc /cm/shared/hyalite/apps/matlab/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+06584284
+[ 90] 0x00002aab1a3bf271                        bin/glnxa64/libnativemvm.so+00635505 _ZN7JNIEnv_14CallVoidMethodEP8_jobjectP10_jmethodIDz+00000129
+[ 91] 0x00002aab1a3ccf9c                        bin/glnxa64/libnativemvm.so+00692124
+[ 92] 0x00002aab1a3cfaf1                        bin/glnxa64/libnativemvm.so+00703217 _ZN5boost6detail8function26void_function_obj_invoker1IZN10foundation7msg_svc8eventmgr8EventMgr9subscribeINS5_9BaseEventENS_9function1IvRKS8_EEEESt10unique_ptrINS5_10ConnectionESt14default_deleteISE_EERKT0_PKSbIDsSt11char_traitsIDsESaIDsEESQ_EUlSB_E_vSB_E6invokeERNS1_15function_bufferESB_+00000033
+[ 93] 0x00002aaab07ea70b                             bin/glnxa64/libmwms.so+02352907 _ZNK10foundation7msg_svc8eventmgr6CbPack6invokeERKNS1_9BaseEventE+00000603
+[ 94] 0x00002aaab08261ab                             bin/glnxa64/libmwms.so+02597291
+[ 95] 0x00002aaab084caf3                             bin/glnxa64/libmwms.so+02755315
+[ 96] 0x00002aaab084d028                             bin/glnxa64/libmwms.so+02756648
+[ 97] 0x00002aaab084da0c                             bin/glnxa64/libmwms.so+02759180
+[ 98] 0x00002aaab081c277                             bin/glnxa64/libmwms.so+02556535
+[ 99] 0x00002aaab1aeda59                         bin/glnxa64/libmwmlutil.so+05065305 _ZN6mlutil8eventmgr13EventMgrFront8doNotifyERKN5boost10shared_ptrIKN10foundation7msg_svc8eventmgr9BaseEventEEENS6_11DeliverModeE+00000201
+[100] 0x00002aaac20b0fe1                            bin/glnxa64/libmwmcr.so+00810977 _ZN10foundation7msg_svc8eventmgr8EventMgr6notifyIN8services6prompt17InputRequestEventEEEvRKT_NS1_11DeliverModeE+00000161
+[101] 0x00002aaac3f7551b                         bin/glnxa64/libmwbridge.so+00189723
+[102] 0x00002aaac3f7567b                         bin/glnxa64/libmwbridge.so+00190075
+[103] 0x00002aaac3f76003                         bin/glnxa64/libmwbridge.so+00192515 _Z8mnParserv+00000627
+[104] 0x00002aaac2071df3                            bin/glnxa64/libmwmcr.so+00552435
+[105] 0x00002aaac2073f9e                            bin/glnxa64/libmwmcr.so+00561054
+[106] 0x00002aaac2074619                            bin/glnxa64/libmwmcr.so+00562713 _ZN5boost6detail17task_shared_stateINS_3_bi6bind_tIvPFvRKNS_8functionIFvvEEEENS2_5list1INS2_5valueIS6_EEEEEEvE6do_runEv+00000025
+[107] 0x00002aaac2072f06                            bin/glnxa64/libmwmcr.so+00556806
+[108] 0x00002aaac191f739                            bin/glnxa64/libmwiqm.so+00857913
+[109] 0x00002aaac190c06c                            bin/glnxa64/libmwiqm.so+00778348 _ZN5boost6detail8function21function_obj_invoker0ISt8functionIFNS_3anyEvEES4_E6invokeERNS1_15function_bufferE+00000028
+[110] 0x00002aaac190bd4c                            bin/glnxa64/libmwiqm.so+00777548 _ZN3iqm18PackagedTaskPlugin7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000428
+[111] 0x00002aaac18e9fba                            bin/glnxa64/libmwiqm.so+00638906
+[112] 0x00002aaac18d815f                            bin/glnxa64/libmwiqm.so+00565599
+[113] 0x00002aaac18da609                            bin/glnxa64/libmwiqm.so+00574985
+[114] 0x00002aaaab7c301a                       bin/glnxa64/libmwservices.so+02469914
+[115] 0x00002aaaab7c45cf                       bin/glnxa64/libmwservices.so+02475471
+[116] 0x00002aaaab7c4d7a                       bin/glnxa64/libmwservices.so+02477434 _Z25svWS_ProcessPendingEventsiib+00000186
+[117] 0x00002aaac207256e                            bin/glnxa64/libmwmcr.so+00554350
+[118] 0x00002aaac2072901                            bin/glnxa64/libmwmcr.so+00555265
+[119] 0x00002aaac2060206                            bin/glnxa64/libmwmcr.so+00479750
+[120] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[121] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[122] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.30527-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/cm/local/apps/slurm/var/spool/job1293951/slurm_script: line 21: 30527 Killed                  matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID} + 1000); exit;"
