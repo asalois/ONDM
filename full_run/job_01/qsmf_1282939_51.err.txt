@@ -1,0 +1,139 @@
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+*** glibc detected *** /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB: malloc(): memory corruption: 0x00002aaadc000087 ***
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75dee)[0x2aaaacff6dee]
+/lib64/libc.so.6(+0x7a3aa)[0x2aaaacffb3aa]
+/lib64/libc.so.6(__libc_malloc+0x5c)[0x2aaaacffbaac]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6(_Znwm+0x18)[0x2aaaac5fcd68]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaaade4)[0x2aaac55a6de4]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa902a)[0x2aaac55a502a]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa9600)[0x2aaac55a5600]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaa9c4e)[0x2aaac55a5c4e]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaaa22f)[0x2aaac55a622f]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaaa325)[0x2aaac55a6325]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4af7ca)[0x2aaac4fab7ca]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4ac224)[0x2aaac4fa8224]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4a7b21)[0x2aaac4fa3b21]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4a7fb9)[0x2aaac4fa3fb9]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4aba10)[0x2aaac4fa7a10]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4abadf)[0x2aaac4fa7adf]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x5a5a1c)[0x2aaac50a1a1c]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x5aa083)[0x2aaac50a6083]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xa2cb0e)[0x2aaac5528b0e]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xb1e2d3)[0x2aaac561a2d3]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so(_ZN8Mfh_file16dispatch_fh_implEMS_FviPP11mxArray_tagiS2_EiS2_iS2_+0x3b3)[0x2aaac23b51f3]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so(_ZN8Mfh_file22dispatch_fh_with_reuseEiPP11mxArray_tagiS2_+0x1e)[0x2aaac23b5aee]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xc19e44)[0x2aaac5715e44]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xc19ede)[0x2aaac5715ede]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xc1d7e5)[0x2aaac57197e5]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xc21c7a)[0x2aaac571dc7a]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xb2db00)[0x2aaac5629b00]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xbfbd41)[0x2aaac56f7d41]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xbb30b1)[0x2aaac56af0b1]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4ada00)[0x2aaac4fa9a00]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4afc84)[0x2aaac4fabc84]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4ac224)[0x2aaac4fa8224]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4a7b21)[0x2aaac4fa3b21]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4a7fb9)[0x2aaac4fa3fb9]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4aba10)[0x2aaac4fa7a10]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x4abadf)[0x2aaac4fa7adf]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x5a5a1c)[0x2aaac50a1a1c]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x5aa083)[0x2aaac50a6083]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xa2cb0e)[0x2aaac5528b0e]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x9f8dd4)[0x2aaac54f4dd4]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x9f914a)[0x2aaac54f514a]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x9fa919)[0x2aaac54f6919]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xa6f2be)[0x2aaac556b2be]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xa6f772)[0x2aaac556b772]
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Thu Mar 12 01:06:31 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute065
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 2
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc000077  RBX = 00002aab48c42640
+  RCX = 00058006c8c43530  RDX = 0005555b80000f00
+  RSP = 00002aab903ffd50  RBP = 0000000000000001
+  RSI = 0000000000000000  RDI = 0000000000000000
+
+   R8 = 00000000ffffffff   R9 = 00002aaadfafbb40
+  R10 = 0000000000000008  R11 = 00002aaaad0db8f0
+  R12 = 00002aaacdfb3cac  R13 = 00002aaacdfb3c80
+  R14 = 00002aab903ffdd0  R15 = 00002aaacdfb3180
+
+  RIP = 00002aaaacfb68e5  EFL = 0000000000010206
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaacfb68e5                                   /lib64/libc.so.6+00219365 exit+00000053
+[  1] 0x00002aaab2d3129e /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00111262
+[  2] 0x00002aaab2d30fcd /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00110541
+[  3] 0x00002aaab2d30d56 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00109910
+[  4] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  5] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  6] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc000078  RBX = 00002aaadfb17f50
+  RCX = 00002aaadc000030  RDX = 0000002aaadc0000
+  RSP = 00002aabac3ffcb0  RBP = 00000000000000e0
+  RSI = 0000000000000000  RDI = 00002aaadc000020
+
+   R8 = 00000000ffffffff   R9 = 0000000000000000
+  R10 = 0000000000000008  R11 = 00002aaaad0db8f0
+  R12 = 00002aaadfb18030  R13 = 00002aaadc000020
+  R14 = 0000000000000030  R15 = 0000000000000001
+
+  RIP = 00002aaaacff988d  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.6637-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/cm/local/apps/slurm/var/spool/job1282991/slurm_script: line 21:  6637 Killed                  matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"

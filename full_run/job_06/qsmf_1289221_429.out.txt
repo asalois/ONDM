@@ -1,0 +1,18 @@
+Fri Mar 13 23:33:26 MDT 2020
+Hello from compute017.
+429 + 1000
+Run a matlab script
+
+Internal error 2: Could not determine the path of the
+                  MATLAB root directory.
+
+                  original command path = /cm/shared/hyalite/apps/matlab/R2017a/bin/matlab
+                  current  command path = /cm/shared/hyalite/apps/matlab/R2017a/bin/matlab
+
+                  Please contact:
+
+                      MathWorks Technical Support
+
+                  for further assistance.
+
+Ended batch processing at Fri Mar 13 23:33:56 MDT 2020.

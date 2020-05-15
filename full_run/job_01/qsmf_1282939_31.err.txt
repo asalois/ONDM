@@ -1,0 +1,63 @@
+thread_monitor Resource temporarily unavailable in pthread_create
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Thu Mar 12 01:28:37 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute072
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 0000000000000000  RBX = 00002aaad7f7b310
+  RCX = 00002aaad7f7b370  RDX = 00002aaaed6698d0
+  RSP = 00002aaad7f7b2c0  RBP = 00002aaad7ffb3c0
+  RSI = 00002aabf41e94b0  RDI = 00002aaad7f7b370
+
+   R8 = 0000000000000005   R9 = 0000000000000006
+  R10 = 00002aaad7f7b300  R11 = 00002aaad7f7b310
+  R12 = 0000000000080000  R13 = 0000000000000001
+  R14 = 00002aaad7f7b300  R15 = 00002aaad7f7b310
+
+  RIP = 00002aaac56dd8f9  EFL = 0000000000010246
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaac56dd8f9                          bin/glnxa64/libmwm_lxe.so+12458233
+[  1] 0x00002aaac56a4ed1                          bin/glnxa64/libmwm_lxe.so+12226257
+[  2] 0x00002aaae2a0921a                                   <unknown-module>+00000000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.9610-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/cm/local/apps/slurm/var/spool/job1282971/slurm_script: line 21:  9610 Killed                  matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"

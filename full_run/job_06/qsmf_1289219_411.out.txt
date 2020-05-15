@@ -1,0 +1,4 @@
+Fri Mar 13 23:33:29 MDT 2020
+Hello from compute048.
+411 + 1000
+Run a matlab script
