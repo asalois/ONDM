@@ -34,14 +34,14 @@ function  QdB = qsmf_simulation_fft2(indx)
 % folder = createDirectoryForResults();
 
 tic;   % start  a timer
-in_span = 0:5:100;
+in_span = 0:1:10;
 in_power = -9:1:2;
 in_r = 0;
 in_m = combvec(in_power, in_span, in_r);
 laserPowerdBmArray = in_m(1,indx);  %-45.96:1.05:-30.96;   % Laser power [dBm] 
 %laserPowerdBm = 0  % Laser power [dBm}
 totalLength = 6000;   % total transmission length [km]
-spanLength = 100;   % span length [km]
+spanLength = 10;   % span length [km]
 segmentLength_1 = in_m(2,indx);  % first segement length,must < spanLength [km]
 nblocksP = 32;  % phase equalizer nblockP, power of 2
 Nch = 9;   % WDM channels, must be an odd number
