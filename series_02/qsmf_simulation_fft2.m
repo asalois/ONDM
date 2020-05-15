@@ -35,8 +35,8 @@ function  QdB = qsmf_simulation_fft2(indx)
 
 tic;   % start  a timer
 in_span = 0:5:100;
-in_power = -6:1:5;
-in_r = 0:20:100;
+in_power = -9:1:2;
+in_r = 0;
 in_m = combvec(in_power, in_span, in_r);
 laserPowerdBmArray = in_m(1,indx);  %-45.96:1.05:-30.96;   % Laser power [dBm] 
 %laserPowerdBm = 0  % Laser power [dBm}
