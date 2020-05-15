@@ -1,0 +1,3 @@
+/cm/local/apps/slurm/var/spool/job1296550/slurm_script: fork: retry: Resource temporarily unavailable
+/cm/local/apps/slurm/var/spool/job1296550/slurm_script: fork: retry: Resource temporarily unavailable
+slurmstepd: *** JOB 1296550 ON compute048 CANCELLED AT 2020-03-18T16:58:11 DUE TO TIME LIMIT ***

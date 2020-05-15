@@ -1,0 +1,16 @@
+com.mathworks.jmi.MatlabException: boost::thread_resource_error: Resource temporarily unavailable
+	at com.mathworks.jmi.NativeMatlab.SendMatlabMessage(Native Method)
+	at com.mathworks.jmi.NativeMatlab.sendMatlabMessage(NativeMatlab.java:259)
+	at com.mathworks.jmi.MatlabLooper.sendMatlabMessage(MatlabLooper.java:120)
+	at com.mathworks.jmi.Matlab.mtFeval(Matlab.java:1712)
+	at com.mathworks.jmi.Matlab.mtEval(Matlab.java:1646)
+	at com.mathworks.jmi.Matlab.mtEval(Matlab.java:1627)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$2.run(AutoStartImpl.java:63)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$TaskListener.mvmChanged(AutoStartImpl.java:200)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$TaskListener.mvmChanged(AutoStartImpl.java:182)
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+/cm/local/apps/slurm/var/spool/job1295393/slurm_script: line 21:  7350 Segmentation fault      matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID} + 1000); exit;"

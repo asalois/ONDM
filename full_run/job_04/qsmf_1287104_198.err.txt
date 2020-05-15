@@ -1,0 +1,179 @@
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+*** glibc detected *** /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB: malloc(): memory corruption: 0x00002aaadc000087 ***
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75dee)[0x2aaaacff6dee]
+/lib64/libc.so.6(+0x7a3aa)[0x2aaaacffb3aa]
+/lib64/libc.so.6(__libc_malloc+0x5c)[0x2aaaacffbaac]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libut.so(ut_mem_alloc+0x19)[0x2aaab0c828b9]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libut.so(ut_initialize_ghash_table+0x1d4)[0x2aaab0c7b1f4]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so(+0x15321c)[0x2aaac33bf21c]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so(+0x15444c)[0x2aaac33c044c]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so(+0x15463f)[0x2aaac33c063f]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so(_Z39mps_expression_to_IR_with_visible_namesIcEP9term_nodePP13variable_nodePP15_M_parse_tree_TIT_EP10_M_to_IR_TIS6_EPKNSt13make_unsignedIS6_E4typeEmjN22fn_each_visible_name_TIS6_E4typeEPvN16fn_is_function_TIS6_E4typeESL_SL_N15fn_find_class_TIS6_E4typeEN16fn_is_variable_TIS6_E4typeESL_i+0x45)[0x2aaac340d345]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so(_Z21in_parse_eval_for_lxeP19_m_parser_interfacePvS1_PFbS1_PKvPKcES1_PFS5_mPS5_S5_bEPKhPFbS1_S5_ES1_mP9_dsbufferSG_SG_+0x71)[0x2aaac3486371]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0xaf278f)[0x2aaac55ee78f]
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Fri Mar 13 10:32:13 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute033
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 62 Stepping 4, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 2
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc000077  RBX = 00002aab4fc62630
+  RCX = 00058006cfc63520  RDX = 0005555b80000f00
+  RSP = 00002aaba03ffd50  RBP = 0000000000000001
+  RSI = 0000000000000000  RDI = 00002aab1b452c00
+
+   R8 = 00000000ffffffff   R9 = 0000000000000975
+  R10 = 00002aaba03ffaf0  R11 = 0000000000000206
+  R12 = 00002aaacdfb3780  R13 = 00002aaba04009c0
+  R14 = 00002aaba03ffdd0  R15 = 00002aaacdfb3580
+
+  RIP = 00002aaaacfb68e5  EFL = 0000000000010206
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaacfb68e5                                   /lib64/libc.so.6+00219365 exit+00000053
+[  1] 0x00002aaab2d3129e /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00111262
+[  2] 0x00002aaab2d30d7e /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00109950
+[  3] 0x00002aaab2d30d56 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00109910
+[  4] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  5] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  6] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc000078  RBX = 00002aab4fc62230
+  RCX = 00002aaadc000030  RDX = 0000002aaadc0000
+  RSP = 00002aabac3ffca0  RBP = 0000000000000170
+  RSI = 0000000000000000  RDI = 00002aaadc000020
+
+   R8 = 00000000ffffffff   R9 = 0000000000000979
+  R10 = 0000000000000000  R11 = 0000000000000206
+  R12 = 00002aab4fc623a0  R13 = 00002aaadc000020
+  R14 = 0000000000000030  R15 = 0000000000000001
+
+  RIP = 00002aaaacff988d  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.711-1 **
+
+
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x9f58b6)[0x2aaac54f18b6]
+
+MATLAB is exiting because of fatal error
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Fri Mar 13 10:32:13 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute033
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 62 Stepping 4, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 2
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc000077  RBX = 00002aab4fc62630
+  RCX = 00058006cfc63520  RDX = 0005555b80000f00
+  RSP = 00002aaba03ffd50  RBP = 0000000000000001
+  RSI = 0000000000000000  RDI = 00002aab1b452c00
+
+   R8 = 00000000ffffffff   R9 = 0000000000000975
+  R10 = 00002aaba03ffaf0  R11 = 0000000000000206
+  R12 = 00002aaacdfb3780  R13 = 00002aaba04009c0
+  R14 = 00002aaba03ffdd0  R15 = 00002aaacdfb3580
+
+  RIP = 00002aaaacfb68e5  EFL = 0000000000010206
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaacfb68e5                                   /lib64/libc.so.6+00219365 exit+00000053
+[  1] 0x00002aaab2d3129e /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00111262
+[  2] 0x00002aaab2d30d7e /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00109950
+[  3] 0x00002aaab2d30d56 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00109910
+[  4] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  5] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  6] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aaadc000078  RBX = 00002aab4fc62230
+  RCX = 00002aaadc000030  RDX = 0000002aaadc0000
+  RSP = 00002aabac3ffca0  RBP = 0000000000000170
+  RSI = 0000000000000000  RDI = 00002aaadc000020
+
+   R8 = 00000000ffffffff   R9 = 0000000000000979
+  R10 = 0000000000000000  R11 = 0000000000000206
+  R12 = 00002aab4fc623a0  R13 = 00002aaadc000020
+  R14 = 0000000000000030  R15 = 0000000000000001
+
+  RIP = 00002aaaacff988d  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaacff988d                                   /lib64/libc.so.6+00493709
+[  1] 0x00002aaab0fa9be9                             bin/glnxa64/cm/local/apps/slurm/var/spool/job1287229/slurm_script: line 21:   711 Killed                  matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"

@@ -1,0 +1,1 @@
+Fatal Internal Error: Failed to initialize Java
