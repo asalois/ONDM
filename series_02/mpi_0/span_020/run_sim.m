@@ -4,7 +4,7 @@
 function run_sim(indx)
 
     laser_power = -9:1:2; % Laser power [dBm] 
-    span = 2; % span length [km]
+    span = 20; % span length [km]
     step_size = span/10; % step size of segment length [km]
     seg_len = 0:step_size:span;  % first segement length,must < spanLength [km]
     comp = 0; % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
