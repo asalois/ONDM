@@ -9,45 +9,56 @@ MPI Compensation level: 0%
 10 km spans
 Power range: -9 dBm to +2 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 10 km with steps of 1 km
+132 sims
  
 20 km spans
 Power range: -9 dBm to +2 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 20 km with steps of 2 km
- 
+132 sims
+
 25 km spans
 Power range: -9 dBm to +2 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 25 km with steps of 2.5 km
+132 sims
  
 30 km spans
 Power range: -8 dBm to +3 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 30 km with steps of 3 km
+132 sims
  
 40 km spans
 Power range: -8 dBm to +3 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 40 km with steps of 4 km
+132 sims
  
 50 km spans
 Power range: -7 dBm to +4 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 50 km with steps of 5 km
+132 sims
  
 60 km spans
 Power range: -7 dBm to +4 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 60 km with steps of 6 km
+132 sims
  
 75 km spans
 Power range: -6 dBm to +5 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 75 km with steps of 7.5 km
+132 sims
  
 80 km spans
 Power range: -6 dBm to +5 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 80 km with steps of 8 km
+132 sims
  
 120 km spans
 Power range: -3 dBm to +8 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 120 km with steps of 10 km
+156 sims
  
 150 km spans
 Power range: -1 dBm to +10 dBm, with steps of 1 dBm
 Quasi-single-mode fiber length per span: 0 km – 150 km with steps of 10 km
+192 sims
 
 Then repeat for 100% mpi
