@@ -1,42 +1,10 @@
 #!/bin/bash
 # to relaunch jobs
-sbatch --array=72 qsmf_test_1.slurm
-sleep 1
-sbatch --array=81 qsmf_test_1.slurm
-sleep 1
-sbatch --array=83 qsmf_test_1.slurm
-sleep 1
-sbatch --array=84 qsmf_test_1.slurm
-sleep 1
-sbatch --array=85 qsmf_test_1.slurm
-sleep 1
-sbatch --array=92 qsmf_test_1.slurm
-sleep 1
-sbatch --array=94 qsmf_test_1.slurm
-sleep 1
-sbatch --array=96 qsmf_test_1.slurm
-sleep 1
-sbatch --array=97 qsmf_test_1.slurm
-sleep 1
-sbatch --array=98 qsmf_test_1.slurm
-sleep 1
-sbatch --array=99 qsmf_test_1.slurm
-sleep 1
-sbatch --array=100 qsmf_test_1.slurm
-sleep 1
-sbatch --array=101 qsmf_test_1.slurm
-sleep 1
 sbatch --array=102 qsmf_test_1.slurm
-sleep 1
-sbatch --array=103 qsmf_test_1.slurm
-sleep 1
-sbatch --array=104 qsmf_test_1.slurm
 sleep 1
 sbatch --array=105 qsmf_test_1.slurm
 sleep 1
 sbatch --array=106 qsmf_test_1.slurm
-sleep 1
-sbatch --array=107 qsmf_test_1.slurm
 sleep 1
 sbatch --array=108 qsmf_test_1.slurm
 sleep 1
@@ -63,10 +31,6 @@ sleep 1
 sbatch --array=128 qsmf_test_1.slurm
 sleep 1
 sbatch --array=129 qsmf_test_1.slurm
-sleep 1
-sbatch --array=130 qsmf_test_1.slurm
-sleep 1
-sbatch --array=131 qsmf_test_1.slurm
 sleep 1
 sbatch --array=133 qsmf_test_1.slurm
 sleep 1
