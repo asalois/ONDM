@@ -1,0 +1,7 @@
+/cm/shared/hyalite/apps/matlab/R2017a/bin/matlab: fork: retry: Resource temporarily unavailable
+PostVMInit failed to initialize com.mathworks.mlwidgets.prefs.InitialWorkingFolder
+{Index exceeds matrix dimensions.
+
+Error in qsmf_simulation_fft2 (line 41)
+laserPowerdBmArray = in_m(1,indx);  %-45.96:1.05:-30.96;   % Laser power [dBm]
+} 
