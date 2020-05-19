@@ -18,7 +18,7 @@ module load matlab/R2017a
 
 echo "Run a matlab script"
 
-matlab -nodesktop -nodisplay -nosplash -r "run_sim(${SLURM_ARRAY_TASK_ID} + 1000); exit;"
+matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID} + 1000); exit;"
 
 echo "Ended batch processing at `date`."
 

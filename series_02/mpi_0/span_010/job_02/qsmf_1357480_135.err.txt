@@ -1,0 +1,99 @@
+com.mathworks.jmi.MatlabException: Resource temporarily unavailable
+	at com.mathworks.jmi.NativeMatlab.SendMatlabMessage(Native Method)
+	at com.mathworks.jmi.NativeMatlab.sendMatlabMessage(NativeMatlab.java:259)
+	at com.mathworks.jmi.MatlabLooper.sendMatlabMessage(MatlabLooper.java:120)
+	at com.mathworks.jmi.Matlab.mtFeval(Matlab.java:1712)
+	at com.mathworks.jmi.Matlab.mtEval(Matlab.java:1646)
+	at com.mathworks.jmi.Matlab.mtEval(Matlab.java:1627)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$2.run(AutoStartImpl.java:63)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$TaskListener.mvmChanged(AutoStartImpl.java:200)
+	at com.mathworks.matlabserver.connector.impl.AutoStartImpl$TaskListener.mvmChanged(AutoStartImpl.java:182)
+{Index exceeds matrix dimensions.
+
+Error in qsmf_simulation_fft2 (line 41)
+laserPowerdBmArray = in_m(1,indx);  %-45.96:1.05:-30.96;   % Laser power [dBm]
+} 
+MATLAB: runtime/shutdown.cpp:183: bool mnShutdownMatlabInternal(bool, bool, const boost::optional<int>&, int*, bool, bool): Assertion `Unexpected exception during MATLAB shutdown: boost::thread_resource_error: Resource temporarily unavailable' failed.
+
+------------------------------------------------------------------------
+             Assertion detected at Sat May 16 10:06:04 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute072
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 1
+
+
+Assertion in bool mnShutdownMatlabInternal(bool, bool, const boost::optional<int>&, int*, bool, bool) at runtime/shutdown.cpp line 183:
+Unexpected exception during MATLAB shutdown: boost::thread_resource_error: Resource temporarily unavailable
+
+Register State (captured):
+  RAX = 0000000000000115  RBX = 00002aaab12742c8
+  RCX = 000000000000000a  RDX = 00002aaab1265260
+  RSP = 00002aaad7ffe260  RBP = 00002aaad7ffe620
+  RSI = 00002aaab1029439  RDI = 00002aaad7ffe270
+
+   R8 = 00002aaab1029438   R9 = 706d657420656372
+  R10 = 000000000079dae8  R11 = 000000000079dac0
+  R12 = 00002aaab1284358  R13 = 00002aaac20bf7ad
+  R14 = 00002aaac20bfac0  R15 = 00002aaad7ffeea0
+
+  RIP = 00002aaab0fa13ae  EFL = 0000000000000115
+
+   CS = 9ca0   FS = 0079   GS = 0000
+
+Stack Trace (captured):
+[  0] 0x00002aaab0f9b7d3                             bin/glnxa64/libmwfl.so+00821203
+[  1] 0x00002aaab0f9b82c                             bin/glnxa64/libmwfl.so+00821292 _ZN2fl4diag15stacktrace_base7captureEm+00000028
+[  2] 0x00002aaab0f9f006                             bin/glnxa64/libmwfl.so+00835590
+[  3] 0x00002aaab0f9f0e0                             bin/glnxa64/libmwfl.so+00835808
+[  4] 0x00002aaac20ab98c                            bin/glnxa64/libmwmcr.so+00788876
+[  5] 0x00002aaac2071be1                            bin/glnxa64/libmwmcr.so+00551905
+[  6] 0x00002aaac2073f9e                            bin/glnxa64/libmwmcr.so+00561054
+[  7] 0x00002aaac2074619                            bin/glnxa64/libmwmcr.so+00562713 _ZN5boost6detail17task_shared_stateINS_3_bi6bind_tIvPFvRKNS_8functionIFvvEEEENS2_5list1INS2_5valueIS6_EEEEEEvE6do_runEv+00000025
+[  8] 0x00002aaac2072f06                            bin/glnxa64/libmwmcr.so+00556806
+[  9] 0x00002aaac191f739                            bin/glnxa64/libmwiqm.so+00857913
+[ 10] 0x00002aaac190c06c                            bin/glnxa64/libmwiqm.so+00778348 _ZN5boost6detail8function21function_obj_invoker0ISt8functionIFNS_3anyEvEES4_E6invokeERNS1_15function_bufferE+00000028
+[ 11] 0x00002aaac190bd4c                            bin/glnxa64/libmwiqm.so+00777548 _ZN3iqm18PackagedTaskPlugin7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000428
+[ 12] 0x00002aaac18e9fba                            bin/glnxa64/libmwiqm.so+00638906
+[ 13] 0x00002aaac18d815f                            bin/glnxa64/libmwiqm.so+00565599
+[ 14] 0x00002aaac18da609                            bin/glnxa64/libmwiqm.so+00574985
+[ 15] 0x00002aaaab7c301a                       bin/glnxa64/libmwservices.so+02469914
+[ 16] 0x00002aaaab7c45cf                       bin/glnxa64/libmwservices.so+02475471
+[ 17] 0x00002aaaab7c4d7a                       bin/glnxa64/libmwservices.so+02477434 _Z25svWS_ProcessPendingEventsiib+00000186
+[ 18] 0x00002aaac207256e                            bin/glnxa64/libmwmcr.so+00554350
+[ 19] 0x00002aaac2072901                            bin/glnxa64/libmwmcr.so+00555265
+[ 20] 0x00002aaac2060206                            bin/glnxa64/libmwmcr.so+00479750
+[ 21] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[ 22] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[ 23] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.12911-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/cm/local/apps/slurm/var/spool/job1357480/slurm_script: line 21: 12911 Killed                  matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"
