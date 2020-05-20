@@ -1,0 +1,14 @@
+To do list
+Summer 2020
+
+1. Run simulations series on the Hyalite cluster 
+2. Upgrade and improve the Matlab program including the following
+    - Multipath crosstalk model using matrix concatenation
+    - Linear compensation algorithms (adaptive equalizers, artificial neural networks)
+    - Nonlinear compensation (Digital backpropagation, inverse Volterra series, artificial neural networks)
+    - Advanced modulation formats
+3. Outage calculation
+    - Semi-analytic error probability evaluation using the nonlinear Gaussian noise model
+    - Multicanonical Monte Carlo simulation
+4. GPU implementation
+5. Website update
