@@ -1,0 +1,16 @@
+Tue May 19 14:45:01 MDT 2020
+Hello from compute027.
+197
+Run a matlab script
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+ERROR: Unable to start system bundle. (java.lang.OutOfMemoryError: unable to create new native thread)
+>> Ended batch processing at Tue May 19 14:45:19 MDT 2020.
