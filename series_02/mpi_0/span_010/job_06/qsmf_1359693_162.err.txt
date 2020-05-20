@@ -1,0 +1,14 @@
+PostVMInit failed to initialize com.mathworks.mlwidgets.prefs.InitialWorkingFolder
+{Index exceeds matrix dimensions.
+
+Error in qsmf_simulation_fft2 (line 41)
+laserPowerdBmArray = in_m(1,indx);  %-45.96:1.05:-30.96;   % Laser power [dBm]
+} 
+Exception in thread "OSGi Starter" java.lang.OutOfMemoryError: unable to create new native thread
+	at java.lang.Thread.start0(Native Method)
+	at java.lang.Thread.start(Unknown Source)
+	at org.apache.felix.framework.util.EventDispatcher.start(EventDispatcher.java:118)
+	at org.apache.felix.framework.Felix.init(Felix.java:487)
+	at org.apache.felix.framework.Felix.start(Felix.java:672)
+	at com.mathworks.util.osgi.OSGiManager$1.run(OSGiManager.java:211)
+	at java.lang.Thread.run(Unknown Source)
