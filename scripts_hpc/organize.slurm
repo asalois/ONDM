@@ -13,10 +13,11 @@
 date
 echo "Hello from $(hostname)."
 
-module load pyhton3
-./organize.sh
+module load lang/Python/3.5.2-foss-2016b
+cd /mnt/lustrefs/scratch/v16b915/series_02/mpi_0/span_030
+/mnt/lustrefs/scratch/v16b915/scripts_hpc/organize.sh
 cd output
-./find_relaunched
+/mnt/lustrefs/scratch/v16b915/scripts_hpc/find_relaunched.sh 132
 
 echo "Ended batch processing at `date`."
 

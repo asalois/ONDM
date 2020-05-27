@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/mnt/lustrefs/scratch/v16b915/scripts_hpc/make_excel.py", line 17, in <module>
+    writer = pd.ExcelWriter('qsmf_output.xlsx', engine='xlsxwriter')
+  File "/cm/shared/hyalite/apps/eb/Python/3.5.2-foss-2016b/lib/python3.5/site-packages/pandas-0.18.1-py3.5-linux-x86_64.egg/pandas/io/excel.py", line 1431, in __init__
+    import xlsxwriter
+ImportError: No module named 'xlsxwriter'
+mv: cannot stat `qsmf_output.xlsx': No such file or directory

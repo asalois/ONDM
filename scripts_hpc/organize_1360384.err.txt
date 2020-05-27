@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/mnt/lustrefs/scratch/v16b915/scripts_hpc/give_me_jobs.py", line 2, in <module>
+    import pandas
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/mnt/lustrefs/scratch/v16b915/scripts_hpc/give_me_relaunched.py", line 3, in <module>
+    import pandas
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "/mnt/lustrefs/scratch/v16b915/scripts_hpc/make_excel.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
