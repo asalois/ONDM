@@ -1,0 +1,3 @@
+Wed May 20 15:32:49 MDT 2020
+Hello from compute001.
+Ended batch processing at Wed May 20 15:32:49 MDT 2020.

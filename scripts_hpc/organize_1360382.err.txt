@@ -1,0 +1,5 @@
+(null): can't open file 'give_me_jobs.py': [Errno 2] No such file or directory
+mkdir: cannot create directory `job_': File exists
+mv: cannot stat `qsmf_*.txt': No such file or directory
+(null): can't open file 'give_me_relaunched.py': [Errno 2] No such file or directory
+(null): can't open file 'make_excel.py': [Errno 2] No such file or directory
