@@ -6,3 +6,4 @@ mkdir job_$num
 mv qsmf_*.txt job_$num
 cp qsmf_output* job_$num
 mv qsmf_output* output/
+rm jobs.csv
