@@ -440,7 +440,7 @@ if (strcmp(figFlag7,'yes'))
     hold off
 end
 
-out = [QdB, laserPowerdBmArray, segmentLength_1, percComp, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2];
+out = [QdB, laserPowerdBmArray, segmentLength_1, percComp, fiberAeff_1, fiberAeff_2, fiberAlphadB_1, fiberAlphadB_2, spanLength];
 file = "qsmf_output_" + indx + ".csv";
 csvwrite(file, out);
 toc;    % stop the timer 
