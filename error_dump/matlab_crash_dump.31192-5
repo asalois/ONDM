@@ -1,0 +1,106 @@
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Wed May 20 23:57:41 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute061
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 20
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aabf5a27658  RBX = 0000000000000000
+  RCX = 00002aabf5a27618  RDX = 00002aabf05d9950
+  RSP = 00002aabfd207d20  RBP = 0000000000000000
+  RSI = 0000000000000000  RDI = 0000000000000000
+
+   R8 = 0000000000000004   R9 = 00002aabf6223618
+  R10 = 00002aabf6223610  R11 = 00002aabf05db948
+  R12 = 0000000000000025  R13 = 0000000000000000
+  R14 = 00002aabf05d9950  R15 = 00002aabf5a27650
+
+  RIP = 00002aabb415431d  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aabb415431d /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfftw3.so.3+00189213
+[  1] 0x00002aabb42d6b51 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfftw3.so.3+01772369
+[  2] 0x00002aabb42d6186 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfftw3.so.3+01769862
+[  3] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  4] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  5] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aabf5a2aa18  RBX = 0000000000000000
+  RCX = 00002aabf5a2a9d8  RDX = 00002aabf028d950
+  RSP = 00002aabf710cd20  RBP = 0000000000000000
+  RSI = 0000000000000000  RDI = 0000000000000000
+
+   R8 = 0000000000000004   R9 = 00002aabf62269d8
+  R10 = 00002aabf62269d0  R11 = 00002aabf028f948
+  R12 = 0000000000000361  R13 = 0000000000000000
+  R14 = 00002aabf028d950  R15 = 00002aabf5a2aa10
+
+  RIP = 00002aabb415431d  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aabb415431d /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfftw3.so.3+00189213
+[  1] 0x00002aabb42d6b51 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfftw3.so.3+01772369
+[  2] 0x00002aabb42d6186 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfftw3.so.3+01769862
+[  3] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  4] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  5] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aab4fe75c7f  RBX = 00002aab4fe76330
+  RCX = 000580154cd2f320  RDX = 00055569fceb9000
+  RSP = 00002aabb5002d50  RBP = 0000000000000001
+  RSI = 0000000000000000  RDI = 00002aabb3addc88
+
+   R8 = 00000000ffffffff   R9 = 0000000000000020
+  R10 = 00002aabb5002a00  R11 = 0000000000000000
+  R12 = 00002aaacdfb3b2c  R13 = 00002aaacdfb3b00
+  R14 = 00002aabb5002dd0  R15 = 00002aaacdfb3200
+
+  RIP = 00002aaaacfb68e5  EFL = 0000000000010212
+
+   CS = 0033   FS = 0000   GS = 0000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.

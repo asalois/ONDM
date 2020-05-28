@@ -1,0 +1,6 @@
+2018-05-25T16:35:00MDT	/home/alexander.salois/logs	   12  mkdir bash
+2018-05-25T16:35:02MDT	/home/alexander.salois	   12  mkdir bash
+2018-05-25T16:35:04MDT	/home/alexander.salois	   13  pwd
+2018-05-25T16:35:07MDT	/home/alexander.salois	   14  find logs/
+2018-05-25T16:37:43MDT	/home/alexander.salois	   14  find logs/
+2018-05-25T16:37:48MDT	/home/alexander.salois	   15  chmod 700 logs/bash/

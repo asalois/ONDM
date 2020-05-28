@@ -1,0 +1,148 @@
+2019-10-09T20:18:19 MDT  hyalite:/home/alexander.salois    425  exit
+2019-10-09T20:18:21 MDT  hyalite:/home/alexander.salois    426  ls
+2019-10-09T20:18:41 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    427  cd /mnt/lustrefs/scratch/alexander.salois/
+2019-10-09T20:18:42 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    428  ls
+2019-10-09T20:18:47 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    429  cd CSCI447/
+2019-10-09T20:18:48 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    430  ls
+2019-10-09T20:19:00 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    431  git pull
+2019-10-09T20:19:11 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    432  git status
+2019-10-09T20:19:23 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    433  git checkout master
+2019-10-09T20:19:28 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    434  git pull
+2019-10-09T20:20:16 MDT  hyalite:/home/alexander.salois    435  exit
+2019-10-09T20:20:18 MDT  hyalite:/home/alexander.salois    436  ls
+2019-10-09T20:21:05 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    437  cd /mnt/lustrefs/scratch/alexander.salois/CSCI447/
+2019-10-09T20:21:17 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    438  git pull
+2019-10-09T20:21:20 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    439  ls
+2019-10-09T20:21:23 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    440  ll -a
+2019-10-09T20:21:27 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/.git    441  cd .git
+2019-10-09T20:21:28 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/.git    442  ls
+2019-10-09T20:21:57 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/.git    443  vim config 
+2019-10-09T20:22:02 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/.git    444  git pull
+2019-10-09T20:22:09 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    445  cd ..
+2019-10-09T20:22:24 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    446  git pull
+2019-10-09T20:22:31 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    446  git pull
+2019-10-09T20:22:37 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    447  htop
+2019-10-09T20:22:40 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    448  ls
+2019-10-09T20:22:47 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/Project 1    449  cd Project\ 1/
+2019-10-09T20:22:48 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/Project 1    450  ls
+2019-10-09T20:22:55 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/Project 1/python    451  cd python/
+2019-10-09T20:22:56 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/Project 1/python    452  ls
+2019-10-09T20:23:13 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/Project 1/python    453  cp run_nb.slurm ../../../
+2019-10-09T20:23:14 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/Project 1/python    454  ls
+2019-10-09T20:23:20 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    455  cd ../../../
+2019-10-09T20:23:21 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    456  ls
+2019-10-09T20:23:45 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    457  mv run_nb.slurm CSCI447/project_2/python/
+2019-10-09T20:23:46 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    458  ls
+2019-10-09T20:23:50 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    459  cd CSCI447/
+2019-10-09T20:23:51 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    460  ls
+2019-10-09T20:23:55 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    461  cd project_2/
+2019-10-09T20:23:55 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    462  ls
+2019-10-09T20:24:06 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    463  cd python/
+2019-10-09T20:24:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    464  ls
+2019-10-09T20:24:37 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    465  mkdir job_out
+2019-10-09T20:24:38 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    466  ls
+2019-10-09T20:24:56 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    467  mv run_nb.slurm run_KNN.slurm
+2019-10-09T20:24:57 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    468  ls
+2019-10-09T20:26:26 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    469  vim run_KNN.slurm 
+2019-10-09T20:27:04 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    469  vim run_KNN.slurm 
+2019-10-09T20:27:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    470  ls
+2019-10-09T20:27:16 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    471  cat run_KNN.slurm 
+2019-10-09T20:28:00 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    472  vim run_KNN.slurm 
+2019-10-09T20:28:16 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    473  sbatch run_KNN.slurm 
+2019-10-09T20:28:21 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    474  squeue 
+2019-10-09T20:28:30 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    475  ls
+2019-10-09T20:28:35 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/job_out    476  cd job_out/
+2019-10-09T20:28:36 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/job_out    477  ls
+2019-10-09T20:28:38 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/job_out    477  ls
+2019-10-09T20:28:53 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/job_out    478  squeue 
+2019-10-09T20:29:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/job_out    479  ls
+2019-10-09T20:29:09 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    480  cd ..
+2019-10-09T20:29:10 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    481  ls
+2019-10-09T20:29:30 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    482  mv run_KNN.slurm 
+2019-10-09T20:29:47 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    483  mv run_KNN.slurm /job_out
+2019-10-09T20:30:02 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    484  ls
+2019-10-09T20:30:35 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    485  squeue 1150924
+2019-10-09T20:30:40 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    486  squeue -j 1150924
+2019-10-09T20:30:59 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    487  ls
+2019-10-09T20:31:06 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    488  mv run_KNN.slurm job_out/
+2019-10-09T20:31:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    489  ls
+2019-10-09T20:31:12 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    490  cd ..
+2019-10-09T20:31:14 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    491  ls
+2019-10-09T20:31:20 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    492  cd python/
+2019-10-09T20:31:22 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    493  ls
+2019-10-09T20:31:42 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    494  mv -r job_out/ actual\ code/
+2019-10-09T20:31:44 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    495  ls
+2019-10-09T20:31:52 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    496  mv job_out/ actual\ code/
+2019-10-09T20:31:53 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python    497  ls
+2019-10-09T20:31:55 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code    498  cd actual\ code/
+2019-10-09T20:31:56 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code    499  ls
+2019-10-09T20:32:05 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    500  cd job_out/
+2019-10-09T20:32:06 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    501  ls
+2019-10-09T20:32:36 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    502  vim run_KNN.slurm 
+2019-10-09T20:32:42 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    503  sbatch run_KNN.slurm 
+2019-10-09T20:32:45 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    504  squeue 
+2019-10-09T20:32:49 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    505  ls
+2019-10-09T20:33:01 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    506  cat nb-1150926.out.txt 
+2019-10-09T20:33:11 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    507  cat nb-1150926.err.txt 
+2019-10-09T20:33:19 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    507  cat nb-1150926.err.txt 
+2019-10-09T20:33:38 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    508  vim run_KNN.slurm 
+2019-10-09T20:33:41 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    509  squeue 
+2019-10-09T20:33:46 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    510  sbatch run_KNN.slurm 
+2019-10-09T20:33:47 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    511  squeue 
+2019-10-09T20:33:49 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    511  squeue 
+2019-10-09T20:33:53 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    511  squeue 
+2019-10-09T20:33:54 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    512  ls
+2019-10-09T20:34:13 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    513  cat nb-1150928.out.txt 
+2019-10-09T20:34:48 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    514  cat nb-1150928.err.txt 
+2019-10-09T20:38:26 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    515  vim run_KNN.slurm 
+2019-10-09T20:38:30 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    516  sbatch run_KNN.slurm 
+2019-10-09T20:38:34 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    517  sls
+2019-10-09T20:38:35 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    518  ls
+2019-10-09T20:38:50 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    519  cat nb-1150933.out.txt 
+2019-10-09T20:39:05 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    520  cat nb-1150933.err.txt 
+2019-10-09T20:39:12 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    520  cat nb-1150933.err.txt 
+2019-10-09T20:39:15 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    521  sque
+2019-10-09T20:39:17 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    522  squeue 
+2019-10-09T20:39:22 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    522  squeue 
+2019-10-09T20:39:31 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    523  cat nb-1150933.err.txt 
+2019-10-09T20:39:39 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    524  ls
+2019-10-09T20:39:54 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    525  rm nb*
+2019-10-09T20:39:55 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    526  ls
+2019-10-09T20:40:54 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    527  cat run_KNN.slurm 
+2019-10-09T20:45:26 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    528  vim run_KNN.slurm 
+2019-10-09T20:46:22 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    528  vim run_KNN.slurm 
+2019-10-09T20:46:46 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    528  vim run_KNN.slurm 
+2019-10-09T20:46:50 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    529  ls
+2019-10-09T20:46:58 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    530  htop
+2019-10-09T20:47:46 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    531  vim run_KNN.slurm 
+2019-10-09T20:47:56 MDT  hyalite:/home/alexander.salois    532  exit
+2019-10-09T20:47:58 MDT  hyalite:/home/alexander.salois    533  ls
+2019-10-09T20:48:17 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    534  cd /mnt/lustrefs/scratch/alexander.salois/
+2019-10-09T20:48:17 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    535  ls
+2019-10-09T20:48:20 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    536  cd CSCI447/
+2019-10-09T20:48:21 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    537  ls
+2019-10-09T20:48:26 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    538  cd project_2/
+2019-10-09T20:48:36 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    539  git pull
+2019-10-09T20:48:39 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2    540  ls
+2019-10-09T20:48:52 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code    541  cd python/actual\ code/
+2019-10-09T20:48:53 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code    542  ls
+2019-10-09T20:49:04 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    543  cd job_out/
+2019-10-09T20:49:05 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    544  ls
+2019-10-09T20:49:54 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    545  vim run_KNN.slurm 
+2019-10-09T20:49:56 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    546  ls
+2019-10-09T20:50:03 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    547  sbatch run_KNN.slurm 
+2019-10-09T20:50:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    548  squeue 
+2019-10-09T20:50:30 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    549  ls
+2019-10-09T20:50:38 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    550  cat nb-1151131.out.txt 
+2019-10-09T20:50:52 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    551  cat nb-1151131.err.txt 
+2019-10-09T20:54:17 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    552  vim run_KNN.slurm 
+2019-10-09T20:54:22 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    553  cat run_KNN.slurm 
+2019-10-09T20:54:29 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    554  sbatch run_KNN.slurm 
+2019-10-09T20:54:32 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    555  squeue 
+2019-10-09T20:54:46 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    556  ls
+2019-10-09T20:54:57 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    557  cat nb-1151135.out.txt 
+2019-10-09T20:55:12 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    558  cat nb-1151135.err.txt 
+2019-10-09T21:18:19 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    559  vim run_KNN.slurm 
+2019-10-09T21:18:21 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    560  la
+2019-10-09T21:18:22 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    561  ls
+2019-10-09T21:18:24 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447/project_2/python/actual code/job_out    562  ll
