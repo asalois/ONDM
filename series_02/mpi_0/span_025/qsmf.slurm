@@ -12,13 +12,13 @@
 
 date
 echo "Hello from $(hostname)."
-echo "${SLURM_ARRAY_TASK_ID} + 1000"
+echo "${SLURM_ARRAY_TASK_ID}"
 
 module load matlab/R2017a
 
 echo "Run a matlab script"
 
-matlab -nodesktop -nodisplay -nosplash -r "run_sim(${SLURM_ARRAY_TASK_ID} + 1000); exit;"
+matlab -nodesktop -nodisplay -nosplash -r "run_sim(${SLURM_ARRAY_TASK_ID}); exit;"
 
 echo "Ended batch processing at `date`."
 
