@@ -8,6 +8,7 @@ in_x = int(sys.argv[1]) + 1
 in_start = int(sys.argv[2])
 num_grab = int(sys.argv[3])
 sleep_time = int(sys.argv[4])
+num_same_time = int(sys.argv[5])
 
 
 j = 0
@@ -20,9 +21,9 @@ def print_list(i):
     print("sbatch --array=", end = '')
     print(*num_list, sep = ",", end = '')
     if i > 1000 + num_grab or print_2:
-        print(" qsmf_test_2.slurm")
+        print(" qsmf_2.slurm")
     else:
-        print(" qsmf_test_1.slurm")
+        print("%" + str(num_same_time) + " qsmf.slurm")
     print("sleep", str(sleep_time))
 
 # beggining of bash script
