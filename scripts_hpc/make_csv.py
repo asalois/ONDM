@@ -10,5 +10,7 @@ df.columns = ['Laser Power (dBm)', 'Length of Segment 1 (Km)', 'Q (dB)','Compens
 df = df.sort_values(['Compensation (%)', 'Length of Segment 1 (Km)', 'Laser Power (dBm)'])
 df.to_csv('qsmf_output.csv', index=False)
 
-# Close the Pandas Excel writer and output the Excel file.
-writer.save()
+# Make subframes from compensation
+comp =[frame for percComp, frame in df.groupby(by='Compensation (%)')]
+
+
