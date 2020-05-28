@@ -1,0 +1,4 @@
+Wed May 27 14:29:26 MDT 2020
+Hello from compute072.
+78
+Run a matlab script
