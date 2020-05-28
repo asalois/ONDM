@@ -3,6 +3,7 @@
 
 function run_sim(indx)
 
+    addpath('/mnt/lustrefs/scratch/v16b915/series_02/sim_files')
     laser_power = -9:1:2; % Laser power [dBm] 
     span = 20; % span length [km]
     step_size = span/10; % step size of segment length [km]
