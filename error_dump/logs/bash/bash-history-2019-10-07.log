@@ -1,0 +1,172 @@
+2019-10-07T14:12:03 MDT  hyalite:/home/alexander.salois     15  chmod 700 logs/bash/
+2019-10-07T14:12:18 MDT  hyalite:/home/alexander.salois     16  mode avail
+2019-10-07T14:12:37 MDT  hyalite:/home/alexander.salois     17  module avail
+2019-10-07T14:14:27 MDT  hyalite:/home/alexander.salois     18  htop
+2019-10-07T14:21:15 MDT  hyalite:/home/alexander.salois     19  ls
+2019-10-07T14:21:22 MDT  hyalite:/home/alexander.salois/slurm-examples     20  cd slurm-examples/
+2019-10-07T14:21:24 MDT  hyalite:/home/alexander.salois/slurm-examples     21  ls
+2019-10-07T14:21:33 MDT  hyalite:/home/alexander.salois/slurm-examples     22  vaim slurm/
+2019-10-07T14:21:39 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     23  cd slurm/
+2019-10-07T14:21:40 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     24  ls
+2019-10-07T14:21:53 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     24  ls
+2019-10-07T14:22:10 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     25  cat README 
+2019-10-07T14:22:25 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     26  cd hyalite/
+2019-10-07T14:22:27 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     27  ls
+2019-10-07T14:22:39 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     28  cat hello.slurm 
+2019-10-07T14:25:13 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     29  htop
+2019-10-07T14:25:36 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     30  sbatch hello.slurm 
+2019-10-07T14:27:44 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     31  squeue -J 1149462
+2019-10-07T14:27:51 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     32  squeue -j 1149462
+2019-10-07T14:28:27 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     32  squeue -j 1149462
+2019-10-07T14:28:42 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     32  squeue -j 1149462
+2019-10-07T14:29:04 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     33  squeue
+2019-10-07T14:30:09 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     33  squeue
+2019-10-07T14:30:12 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     33  squeue
+2019-10-07T14:30:49 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     34  squeue -u `whoami`
+2019-10-07T14:31:06 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     35  ls
+2019-10-07T14:31:19 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     36  cat hello
+2019-10-07T14:31:21 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     37  cat hello.slurm 
+2019-10-07T14:34:01 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     38  scontrol show job 1149462
+2019-10-07T14:34:04 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     38  scontrol show job 1149462
+2019-10-07T14:34:19 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     39  sbatch hello.slurm 
+2019-10-07T14:34:24 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     40  squeue -u `whoami`
+2019-10-07T14:34:29 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     41  scontrol show job 1149462
+2019-10-07T14:34:33 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     42  squeue -u `whoami`
+2019-10-07T14:35:41 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     43  htop
+2019-10-07T14:38:40 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     44  vim hello
+2019-10-07T14:41:09 MDT  hyalite:/home/alexander.salois     45  vim hello.slurm 
+2019-10-07T14:41:18 MDT  hyalite:/home/alexander.salois     46  ls
+2019-10-07T14:41:21 MDT  hyalite:/home/alexander.salois/slurm-examples     47  cd slurm-examples/
+2019-10-07T14:41:22 MDT  hyalite:/home/alexander.salois/slurm-examples     48  ls
+2019-10-07T14:41:42 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     49  cd slurm/
+2019-10-07T14:41:43 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     50  ls
+2019-10-07T14:41:55 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     51  cd hyalite/
+2019-10-07T14:41:56 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     52  ls
+2019-10-07T14:42:51 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     53  vim hello.slurm 
+2019-10-07T14:43:00 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     54  ls
+2019-10-07T14:43:02 MDT  hyalite:/home/alexander.salois     55  cd
+2019-10-07T14:43:03 MDT  hyalite:/home/alexander.salois     56  ls
+2019-10-07T14:46:15 MDT  hyalite:/home/alexander.salois     56  ls
+2019-10-07T14:46:17 MDT  hyalite:/home/alexander.salois     56  ls
+2019-10-07T14:46:24 MDT  hyalite:/home     57  cd /home
+2019-10-07T14:46:44 MDT  hyalite:/home/alexander.salois     58  cd /home/alexander.salois/
+2019-10-07T14:46:45 MDT  hyalite:/home/alexander.salois     59  ls
+2019-10-07T14:47:06 MDT  hyalite:/home/alexander.salois     60  ls logs/
+2019-10-07T14:47:08 MDT  hyalite:/home/alexander.salois     61  ls
+2019-10-07T14:47:14 MDT  hyalite:/home/alexander.salois/logs     62  cd logs/
+2019-10-07T14:47:15 MDT  hyalite:/home/alexander.salois/logs     62  cd logs/
+2019-10-07T14:47:16 MDT  hyalite:/home/alexander.salois/logs     63  ls
+2019-10-07T14:47:20 MDT  hyalite:/home/alexander.salois/logs     64  cat bash/
+2019-10-07T14:47:26 MDT  hyalite:/home/alexander.salois/logs/bash     65  cd bash/
+2019-10-07T14:47:27 MDT  hyalite:/home/alexander.salois/logs/bash     66  ls
+2019-10-07T14:47:36 MDT  hyalite:/home/alexander.salois/logs/bash     67  cat bash-history-201
+2019-10-07T14:47:42 MDT  hyalite:/home/alexander.salois/logs/bash     68  cat bash-history-2019-10-07.log 
+2019-10-07T14:48:35 MDT  hyalite:/home/alexander.salois     69  cd
+2019-10-07T14:48:37 MDT  hyalite:/home/alexander.salois     70  ls
+2019-10-07T14:48:39 MDT  hyalite:/home/alexander.salois/slurm-examples     71  cd slurm-examples/
+2019-10-07T14:48:40 MDT  hyalite:/home/alexander.salois/slurm-examples     72  ls
+2019-10-07T14:49:26 MDT  hyalite:/home/alexander.salois/slurm-examples     73  vim hello.slurm.sh 
+2019-10-07T14:49:38 MDT  hyalite:/home/alexander.salois/slurm-examples     74  sbatch hello.slurm.sh 
+2019-10-07T14:49:44 MDT  hyalite:/home/alexander.salois/slurm-examples     75  squeue 
+2019-10-07T14:50:21 MDT  hyalite:/home/alexander.salois/slurm-examples     76  vim hello.slurm.sh 
+2019-10-07T14:50:23 MDT  hyalite:/home/alexander.salois/slurm-examples     77  ls
+2019-10-07T14:50:31 MDT  hyalite:/home/alexander.salois/slurm-examples/hyalite     78  cd hyalite/
+2019-10-07T14:50:32 MDT  hyalite:/home/alexander.salois/slurm-examples/hyalite     79  ls
+2019-10-07T14:50:46 MDT  hyalite:/home/alexander.salois     80  cd
+2019-10-07T14:50:47 MDT  hyalite:/home/alexander.salois     81  ls
+2019-10-07T14:50:49 MDT  hyalite:/home/alexander.salois/slurm-examples     82  cd slurm-examples/
+2019-10-07T14:50:51 MDT  hyalite:/home/alexander.salois/slurm-examples     83  ls
+2019-10-07T14:51:01 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     84  cd slurm/
+2019-10-07T14:51:02 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm     85  ls
+2019-10-07T14:51:18 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     86  cd hyalite/
+2019-10-07T14:51:19 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     87  ls
+2019-10-07T14:51:45 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     88  cat hello_mpi
+2019-10-07T14:51:51 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     89  cat hello_mpic
+2019-10-07T14:52:00 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite     90  ls
+2019-10-07T14:52:18 MDT  hyalite:/home/alexander.salois     91  cd 
+2019-10-07T14:52:19 MDT  hyalite:/home/alexander.salois     92  ls
+2019-10-07T14:52:21 MDT  hyalite:/home/alexander.salois/slurm-examples     93  cd slurm-examples/
+2019-10-07T14:52:22 MDT  hyalite:/home/alexander.salois/slurm-examples     94  ls
+2019-10-07T14:52:31 MDT  hyalite:/home/alexander.salois/slurm-examples/jobscripts     95  cd jobscripts/
+2019-10-07T14:52:32 MDT  hyalite:/home/alexander.salois/slurm-examples/jobscripts     96  ls
+2019-10-07T14:52:39 MDT  hyalite:/home/alexander.salois     97  cd 
+2019-10-07T14:52:42 MDT  hyalite:/home/alexander.salois/slurm-examples     98  cd slurm-examples/
+2019-10-07T14:52:43 MDT  hyalite:/home/alexander.salois/slurm-examples     99  ls
+2019-10-07T14:52:48 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm    100  cd slurm/
+2019-10-07T14:52:49 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm    101  ls
+2019-10-07T14:52:55 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/jobscripts    102  cd jobscripts/
+2019-10-07T14:52:56 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/jobscripts    103  ls
+2019-10-07T14:53:16 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/jobscripts    103  ls
+2019-10-07T14:53:17 MDT  hyalite:/home/alexander.salois    104  cd 
+2019-10-07T14:53:17 MDT  hyalite:/home/alexander.salois    104  cd 
+2019-10-07T14:53:22 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm    105  cd slurm-examples/slurm/
+2019-10-07T14:53:22 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm    106  ls
+2019-10-07T14:53:25 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    107  cd hyalite/
+2019-10-07T14:53:26 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    108  ls
+2019-10-07T14:53:56 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    109  cat mpiJob.9273
+2019-10-07T14:54:22 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    110  cat mpiJob.92735.err 
+2019-10-07T14:54:41 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    111  ls
+2019-10-07T14:55:48 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    112  squeue 
+2019-10-07T14:56:01 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    113  whoiam
+2019-10-07T14:56:14 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    114  uname -mrs
+2019-10-07T14:56:27 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    115  sque
+2019-10-07T14:56:35 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    116  squeue 
+2019-10-07T14:56:49 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    117  squeue -j
+2019-10-07T14:56:57 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    118  squeue -j v16b915
+2019-10-07T14:57:09 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    119  squeue -h
+2019-10-07T14:57:18 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    120  squeue --help
+2019-10-07T14:57:54 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    121  squeue --start
+2019-10-07T14:59:42 MDT  hyalite:/home/alexander.salois/slurm-examples/slurm/hyalite    122  cd /lus
+2019-10-07T14:59:55 MDT  hyalite:/mnt/lustrefs    123  cd /mnt/lustrefs/
+2019-10-07T14:59:56 MDT  hyalite:/mnt/lustrefs    124  ls
+2019-10-07T15:00:34 MDT  hyalite:/mnt/lustrefs/scratch    125  cd /mnt/lustrefs/scratch/
+2019-10-07T15:00:35 MDT  hyalite:/mnt/lustrefs/scratch    126  ls
+2019-10-07T15:00:48 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    127  cd alexander.salois/
+2019-10-07T15:00:49 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    128  ls
+2019-10-07T15:00:52 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    128  ls
+2019-10-07T15:01:03 MDT  hyalite:/home/alexander.salois    129  cd
+2019-10-07T15:01:04 MDT  hyalite:/home/alexander.salois    130  ls
+2019-10-07T15:01:06 MDT  hyalite:/home/alexander.salois/slurm-examples    131  cd slurm-examples/
+2019-10-07T15:01:08 MDT  hyalite:/home/alexander.salois/slurm-examples    132  ls
+2019-10-07T15:01:16 MDT  hyalite:/home/alexander.salois/slurm-examples    133  cp hello.slurm.sh 
+2019-10-07T15:01:39 MDT  hyalite:/home/alexander.salois/slurm-examples    134  cp hello.slurm.sh /mnt/lustrefs/scratch/alexander.salois/
+2019-10-07T15:01:40 MDT  hyalite:/home/alexander.salois/slurm-examples    135  ls
+2019-10-07T15:02:41 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    136  cd /mnt/lustrefs/scratch/alexander.salois/
+2019-10-07T15:02:43 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    137  ls
+2019-10-07T15:02:50 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    138  sbatch hello.slurm.sh 
+2019-10-07T15:02:57 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    139  squeue 
+2019-10-07T15:03:08 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    140  ls
+2019-10-07T15:03:18 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    141  cat hello
+2019-10-07T15:03:23 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    142  cat hello-1149465.
+2019-10-07T15:03:28 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    143  cat hello-1149465.out 
+2019-10-07T16:58:23 MDT  hyalite:/home/alexander.salois    143  cat hello-1149465.out 
+2019-10-07T16:58:25 MDT  hyalite:/home/alexander.salois    144  ls
+2019-10-07T16:58:41 MDT  hyalite:/mnt/lustrefs/scratch    145  cd /mnt/lustrefs/scratch/
+2019-10-07T16:58:43 MDT  hyalite:/mnt/lustrefs/scratch    146  ls
+2019-10-07T16:58:52 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    147  cd alexander.salois/
+2019-10-07T16:58:54 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    148  ls
+2019-10-07T16:58:57 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    149  cd kernel/
+2019-10-07T16:58:58 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    150  ls
+2019-10-07T16:59:17 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    151  rm -rf linux-5.2.5/
+2019-10-07T16:59:18 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    152  ls
+2019-10-07T17:03:23 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    153  unzx -v linux-5.3.5.tar.xz 
+2019-10-07T17:03:53 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    154  xz -d -v linux-5.3.5.tar.xz 
+2019-10-07T17:04:15 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    155  htop
+2019-10-07T17:04:20 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    156  ls
+2019-10-07T17:04:24 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    156  ls
+2019-10-07T17:04:44 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    157  tar xvf
+2019-10-07T17:08:41 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    158  tar xvf linux-5.3.5.tar 
+2019-10-07T17:09:06 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    159  ls
+2019-10-07T17:09:09 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    160  htop
+2019-10-07T17:09:12 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel    161  ls
+2019-10-07T17:09:14 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    162  cd linux-5.3.5
+2019-10-07T17:09:15 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    163  ls
+2019-10-07T17:09:49 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    164  modules --help
+2019-10-07T17:10:06 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    165  avail modules
+2019-10-07T17:10:44 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    166  module avail
+2019-10-07T17:13:20 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    167  ls
+2019-10-07T17:14:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    168  vim make_kernel.slurm
+2019-10-07T17:14:36 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    169  ls
+2019-10-07T17:16:56 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    169  ls
+2019-10-07T17:18:07 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    169  ls
+2019-10-07T17:18:40 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/kernel/linux-5.3.5    170  vim make_kernel.slurm

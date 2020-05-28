@@ -1,0 +1,9 @@
+2019-10-14T16:46:15 MDT  hyalite:/home/alexander.salois    745  exit
+2019-10-14T16:46:16 MDT  hyalite:/home/alexander.salois    746  ls
+2019-10-14T16:46:38 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    747  cd /mnt/lustrefs/scratch/alexander.salois/
+2019-10-14T16:46:39 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois    748  ls
+2019-10-14T16:46:45 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    749  cd CSCI447/
+2019-10-14T16:46:46 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    750  ls
+2019-10-14T16:46:50 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    751  git pull'
+2019-10-14T16:47:00 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    752  git pull
+2019-10-14T16:47:26 MDT  hyalite:/mnt/lustrefs/scratch/alexander.salois/CSCI447    753  module avail
