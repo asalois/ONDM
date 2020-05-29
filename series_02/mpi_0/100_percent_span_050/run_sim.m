@@ -4,8 +4,8 @@
 function run_sim(indx)
 
     addpath('/mnt/lustrefs/scratch/v16b915/series_02/sim_files')
-    laser_power = -8:1:3; % Laser power [dBm] 
-    span = 30; % span length [km]
+    laser_power = -9:1:2; % Laser power [dBm] 
+    span = 50; % span length [km]
     step_size = span/10; % step size of segment length [km]
     seg_len = 0:step_size:span;  % first segement length,must < spanLength [km]
     comp = 0; % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
