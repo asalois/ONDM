@@ -1,4 +1,0 @@
-Tue May 19 16:52:41 MDT 2020
-Hello from compute072.
-54
-Run a matlab script
