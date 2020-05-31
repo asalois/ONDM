@@ -2,12 +2,11 @@
 clc
 clear all
 runs = 30;
-power = 13;
-times = zeros(4,power*runs);
+times = zeros(4,12*runs);
     
-for k = 1:power
+for k = 1:12
     array_size = 2^k;
-    for i = ((k-1)*runs + 1):k*runs
+    for i = k:k*runs
         % cpu fft test
         tic;
         M = rand(array_size);
@@ -30,11 +29,17 @@ for k = 1:power
         times(4,i) = array_size;
     end
 end
+
 %%
+writematrix(times', 'gpu_vs_cpu.csv');
 figure()
+fig = plot(times(4,:),times(3,:));
+title('Array Size vs X faster');
+xlabel('array size (number of RxC
+saveas(fig, 'size_vs_speedup.png');
+
+figure
 fig = plot(times(4,:),times(1,:),times(4,:),times(2,:));
 title('Array Size vs time (ms)');
-xlabel('Array Size (RxR)');
-ylabel('Time (ms)');
 legend({'cpu', 'gpu'}, 'Location', 'northwest');
-saveas(gcf, 'size_vs_time.png');
+saveas(fig, 'size_vs_time.png');
