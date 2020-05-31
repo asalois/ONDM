@@ -33,8 +33,8 @@ end
 %%
 figure()
 fig = plot(times(4,:),times(1,:),times(4,:),times(2,:));
-title('Array Size vs time (ms)');
+title('Array Size vs Time (s)');
 xlabel('Array Size (RxR)');
-ylabel('Time (ms)');
+ylabel('Time (Seconds)');
 legend({'cpu', 'gpu'}, 'Location', 'northwest');
 saveas(gcf, 'size_vs_time.png');
