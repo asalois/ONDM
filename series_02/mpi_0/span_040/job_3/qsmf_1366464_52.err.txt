@@ -1,0 +1,70 @@
+thread_monitor Resource temporarily unavailable in pthread_create
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Sat May 30 20:52:48 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute072
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 0000000000000000  RBX = 000000000069bac0
+  RCX = 000000000000a9ff  RDX = 00000000005f8520
+  RSP = 00002aab0fba2be8  RBP = 00002aab72e06010
+  RSI = 00000000007e7fd8  RDI = 00002aab72f52528
+
+   R8 = 0000000000000000   R9 = 0000000000000000
+  R10 = 0000000000000000  R11 = 0000000000000000
+  R12 = 0000000000000000  R13 = 0000000000000000
+  R14 = 0000000000000000  R15 = 0000000000000007
+
+  RIP = 00002aaaad00aa64  EFL = 0000000000010216
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaad00aa64                                   /lib64/libc.so.6+00563812 memcpy+00000948
+[  1] 0x00002aaaac662930 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00805168 _ZNSs4_Rep8_M_cloneERKSaIcEm+00000064
+[  2] 0x00002aaaac66309c /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00807068 _ZNSsC2ERKSs+00000060
+[  3] 0x00002aaab6758c93 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31+01133715 _ZN4Poco12PooledThread5startENS_6Thread8PriorityERNS_8RunnableERKSs+00000067
+[  4] 0x00002aaab6d2f1fa /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31+00717306 _ZN4Poco3Net19TCPServerDispatcher7enqueueERKNS0_12StreamSocketE+00000282
+[  5] 0x00002aaab6d1b10c /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31+00635148 _ZN4Poco3Net9TCPServer3runEv+00000124
+[  6] 0x00002aaab6754226 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31+01114662 _ZN4Poco10ThreadImpl13runnableEntryEPv+00000134
+[  7] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  8] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  9] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.24060-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/cm/local/apps/slurm/var/spool/job1366489/slurm_script: line 21: 24060 Killed                  matlab -nodesktop -nodisplay -nosplash -r "run_sim(${SLURM_ARRAY_TASK_ID}); exit;"
