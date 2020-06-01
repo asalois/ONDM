@@ -1,0 +1,6 @@
+Sat May 30 12:56:30 MDT 2020
+Hello from compute073.
+54
+Run a matlab script
+Opening log file:  /home/alexander.salois/java.log.14470
+Ended batch processing at Sat May 30 12:56:35 MDT 2020.
