@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J qsmf_40 # Name for your job
-#SBATCH -n 1 # Number of tasks when using MPI. Default is 1, and SLURM assumes the usage of 1 cpu per task.
+#SBATCH -n 8 # Number of tasks when using MPI. Default is 1, and SLURM assumes the usage of 1 cpu per task.
 #SBATCH -N 1 # Number of nodes to spread cores across - default is 1 - if you are not using MPI this should likely be 1
 #SBATCH --mem 4000 # Megabytes of memory requested. Default is 2000/task.
 #SBATCH -t 0-04:00:00 # Runtime in days-hours:minutes:seconds.
