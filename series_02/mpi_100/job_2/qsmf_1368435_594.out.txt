@@ -1,0 +1,10 @@
+Tue Jun  2 14:26:35 MDT 2020
+Hello from compute075.
+594
+Run a matlab script
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Cannot create GC thread. Out of system resources.
+# An error report file with more information is saved as:
+# /home/alexander.salois/hs_error_pid8179.log
+Ended batch processing at Tue Jun  2 14:27:10 MDT 2020.
