@@ -14,10 +14,10 @@ date
 echo "Hello from $(hostname)."
 
 module load lang/Python/3.5.2-foss-2016b
-cd /mnt/lustrefs/scratch/v16b915/series_02/mpi_0/span_050
-/mnt/lustrefs/scratch/v16b915/scripts_hpc/organize.sh
+cd /mnt/lustrefs/scratch/v16b915/series_02/mpi_100
+#/mnt/lustrefs/scratch/v16b915/scripts_hpc/organize.sh
 cd output
-/mnt/lustrefs/scratch/v16b915/scripts_hpc/find_relaunched.sh 132 25
+/mnt/lustrefs/scratch/v16b915/scripts_hpc/find_relaunched.sh 1000 40
 
 echo "Ended batch processing at `date`."
 
