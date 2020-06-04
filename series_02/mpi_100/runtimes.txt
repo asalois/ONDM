@@ -1,4 +1,5 @@
 xps 13 time 3845 seconds
 desktop 2320 seconds
 gpu 1450 seconds
-hyalite x seconds
+hyalite x second
+
