@@ -1407,4 +1407,424 @@ ans =
 
     6.5645
 
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -5.0000    5.4182
+
+Elapsed time is 1457.084185 seconds.
+
+ans =
+
+    5.4182
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -4.0000    6.1600
+
+Elapsed time is 1422.442721 seconds.
+
+ans =
+
+    6.1600
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -3.0000    6.7721
+
+Elapsed time is 1418.932247 seconds.
+
+ans =
+
+    6.7721
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -2.0000    7.2874
+
+Elapsed time is 1588.409804 seconds.
+
+ans =
+
+    7.2874
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    4.0000    3.5060
+
+Elapsed time is 1914.332522 seconds.
+
+ans =
+
+    3.5060
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -1.0000    7.5391
+
+Elapsed time is 1918.321299 seconds.
+
+ans =
+
+    7.5391
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    5.0000    2.5860
+
+Elapsed time is 1907.814507 seconds.
+
+ans =
+
+    2.5860
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+         0    7.6156
+
+Elapsed time is 1934.575266 seconds.
+
+ans =
+
+    7.6156
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -6.0000    4.6020
+
+Elapsed time is 1903.106622 seconds.
+
+ans =
+
+    4.6020
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    1.0000    7.2543
+
+Elapsed time is 1932.874536 seconds.
+
+ans =
+
+    7.2543
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -5.0000    5.2870
+
+Elapsed time is 1903.494471 seconds.
+
+ans =
+
+    5.2870
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    2.0000    6.8655
+
+Elapsed time is 1936.860354 seconds.
+
+ans =
+
+    6.8655
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -4.0000    5.9652
+
+Elapsed time is 1906.911312 seconds.
+
+ans =
+
+    5.9652
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    3.0000    5.8339
+
+Elapsed time is 1914.873250 seconds.
+
+ans =
+
+    5.8339
+
+[?1l>
+ans =
+
+   -3.0000    6.5660
+
+Elapsed time is 1615.749639 seconds.
+
+ans =
+
+    6.5660
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -2.0000    7.1479
+
+Elapsed time is 1405.829917 seconds.
+
+ans =
+
+    7.1479
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -1.0000    7.5813
+
+Elapsed time is 1451.703755 seconds.
+
+ans =
+
+    7.5813
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+         0    7.6466
+
+Elapsed time is 1411.585353 seconds.
+
+ans =
+
+    7.6466
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    1.0000    7.4017
+
+Elapsed time is 1411.189070 seconds.
+
+ans =
+
+    7.4017
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    2.0000    6.8841
+
+Elapsed time is 1410.319544 seconds.
+
+ans =
+
+    6.8841
+
 [?1l>
