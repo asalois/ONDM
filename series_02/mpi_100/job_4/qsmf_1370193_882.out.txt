@@ -1,0 +1,41 @@
+Thu Jun  4 11:27:26 MDT 2020
+Hello from compute007.
+882
+Run a matlab script
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -2.0000    9.1129
+
+Elapsed time is 5797.269489 seconds.
+
+ans =
+
+    9.1129
+
+Ended batch processing at Thu Jun  4 13:04:22 MDT 2020.
+Thu Jun  4 14:12:56 MDT 2020
+Hello from compute072.
+882
+Run a matlab script
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Ended batch processing at Thu Jun  4 14:35:56 MDT 2020.
