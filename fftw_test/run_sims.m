@@ -5,7 +5,7 @@ laser_power = [[-9:1:2]', [-9:1:2]', [-9:1:2]', [-8:1:3]', [-8:1:3]', [-7:1:4]',
 %addpath('/mnt/lustrefs/scratch/v16b915/series_02/sim_files')
 addpath('/home/alex/Documents/ONDM/fftw_test/sim_files')
 fftw('dwisdom',[]);
-fftw('planner','patient');
+fftw('planner','hybrid');
 comp = 0; % percentage of MPI compensation.  0 - full MPI, 100 - MPI fully compensated
 alpha1 = 0.16; % QSM fiber attenuation [dB/km]
 alpha2 = 0.158; % EX3000 fiber attenuation [dB/km]
