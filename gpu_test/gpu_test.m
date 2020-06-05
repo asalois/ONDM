@@ -1,8 +1,8 @@
 %% scrip to test gpu performance
 clc
 clear all
-runs = 30;
-power = 13;
+runs = 10;
+power = 5;
 times = zeros(4,power*runs);
     
 for k = 1:power
