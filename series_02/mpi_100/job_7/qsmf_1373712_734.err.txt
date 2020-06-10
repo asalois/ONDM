@@ -1,0 +1,1 @@
+slurmstepd: *** JOB 1374939 ON compute076 CANCELLED AT 2020-06-09T19:06:52 ***

@@ -1,0 +1,1305 @@
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+thread_monitor Resource temporarily unavailable in pthread_create
+*** glibc detected *** /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB: double free or corruption (out): 0x00002aab4fec32b0 ***
+*** glibc detected *** /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB: corrupted double-linked list: 0x00002aab4fec7ff0 ***
+======= Backtrace: =========
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75dee)[0x2aaaacff6dee]
+/lib64/libc.so.6(+0x75dee)[0x2aaaacff6dee]
+/lib64/libc.so.6(+0x761f3)[0x2aaaacff71f3]
+/lib64/libc.so.6(+0x78c80)[0x2aaaacff9c80]
+/lib64/libc.so.6(+0x78c18)[0x2aaaacff9c18]
+/lib64/libc.so.6(exit+0x115)[0x2aaaacfb69c5]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so(+0x685c1)[0x2aaab12ee5c1]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2(+0x1b29e)[0x2aaab2d3129e]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so(+0x6ae57)[0x2aaab12f0e57]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2(+0x1afcd)[0x2aaab2d30fcd]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so(+0x6b054)[0x2aaab12f1054]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2(+0x1ad56)[0x2aaab2d30d56]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so(+0x6b2bf)[0x2aaab12f12bf]
+/lib64/libpthread.so.0(+0x7aa1)[0x2aaaacd6baa1]
+/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so(+0x39869)[0x2aaaca38c869]
+/lib64/libc.so.6(clone+0x6d)[0x2aaaad069bcd]
+======= Memory map: ========
+00400000-0040b000 r-xp 00000000 00:14 12329378                           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB
+0060a000-0060b000 rw-p 0000a000 00:14 12329378                           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB
+0060b000-007e8000 rw-p 00000000 00:00 0                                  [heap]
+e0000000-e1500000 rw-p 00000000 00:00 0 
+e1500000-e8000000 rw-p 00000000 00:00 0 
+e8000000-eb000000 rw-p 00000000 00:00 0 
+eb000000-fa000000 rw-p 00000000 00:00 0 
+fa000000-fcf00000 rw-p 00000000 00:00 0 
+fcf00000-fe700000 ---p 00000000 00:00 0 
+fe700000-100000000 rw-p 00000000 00:00 0 
+36b9800000-36b9815000 r-xp 00000000 08:01 262426                         /lib64/libz.so.1.2.3
+36b9815000-36b9a14000 ---p 00015000 08:01 262426                         /lib64/libz.so.1.2.3
+36b9a14000-36b9a15000 r--p 00014000 08:01 262426                         /lib64/libz.so.1.2.3
+36b9a15000-36b9a16000 rw-p 00015000 08:01 262426                         /lib64/libz.so.1.2.3
+36bd000000-36bd00200/cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so(+0x5bb4c4)[0x2aaac50b74c4]
+0 r-xp 00000000 08:01 983944                         /usr/lib64/libXau.so.6.0.0
+36bd002000-36bd202000 ---p 00002000 08:01 983944                         /usr/lib64/libXau.so.6.0.0
+36bd202000-36bd203000 rw-p 00002000 08:01 983944                         /usr/lib64/libXau.so.6.0.0
+36be000000-36be022000 r-xp 00000000 08:01 984072                         /usr/lib64/libdbus-glib-1.so.2.1.0
+36be022000-36be221000 ---p 00022000 08:01 984072                         /usr/lib64/libdbus-glib-1.so.2.1.0
+36be221000-36be223000 rw-p 00021000 08:01 984072                         /usr/lib64/libdbus-glib-1.so.2.1.0
+36c4400000-36c4407000 r-xp 00000000 08:01 983938                         /usr/lib64/libSM.so.6.0.1
+36c4407000-36c4607000 ---p 00007000 08:01 983938                         /usr/lib64/libSM.so.6.0.1
+36c4607000-36c4608000 rw-p 00007000 08:01 983938                         /usr/lib64/libSM.so.6.0.1
+36c4800000-36c4817000 r-xp 00000000 08:01 983844                         /usr/lib64/libICE.so.6.3.0
+36c4817000-36c4a17000 -[0x2aaae2a09ad4]
+======= Memory map: ========
+--p 00017000 08:01 983844                         /usr/lib64/libICE.so.6.3.0
+36c4a17000-36c4a18000 rw-p 00017000 08:01 983844                         /usr/lib64/libICE.so.6.3.0
+36c4a18000-36c4a1c000 rw-p 00000000 00:00 0 
+2aaaaaaab000-2aaaaaacb000 r-xp 00000000 08:01 262308                     /lib64/ld-2.12.so
+2aaaaaacb000-2aaaaaacc000 r-xp 00000000 00:00 0                          [vdso]
+2aaaaaacc000-2aaaaaace000 rw-p 00000000 00:00 0 
+2aaaaaccb000-2aaaaaccc000 r--p 00020000 08:01 262308                     /lib64/ld-2.12.so
+2aaaaaccc000-2aaaaaccd000 rw-p 00021000 08:01 262308                     /lib64/ld-2.12.so
+2aaaaaccd000-2aaaaacce000 rw-p 00000000 00:00 0 
+2aaaaacce000-2aaaaae11000 r-xp 00000000 00:14 12325707                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwi18n.so
+2aaaaae11000-2aaaab011000 ---p 00143000 00:14 12325707                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwi18n.so
+2aaaab011000-2aaaab01f000 rw-p 00143000 00:14 12325707                   /cm/sh00400000-0040b000 r-xp 00000000 00:14 12329378                           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB
+0060a000-0060b000 rw-p 0000a000 00:14 12329378                           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/MATLAB
+0060b000-007e8000 rw-p 00000000 00:00 0                                  [heap]
+e0000000-e1500000 rw-p 00000000 00:00 0 
+e1500000-e8000000 rw-p 00000000 00:00 0 
+e8000000-eb000000 rw-p 00000000 00:00 0 
+eb000000-fa000000 rw-p 00000000 00:00 0 
+fa000000-fcf00000 rw-p 00000000 00:00 0 
+fcf00000-fe700000 ---p 00000000 00:00 0 
+fe700000-100000000 rw-p 00000000 00:00 0 
+36b9800000-36b9815000 r-xp 00000000 08:01 262426                         /lib64/libz.so.1.2.3
+36b9815000-36b9a14000 ---p 00015000 08:01 262426                         /lib64/libz.so.1.2.3
+36b9a14000-36b9a15000 r--p 00014000 08:01 262426                         /lib64/libz.so.1.2.3
+36b9a15000-36b9a16000 rw-p 00015000 08:01 262426                         /lib64/libz.so.1.2.3
+36bd000000-36bd00200ared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwi18n.so
+2aaaab01f000-2aaaab339000 r-xp 00000000 00:14 12325509                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmvm.so
+2aaaab339000-2aaaab538000 ---p 0031a000 00:14 12325509                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmvm.so
+2aaaab538000-2aaaab563000 rw-p 00319000 00:14 12325509                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmvm.so
+2aaaab563000-2aaaab568000 rw-p 00000000 00:00 0 
+2aaaab568000-2aaaab939000 r-xp 00000000 00:14 12330113                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwservices.so
+2aaaab939000-2aaaabb39000 ---p 003d1000 00:14 12330113                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwservices.so
+2aaaabb39000-2aaaabb5f000 rw-p 003d1000 00:14 12330113                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwservices.so
+2aaaabb5f000-2aaaabb6e000 rw-p 00000000 00:00 0 
+2aaaabb6e000-2aaaabb71000 r-xp 00000000 00:10 r-xp 00000000 08:01 983944                         /usr/lib64/libXau.so.6.0.0
+36bd002000-36bd202000 ---p 00002000 08:01 983944                         /usr/lib64/libXau.so.6.0.0
+36bd202000-36bd203000 rw-p 00002000 08:01 983944                         /usr/lib64/libXau.so.6.0.0
+36be000000-36be022000 r-xp 00000000 08:01 984072                         /usr/lib64/libdbus-glib-1.so.2.1.0
+36be022000-36be221000 ---p 00022000 08:01 984072                         /usr/lib64/libdbus-glib-1.so.2.1.0
+36be221000-36be223000 rw-p 00021000 08:01 984072                         /usr/lib64/libdbus-glib-1.so.2.1.0
+36c4400000-36c4407000 r-xp 00000000 08:01 983938                         /usr/lib64/libSM.so.6.0.1
+36c4407000-36c4607000 ---p 00007000 08:01 983938                         /usr/lib64/libSM.so.6.0.1
+36c4607000-36c4608000 rw-p 00007000 08:01 983938                         /usr/lib64/libSM.so.6.0.1
+36c4800000-36c4817000 r-xp 00000000 08:01 983844                         /usr/lib64/libICE.so.6.3.0
+36c4817000-36c4a17000 -4 12324949                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_system.so.1.56.0
+2aaaabb71000-2aaaabd70000 ---p 00003000 00:14 12324949                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_system.so.1.56.0
+2aaaabd70000-2aaaabd71000 rw-p 00002000 00:14 12324949                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_system.so.1.56.0
+2aaaabd71000-2aaaabd8e000 r-xp 00000000 00:14 12297860                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcpp11compat.so
+2aaaabd8e000-2aaaabf8e000 ---p 0001d000 00:14 12297860                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcpp11compat.so
+2aaaabf8e000-2aaaabf8f000 rw-p 0001d000 00:14 12297860                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcpp11compat.so
+2aaaabf8f000-2aaaac36e000 r-xp 00000000 00:14 12320932                   /cm/shared/hyalite/apps/matlab/R2017a/sys/opengl/lib/glnxa64/libGL.so.1.6.0
+2aaaac36e000-2aaaac56d000 ---p 003df000 00:--p 00017000 08:01 983844                         /usr/lib64/libICE.so.6.3.0
+36c4a17000-36c4a18000 rw-p 00017000 08:01 983844                         /usr/lib64/libICE.so.6.3.0
+36c4a18000-36c4a1c000 rw-p 00000000 00:00 0 
+2aaaaaaab000-2aaaaaacb000 r-xp 00000000 08:01 262308                     /lib64/ld-2.12.so
+2aaaaaacb000-2aaaaaacc000 r-xp 00000000 00:00 0                          [vdso]
+2aaaaaacc000-2aaaaaace000 rw-p 00000000 00:00 0 
+2aaaaaccb000-2aaaaaccc000 r--p 00020000 08:01 262308                     /lib64/ld-2.12.so
+2aaaaaccc000-2aaaaaccd000 rw-p 00021000 08:01 262308                     /lib64/ld-2.12.so
+2aaaaaccd000-2aaaaacce000 rw-p 00000000 00:00 0 
+2aaaaacce000-2aaaaae11000 r-xp 00000000 00:14 12325707                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwi18n.so
+2aaaaae11000-2aaaab011000 ---p 00143000 00:14 12325707                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwi18n.so
+2aaaab011000-2aaaab01f000 rw-p 00143000 00:14 12325707                   /cm/sh14 12320932                   /cm/shared/hyalite/apps/matlab/R2017a/sys/opengl/lib/glnxa64/libGL.so.1.6.0
+2aaaac56d000-2aaaac595000 rw-p 003de000 00:14 12320932                   /cm/shared/hyalite/apps/matlab/R2017a/sys/opengl/lib/glnxa64/libGL.so.1.6.0
+2aaaac595000-2aaaac59e000 rw-p 00000000 00:00 0 
+2aaaac59e000-2aaaac691000 r-xp 00000000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac691000-2aaaac890000 ---p 000f3000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac890000-2aaaac899000 r--p 000f2000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac899000-2aaaac89b000 rw-p 000fb000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac89b000-2aaaac8b0000 rw-p 00000000 00:00 0 
+2aaaac8c9000-2aaaac94c000 r-xp 00000000 08:01 262376                     /lib64/libm-2.ared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwi18n.so
+2aaaab01f000-2aaaab339000 r-xp 00000000 00:14 12325509                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmvm.so
+2aaaab339000-2aaaab538000 ---p 0031a000 00:14 12325509                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmvm.so
+2aaaab538000-2aaaab563000 rw-p 00319000 00:14 12325509                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmvm.so
+2aaaab563000-2aaaab568000 rw-p 00000000 00:00 0 
+2aaaab568000-2aaaab939000 r-xp 00000000 00:14 12330113                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwservices.so
+2aaaab939000-2aaaabb39000 ---p 003d1000 00:14 12330113                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwservices.so
+2aaaabb39000-2aaaabb5f000 rw-p 003d1000 00:14 12330113                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwservices.so
+2aaaabb5f000-2aaaabb6e000 rw-p 00000000 00:00 0 
+2aaaabb6e000-2aaaabb71000 r-xp 00000000 00:112.so
+2aaaac94c000-2aaaacb4b000 ---p 00083000 08:01 262376                     /lib64/libm-2.12.so
+2aaaacb4b000-2aaaacb4c000 r--p 00082000 08:01 262376                     /lib64/libm-2.12.so
+2aaaacb4c000-2aaaacb4d000 rw-p 00083000 08:01 262376                     /lib64/libm-2.12.so
+2aaaacb4d000-2aaaacb63000 r-xp 00000000 00:14 12316856                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libgcc_s.so.1
+2aaaacb63000-2aaaacd62000 ---p 00016000 00:14 12316856                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libgcc_s.so.1
+2aaaacd62000-2aaaacd63000 rw-p 00015000 00:14 12316856                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libgcc_s.so.1
+2aaaacd63000-2aaaacd64000 rw-p 00000000 00:00 0 
+2aaaacd64000-2aaaacd7b000 r-xp 00000000 08:01 262407                     /lib64/libpthread-2.12.so
+2aaaacd7b000-2aaaacf7b000 ---p 00017000 08:01 262407                     /lib64/libpthread-2.12.so
+2aaaacf7b000-2aaaacf7c000 r--p 00017000 08:01 262407                    4 12324949                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_system.so.1.56.0
+2aaaabb71000-2aaaabd70000 ---p 00003000 00:14 12324949                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_system.so.1.56.0
+2aaaabd70000-2aaaabd71000 rw-p 00002000 00:14 12324949                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_system.so.1.56.0
+2aaaabd71000-2aaaabd8e000 r-xp 00000000 00:14 12297860                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcpp11compat.so
+2aaaabd8e000-2aaaabf8e000 ---p 0001d000 00:14 12297860                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcpp11compat.so
+2aaaabf8e000-2aaaabf8f000 rw-p 0001d000 00:14 12297860                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcpp11compat.so
+2aaaabf8f000-2aaaac36e000 r-xp 00000000 00:14 12320932                   /cm/shared/hyalite/apps/matlab/R2017a/sys/opengl/lib/glnxa64/libGL.so.1.6.0
+2aaaac36e000-2aaaac56d000 ---p 003df000 00: /lib64/libpthread-2.12.so
+2aaaacf7c000-2aaaacf7d000 rw-p 00018000 08:01 262407                     /lib64/libpthread-2.12.so
+2aaaacf7d000-2aaaacf81000 rw-p 00000000 00:00 0 
+2aaaacf81000-2aaaad10b000 r-xp 00000000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad10b000-2aaaad30b000 ---p 0018a000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad30b000-2aaaad30f000 r--p 0018a000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad30f000-2aaaad311000 rw-p 0018e000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad311000-2aaaad315000 rw-p 00000000 00:00 0 
+2aaaad315000-2aaaad316000 r-xp 00000000 00:14 12328545                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwresource_core.so
+2aaaad316000-2aaaad516000 ---p 00001000 00:14 12328545                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwresource_core.so
+2aaaad516000-2aaaad517000 rw-p 00001000 00:14 12328545                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwresource_c14 12320932                   /cm/shared/hyalite/apps/matlab/R2017a/sys/opengl/lib/glnxa64/libGL.so.1.6.0
+2aaaac56d000-2aaaac595000 rw-p 003de000 00:14 12320932                   /cm/shared/hyalite/apps/matlab/R2017a/sys/opengl/lib/glnxa64/libGL.so.1.6.0
+2aaaac595000-2aaaac59e000 rw-p 00000000 00:00 0 
+2aaaac59e000-2aaaac691000 r-xp 00000000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac691000-2aaaac890000 ---p 000f3000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac890000-2aaaac899000 r--p 000f2000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac899000-2aaaac89b000 rw-p 000fb000 00:14 12316850                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libstdc++.so.6.0.20
+2aaaac89b000-2aaaac8b0000 rw-p 00000000 00:00 0 
+2aaaac8c9000-2aaaac94c000 r-xp 00000000 08:01 262376                     /lib64/libm-2.ore.so
+2aaaad517000-2aaaad518000 rw-p 00000000 00:00 0 
+2aaaad518000-2aaaad51a000 r-xp 00000000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad51a000-2aaaad71a000 ---p 00002000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad71a000-2aaaad71b000 r--p 00002000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad71b000-2aaaad71c000 rw-p 00003000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad71c000-2aaaad722000 r-xp 00000000 00:14 12317899                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_chrono.so.1.56.0
+2aaaad722000-2aaaad921000 ---p 00006000 00:14 12317899                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_chrono.so.1.56.0
+2aaaad921000-2aaaad922000 rw-p 00005000 00:14 12317899                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_chrono.so.1.56.0
+2aaaad922000-2aaaad932000 r-xp 00000000 00:14 12297818                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_date_time.so.12.so
+2aaaac94c000-2aaaacb4b000 ---p 00083000 08:01 262376                     /lib64/libm-2.12.so
+2aaaacb4b000-2aaaacb4c000 r--p 00082000 08:01 262376                     /lib64/libm-2.12.so
+2aaaacb4c000-2aaaacb4d000 rw-p 00083000 08:01 262376                     /lib64/libm-2.12.so
+2aaaacb4d000-2aaaacb63000 r-xp 00000000 00:14 12316856                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libgcc_s.so.1
+2aaaacb63000-2aaaacd62000 ---p 00016000 00:14 12316856                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libgcc_s.so.1
+2aaaacd62000-2aaaacd63000 rw-p 00015000 00:14 12316856                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libgcc_s.so.1
+2aaaacd63000-2aaaacd64000 rw-p 00000000 00:00 0 
+2aaaacd64000-2aaaacd7b000 r-xp 00000000 08:01 262407                     /lib64/libpthread-2.12.so
+2aaaacd7b000-2aaaacf7b000 ---p 00017000 08:01 262407                     /lib64/libpthread-2.12.so
+2aaaacf7b000-2aaaacf7c000 r--p 00017000 08:01 262407                    1.56.0
+2aaaad932000-2aaaadb31000 ---p 00010000 00:14 12297818                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_date_time.so.1.56.0
+2aaaadb31000-2aaaadb33000 rw-p 0000f000 00:14 12297818                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_date_time.so.1.56.0
+2aaaadb33000-2aaaadb34000 rw-p 00000000 00:00 0 
+2aaaadb34000-2aaaadb4a000 r-xp 00000000 00:14 12326886                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_filesystem.so.1.56.0
+2aaaadb4a000-2aaaadd49000 ---p 00016000 00:14 12326886                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_filesystem.so.1.56.0
+2aaaadd49000-2aaaadd4a000 rw-p 00015000 00:14 12326886                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_filesystem.so.1.56.0
+2aaaadd4a000-2aaaadd69000 r-xp 00000000 00:14 12288125                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0
+2aaaadd69000-2aaaadf69000 ---p 0001f000 00:14 12288125   /lib64/libpthread-2.12.so
+2aaaacf7c000-2aaaacf7d000 rw-p 00018000 08:01 262407                     /lib64/libpthread-2.12.so
+2aaaacf7d000-2aaaacf81000 rw-p 00000000 00:00 0 
+2aaaacf81000-2aaaad10b000 r-xp 00000000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad10b000-2aaaad30b000 ---p 0018a000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad30b000-2aaaad30f000 r--p 0018a000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad30f000-2aaaad311000 rw-p 0018e000 08:01 262321                     /lib64/libc-2.12.so
+2aaaad311000-2aaaad315000 rw-p 00000000 00:00 0 
+2aaaad315000-2aaaad316000 r-xp 00000000 00:14 12328545                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwresource_core.so
+2aaaad316000-2aaaad516000 ---p 00001000 00:14 12328545                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwresource_core.so
+2aaaad516000-2aaaad517000 rw-p 00001000 00:14 12328545                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwresource_c                 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0
+2aaaadf69000-2aaaadf6b000 rw-p 0001f000 00:14 12288125                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0
+2aaaadf6b000-2aaaadf91000 r-xp 00000000 00:14 12330128                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libexpat.so.1.5.0
+2aaaadf91000-2aaaae190000 ---p 00026000 00:14 12330128                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libexpat.so.1.5.0
+2aaaae190000-2aaaae193000 rw-p 00025000 00:14 12330128                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libexpat.so.1.5.0
+2aaaae193000-2aaaae194000 rw-p 00000000 00:00 0 
+2aaaae194000-2aaaaf97a000 r-xp 00000000 00:14 12324493                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicudata.so.56.1
+2aaaaf97a000-2aaaafb79000 ---p 017e6000 00:14 12324493                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicudata.so.56.1
+2aaaafb79000-2aaaafb7a000 ore.so
+2aaaad517000-2aaaad518000 rw-p 00000000 00:00 0 
+2aaaad518000-2aaaad51a000 r-xp 00000000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad51a000-2aaaad71a000 ---p 00002000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad71a000-2aaaad71b000 r--p 00002000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad71b000-2aaaad71c000 rw-p 00003000 08:01 262335                     /lib64/libdl-2.12.so
+2aaaad71c000-2aaaad722000 r-xp 00000000 00:14 12317899                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_chrono.so.1.56.0
+2aaaad722000-2aaaad921000 ---p 00006000 00:14 12317899                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_chrono.so.1.56.0
+2aaaad921000-2aaaad922000 rw-p 00005000 00:14 12317899                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_chrono.so.1.56.0
+2aaaad922000-2aaaad932000 r-xp 00000000 00:14 12297818                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_date_time.so.rw-p 017e5000 00:14 12324493                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicudata.so.56.1
+2aaaafb7a000-2aaaafd03000 r-xp 00000000 00:14 12298107                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuuc.so.56.1
+2aaaafd03000-2aaaaff02000 ---p 00189000 00:14 12298107                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuuc.so.56.1
+2aaaaff02000-2aaaaff15000 rw-p 00188000 00:14 12298107                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuuc.so.56.1
+2aaaaff15000-2aaaaff17000 rw-p 00000000 00:00 0 
+2aaaaff17000-2aaab018b000 r-xp 00000000 00:14 12324385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicui18n.so.56.1
+2aaab018b000-2aaab038b000 ---p 00274000 00:14 12324385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicui18n.so.56.1
+2aaab038b000-2aaab039d000 rw-p 00274000 00:14 12324385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicui18n.so.56.1
+2aaab039d000-1.56.0
+2aaaad932000-2aaaadb31000 ---p 00010000 00:14 12297818                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_date_time.so.1.56.0
+2aaaadb31000-2aaaadb33000 rw-p 0000f000 00:14 12297818                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_date_time.so.1.56.0
+2aaaadb33000-2aaaadb34000 rw-p 00000000 00:00 0 
+2aaaadb34000-2aaaadb4a000 r-xp 00000000 00:14 12326886                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_filesystem.so.1.56.0
+2aaaadb4a000-2aaaadd49000 ---p 00016000 00:14 12326886                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_filesystem.so.1.56.0
+2aaaadd49000-2aaaadd4a000 rw-p 00015000 00:14 12326886                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_filesystem.so.1.56.0
+2aaaadd4a000-2aaaadd69000 r-xp 00000000 00:14 12288125                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0
+2aaaadd69000-2aaaadf69000 ---p 0001f000 00:14 12288125  2aaab039f000 rw-p 00000000 00:00 0 
+2aaab039f000-2aaab03ab000 r-xp 00000000 00:14 12330023                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuio.so.56.1
+2aaab03ab000-2aaab05aa000 ---p 0000c000 00:14 12330023                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuio.so.56.1
+2aaab05aa000-2aaab05ac000 rw-p 0000b000 00:14 12330023                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuio.so.56.1
+2aaab05ac000-2aaab09b6000 r-xp 00000000 00:14 12329744                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwms.so
+2aaab09b6000-2aaab0bb6000 ---p 0040a000 00:14 12329744                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwms.so
+2aaab0bb6000-2aaab0be9000 rw-p 0040a000 00:14 12329744                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwms.so
+2aaab0be9000-2aaab0bef000 rw-p 00000000 00:00 0 
+2aaab0bef000-2aaab0cb6000 r-xp 00000000 00:14 12326883                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gl                 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0
+2aaaadf69000-2aaaadf6b000 rw-p 0001f000 00:14 12288125                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_thread.so.1.56.0
+2aaaadf6b000-2aaaadf91000 r-xp 00000000 00:14 12330128                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libexpat.so.1.5.0
+2aaaadf91000-2aaaae190000 ---p 00026000 00:14 12330128                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libexpat.so.1.5.0
+2aaaae190000-2aaaae193000 rw-p 00025000 00:14 12330128                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libexpat.so.1.5.0
+2aaaae193000-2aaaae194000 rw-p 00000000 00:00 0 
+2aaaae194000-2aaaaf97a000 r-xp 00000000 00:14 12324493                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicudata.so.56.1
+2aaaaf97a000-2aaaafb79000 ---p 017e6000 00:14 12324493                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicudata.so.56.1
+2aaaafb79000-2aaaafb7a000 nxa64/libut.so
+2aaab0cb6000-2aaab0eb5000 ---p 000c7000 00:14 12326883                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libut.so
+2aaab0eb5000-2aaab0ec0000 rw-p 000c6000 00:14 12326883                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libut.so
+2aaab0ec0000-2aaab0ed3000 rw-p 00000000 00:00 0 
+2aaab0ed3000-2aaab1064000 r-xp 00000000 00:14 12329189                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfl.so
+2aaab1064000-2aaab1263000 ---p 00191000 00:14 12329189                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfl.so
+2aaab1263000-2aaab1275000 rw-p 00190000 00:14 12329189                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfl.so
+2aaab1275000-2aaab1286000 rw-p 00000000 00:00 0 
+2aaab1286000-2aaab1408000 r-xp 00000000 00:14 12326607                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so
+2aaab1408000-2aaab1608000 ---p 00182000 00:14 12326607                   /cm/shared/hyalite/apps/matlab/R2017a/birw-p 017e5000 00:14 12324493                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicudata.so.56.1
+2aaaafb7a000-2aaaafd03000 r-xp 00000000 00:14 12298107                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuuc.so.56.1
+2aaaafd03000-2aaaaff02000 ---p 00189000 00:14 12298107                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuuc.so.56.1
+2aaaaff02000-2aaaaff15000 rw-p 00188000 00:14 12298107                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuuc.so.56.1
+2aaaaff15000-2aaaaff17000 rw-p 00000000 00:00 0 
+2aaaaff17000-2aaab018b000 r-xp 00000000 00:14 12324385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicui18n.so.56.1
+2aaab018b000-2aaab038b000 ---p 00274000 00:14 12324385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicui18n.so.56.1
+2aaab038b000-2aaab039d000 rw-p 00274000 00:14 12324385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicui18n.so.56.1
+2aaab039d000-n/glnxa64/libmx.so
+2aaab1608000-2aaab1618000 rw-p 00182000 00:14 12326607                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so
+2aaab1618000-2aaab1619000 rw-p 00000000 00:00 0 
+2aaab1619000-2aaab1c1a000 r-xp 00000000 00:14 12325413                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlutil.so
+2aaab1c1a000-2aaab1e1a000 ---p 00601000 00:14 12325413                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlutil.so
+2aaab1e1a000-2aaab1e64000 rw-p 00601000 00:14 12325413                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlutil.so
+2aaab1e64000-2aaab1e6e000 rw-p 00000000 00:00 0 
+2aaab1e6e000-2aaab1e8d000 r-xp 00000000 00:14 12326394                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_usm.so
+2aaab1e8d000-2aaab208d000 ---p 0001f000 00:14 12326394                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_usm.so
+2aaab208d000-2aaab208f000 rw-p 0001f000 00:14 12326394               2aaab039f000 rw-p 00000000 00:00 0 
+2aaab039f000-2aaab03ab000 r-xp 00000000 00:14 12330023                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuio.so.56.1
+2aaab03ab000-2aaab05aa000 ---p 0000c000 00:14 12330023                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuio.so.56.1
+2aaab05aa000-2aaab05ac000 rw-p 0000b000 00:14 12330023                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libicuio.so.56.1
+2aaab05ac000-2aaab09b6000 r-xp 00000000 00:14 12329744                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwms.so
+2aaab09b6000-2aaab0bb6000 ---p 0040a000 00:14 12329744                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwms.so
+2aaab0bb6000-2aaab0be9000 rw-p 0040a000 00:14 12329744                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwms.so
+2aaab0be9000-2aaab0bef000 rw-p 00000000 00:00 0 
+2aaab0bef000-2aaab0cb6000 r-xp 00000000 00:14 12326883                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gl    /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_usm.so
+2aaab208f000-2aaab20b2000 r-xp 00000000 00:14 12326241                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_array.so
+2aaab20b2000-2aaab22b1000 ---p 00023000 00:14 12326241                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_array.so
+2aaab22b1000-2aaab22b3000 rw-p 00022000 00:14 12326241                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_array.so
+2aaab22b3000-2aaab22b4000 rw-p 00000000 00:00 0 
+2aaab22b4000-2aaab22c7000 r-xp 00000000 00:14 12330110                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_iostreams.so.1.56.0
+2aaab22c7000-2aaab24c6000 ---p 00013000 00:14 12330110                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_iostreams.so.1.56.0
+2aaab24c6000-2aaab24c8000 rw-p 00012000 00:14 12330110                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libnxa64/libut.so
+2aaab0cb6000-2aaab0eb5000 ---p 000c7000 00:14 12326883                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libut.so
+2aaab0eb5000-2aaab0ec0000 rw-p 000c6000 00:14 12326883                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libut.so
+2aaab0ec0000-2aaab0ed3000 rw-p 00000000 00:00 0 
+2aaab0ed3000-2aaab1064000 r-xp 00000000 00:14 12329189                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfl.so
+2aaab1064000-2aaab1263000 ---p 00191000 00:14 12329189                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfl.so
+2aaab1263000-2aaab1275000 rw-p 00190000 00:14 12329189                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfl.so
+2aaab1275000-2aaab1286000 rw-p 00000000 00:00 0 
+2aaab1286000-2aaab1408000 r-xp 00000000 00:14 12326607                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so
+2aaab1408000-2aaab1608000 ---p 00182000 00:14 12326607                   /cm/shared/hyalite/apps/matlab/R2017a/biboost_iostreams.so.1.56.0
+2aaab24c8000-2aaab259c000 r-xp 00000000 00:14 12325209                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_log.so.1.56.0
+2aaab259c000-2aaab279c000 ---p 000d4000 00:14 12325209                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_log.so.1.56.0
+2aaab279c000-2aaab27a5000 rw-p 000d4000 00:14 12325209                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_log.so.1.56.0
+2aaab27a5000-2aaab28af000 r-xp 00000000 00:14 12328431                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_regex.so.1.56.0
+2aaab28af000-2aaab2aae000 ---p 0010a000 00:14 12328431                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_regex.so.1.56.0
+2aaab2aae000-2aaab2ab5000 rw-p 00109000 00:14 12328431                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_regex.so.1.56.0
+2aaab2ab5000-2aaab2ab6000 rw-p 00000000 00:00 0 
+2aaab2ab6000-2aaab2b13000 r-xp 00000000 00:14 12329270             n/glnxa64/libmx.so
+2aaab1608000-2aaab1618000 rw-p 00182000 00:14 12326607                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmx.so
+2aaab1618000-2aaab1619000 rw-p 00000000 00:00 0 
+2aaab1619000-2aaab1c1a000 r-xp 00000000 00:14 12325413                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlutil.so
+2aaab1c1a000-2aaab1e1a000 ---p 00601000 00:14 12325413                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlutil.so
+2aaab1e1a000-2aaab1e64000 rw-p 00601000 00:14 12325413                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlutil.so
+2aaab1e64000-2aaab1e6e000 rw-p 00000000 00:00 0 
+2aaab1e6e000-2aaab1e8d000 r-xp 00000000 00:14 12326394                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_usm.so
+2aaab1e8d000-2aaab208d000 ---p 0001f000 00:14 12326394                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_usm.so
+2aaab208d000-2aaab208f000 rw-p 0001f000 00:14 12326394                     /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_serialization.so.1.56.0
+2aaab2b13000-2aaab2d12000 ---p 0005d000 00:14 12329270                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_serialization.so.1.56.0
+2aaab2d12000-2aaab2d16000 rw-p 0005c000 00:14 12329270                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_serialization.so.1.56.0
+2aaab2d16000-2aaab2d5a000 r-xp 00000000 00:14 12328809                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2
+2aaab2d5a000-2aaab2f5a000 ---p 00044000 00:14 12328809                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2
+2aaab2f5a000-2aaab2f5f000 rw-p 00044000 00:14 12328809                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2
+2aaab2f5f000-2aaab2f61000 rw-p 00000000 00:00 0 
+2aaab2f61000-2aaab2f8d000 r-xp 00000000 00:14 12326472                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbbmalloc.so.2
+2aaab2f8d000-2aaab318d000 --    /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_usm.so
+2aaab208f000-2aaab20b2000 r-xp 00000000 00:14 12326241                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_array.so
+2aaab20b2000-2aaab22b1000 ---p 00023000 00:14 12326241                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_array.so
+2aaab22b1000-2aaab22b3000 rw-p 00022000 00:14 12326241                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_array.so
+2aaab22b3000-2aaab22b4000 rw-p 00000000 00:00 0 
+2aaab22b4000-2aaab22c7000 r-xp 00000000 00:14 12330110                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_iostreams.so.1.56.0
+2aaab22c7000-2aaab24c6000 ---p 00013000 00:14 12330110                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_iostreams.so.1.56.0
+2aaab24c6000-2aaab24c8000 rw-p 00012000 00:14 12330110                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/lib-p 0002c000 00:14 12326472                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbbmalloc.so.2
+2aaab318d000-2aaab3190000 rw-p 0002c000 00:14 12326472                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbbmalloc.so.2
+2aaab3190000-2aaab31b4000 rw-p 00000000 00:00 0 
+2aaab31b4000-2aaab31bb000 r-xp 00000000 00:14 12325359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdisplay_device.so
+2aaab31bb000-2aaab33ba000 ---p 00007000 00:14 12325359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdisplay_device.so
+2aaab33ba000-2aaab33bb000 rw-p 00006000 00:14 12325359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdisplay_device.so
+2aaab33bb000-2aaab33f9000 r-xp 00000000 00:14 12326838                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlivecode.so
+2aaab33f9000-2aaab35f8000 ---p 0003e000 00:14 12326838                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlivecode.so
+2aaboost_iostreams.so.1.56.0
+2aaab24c8000-2aaab259c000 r-xp 00000000 00:14 12325209                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_log.so.1.56.0
+2aaab259c000-2aaab279c000 ---p 000d4000 00:14 12325209                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_log.so.1.56.0
+2aaab279c000-2aaab27a5000 rw-p 000d4000 00:14 12325209                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_log.so.1.56.0
+2aaab27a5000-2aaab28af000 r-xp 00000000 00:14 12328431                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_regex.so.1.56.0
+2aaab28af000-2aaab2aae000 ---p 0010a000 00:14 12328431                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_regex.so.1.56.0
+2aaab2aae000-2aaab2ab5000 rw-p 00109000 00:14 12328431                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_regex.so.1.56.0
+2aaab2ab5000-2aaab2ab6000 rw-p 00000000 00:00 0 
+2aaab2ab6000-2aaab2b13000 r-xp 00000000 00:14 12329270             ab35f8000-2aaab35fc000 rw-p 0003d000 00:14 12326838                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlivecode.so
+2aaab35fc000-2aaab35fd000 rw-p 00000000 00:00 0 
+2aaab35fd000-2aaab3617000 r-xp 00000000 00:14 12329819                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcppmicroservices.so
+2aaab3617000-2aaab3817000 ---p 0001a000 00:14 12329819                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcppmicroservices.so
+2aaab3817000-2aaab3818000 rw-p 0001a000 00:14 12329819                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcppmicroservices.so
+2aaab3818000-2aaab385b000 r-xp 00000000 00:14 12326292                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwregexp.so
+2aaab385b000-2aaab3a5b000 ---p 00043000 00:14 12326292                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwregexp.so
+2aaab3a5b000-2aaab3a61000 rw-p 00043000 00:14 12326292                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gln      /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_serialization.so.1.56.0
+2aaab2b13000-2aaab2d12000 ---p 0005d000 00:14 12329270                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_serialization.so.1.56.0
+2aaab2d12000-2aaab2d16000 rw-p 0005c000 00:14 12329270                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_serialization.so.1.56.0
+2aaab2d16000-2aaab2d5a000 r-xp 00000000 00:14 12328809                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2
+2aaab2d5a000-2aaab2f5a000 ---p 00044000 00:14 12328809                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2
+2aaab2f5a000-2aaab2f5f000 rw-p 00044000 00:14 12328809                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2
+2aaab2f5f000-2aaab2f61000 rw-p 00000000 00:00 0 
+2aaab2f61000-2aaab2f8d000 r-xp 00000000 00:14 12326472                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbbmalloc.so.2
+2aaab2f8d000-2aaab318d000 --xa64/libmwregexp.so
+2aaab3a61000-2aaab3ae4000 r-xp 00000000 00:14 12327090                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmpath.so
+2aaab3ae4000-2aaab3ce4000 ---p 00083000 00:14 12327090                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmpath.so
+2aaab3ce4000-2aaab3cea000 rw-p 00083000 00:14 12327090                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmpath.so
+2aaab3cea000-2aaab3cef000 rw-p 00000000 00:00 0 
+2aaab3cef000-2aaab3cf4000 r-xp 00000000 00:14 12176192                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_interfaces.so
+2aaab3cf4000-2aaab3ef3000 ---p 00005000 00:14 12176192                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_interfaces.so
+2aaab3ef3000-2aaab3ef4000 rw-p 00004000 00:14 12176192                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_interfaces.so
+2aaab3ef4000-2aaab3f66000 r-xp 00000000 00:14 12297905                   /cm/share-p 0002c000 00:14 12326472                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbbmalloc.so.2
+2aaab318d000-2aaab3190000 rw-p 0002c000 00:14 12326472                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbbmalloc.so.2
+2aaab3190000-2aaab31b4000 rw-p 00000000 00:00 0 
+2aaab31b4000-2aaab31bb000 r-xp 00000000 00:14 12325359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdisplay_device.so
+2aaab31bb000-2aaab33ba000 ---p 00007000 00:14 12325359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdisplay_device.so
+2aaab33ba000-2aaab33bb000 rw-p 00006000 00:14 12325359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdisplay_device.so
+2aaab33bb000-2aaab33f9000 r-xp 00000000 00:14 12326838                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlivecode.so
+2aaab33f9000-2aaab35f8000 ---p 0003e000 00:14 12326838                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlivecode.so
+2aad/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefilefolderobserver.so
+2aaab3f66000-2aaab4165000 ---p 00072000 00:14 12297905                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefilefolderobserver.so
+2aaab4165000-2aaab416c000 rw-p 00071000 00:14 12297905                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefilefolderobserver.so
+2aaab416c000-2aaab416d000 rw-p 00000000 00:00 0 
+2aaab416d000-2aaab422d000 r-xp 00000000 00:14 12176198                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstoragevfs.so
+2aaab422d000-2aaab442d000 ---p 000c0000 00:14 12176198                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstoragevfs.so
+2aaab442d000-2aaab4436000 rw-p 000c0000 00:14 12176198                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstoragevfs.so
+2aaab4436000-2aaab4437000 rw-p 00000000 00:00 0 
+2aaab4437000-2aaab448f000 r-xp 00000000 00:14 12329501                   /cm/shared/hyalite/apps/matlab/Rab35f8000-2aaab35fc000 rw-p 0003d000 00:14 12326838                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlivecode.so
+2aaab35fc000-2aaab35fd000 rw-p 00000000 00:00 0 
+2aaab35fd000-2aaab3617000 r-xp 00000000 00:14 12329819                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcppmicroservices.so
+2aaab3617000-2aaab3817000 ---p 0001a000 00:14 12329819                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcppmicroservices.so
+2aaab3817000-2aaab3818000 rw-p 0001a000 00:14 12329819                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcppmicroservices.so
+2aaab3818000-2aaab385b000 r-xp 00000000 00:14 12326292                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwregexp.so
+2aaab385b000-2aaab3a5b000 ---p 00043000 00:14 12326292                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwregexp.so
+2aaab3a5b000-2aaab3a61000 rw-p 00043000 00:14 12326292                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gln2017a/bin/glnxa64/libmwcwf_interface.so
+2aaab448f000-2aaab468e000 ---p 00058000 00:14 12329501                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_interface.so
+2aaab468e000-2aaab4693000 rw-p 00057000 00:14 12329501                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_interface.so
+2aaab4693000-2aaab4694000 rw-p 00000000 00:00 0 
+2aaab4694000-2aaab48c2000 r-xp 00000000 00:14 12325311                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsettingscore.so
+2aaab48c2000-2aaab4ac1000 ---p 0022e000 00:14 12325311                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsettingscore.so
+2aaab4ac1000-2aaab4ad5000 rw-p 0022d000 00:14 12325311                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsettingscore.so
+2aaab4ad5000-2aaab4ad6000 rw-p 00000000 00:00 0 
+2aaab4ad6000-2aaab4ae1000 r-xp 00000000 00:14 12327515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedisplay.so
+2aaab4ae1000-2aaab4xa64/libmwregexp.so
+2aaab3a61000-2aaab3ae4000 r-xp 00000000 00:14 12327090                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmpath.so
+2aaab3ae4000-2aaab3ce4000 ---p 00083000 00:14 12327090                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmpath.so
+2aaab3ce4000-2aaab3cea000 rw-p 00083000 00:14 12327090                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmpath.so
+2aaab3cea000-2aaab3cef000 rw-p 00000000 00:00 0 
+2aaab3cef000-2aaab3cf4000 r-xp 00000000 00:14 12176192                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_interfaces.so
+2aaab3cf4000-2aaab3ef3000 ---p 00005000 00:14 12176192                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_interfaces.so
+2aaab3ef3000-2aaab3ef4000 rw-p 00004000 00:14 12176192                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_interfaces.so
+2aaab3ef4000-2aaab3f66000 r-xp 00000000 00:14 12297905                   /cm/sharece0000 ---p 0000b000 00:14 12327515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedisplay.so
+2aaab4ce0000-2aaab4ce1000 rw-p 0000a000 00:14 12327515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedisplay.so
+2aaab4ce1000-2aaab4ce2000 rw-p 00000000 00:00 0 
+2aaab4ce2000-2aaab4d35000 r-xp 00000000 00:14 12326811                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopccore.so
+2aaab4d35000-2aaab4f35000 ---p 00053000 00:14 12326811                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopccore.so
+2aaab4f35000-2aaab4f39000 rw-p 00053000 00:14 12326811                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopccore.so
+2aaab4f39000-2aaab5006000 r-xp 00000000 00:14 12325773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmodel.so
+2aaab5006000-2aaab5205000 ---p 000cd000 00:14 12325773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmodel.so
+2aaab52d/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefilefolderobserver.so
+2aaab3f66000-2aaab4165000 ---p 00072000 00:14 12297905                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefilefolderobserver.so
+2aaab4165000-2aaab416c000 rw-p 00071000 00:14 12297905                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefilefolderobserver.so
+2aaab416c000-2aaab416d000 rw-p 00000000 00:00 0 
+2aaab416d000-2aaab422d000 r-xp 00000000 00:14 12176198                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstoragevfs.so
+2aaab422d000-2aaab442d000 ---p 000c0000 00:14 12176198                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstoragevfs.so
+2aaab442d000-2aaab4436000 rw-p 000c0000 00:14 12176198                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstoragevfs.so
+2aaab4436000-2aaab4437000 rw-p 00000000 00:00 0 
+2aaab4437000-2aaab448f000 r-xp 00000000 00:14 12329501                   /cm/shared/hyalite/apps/matlab/R05000-2aaab520d000 rw-p 000cc000 00:14 12325773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmodel.so
+2aaab520d000-2aaab522e000 r-xp 00000000 00:14 12297923                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopczippackage.so
+2aaab522e000-2aaab542d000 ---p 00021000 00:14 12297923                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopczippackage.so
+2aaab542d000-2aaab5430000 rw-p 00020000 00:14 12297923                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopczippackage.so
+2aaab5430000-2aaab5431000 rw-p 00000000 00:00 0 
+2aaab5431000-2aaab548f000 r-xp 00000000 00:14 12324835                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmwservices.so
+2aaab548f000-2aaab568f000 ---p 0005e000 00:14 12324835                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmwservices.so
+2aaab568f000-2aaab5693000 rw-p 0005e000 00:14 12324835                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gl2017a/bin/glnxa64/libmwcwf_interface.so
+2aaab448f000-2aaab468e000 ---p 00058000 00:14 12329501                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_interface.so
+2aaab468e000-2aaab4693000 rw-p 00057000 00:14 12329501                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_interface.so
+2aaab4693000-2aaab4694000 rw-p 00000000 00:00 0 
+2aaab4694000-2aaab48c2000 r-xp 00000000 00:14 12325311                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsettingscore.so
+2aaab48c2000-2aaab4ac1000 ---p 0022e000 00:14 12325311                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsettingscore.so
+2aaab4ac1000-2aaab4ad5000 rw-p 0022d000 00:14 12325311                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsettingscore.so
+2aaab4ad5000-2aaab4ad6000 rw-p 00000000 00:00 0 
+2aaab4ad6000-2aaab4ae1000 r-xp 00000000 00:14 12327515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedisplay.so
+2aaab4ae1000-2aaab4nxa64/libmwopcmwservices.so
+2aaab5693000-2aaab569e000 r-xp 00000000 00:14 12325215                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwwebproxy.so
+2aaab569e000-2aaab589e000 ---p 0000b000 00:14 12325215                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwwebproxy.so
+2aaab589e000-2aaab589f000 rw-p 0000b000 00:14 12325215                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwwebproxy.so
+2aaab589f000-2aaab58a2000 r-xp 00000000 00:14 12328018                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwkeybrd.so
+2aaab58a2000-2aaab5aa2000 ---p 00003000 00:14 12328018                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwkeybrd.so
+2aaab5aa2000-2aaab5aa3000 rw-p 00003000 00:14 12328018                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwkeybrd.so
+2aaab5aa3000-2aaab5aa4000 rw-p 00000000 00:00 0 
+2aaab5aa4000-2aaab5b65000 r-xp 00000000 00:14 12326610                   /cm/shared/hyalite/apps/matlab/R2017a/bice0000 ---p 0000b000 00:14 12327515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedisplay.so
+2aaab4ce0000-2aaab4ce1000 rw-p 0000a000 00:14 12327515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedisplay.so
+2aaab4ce1000-2aaab4ce2000 rw-p 00000000 00:00 0 
+2aaab4ce2000-2aaab4d35000 r-xp 00000000 00:14 12326811                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopccore.so
+2aaab4d35000-2aaab4f35000 ---p 00053000 00:14 12326811                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopccore.so
+2aaab4f35000-2aaab4f39000 rw-p 00053000 00:14 12326811                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopccore.so
+2aaab4f39000-2aaab5006000 r-xp 00000000 00:14 12325773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmodel.so
+2aaab5006000-2aaab5205000 ---p 000cd000 00:14 12325773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmodel.so
+2aaab52n/glnxa64/libCppMicroServices.so.3.0.0
+2aaab5b65000-2aaab5d65000 ---p 000c1000 00:14 12326610                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libCppMicroServices.so.3.0.0
+2aaab5d65000-2aaab5d69000 rw-p 000c1000 00:14 12326610                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libCppMicroServices.so.3.0.0
+2aaab5d69000-2aaab5dd0000 r-xp 00000000 00:14 12297773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libssl.so.1.0.0
+2aaab5dd0000-2aaab5fcf000 ---p 00067000 00:14 12297773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libssl.so.1.0.0
+2aaab5fcf000-2aaab5fda000 rw-p 00066000 00:14 12297773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libssl.so.1.0.0
+2aaab5fda000-2aaab61f4000 r-xp 00000000 00:14 12330092                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libcrypto.so.1.0.0
+2aaab61f4000-2aaab63f4000 ---p 0021a000 00:14 12330092                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa6405000-2aaab520d000 rw-p 000cc000 00:14 12325773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmodel.so
+2aaab520d000-2aaab522e000 r-xp 00000000 00:14 12297923                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopczippackage.so
+2aaab522e000-2aaab542d000 ---p 00021000 00:14 12297923                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopczippackage.so
+2aaab542d000-2aaab5430000 rw-p 00020000 00:14 12297923                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopczippackage.so
+2aaab5430000-2aaab5431000 rw-p 00000000 00:00 0 
+2aaab5431000-2aaab548f000 r-xp 00000000 00:14 12324835                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmwservices.so
+2aaab548f000-2aaab568f000 ---p 0005e000 00:14 12324835                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwopcmwservices.so
+2aaab568f000-2aaab5693000 rw-p 0005e000 00:14 12324835                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gl/libcrypto.so.1.0.0
+2aaab63f4000-2aaab641e000 rw-p 0021a000 00:14 12330092                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libcrypto.so.1.0.0
+2aaab641e000-2aaab6422000 rw-p 00000000 00:00 0 
+2aaab6422000-2aaab6442000 r-xp 00000000 00:14 12330083                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoCrypto.so.31
+2aaab6442000-2aaab6641000 ---p 00020000 00:14 12330083                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoCrypto.so.31
+2aaab6641000-2aaab6644000 rw-p 0001f000 00:14 12330083                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoCrypto.so.31
+2aaab6644000-2aaab681b000 r-xp 00000000 00:14 12327844                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31
+2aaab681b000-2aaab6a1a000 ---p 001d7000 00:14 12327844                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31
+2aaab6a1a000-2aaab6a2c000 rw-p 001d6000 00:14 12327844                   /cm/shared/hyalitnxa64/libmwopcmwservices.so
+2aaab5693000-2aaab569e000 r-xp 00000000 00:14 12325215                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwwebproxy.so
+2aaab569e000-2aaab589e000 ---p 0000b000 00:14 12325215                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwwebproxy.so
+2aaab589e000-2aaab589f000 rw-p 0000b000 00:14 12325215                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwwebproxy.so
+2aaab589f000-2aaab58a2000 r-xp 00000000 00:14 12328018                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwkeybrd.so
+2aaab58a2000-2aaab5aa2000 ---p 00003000 00:14 12328018                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwkeybrd.so
+2aaab5aa2000-2aaab5aa3000 rw-p 00003000 00:14 12328018                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwkeybrd.so
+2aaab5aa3000-2aaab5aa4000 rw-p 00000000 00:00 0 
+2aaab5aa4000-2aaab5b65000 r-xp 00000000 00:14 12326610                   /cm/shared/hyalite/apps/matlab/R2017a/bie/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31
+2aaab6a2c000-2aaab6a2d000 rw-p 00000000 00:00 0 
+2aaab6a2d000-2aaab6a7c000 r-xp 00000000 00:14 12326592                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoJSON.so.31
+2aaab6a7c000-2aaab6c7c000 ---p 0004f000 00:14 12326592                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoJSON.so.31
+2aaab6c7c000-2aaab6c7f000 rw-p 0004f000 00:14 12326592                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoJSON.so.31
+2aaab6c7f000-2aaab6c80000 rw-p 00000000 00:00 0 
+2aaab6c80000-2aaab6d9a000 r-xp 00000000 00:14 12329858                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31
+2aaab6d9a000-2aaab6f9a000 ---p 0011a000 00:14 12329858                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31
+2aaab6f9a000-2aaab6fa7000 rw-p 0011a000 00:14 12329858                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31
+2aaab6fa7000-2aaab6fa8000 n/glnxa64/libCppMicroServices.so.3.0.0
+2aaab5b65000-2aaab5d65000 ---p 000c1000 00:14 12326610                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libCppMicroServices.so.3.0.0
+2aaab5d65000-2aaab5d69000 rw-p 000c1000 00:14 12326610                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libCppMicroServices.so.3.0.0
+2aaab5d69000-2aaab5dd0000 r-xp 00000000 00:14 12297773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libssl.so.1.0.0
+2aaab5dd0000-2aaab5fcf000 ---p 00067000 00:14 12297773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libssl.so.1.0.0
+2aaab5fcf000-2aaab5fda000 rw-p 00066000 00:14 12297773                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libssl.so.1.0.0
+2aaab5fda000-2aaab61f4000 r-xp 00000000 00:14 12330092                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libcrypto.so.1.0.0
+2aaab61f4000-2aaab63f4000 ---p 0021a000 00:14 12330092                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64rw-p 00000000 00:00 0 
+2aaab6fa8000-2aaab6fee000 r-xp 00000000 00:14 12328674                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNetSSL.so.31
+2aaab6fee000-2aaab71ee000 ---p 00046000 00:14 12328674                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNetSSL.so.31
+2aaab71ee000-2aaab71f1000 rw-p 00046000 00:14 12328674                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNetSSL.so.31
+2aaab71f1000-2aaab7260000 r-xp 00000000 00:14 12328677                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoUtil.so.31
+2aaab7260000-2aaab7460000 ---p 0006f000 00:14 12328677                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoUtil.so.31
+2aaab7460000-2aaab7464000 rw-p 0006f000 00:14 12328677                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoUtil.so.31
+2aaab7464000-2aaab7465000 rw-p 00000000 00:00 0 
+2aaab7465000-2aaab74ef000 r-xp 00000000 00:14 12329366                   /cm/shared/hyalite/apps/mat/libcrypto.so.1.0.0
+2aaab63f4000-2aaab641e000 rw-p 0021a000 00:14 12330092                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libcrypto.so.1.0.0
+2aaab641e000-2aaab6422000 rw-p 00000000 00:00 0 
+2aaab6422000-2aaab6442000 r-xp 00000000 00:14 12330083                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoCrypto.so.31
+2aaab6442000-2aaab6641000 ---p 00020000 00:14 12330083                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoCrypto.so.31
+2aaab6641000-2aaab6644000 rw-p 0001f000 00:14 12330083                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoCrypto.so.31
+2aaab6644000-2aaab681b000 r-xp 00000000 00:14 12327844                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31
+2aaab681b000-2aaab6a1a000 ---p 001d7000 00:14 12327844                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31
+2aaab6a1a000-2aaab6a2c000 rw-p 001d6000 00:14 12327844                   /cm/shared/hyalitlab/R2017a/bin/glnxa64/libPocoXML.so.31
+2aaab74ef000-2aaab76ee000 ---p 0008a000 00:14 12329366                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoXML.so.31
+2aaab76ee000-2aaab76f6000 rw-p 00089000 00:14 12329366                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoXML.so.31
+2aaab76f6000-2aaab7b61000 r-xp 00000000 00:14 12326856                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libxerces-c-3.1.so
+2aaab7b61000-2aaab7d60000 ---p 0046b000 00:14 12326856                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libxerces-c-3.1.so
+2aaab7d60000-2aaab7da6000 rw-p 0046a000 00:14 12326856                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libxerces-c-3.1.so
+2aaab7da6000-2aaab7da7000 rw-p 00000000 00:00 0 
+2aaab7da7000-2aaab7dae000 r-xp 00000000 08:01 262411                     /lib64/librt-2.12.so
+2aaab7dae000-2aaab7fad000 ---p 00007000 08:01 262411                     /lib64/librt-2.12.so
+2aaab7fad000-2aaab7fae000 r--p 00006000 0e/apps/matlab/R2017a/bin/glnxa64/libPocoFoundation.so.31
+2aaab6a2c000-2aaab6a2d000 rw-p 00000000 00:00 0 
+2aaab6a2d000-2aaab6a7c000 r-xp 00000000 00:14 12326592                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoJSON.so.31
+2aaab6a7c000-2aaab6c7c000 ---p 0004f000 00:14 12326592                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoJSON.so.31
+2aaab6c7c000-2aaab6c7f000 rw-p 0004f000 00:14 12326592                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoJSON.so.31
+2aaab6c7f000-2aaab6c80000 rw-p 00000000 00:00 0 
+2aaab6c80000-2aaab6d9a000 r-xp 00000000 00:14 12329858                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31
+2aaab6d9a000-2aaab6f9a000 ---p 0011a000 00:14 12329858                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31
+2aaab6f9a000-2aaab6fa7000 rw-p 0011a000 00:14 12329858                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNet.so.31
+2aaab6fa7000-2aaab6fa8000 8:01 262411                     /lib64/librt-2.12.so
+2aaab7fae000-2aaab7faf000 rw-p 00007000 08:01 262411                     /lib64/librt-2.12.so
+2aaab7faf000-2aaab80e6000 r-xp 00000000 08:01 983941                     /usr/lib64/libX11.so.6.3.0
+2aaab80e6000-2aaab82e6000 ---p 00137000 08:01 983941                     /usr/lib64/libX11.so.6.3.0
+2aaab82e6000-2aaab82ec000 rw-p 00137000 08:01 983941                     /usr/lib64/libX11.so.6.3.0
+2aaab82ec000-2aaab82ed000 rw-p 00000000 00:00 0 
+2aaab82ed000-2aaab82fe000 r-xp 00000000 08:01 983951                     /usr/lib64/libXext.so.6.4.0
+2aaab82fe000-2aaab84fe000 ---p 00011000 08:01 983951                     /usr/lib64/libXext.so.6.4.0
+2aaab84fe000-2aaab84ff000 rw-p 00011000 08:01 983951                     /usr/lib64/libXext.so.6.4.0
+2aaab84ff000-2aaab8523000 r-xp 00000000 08:01 984508                     /usr/lib64/libxcb.so.1.1.0
+2aaab8523000-2aaab8723000 ---p 00024000 08:01 984508                     /usr/lib64/libxcb.so.1.1.0
+2aaab8723000-2aaab8724000rw-p 00000000 00:00 0 
+2aaab6fa8000-2aaab6fee000 r-xp 00000000 00:14 12328674                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNetSSL.so.31
+2aaab6fee000-2aaab71ee000 ---p 00046000 00:14 12328674                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNetSSL.so.31
+2aaab71ee000-2aaab71f1000 rw-p 00046000 00:14 12328674                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoNetSSL.so.31
+2aaab71f1000-2aaab7260000 r-xp 00000000 00:14 12328677                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoUtil.so.31
+2aaab7260000-2aaab7460000 ---p 0006f000 00:14 12328677                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoUtil.so.31
+2aaab7460000-2aaab7464000 rw-p 0006f000 00:14 12328677                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoUtil.so.31
+2aaab7464000-2aaab7465000 rw-p 00000000 00:00 0 
+2aaab7465000-2aaab74ef000 r-xp 00000000 00:14 12329366                   /cm/shared/hyalite/apps/mat rw-p 00024000 08:01 984508                     /usr/lib64/libxcb.so.1.1.0
+2aaab8724000-2aaab8725000 rw-p 00000000 00:00 0 
+2aaab8725000-2aaab872c000 r-xp 00000000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab872c000-2aaab892c000 ---p 00007000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab892c000-2aaab892d000 r--p 00007000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab892d000-2aaab892e000 rw-p 00008000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab892e000-2aaab895c000 rw-p 00000000 00:00 0 
+2aaab895c000-2aaab8968000 r-xp 00000000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8968000-2aaab8b68000 ---p 0000c000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8b68000-2aaab8b69000 r--p 0000c000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8b69000-2aaab8b6a000 rw-p 0000d000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8b6a000-2aaab8b6b000 rw-p 00000000 00:00 0 
+2aaab8b6b000-2aaab8b81000 lab/R2017a/bin/glnxa64/libPocoXML.so.31
+2aaab74ef000-2aaab76ee000 ---p 0008a000 00:14 12329366                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoXML.so.31
+2aaab76ee000-2aaab76f6000 rw-p 00089000 00:14 12329366                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libPocoXML.so.31
+2aaab76f6000-2aaab7b61000 r-xp 00000000 00:14 12326856                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libxerces-c-3.1.so
+2aaab7b61000-2aaab7d60000 ---p 0046b000 00:14 12326856                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libxerces-c-3.1.so
+2aaab7d60000-2aaab7da6000 rw-p 0046a000 00:14 12326856                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libxerces-c-3.1.so
+2aaab7da6000-2aaab7da7000 rw-p 00000000 00:00 0 
+2aaab7da7000-2aaab7dae000 r-xp 00000000 08:01 262411                     /lib64/librt-2.12.so
+2aaab7dae000-2aaab7fad000 ---p 00007000 08:01 262411                     /lib64/librt-2.12.so
+2aaab7fad000-2aaab7fae000 r--p 00006000 0r-xp 00000000 00:14 12326289                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_signals.so.1.56.0
+2aaab8b81000-2aaab8d80000 ---p 00016000 00:14 12326289                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_signals.so.1.56.0
+2aaab8d80000-2aaab8d81000 rw-p 00015000 00:14 12326289                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_signals.so.1.56.0
+2aaab8d81000-2aaab8d90000 r-xp 00000000 00:14 12328205                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libunwind.so.8.0.1
+2aaab8d90000-2aaab8f90000 ---p 0000f000 00:14 12328205                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libunwind.so.8.0.1
+2aaab8f90000-2aaab8f91000 rw-p 0000f000 00:14 12328205                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libunwind.so.8.0.1
+2aaab8f91000-2aaab8fa2000 rw-p 00000000 00:00 0 
+2aaab8fa2000-2aaab9049000 r-xp 00000000 00:14 12325272                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/li8:01 262411                     /lib64/librt-2.12.so
+2aaab7fae000-2aaab7faf000 rw-p 00007000 08:01 262411                     /lib64/librt-2.12.so
+2aaab7faf000-2aaab80e6000 r-xp 00000000 08:01 983941                     /usr/lib64/libX11.so.6.3.0
+2aaab80e6000-2aaab82e6000 ---p 00137000 08:01 983941                     /usr/lib64/libX11.so.6.3.0
+2aaab82e6000-2aaab82ec000 rw-p 00137000 08:01 983941                     /usr/lib64/libX11.so.6.3.0
+2aaab82ec000-2aaab82ed000 rw-p 00000000 00:00 0 
+2aaab82ed000-2aaab82fe000 r-xp 00000000 08:01 983951                     /usr/lib64/libXext.so.6.4.0
+2aaab82fe000-2aaab84fe000 ---p 00011000 08:01 983951                     /usr/lib64/libXext.so.6.4.0
+2aaab84fe000-2aaab84ff000 rw-p 00011000 08:01 983951                     /usr/lib64/libXext.so.6.4.0
+2aaab84ff000-2aaab8523000 r-xp 00000000 08:01 984508                     /usr/lib64/libxcb.so.1.1.0
+2aaab8523000-2aaab8723000 ---p 00024000 08:01 984508                     /usr/lib64/libxcb.so.1.1.0
+2aaab8723000-2aaab8724000bmwflnetwork.so
+2aaab9049000-2aaab9248000 ---p 000a7000 00:14 12325272                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflnetwork.so
+2aaab9248000-2aaab924b000 rw-p 000a6000 00:14 12325272                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflnetwork.so
+2aaab924b000-2aaab924c000 rw-p 00000000 00:00 0 
+2aaab924c000-2aaab9287000 r-xp 00000000 00:14 12328042                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageprovider.so
+2aaab9287000-2aaab9487000 ---p 0003b000 00:14 12328042                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageprovider.so
+2aaab9487000-2aaab948a000 rw-p 0003b000 00:14 12328042                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageprovider.so
+2aaab948a000-2aaab948b000 rw-p 00000000 00:00 0 
+2aaab948b000-2aaab94e4000 r-xp 00000000 00:14 12328755                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefileprovider.so
+2aaab94e4000-2aaab96e3000 ---p rw-p 00024000 08:01 984508                     /usr/lib64/libxcb.so.1.1.0
+2aaab8724000-2aaab8725000 rw-p 00000000 00:00 0 
+2aaab8725000-2aaab872c000 r-xp 00000000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab872c000-2aaab892c000 ---p 00007000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab892c000-2aaab892d000 r--p 00007000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab892d000-2aaab892e000 rw-p 00008000 08:01 262328                     /lib64/libcrypt-2.12.so
+2aaab892e000-2aaab895c000 rw-p 00000000 00:00 0 
+2aaab895c000-2aaab8968000 r-xp 00000000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8968000-2aaab8b68000 ---p 0000c000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8b68000-2aaab8b69000 r--p 0000c000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8b69000-2aaab8b6a000 rw-p 0000d000 08:01 262395                     /lib64/libpam.so.0.82.2
+2aaab8b6a000-2aaab8b6b000 rw-p 00000000 00:00 0 
+2aaab8b6b000-2aaab8b81000  00059000 00:14 12328755                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefileprovider.so
+2aaab96e3000-2aaab96e9000 rw-p 00058000 00:14 12328755                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefileprovider.so
+2aaab96e9000-2aaab9727000 r-xp 00000000 00:14 12328407                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstorageshlibstoragesys.so
+2aaab9727000-2aaab9926000 ---p 0003e000 00:14 12328407                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstorageshlibstoragesys.so
+2aaab9926000-2aaab992b000 rw-p 0003d000 00:14 12328407                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstorageshlibstoragesys.so
+2aaab992b000-2aaab992c000 rw-p 00000000 00:00 0 
+2aaab992c000-2aaab9947000 r-xp 00000000 00:14 12328347                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageevents.so
+2aaab9947000-2aaab9b47000 ---p 0001b000 00:14 12328347                   /cm/shared/hyalite/apr-xp 00000000 00:14 12326289                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_signals.so.1.56.0
+2aaab8b81000-2aaab8d80000 ---p 00016000 00:14 12326289                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_signals.so.1.56.0
+2aaab8d80000-2aaab8d81000 rw-p 00015000 00:14 12326289                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_signals.so.1.56.0
+2aaab8d81000-2aaab8d90000 r-xp 00000000 00:14 12328205                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libunwind.so.8.0.1
+2aaab8d90000-2aaab8f90000 ---p 0000f000 00:14 12328205                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libunwind.so.8.0.1
+2aaab8f90000-2aaab8f91000 rw-p 0000f000 00:14 12328205                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libunwind.so.8.0.1
+2aaab8f91000-2aaab8fa2000 rw-p 00000000 00:00 0 
+2aaab8fa2000-2aaab9049000 r-xp 00000000 00:14 12325272                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/lips/matlab/R2017a/bin/glnxa64/libmwflstorageevents.so
+2aaab9b47000-2aaab9b49000 rw-p 0001b000 00:14 12328347                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageevents.so
+2aaab9b49000-2aaab9bb6000 r-xp 00000000 00:14 12326730                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlcore.so
+2aaab9bb6000-2aaab9db5000 ---p 0006d000 00:14 12326730                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlcore.so
+2aaab9db5000-2aaab9dbd000 rw-p 0006c000 00:14 12326730                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlcore.so
+2aaab9dbd000-2aaab9dbf000 rw-p 00000000 00:00 0 
+2aaab9dbf000-2aaab9deb000 r-xp 00000000 00:14 12325968                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcrypto.so
+2aaab9deb000-2aaab9fea000 ---p 0002c000 00:14 12325968                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcrypto.so
+2aaab9fea000-2aaab9fec000 rw-p 0002b000 00:14 12325968                   /cm/sbmwflnetwork.so
+2aaab9049000-2aaab9248000 ---p 000a7000 00:14 12325272                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflnetwork.so
+2aaab9248000-2aaab924b000 rw-p 000a6000 00:14 12325272                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflnetwork.so
+2aaab924b000-2aaab924c000 rw-p 00000000 00:00 0 
+2aaab924c000-2aaab9287000 r-xp 00000000 00:14 12328042                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageprovider.so
+2aaab9287000-2aaab9487000 ---p 0003b000 00:14 12328042                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageprovider.so
+2aaab9487000-2aaab948a000 rw-p 0003b000 00:14 12328042                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageprovider.so
+2aaab948a000-2aaab948b000 rw-p 00000000 00:00 0 
+2aaab948b000-2aaab94e4000 r-xp 00000000 00:14 12328755                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefileprovider.so
+2aaab94e4000-2aaab96e3000 ---phared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcrypto.so
+2aaab9fec000-2aaab9ff7000 r-xp 00000000 00:14 12330005                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoutils.so
+2aaab9ff7000-2aaaba1f7000 ---p 0000b000 00:14 12330005                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoutils.so
+2aaaba1f7000-2aaaba1f8000 rw-p 0000b000 00:14 12330005                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoutils.so
+2aaaba1f8000-2aaaba1f9000 rw-p 00000000 00:00 0 
+2aaaba1f9000-2aaaba4f5000 r-xp 00000000 00:14 12324568                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptocryptopp.so
+2aaaba4f5000-2aaaba6f5000 ---p 002fc000 00:14 12324568                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptocryptopp.so
+2aaaba6f5000-2aaaba747000 rw-p 002fc000 00:14 12324568                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptocryptopp.so
+2aaaba747000-2aaaba749000 rw-p 000 00059000 00:14 12328755                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefileprovider.so
+2aaab96e3000-2aaab96e9000 rw-p 00058000 00:14 12328755                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragefileprovider.so
+2aaab96e9000-2aaab9727000 r-xp 00000000 00:14 12328407                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstorageshlibstoragesys.so
+2aaab9727000-2aaab9926000 ---p 0003e000 00:14 12328407                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstorageshlibstoragesys.so
+2aaab9926000-2aaab992b000 rw-p 0003d000 00:14 12328407                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstorageshlibstoragesys.so
+2aaab992b000-2aaab992c000 rw-p 00000000 00:00 0 
+2aaab992c000-2aaab9947000 r-xp 00000000 00:14 12328347                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageevents.so
+2aaab9947000-2aaab9b47000 ---p 0001b000 00:14 12328347                   /cm/shared/hyalite/ap00000 00:00 0 
+2aaaba749000-2aaaba755000 r-xp 00000000 00:14 12329144                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libminizip.so
+2aaaba755000-2aaaba954000 ---p 0000c000 00:14 12329144                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libminizip.so
+2aaaba954000-2aaaba955000 rw-p 0000b000 00:14 12329144                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libminizip.so
+2aaaba955000-2aaaba957000 rw-p 00000000 00:00 0 
+2aaaba957000-2aaaba959000 r-xp 00000000 08:01 262343                     /lib64/libfreebl3.so
+2aaaba959000-2aaabab58000 ---p 00002000 08:01 262343                     /lib64/libfreebl3.so
+2aaabab58000-2aaabab59000 r--p 00001000 08:01 262343                     /lib64/libfreebl3.so
+2aaabab59000-2aaabab5a000 rw-p 00002000 08:01 262343                     /lib64/libfreebl3.so
+2aaabab5a000-2aaabab72000 r-xp 00000000 08:01 262317                     /lib64/libaudit.so.1.0.0
+2aaabab72000-2aaabad71000 ---p 00018000 08:01 262317                     /lps/matlab/R2017a/bin/glnxa64/libmwflstorageevents.so
+2aaab9b47000-2aaab9b49000 rw-p 0001b000 00:14 12328347                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflstorageevents.so
+2aaab9b49000-2aaab9bb6000 r-xp 00000000 00:14 12326730                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlcore.so
+2aaab9bb6000-2aaab9db5000 ---p 0006d000 00:14 12326730                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlcore.so
+2aaab9db5000-2aaab9dbd000 rw-p 0006c000 00:14 12326730                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlcore.so
+2aaab9dbd000-2aaab9dbf000 rw-p 00000000 00:00 0 
+2aaab9dbf000-2aaab9deb000 r-xp 00000000 00:14 12325968                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcrypto.so
+2aaab9deb000-2aaab9fea000 ---p 0002c000 00:14 12325968                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcrypto.so
+2aaab9fea000-2aaab9fec000 rw-p 0002b000 00:14 12325968                   /cm/sib64/libaudit.so.1.0.0
+2aaabad71000-2aaabad73000 r--p 00017000 08:01 262317                     /lib64/libaudit.so.1.0.0
+2aaabad73000-2aaabad7e000 rw-p 00019000 08:01 262317                     /lib64/libaudit.so.1.0.0
+2aaabad7e000-2aaabad99000 r-xp 00000000 00:14 12328632                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragesharedlib.so
+2aaabad99000-2aaabaf98000 ---p 0001b000 00:14 12328632                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragesharedlib.so
+2aaabaf98000-2aaabaf9a000 rw-p 0001a000 00:14 12328632                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragesharedlib.so
+2aaabaf9a000-2aaabaf9b000 rw-p 00000000 00:00 0 
+2aaabaf9b000-2aaabafc3000 r-xp 00000000 00:14 12325644                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoopenssl.so
+2aaabafc3000-2aaabb1c2000 ---p 00028000 00:14 12325644                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoopenssl.so
+2aaabb1c2000-2aaabhared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcrypto.so
+2aaab9fec000-2aaab9ff7000 r-xp 00000000 00:14 12330005                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoutils.so
+2aaab9ff7000-2aaaba1f7000 ---p 0000b000 00:14 12330005                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoutils.so
+2aaaba1f7000-2aaaba1f8000 rw-p 0000b000 00:14 12330005                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoutils.so
+2aaaba1f8000-2aaaba1f9000 rw-p 00000000 00:00 0 
+2aaaba1f9000-2aaaba4f5000 r-xp 00000000 00:14 12324568                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptocryptopp.so
+2aaaba4f5000-2aaaba6f5000 ---p 002fc000 00:14 12324568                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptocryptopp.so
+2aaaba6f5000-2aaaba747000 rw-p 002fc000 00:14 12324568                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptocryptopp.so
+2aaaba747000-2aaaba749000 rw-p 000b1c5000 rw-p 00027000 00:14 12325644                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoopenssl.so
+2aaabb1c5000-2aaabb2cd000 rw-p 00000000 00:00 0 
+2aaabb2cd000-2aaac1162000 r--p 00000000 08:01 503303                     /usr/lib/locale/locale-archive
+2aaac1162000-2aaac1169000 r--s 00000000 08:01 526722                     /usr/lib64/gconv/gconv-modules.cache
+2aaac1169000-2aaac116b000 r-xp 00000000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac116b000-2aaac136b000 ---p 00002000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac136b000-2aaac136c000 r--p 00002000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac136c000-2aaac136d000 rw-p 00003000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac136d000-2aaac140a000 r-xp 00000000 00:14 12327751                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwMVMLocal.so
+2aaac140a000-2aaac1609000 ---p 0009d000 00:14 12327751                   /cm/shared/hyalite/00000 00:00 0 
+2aaaba749000-2aaaba755000 r-xp 00000000 00:14 12329144                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libminizip.so
+2aaaba755000-2aaaba954000 ---p 0000c000 00:14 12329144                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libminizip.so
+2aaaba954000-2aaaba955000 rw-p 0000b000 00:14 12329144                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libminizip.so
+2aaaba955000-2aaaba957000 rw-p 00000000 00:00 0 
+2aaaba957000-2aaaba959000 r-xp 00000000 08:01 262343                     /lib64/libfreebl3.so
+2aaaba959000-2aaabab58000 ---p 00002000 08:01 262343                     /lib64/libfreebl3.so
+2aaabab58000-2aaabab59000 r--p 00001000 08:01 262343                     /lib64/libfreebl3.so
+2aaabab59000-2aaabab5a000 rw-p 00002000 08:01 262343                     /lib64/libfreebl3.so
+2aaabab5a000-2aaabab72000 r-xp 00000000 08:01 262317                     /lib64/libaudit.so.1.0.0
+2aaabab72000-2aaabad71000 ---p 00018000 08:01 262317                     /lapps/matlab/R2017a/bin/glnxa64/libmwMVMLocal.so
+2aaac1609000-2aaac1613000 rw-p 0009c000 00:14 12327751                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwMVMLocal.so
+2aaac1613000-2aaac164a000 r-xp 00000000 00:14 12326508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmex.so
+2aaac164a000-2aaac184a000 ---p 00037000 00:14 12326508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmex.so
+2aaac184a000-2aaac184e000 rw-p 00037000 00:14 12326508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmex.so
+2aaac184e000-2aaac1962000 r-xp 00000000 00:14 12326817                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwiqm.so
+2aaac1962000-2aaac1b62000 ---p 00114000 00:14 12326817                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwiqm.so
+2aaac1b62000-2aaac1b71000 rw-p 00114000 00:14 12326817                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwiqm.so
+2aaac1b71000-2aaac1b72000 rw-p 0ib64/libaudit.so.1.0.0
+2aaabad71000-2aaabad73000 r--p 00017000 08:01 262317                     /lib64/libaudit.so.1.0.0
+2aaabad73000-2aaabad7e000 rw-p 00019000 08:01 262317                     /lib64/libaudit.so.1.0.0
+2aaabad7e000-2aaabad99000 r-xp 00000000 00:14 12328632                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragesharedlib.so
+2aaabad99000-2aaabaf98000 ---p 0001b000 00:14 12328632                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragesharedlib.so
+2aaabaf98000-2aaabaf9a000 rw-p 0001a000 00:14 12328632                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstoragesharedlib.so
+2aaabaf9a000-2aaabaf9b000 rw-p 00000000 00:00 0 
+2aaabaf9b000-2aaabafc3000 r-xp 00000000 00:14 12325644                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoopenssl.so
+2aaabafc3000-2aaabb1c2000 ---p 00028000 00:14 12325644                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoopenssl.so
+2aaabb1c2000-2aaab0000000 00:00 0 
+2aaac1b72000-2aaac1b97000 r-xp 00000000 00:14 12328485                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_state.so
+2aaac1b97000-2aaac1d96000 ---p 00025000 00:14 12328485                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_state.so
+2aaac1d96000-2aaac1d99000 rw-p 00024000 00:14 12328485                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_state.so
+2aaac1d99000-2aaac1de5000 r-xp 00000000 00:14 12324553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcos.so
+2aaac1de5000-2aaac1fe4000 ---p 0004c000 00:14 12324553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcos.so
+2aaac1fe4000-2aaac1feb000 rw-p 0004b000 00:14 12324553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcos.so
+2aaac1feb000-2aaac20e6000 r-xp 00000000 00:14 12329510                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcr.so
+2aaac20e6000-2aaac22e6000 b1c5000 rw-p 00027000 00:14 12325644                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwflcryptoopenssl.so
+2aaabb1c5000-2aaabb2cd000 rw-p 00000000 00:00 0 
+2aaabb2cd000-2aaac1162000 r--p 00000000 08:01 503303                     /usr/lib/locale/locale-archive
+2aaac1162000-2aaac1169000 r--s 00000000 08:01 526722                     /usr/lib64/gconv/gconv-modules.cache
+2aaac1169000-2aaac116b000 r-xp 00000000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac116b000-2aaac136b000 ---p 00002000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac136b000-2aaac136c000 r--p 00002000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac136c000-2aaac136d000 rw-p 00003000 08:01 526717                     /usr/lib64/gconv/UTF-16.so
+2aaac136d000-2aaac140a000 r-xp 00000000 00:14 12327751                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwMVMLocal.so
+2aaac140a000-2aaac1609000 ---p 0009d000 00:14 12327751                   /cm/shared/hyalite/---p 000fb000 00:14 12329510                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcr.so
+2aaac22e6000-2aaac22f4000 rw-p 000fb000 00:14 12329510                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcr.so
+2aaac22f4000-2aaac22f6000 rw-p 00000000 00:00 0 
+2aaac22f6000-2aaac23ea000 r-xp 00000000 00:14 12329756                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so
+2aaac23ea000-2aaac25e9000 ---p 000f4000 00:14 12329756                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so
+2aaac25e9000-2aaac25f5000 rw-p 000f3000 00:14 12329756                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so
+2aaac25f5000-2aaac25fc000 r-xp 00000000 00:14 12324571                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgenerate_diag_message.so
+2aaac25fc000-2aaac27fc000 ---p 00007000 00:14 12324571                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgenerate_diag_messapps/matlab/R2017a/bin/glnxa64/libmwMVMLocal.so
+2aaac1609000-2aaac1613000 rw-p 0009c000 00:14 12327751                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwMVMLocal.so
+2aaac1613000-2aaac164a000 r-xp 00000000 00:14 12326508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmex.so
+2aaac164a000-2aaac184a000 ---p 00037000 00:14 12326508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmex.so
+2aaac184a000-2aaac184e000 rw-p 00037000 00:14 12326508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmex.so
+2aaac184e000-2aaac1962000 r-xp 00000000 00:14 12326817                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwiqm.so
+2aaac1962000-2aaac1b62000 ---p 00114000 00:14 12326817                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwiqm.so
+2aaac1b62000-2aaac1b71000 rw-p 00114000 00:14 12326817                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwiqm.so
+2aaac1b71000-2aaac1b72000 rw-p 0age.so
+2aaac27fc000-2aaac27fd000 rw-p 00007000 00:14 12324571                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgenerate_diag_message.so
+2aaac27fd000-2aaac2801000 r-xp 00000000 00:14 12328548                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlanguage_execution_interfaces.so
+2aaac2801000-2aaac2a00000 ---p 00004000 00:14 12328548                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlanguage_execution_interfaces.so
+2aaac2a00000-2aaac2a01000 rw-p 00003000 00:14 12328548                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlanguage_execution_interfaces.so
+2aaac2a01000-2aaac2a7e000 r-xp 00000000 00:14 12330086                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwerrorrecovery.so
+2aaac2a7e000-2aaac2c7d000 ---p 0007d000 00:14 12330086                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwerrorrecovery.so
+2aaac2c7d000-2aaac2c82000 rw-p 0007c000 00:14 12330086                   /cm/shared/hyalite0000000 00:00 0 
+2aaac1b72000-2aaac1b97000 r-xp 00000000 00:14 12328485                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_state.so
+2aaac1b97000-2aaac1d96000 ---p 00025000 00:14 12328485                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_state.so
+2aaac1d96000-2aaac1d99000 rw-p 00024000 00:14 12328485                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_state.so
+2aaac1d99000-2aaac1de5000 r-xp 00000000 00:14 12324553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcos.so
+2aaac1de5000-2aaac1fe4000 ---p 0004c000 00:14 12324553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcos.so
+2aaac1fe4000-2aaac1feb000 rw-p 0004b000 00:14 12324553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcos.so
+2aaac1feb000-2aaac20e6000 r-xp 00000000 00:14 12329510                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcr.so
+2aaac20e6000-2aaac22e6000 /apps/matlab/R2017a/bin/glnxa64/libmwerrorrecovery.so
+2aaac2c82000-2aaac3038000 r-xp 00000000 00:14 12327573                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_interpreter.so
+2aaac3038000-2aaac3237000 ---p 003b6000 00:14 12327573                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_interpreter.so
+2aaac3237000-2aaac3267000 rw-p 003b5000 00:14 12327573                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_interpreter.so
+2aaac3267000-2aaac326c000 rw-p 00000000 00:00 0 
+2aaac326c000-2aaac3634000 r-xp 00000000 00:14 12330038                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so
+2aaac3634000-2aaac3833000 ---p 003c8000 00:14 12330038                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so
+2aaac3833000-2aaac3d31000 rw-p 003c7000 00:14 12330038                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so
+2aaac3d31000-2aaac3d32000 rw-p 00000000 00:00 0 
+2aaac3d32000-2aaa---p 000fb000 00:14 12329510                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcr.so
+2aaac22e6000-2aaac22f4000 rw-p 000fb000 00:14 12329510                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmcr.so
+2aaac22f4000-2aaac22f6000 rw-p 00000000 00:00 0 
+2aaac22f6000-2aaac23ea000 r-xp 00000000 00:14 12329756                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so
+2aaac23ea000-2aaac25e9000 ---p 000f4000 00:14 12329756                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so
+2aaac25e9000-2aaac25f5000 rw-p 000f3000 00:14 12329756                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_dispatcher.so
+2aaac25f5000-2aaac25fc000 r-xp 00000000 00:14 12324571                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgenerate_diag_message.so
+2aaac25fc000-2aaac27fc000 ---p 00007000 00:14 12324571                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgenerate_diag_messc3d45000 r-xp 00000000 00:14 12326553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_matrix.so
+2aaac3d45000-2aaac3f45000 ---p 00013000 00:14 12326553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_matrix.so
+2aaac3f45000-2aaac3f47000 rw-p 00013000 00:14 12326553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_matrix.so
+2aaac3f47000-2aaac3f91000 r-xp 00000000 00:14 12326427                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbridge.so
+2aaac3f91000-2aaac4191000 ---p 0004a000 00:14 12326427                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbridge.so
+2aaac4191000-2aaac4196000 rw-p 0004a000 00:14 12326427                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbridge.so
+2aaac4196000-2aaac419c000 rw-p 00000000 00:00 0 
+2aaac419c000-2aaac425c000 r-xp 00000000 00:14 12326382                   /cm/shared/hyalite/apps/matlab/R20age.so
+2aaac27fc000-2aaac27fd000 rw-p 00007000 00:14 12324571                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgenerate_diag_message.so
+2aaac27fd000-2aaac2801000 r-xp 00000000 00:14 12328548                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlanguage_execution_interfaces.so
+2aaac2801000-2aaac2a00000 ---p 00004000 00:14 12328548                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlanguage_execution_interfaces.so
+2aaac2a00000-2aaac2a01000 rw-p 00003000 00:14 12328548                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlanguage_execution_interfaces.so
+2aaac2a01000-2aaac2a7e000 r-xp 00000000 00:14 12330086                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwerrorrecovery.so
+2aaac2a7e000-2aaac2c7d000 ---p 0007d000 00:14 12330086                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwerrorrecovery.so
+2aaac2c7d000-2aaac2c82000 rw-p 0007c000 00:14 12330086                   /cm/shared/hyalite17a/bin/glnxa64/libmwsearch_path_impl.so
+2aaac425c000-2aaac445c000 ---p 000c0000 00:14 12326382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_impl.so
+2aaac445c000-2aaac4464000 rw-p 000c0000 00:14 12326382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_impl.so
+2aaac4464000-2aaac447b000 r-xp 00000000 00:14 12325383                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_utilities.so
+2aaac447b000-2aaac467a000 ---p 00017000 00:14 12325383                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_utilities.so
+2aaac467a000-2aaac467c000 rw-p 00016000 00:14 12325383                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_utilities.so
+2aaac467c000-2aaac467f000 r-xp 00000000 00:14 12288101                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmatlabstoragesystem.so
+2aaac467f000-2aaac487e000 ---p 00003000 00:14 12288101                   /cm//apps/matlab/R2017a/bin/glnxa64/libmwerrorrecovery.so
+2aaac2c82000-2aaac3038000 r-xp 00000000 00:14 12327573                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_interpreter.so
+2aaac3038000-2aaac3237000 ---p 003b6000 00:14 12327573                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_interpreter.so
+2aaac3237000-2aaac3267000 rw-p 003b5000 00:14 12327573                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_interpreter.so
+2aaac3267000-2aaac326c000 rw-p 00000000 00:00 0 
+2aaac326c000-2aaac3634000 r-xp 00000000 00:14 12330038                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so
+2aaac3634000-2aaac3833000 ---p 003c8000 00:14 12330038                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so
+2aaac3833000-2aaac3d31000 rw-p 003c7000 00:14 12330038                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_parser.so
+2aaac3d31000-2aaac3d32000 rw-p 00000000 00:00 0 
+2aaac3d32000-2aaashared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmatlabstoragesystem.so
+2aaac487e000-2aaac487f000 rw-p 00002000 00:14 12288101                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmatlabstoragesystem.so
+2aaac487f000-2aaac48f3000 r-xp 00000000 00:14 12326490                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_ir.so
+2aaac48f3000-2aaac4af2000 ---p 00074000 00:14 12326490                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_ir.so
+2aaac4af2000-2aaac4afc000 rw-p 00073000 00:14 12326490                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_ir.so
+2aaac4afc000-2aaac69e6000 r-xp 00000000 00:14 12324376                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so
+2aaac69e6000-2aaac6be5000 ---p 01eea000 00:14 12324376                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so
+2aaac6be5000-2aaac6d2a000 rw-p 01ee9000 00:14 12324376                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glc3d45000 r-xp 00000000 00:14 12326553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_matrix.so
+2aaac3d45000-2aaac3f45000 ---p 00013000 00:14 12326553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_matrix.so
+2aaac3f45000-2aaac3f47000 rw-p 00013000 00:14 12326553                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfoundation_extdata_matrix.so
+2aaac3f47000-2aaac3f91000 r-xp 00000000 00:14 12326427                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbridge.so
+2aaac3f91000-2aaac4191000 ---p 0004a000 00:14 12326427                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbridge.so
+2aaac4191000-2aaac4196000 rw-p 0004a000 00:14 12326427                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbridge.so
+2aaac4196000-2aaac419c000 rw-p 00000000 00:00 0 
+2aaac419c000-2aaac425c000 r-xp 00000000 00:14 12326382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_impl.so
+2aaac425c000-2aaac445c000 ---p 000c0000 00:14 12326382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_impl.so
+2aaac445c000-2aaac4464000 rw-p 000c0000 00:14 12326382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_impl.so
+2aaac4464000-2aaac447b000 r-xp 00000000 00:14 12325383                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_utilities.so
+2aaac447b000-2aaac467a000 ---p 00017000 00:14 12325383                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_utilities.so
+2aaac467a000-2aaac467c000 rw-p 00016000 00:14 12325383                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_utilities.so
+2aaac467c000-2aaac467f000 r-xp 00000000 00:14 12288101                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmatlabstoragesystem.so
+2aaac467f000-2aaac487e000 ---p 00003000 00:14 12288101                   /cm/nxa64/libmwm_lxe.so
+2aaac6d2a000-2aaac6d3e000 rw-p 00000000 00:00 0 
+2aaac6d3e000-2aaac6d4d000 r-xp 00000000 00:14 12325254                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedialogs.so
+2aaac6d4d000-2aaac6f4d000 ---p 0000f000 00:14 12325254                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedialogs.so
+2aaac6f4d000-2aaac6f4e000 rw-p 0000f000 00:14 12325254                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedialogs.so
+2aaac6f4e000-2aaac70ac000 r-xp 00000000 00:14 12329363                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdiagnostic.so
+2aaac70ac000-2aaac72ab000 ---p 0015e000 00:14 12329363                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdiagnostic.so
+2aaac72ab000-2aaac72c1000 rw-p 0015d000 00:14 12329363                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdiagnostic.so
+2aaac72c1000-2aaac72c2000 rw-p 00000000 00:00 0 
+2aaac72c2000-2aaac72dd000 r-xp 00000000 00:14shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmatlabstoragesystem.so
+2aaac487e000-2aaac487f000 rw-p 00002000 00:14 12288101                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmatlabstoragesystem.so
+2aaac487f000-2aaac48f3000 r-xp 00000000 00:14 12326490                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_ir.so
+2aaac48f3000-2aaac4af2000 ---p 00074000 00:14 12326490                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_ir.so
+2aaac4af2000-2aaac4afc000 rw-p 00073000 00:14 12326490                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_ir.so
+2aaac4afc000-2aaac69e6000 r-xp 00000000 00:14 12324376                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so
+2aaac69e6000-2aaac6be5000 ---p 01eea000 00:14 12324376                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwm_lxe.so
+2aaac6be5000-2aaac6d2a000 rw-p 01ee9000 00:14 12324376                   /cm/shared/hyalite/apps/matlab/R2017a/bin/gl 12328575                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwddux.so
+2aaac72dd000-2aaac74dc000 ---p 0001b000 00:14 12328575                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwddux.so
+2aaac74dc000-2aaac74de000 rw-p 0001a000 00:14 12328575                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwddux.so
+2aaac74de000-2aaac7530000 r-xp 00000000 00:14 12325851                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartup_plugin_initializer.so
+2aaac7530000-2aaac7730000 ---p 00052000 00:14 12325851                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartup_plugin_initializer.so
+2aaac7730000-2aaac7735000 rw-p 00052000 00:14 12325851                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartup_plugin_initializer.so
+2aaac7735000-2aaac773d000 r-xp 00000000 00:14 12328554                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_implementation.so
+2aaac773d000-2aaac793c000 ---p 000080nxa64/libmwm_lxe.so
+2aaac6d2a000-2aaac6d3e000 rw-p 00000000 00:00 0 
+2aaac6d3e000-2aaac6d4d000 r-xp 00000000 00:14 12325254                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedialogs.so
+2aaac6d4d000-2aaac6f4d000 ---p 0000f000 00:14 12325254                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedialogs.so
+2aaac6f4d000-2aaac6f4e000 rw-p 0000f000 00:14 12325254                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativedialogs.so
+2aaac6f4e000-2aaac70ac000 r-xp 00000000 00:14 12329363                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdiagnostic.so
+2aaac70ac000-2aaac72ab000 ---p 0015e000 00:14 12329363                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdiagnostic.so
+2aaac72ab000-2aaac72c1000 rw-p 0015d000 00:14 12329363                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdiagnostic.so
+2aaac72c1000-2aaac72c2000 rw-p 00000000 00:00 0 
+2aaac72c2000-2aaac72dd000 r-xp 00000000 00:1400 00:14 12328554                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_implementation.so
+2aaac793c000-2aaac793d000 rw-p 00007000 00:14 12328554                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_implementation.so
+2aaac793d000-2aaac7947000 r-xp 00000000 00:14 12330062                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_events.so
+2aaac7947000-2aaac7b47000 ---p 0000a000 00:14 12330062                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_events.so
+2aaac7b47000-2aaac7b48000 rw-p 0000a000 00:14 12330062                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_events.so
+2aaac7b48000-2aaac7b6c000 r-xp 00000000 00:14 12326976                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcontextdata.so
+2aaac7b6c000-2aaac7d6b000 ---p 00024000 00:14 12326976                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcontextdata.so
+2aaac7d6b000-2aaac7d6d000 12328575                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwddux.so
+2aaac72dd000-2aaac74dc000 ---p 0001b000 00:14 12328575                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwddux.so
+2aaac74dc000-2aaac74de000 rw-p 0001a000 00:14 12328575                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwddux.so
+2aaac74de000-2aaac7530000 r-xp 00000000 00:14 12325851                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartup_plugin_initializer.so
+2aaac7530000-2aaac7730000 ---p 00052000 00:14 12325851                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartup_plugin_initializer.so
+2aaac7730000-2aaac7735000 rw-p 00052000 00:14 12325851                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartup_plugin_initializer.so
+2aaac7735000-2aaac773d000 r-xp 00000000 00:14 12328554                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_implementation.so
+2aaac773d000-2aaac793c000 ---p 000080 rw-p 00023000 00:14 12326976                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcontextdata.so
+2aaac7d6d000-2aaac7dda000 r-xp 00000000 00:14 12329462                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnamesuggestion.so
+2aaac7dda000-2aaac7fda000 ---p 0006d000 00:14 12329462                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnamesuggestion.so
+2aaac7fda000-2aaac7fe1000 rw-p 0006d000 00:14 12329462                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnamesuggestion.so
+2aaac7fe1000-2aaac7fe2000 rw-p 00000000 00:00 0 
+2aaac7fe2000-2aaac8038000 r-xp 00000000 00:14 12327748                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmat.so
+2aaac8038000-2aaac8237000 ---p 00056000 00:14 12327748                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmat.so
+2aaac8237000-2aaac823c000 rw-p 00055000 00:14 12327748                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmat.so
+2aaac823c000-2aaac8300 00:14 12328554                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_implementation.so
+2aaac793c000-2aaac793d000 rw-p 00007000 00:14 12328554                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcwf_implementation.so
+2aaac793d000-2aaac7947000 r-xp 00000000 00:14 12330062                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_events.so
+2aaac7947000-2aaac7b47000 ---p 0000a000 00:14 12330062                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_events.so
+2aaac7b47000-2aaac7b48000 rw-p 0000a000 00:14 12330062                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwsearch_path_events.so
+2aaac7b48000-2aaac7b6c000 r-xp 00000000 00:14 12326976                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcontextdata.so
+2aaac7b6c000-2aaac7d6b000 ---p 00024000 00:14 12326976                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcontextdata.so
+2aaac7d6b000-2aaac7d6d00042000 r-xp 00000000 00:14 12328686                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathutil.so
+2aaac8342000-2aaac8541000 ---p 00106000 00:14 12328686                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathutil.so
+2aaac8541000-2aaac8542000 rw-p 00105000 00:14 12328686                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathutil.so
+2aaac8542000-2aaac85cc000 r-xp 00000000 00:14 12325998                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathrng.so
+2aaac85cc000-2aaac87cc000 ---p 0008a000 00:14 12325998                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathrng.so
+2aaac87cc000-2aaac87d5000 rw-p 0008a000 00:14 12325998                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathrng.so
+2aaac87d5000-2aaac87d6000 rw-p 00000000 00:00 0 
+2aaac87d6000-2aaac884c000 r-xp 00000000 00:14 12328515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwspmatrix.so
+2aaac884c000-2aaac rw-p 00023000 00:14 12326976                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcontextdata.so
+2aaac7d6d000-2aaac7dda000 r-xp 00000000 00:14 12329462                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnamesuggestion.so
+2aaac7dda000-2aaac7fda000 ---p 0006d000 00:14 12329462                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnamesuggestion.so
+2aaac7fda000-2aaac7fe1000 rw-p 0006d000 00:14 12329462                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnamesuggestion.so
+2aaac7fe1000-2aaac7fe2000 rw-p 00000000 00:00 0 
+2aaac7fe2000-2aaac8038000 r-xp 00000000 00:14 12327748                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmat.so
+2aaac8038000-2aaac8237000 ---p 00056000 00:14 12327748                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmat.so
+2aaac8237000-2aaac823c000 rw-p 00055000 00:14 12327748                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmat.so
+2aaac823c000-2aaac838a4c000 ---p 00076000 00:14 12328515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwspmatrix.so
+2aaac8a4c000-2aaac8a4e000 rw-p 00076000 00:14 12328515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwspmatrix.so
+2aaac8a4e000-2aaac8a60000 r-xp 00000000 00:14 12325503                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring_matrix.so
+2aaac8a60000-2aaac8c5f000 ---p 00012000 00:14 12325503                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring_matrix.so
+2aaac8c5f000-2aaac8c61000 rw-p 00011000 00:14 12325503                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring_matrix.so
+2aaac8c61000-2aaac8c74000 r-xp 00000000 00:14 12328812                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir_xfmr.so
+2aaac8c74000-2aaac8e74000 ---p 00013000 00:14 12328812                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir_xfmr.so
+2aaac8e74000-2aaac8e75000 rw-p 00013000 00:14 12342000 r-xp 00000000 00:14 12328686                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathutil.so
+2aaac8342000-2aaac8541000 ---p 00106000 00:14 12328686                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathutil.so
+2aaac8541000-2aaac8542000 rw-p 00105000 00:14 12328686                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathutil.so
+2aaac8542000-2aaac85cc000 r-xp 00000000 00:14 12325998                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathrng.so
+2aaac85cc000-2aaac87cc000 ---p 0008a000 00:14 12325998                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathrng.so
+2aaac87cc000-2aaac87d5000 rw-p 0008a000 00:14 12325998                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathrng.so
+2aaac87d5000-2aaac87d6000 rw-p 00000000 00:00 0 
+2aaac87d6000-2aaac884c000 r-xp 00000000 00:14 12328515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwspmatrix.so
+2aaac884c000-2aaac28812                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir_xfmr.so
+2aaac8e75000-2aaac8e86000 r-xp 00000000 00:14 12327446                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmtok.so
+2aaac8e86000-2aaac9085000 ---p 00011000 00:14 12327446                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmtok.so
+2aaac9085000-2aaac9086000 rw-p 00010000 00:14 12327446                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmtok.so
+2aaac9086000-2aaac919d000 r-xp 00000000 00:14 12329069                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd.so
+2aaac919d000-2aaac939c000 ---p 00117000 00:14 12329069                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd.so
+2aaac939c000-2aaac93b5000 rw-p 00116000 00:14 12329069                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd.so
+2aaac93b5000-2aaac93b7000 rw-p 00000000 00:00 0 
+2aaac93b7000-2aaac94f3000 r-xp 00000000 00:14 12327964                  8a4c000 ---p 00076000 00:14 12328515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwspmatrix.so
+2aaac8a4c000-2aaac8a4e000 rw-p 00076000 00:14 12328515                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwspmatrix.so
+2aaac8a4e000-2aaac8a60000 r-xp 00000000 00:14 12325503                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring_matrix.so
+2aaac8a60000-2aaac8c5f000 ---p 00012000 00:14 12325503                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring_matrix.so
+2aaac8c5f000-2aaac8c61000 rw-p 00011000 00:14 12325503                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring_matrix.so
+2aaac8c61000-2aaac8c74000 r-xp 00000000 00:14 12328812                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir_xfmr.so
+2aaac8c74000-2aaac8e74000 ---p 00013000 00:14 12328812                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir_xfmr.so
+2aaac8e74000-2aaac8e75000 rw-p 00013000 00:14 123 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtabcompletion.so
+2aaac94f3000-2aaac96f3000 ---p 0013c000 00:14 12327964                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtabcompletion.so
+2aaac96f3000-2aaac96fe000 rw-p 0013c000 00:14 12327964                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtabcompletion.so
+2aaac96fe000-2aaac96ff000 rw-p 00000000 00:00 0 
+2aaac96ff000-2aaac970b000 r-xp 00000000 00:14 12326385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlib.so
+2aaac970b000-2aaac990a000 ---p 0000c000 00:14 12326385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlib.so
+2aaac990a000-2aaac990c000 rw-p 0000b000 00:14 12326385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlib.so
+2aaac990c000-2aaac9966000 r-xp 00000000 00:14 12324508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir.so
+2aaac9966000-2aaac9b65000 ---p 0005a000 00:14 12324508                28812                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir_xfmr.so
+2aaac8e75000-2aaac8e86000 r-xp 00000000 00:14 12327446                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmtok.so
+2aaac8e86000-2aaac9085000 ---p 00011000 00:14 12327446                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmtok.so
+2aaac9085000-2aaac9086000 rw-p 00010000 00:14 12327446                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmtok.so
+2aaac9086000-2aaac919d000 r-xp 00000000 00:14 12329069                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd.so
+2aaac919d000-2aaac939c000 ---p 00117000 00:14 12329069                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd.so
+2aaac939c000-2aaac93b5000 rw-p 00116000 00:14 12329069                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd.so
+2aaac93b5000-2aaac93b7000 rw-p 00000000 00:00 0 
+2aaac93b7000-2aaac94f3000 r-xp 00000000 00:14 12327964                     /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir.so
+2aaac9b65000-2aaac9b6a000 rw-p 00059000 00:14 12324508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir.so
+2aaac9b6a000-2aaac9b6f000 r-xp 00000000 00:14 12327685                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeinterfaces.so
+2aaac9b6f000-2aaac9d6f000 ---p 00005000 00:14 12327685                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeinterfaces.so
+2aaac9d6f000-2aaac9d70000 rw-p 00005000 00:14 12327685                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeinterfaces.so
+2aaac9d70000-2aaac9ee5000 r-xp 00000000 00:14 12326958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeindexing.so
+2aaac9ee5000-2aaaca0e4000 ---p 00175000 00:14 12326958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeindexing.so
+2aaaca0e4000-2aaaca0f2000 rw-p 00174000 00:14 12326958                   /cm/shared/hyalite/apps/matlab/R /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtabcompletion.so
+2aaac94f3000-2aaac96f3000 ---p 0013c000 00:14 12327964                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtabcompletion.so
+2aaac96f3000-2aaac96fe000 rw-p 0013c000 00:14 12327964                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtabcompletion.so
+2aaac96fe000-2aaac96ff000 rw-p 00000000 00:00 0 
+2aaac96ff000-2aaac970b000 r-xp 00000000 00:14 12326385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlib.so
+2aaac970b000-2aaac990a000 ---p 0000c000 00:14 12326385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlib.so
+2aaac990a000-2aaac990c000 rw-p 0000b000 00:14 12326385                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmlib.so
+2aaac990c000-2aaac9966000 r-xp 00000000 00:14 12324508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir.so
+2aaac9966000-2aaac9b65000 ---p 0005a000 00:14 12324508                2017a/bin/glnxa64/libmwlxeindexing.so
+2aaaca0f2000-2aaaca0f3000 rw-p 00000000 00:00 0 
+2aaaca0f3000-2aaaca14f000 r-xp 00000000 00:14 12328332                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeutilities.so
+2aaaca14f000-2aaaca34f000 ---p 0005c000 00:14 12328332                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeutilities.so
+2aaaca34f000-2aaaca353000 rw-p 0005c000 00:14 12328332                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeutilities.so
+2aaaca353000-2aaaca3a5000 r-xp 00000000 00:14 12330053                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so
+2aaaca3a5000-2aaaca5a4000 ---p 00052000 00:14 12330053                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so
+2aaaca5a4000-2aaaca5ac000 rw-p 00051000 00:14 12330053                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so
+2aaaca5ac000-2aaaca5ed000 r-xp 00000000 00:14 12326646                   /cm/shared/h   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir.so
+2aaac9b65000-2aaac9b6a000 rw-p 00059000 00:14 12324508                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwir.so
+2aaac9b6a000-2aaac9b6f000 r-xp 00000000 00:14 12327685                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeinterfaces.so
+2aaac9b6f000-2aaac9d6f000 ---p 00005000 00:14 12327685                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeinterfaces.so
+2aaac9d6f000-2aaac9d70000 rw-p 00005000 00:14 12327685                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeinterfaces.so
+2aaac9d70000-2aaac9ee5000 r-xp 00000000 00:14 12326958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeindexing.so
+2aaac9ee5000-2aaaca0e4000 ---p 00175000 00:14 12326958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeindexing.so
+2aaaca0e4000-2aaaca0f2000 rw-p 00174000 00:14 12326958                   /cm/shared/hyalite/apps/matlab/Ryalite/apps/matlab/R2017a/bin/glnxa64/libmwprofiler.so
+2aaaca5ed000-2aaaca7ec000 ---p 00041000 00:14 12326646                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwprofiler.so
+2aaaca7ec000-2aaaca7f0000 rw-p 00040000 00:14 12326646                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwprofiler.so
+2aaaca7f0000-2aaacaac1000 r-xp 00000000 00:14 12329741                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathcore.so
+2aaacaac1000-2aaacacc1000 ---p 002d1000 00:14 12329741                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathcore.so
+2aaacacc1000-2aaacacd5000 rw-p 002d1000 00:14 12329741                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathcore.so
+2aaacacd5000-2aaacacd6000 rw-p 00000000 00:00 0 
+2aaacacd6000-2aaacad47000 r-xp 00000000 00:14 12329735                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_program_options.so.1.56.0
+2aaacad47000-2aaacaf46000 ---p 00071000 00:14 12329735        2017a/bin/glnxa64/libmwlxeindexing.so
+2aaaca0f2000-2aaaca0f3000 rw-p 00000000 00:00 0 
+2aaaca0f3000-2aaaca14f000 r-xp 00000000 00:14 12328332                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeutilities.so
+2aaaca14f000-2aaaca34f000 ---p 0005c000 00:14 12328332                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeutilities.so
+2aaaca34f000-2aaaca353000 rw-p 0005c000 00:14 12328332                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxeutilities.so
+2aaaca353000-2aaaca3a5000 r-xp 00000000 00:14 12330053                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so
+2aaaca3a5000-2aaaca5a4000 ---p 00052000 00:14 12330053                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so
+2aaaca5a4000-2aaaca5ac000 rw-p 00051000 00:14 12330053                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlxetypes.so
+2aaaca5ac000-2aaaca5ed000 r-xp 00000000 00:14 12326646                   /cm/shared/h           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_program_options.so.1.56.0
+2aaacaf46000-2aaacaf4b000 rw-p 00070000 00:14 12329735                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_program_options.so.1.56.0
+2aaacaf4b000-2aaacb017000 r-xp 00000000 00:14 12247365                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfileio.so
+2aaacb017000-2aaacb217000 ---p 000cc000 00:14 12247365                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfileio.so
+2aaacb217000-2aaacb21f000 rw-p 000cc000 00:14 12247365                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfileio.so
+2aaacb21f000-2aaacb24e000 r-xp 00000000 00:14 12324382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtimefun.so
+2aaacb24e000-2aaacb44e000 ---p 0002f000 00:14 12324382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtimefun.so
+2aaacb44e000-2aaacb451000 rw-p 0002f000 00:14 12324382                   /cm/syalite/apps/matlab/R2017a/bin/glnxa64/libmwprofiler.so
+2aaaca5ed000-2aaaca7ec000 ---p 00041000 00:14 12326646                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwprofiler.so
+2aaaca7ec000-2aaaca7f0000 rw-p 00040000 00:14 12326646                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwprofiler.so
+2aaaca7f0000-2aaacaac1000 r-xp 00000000 00:14 12329741                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathcore.so
+2aaacaac1000-2aaacacc1000 ---p 002d1000 00:14 12329741                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathcore.so
+2aaacacc1000-2aaacacd5000 rw-p 002d1000 00:14 12329741                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmathcore.so
+2aaacacd5000-2aaacacd6000 rw-p 00000000 00:00 0 
+2aaacacd6000-2aaacad47000 r-xp 00000000 00:14 12329735                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_program_options.so.1.56.0
+2aaacad47000-2aaacaf46000 ---p 00071000 00:14 12329735        hared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtimefun.so
+2aaacb451000-2aaacb452000 r-xp 00000000 00:14 12326532                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartupplugin.so
+2aaacb452000-2aaacb652000 ---p 00001000 00:14 12326532                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartupplugin.so
+2aaacb652000-2aaacb653000 rw-p 00001000 00:14 12326532                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartupplugin.so
+2aaacb653000-2aaacb671000 r-xp 00000000 00:14 12330074                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5_hl.so.8.0.1
+2aaacb671000-2aaacb871000 ---p 0001e000 00:14 12330074                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5_hl.so.8.0.1
+2aaacb871000-2aaacb872000 rw-p 0001e000 00:14 12330074                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5_hl.so.8.0.1
+2aaacb872000-2aaacb883000 rw-p 00000000 00:00 0 
+2aaacb883000-2aaacbb08000 r-xp 00000000 00:14 1232           /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_program_options.so.1.56.0
+2aaacaf46000-2aaacaf4b000 rw-p 00070000 00:14 12329735                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libboost_program_options.so.1.56.0
+2aaacaf4b000-2aaacb017000 r-xp 00000000 00:14 12247365                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfileio.so
+2aaacb017000-2aaacb217000 ---p 000cc000 00:14 12247365                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfileio.so
+2aaacb217000-2aaacb21f000 rw-p 000cc000 00:14 12247365                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwfileio.so
+2aaacb21f000-2aaacb24e000 r-xp 00000000 00:14 12324382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtimefun.so
+2aaacb24e000-2aaacb44e000 ---p 0002f000 00:14 12324382                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtimefun.so
+2aaacb44e000-2aaacb451000 rw-p 0002f000 00:14 12324382                   /cm/s5953                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5.so.8.0.1
+2aaacbb08000-2aaacbd07000 ---p 00285000 00:14 12325953                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5.so.8.0.1
+2aaacbd07000-2aaacbd12000 rw-p 00284000 00:14 12325953                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5.so.8.0.1
+2aaacbd12000-2aaacbd14000 rw-p 00000000 00:00 0 
+2aaacbd14000-2aaacbd1f000 r-xp 00000000 00:14 12325845                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmfl_rng.so
+2aaacbd1f000-2aaacbf1f000 ---p 0000b000 00:14 12325845                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmfl_rng.so
+2aaacbf1f000-2aaacbf20000 rw-p 0000b000 00:14 12325845                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmfl_rng.so
+2aaacbf20000-2aaacbf23000 r-xp 00000000 00:14 12325488                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdSFMT.so
+2aaacbf23000-2aaacc122000 ---p 00003000 00:14 12325hared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtimefun.so
+2aaacb451000-2aaacb452000 r-xp 00000000 00:14 12326532                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartupplugin.so
+2aaacb452000-2aaacb652000 ---p 00001000 00:14 12326532                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartupplugin.so
+2aaacb652000-2aaacb653000 rw-p 00001000 00:14 12326532                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstartupplugin.so
+2aaacb653000-2aaacb671000 r-xp 00000000 00:14 12330074                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5_hl.so.8.0.1
+2aaacb671000-2aaacb871000 ---p 0001e000 00:14 12330074                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5_hl.so.8.0.1
+2aaacb871000-2aaacb872000 rw-p 0001e000 00:14 12330074                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5_hl.so.8.0.1
+2aaacb872000-2aaacb883000 rw-p 00000000 00:00 0 
+2aaacb883000-2aaacbb08000 r-xp 00000000 00:14 1232488                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdSFMT.so
+2aaacc122000-2aaacc123000 rw-p 00002000 00:14 12325488                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdSFMT.so
+2aaacc123000-2aaacc300000 r-xp 00000000 00:14 12328111                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring.so
+2aaacc300000-2aaacc4ff000 ---p 001dd000 00:14 12328111                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring.so
+2aaacc4ff000-2aaacc511000 rw-p 001dc000 00:14 12328111                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring.so
+2aaacc511000-2aaacc52c000 r-xp 00000000 00:14 12328527                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwblas.so
+2aaacc52c000-2aaacc72b000 ---p 0001b000 00:14 12328527                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwblas.so
+2aaacc72b000-2aaacc72d000 rw-p 0001a000 00:14 12328527                   /cm/shared/hyalite/apps/matlab/R2017a/bin/5953                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5.so.8.0.1
+2aaacbb08000-2aaacbd07000 ---p 00285000 00:14 12325953                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5.so.8.0.1
+2aaacbd07000-2aaacbd12000 rw-p 00284000 00:14 12325953                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libhdf5.so.8.0.1
+2aaacbd12000-2aaacbd14000 rw-p 00000000 00:00 0 
+2aaacbd14000-2aaacbd1f000 r-xp 00000000 00:14 12325845                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmfl_rng.so
+2aaacbd1f000-2aaacbf1f000 ---p 0000b000 00:14 12325845                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmfl_rng.so
+2aaacbf1f000-2aaacbf20000 rw-p 0000b000 00:14 12325845                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwmfl_rng.so
+2aaacbf20000-2aaacbf23000 r-xp 00000000 00:14 12325488                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdSFMT.so
+2aaacbf23000-2aaacc122000 ---p 00003000 00:14 12325glnxa64/libmwblas.so
+2aaacc72d000-2aaacc8c5000 r-xp 00000000 00:14 12330014                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlapack.so
+2aaacc8c5000-2aaaccac5000 ---p 00198000 00:14 12330014                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlapack.so
+2aaaccac5000-2aaaccadb000 rw-p 00198000 00:14 12330014                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlapack.so
+2aaaccadb000-2aaaccb1a000 r-xp 00000000 00:14 12326631                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcholmod.so
+2aaaccb1a000-2aaaccd19000 ---p 0003f000 00:14 12326631                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcholmod.so
+2aaaccd19000-2aaaccd1a000 rw-p 0003e000 00:14 12326631                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcholmod.so
+2aaaccd1a000-2aaaccdab000 r-xp 00000000 00:14 12326016                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbuiltinsutil.so
+2aaaccdab000-2aaaccfab000 --488                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdSFMT.so
+2aaacc122000-2aaacc123000 rw-p 00002000 00:14 12325488                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdSFMT.so
+2aaacc123000-2aaacc300000 r-xp 00000000 00:14 12328111                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring.so
+2aaacc300000-2aaacc4ff000 ---p 001dd000 00:14 12328111                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring.so
+2aaacc4ff000-2aaacc511000 rw-p 001dc000 00:14 12328111                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwstring.so
+2aaacc511000-2aaacc52c000 r-xp 00000000 00:14 12328527                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwblas.so
+2aaacc52c000-2aaacc72b000 ---p 0001b000 00:14 12328527                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwblas.so
+2aaacc72b000-2aaacc72d000 rw-p 0001a000 00:14 12328527                   /cm/shared/hyalite/apps/matlab/R2017a/bin/-p 00091000 00:14 12326016                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbuiltinsutil.so
+2aaaccfab000-2aaaccfb5000 rw-p 00091000 00:14 12326016                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbuiltinsutil.so
+2aaaccfb5000-2aaaccfcd000 r-xp 00000000 00:14 12330050                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtextio.so
+2aaaccfcd000-2aaacd1cc000 ---p 00018000 00:14 12330050                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtextio.so
+2aaacd1cc000-2aaacd1ce000 rw-p 00017000 00:14 12330050                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtextio.so
+2aaacd1ce000-2aaacd23f000 r-xp 00000000 00:14 12327225                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdatetime.so
+2aaacd23f000-2aaacd43f000 ---p 00071000 00:14 12327225                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdatetime.so
+2aaacd43f000-2aaacd444000 rw-p 00071000 00:14 12327225                glnxa64/libmwblas.so
+2aaacc72d000-2aaacc8c5000 r-xp 00000000 00:14 12330014                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlapack.so
+2aaacc8c5000-2aaaccac5000 ---p 00198000 00:14 12330014                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlapack.so
+2aaaccac5000-2aaaccadb000 rw-p 00198000 00:14 12330014                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwlapack.so
+2aaaccadb000-2aaaccb1a000 r-xp 00000000 00:14 12326631                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcholmod.so
+2aaaccb1a000-2aaaccd19000 ---p 0003f000 00:14 12326631                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcholmod.so
+2aaaccd19000-2aaaccd1a000 rw-p 0003e000 00:14 12326631                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcholmod.so
+2aaaccd1a000-2aaaccdab000 r-xp 00000000 00:14 12326016                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbuiltinsutil.so
+2aaaccdab000-2aaaccfab000 --   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdatetime.so
+2aaacd444000-2aaacd456000 r-xp 00000000 00:14 12329348                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbinder.so
+2aaacd456000-2aaacd656000 ---p 00012000 00:14 12329348                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbinder.so
+2aaacd656000-2aaacd657000 rw-p 00012000 00:14 12329348                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbinder.so
+2aaacd657000-2aaacd65d000 r-xp 00000000 00:14 12326265                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwompwrapper.so
+2aaacd65d000-2aaacd85c000 ---p 00006000 00:14 12326265                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwompwrapper.so
+2aaacd85c000-2aaacd85d000 rw-p 00005000 00:14 12326265                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwompwrapper.so
+2aaacd85d000-2aaacd865000 r-xp 00000000 00:14 12325833                   /cm/shared/hyalite/apps/matlab/R2017a/bin-p 00091000 00:14 12326016                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbuiltinsutil.so
+2aaaccfab000-2aaaccfb5000 rw-p 00091000 00:14 12326016                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbuiltinsutil.so
+2aaaccfb5000-2aaaccfcd000 r-xp 00000000 00:14 12330050                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtextio.so
+2aaaccfcd000-2aaacd1cc000 ---p 00018000 00:14 12330050                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtextio.so
+2aaacd1cc000-2aaacd1ce000 rw-p 00017000 00:14 12330050                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwtextio.so
+2aaacd1ce000-2aaacd23f000 r-xp 00000000 00:14 12327225                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdatetime.so
+2aaacd23f000-2aaacd43f000 ---p 00071000 00:14 12327225                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdatetime.so
+2aaacd43f000-2aaacd444000 rw-p 00071000 00:14 12327225                /glnxa64/libmwamd.so
+2aaacd865000-2aaacda65000 ---p 00008000 00:14 12325833                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwamd.so
+2aaacda65000-2aaacda66000 rw-p 00008000 00:14 12325833                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwamd.so
+2aaacda66000-2aaacda6c000 r-xp 00000000 00:14 12328359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcolamd.so
+2aaacda6c000-2aaacdc6b000 ---p 00006000 00:14 12328359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcolamd.so
+2aaacdc6b000-2aaacdc6c000 rw-p 00005000 00:14 12328359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcolamd.so
+2aaacdc6c000-2aaacdd75000 r-xp 00000000 00:14 12316826                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libiomp5.so
+2aaacdd75000-2aaacdf75000 ---p 00109000 00:14 12316826                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libiomp5.so
+2aaacdf75000-2aaacdf80000 rw-p 00109000 00:   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwdatetime.so
+2aaacd444000-2aaacd456000 r-xp 00000000 00:14 12329348                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbinder.so
+2aaacd456000-2aaacd656000 ---p 00012000 00:14 12329348                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbinder.so
+2aaacd656000-2aaacd657000 rw-p 00012000 00:14 12329348                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwbinder.so
+2aaacd657000-2aaacd65d000 r-xp 00000000 00:14 12326265                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwompwrapper.so
+2aaacd65d000-2aaacd85c000 ---p 00006000 00:14 12326265                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwompwrapper.so
+2aaacd85c000-2aaacd85d000 rw-p 00005000 00:14 12326265                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwompwrapper.so
+2aaacd85d000-2aaacd865000 r-xp 00000000 00:14 12325833                   /cm/shared/hyalite/apps/matlab/R2017a/bin14 12316826                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libiomp5.so
+2aaacdf80000-2aaace20e000 rw-p 00000000 00:00 0 
+2aaace20e000-2aaace218000 r-xp 00000000 00:14 12326088                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/connector/openssl_initializer/libmwconnectoropensslinitializer.so
+2aaace218000-2aaace418000 ---p 0000a000 00:14 12326088                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/connector/openssl_initializer/libmwconnectoropensslinitializer.so
+2aaace418000-2aaace419000 rw-p 0000a000 00:14 12326088                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/connector/openssl_initializer/libmwconnectoropensslinitializer.so
+2aaace419000-2aaace41a000 ---p 00000000 00:00 0 
+2aaace41a000-2aaace61a000 rwxp 00000000 00:00 0 
+2aaace61a000-2aaace620000 r-xp 00000000 00:14 12326067                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins//glnxa64/libmwamd.so
+2aaacd865000-2aaacda65000 ---p 00008000 00:14 12325833                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwamd.so
+2aaacda65000-2aaacda66000 rw-p 00008000 00:14 12325833                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwamd.so
+2aaacda66000-2aaacda6c000 r-xp 00000000 00:14 12328359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcolamd.so
+2aaacda6c000-2aaacdc6b000 ---p 00006000 00:14 12328359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcolamd.so
+2aaacdc6b000-2aaacdc6c000 rw-p 00005000 00:14 12328359                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwcolamd.so
+2aaacdc6c000-2aaacdd75000 r-xp 00000000 00:14 12316826                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libiomp5.so
+2aaacdd75000-2aaacdf75000 ---p 00109000 00:14 12316826                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libiomp5.so
+2aaacdf75000-2aaacdf80000 rw-p 00109000 00:matlab_graphics_ui/mwuixloader.so
+2aaace620000-2aaace820000 ---p 00006000 00:14 12326067                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/matlab_graphics_ui/mwuixloader.so
+2aaace820000-2aaace821000 rw-p 00006000 00:14 12326067                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/matlab_graphics_ui/mwuixloader.so
+2aaace821000-2aaace864000 r-xp 00000000 00:14 12329870                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwuix.so
+2aaace864000-2aaacea63000 ---p 00043000 00:14 12329870                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwuix.so
+2aaacea63000-2aaacea68000 rw-p 00042000 00:14 12329870                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwuix.so
+2aaacea68000-2aaacebdd000 r-xp 00000000 00:14 12328374                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgui.so
+2aaacebdd000-2aaaceddc000 ---p 00175000 00:14 12328374                   /cm/shared/hyalit14 12316826                   /cm/shared/hyalite/apps/matlab/R2017a/sys/os/glnxa64/libiomp5.so
+2aaacdf80000-2aaace20e000 rw-p 00000000 00:00 0 
+2aaace20e000-2aaace218000 r-xp 00000000 00:14 12326088                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/connector/openssl_initializer/libmwconnectoropensslinitializer.so
+2aaace218000-2aaace418000 ---p 0000a000 00:14 12326088                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/connector/openssl_initializer/libmwconnectoropensslinitializer.so
+2aaace418000-2aaace419000 rw-p 0000a000 00:14 12326088                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/connector/openssl_initializer/libmwconnectoropensslinitializer.so
+2aaace419000-2aaace41a000 ---p 00000000 00:00 0 
+2aaace41a000-2aaace61a000 rwxp 00000000 00:00 0 
+2aaace61a000-2aaace620000 r-xp 00000000 00:14 12326067                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/e/apps/matlab/R2017a/bin/glnxa64/libmwgui.so
+2aaaceddc000-2aaacee1e000 rw-p 00174000 00:14 12328374                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgui.so
+2aaacee37000-2aaacee96000 r-xp 00000000 08:01 983965                     /usr/lib64/libXt.so.6.0.0
+2aaacee96000-2aaacf095000 ---p 0005f000 08:01 983965                     /usr/lib64/libXt.so.6.0.0
+2aaacf095000-2aaacf09b000 rw-p 0005e000 08:01 983965                     /usr/lib64/libXt.so.6.0.0
+2aaacf09b000-2aaacf09c000 rw-p 00000000 00:00 0 
+2aaacf09c000-2aaacf0fa000 r-xp 00000000 00:14 12324547                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_util.so
+2aaacf0fa000-2aaacf2fa000 ---p 0005e000 00:14 12324547                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_util.so
+2aaacf2fa000-2aaacf301000 rw-p 0005e000 00:14 12324547                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_util.so
+2aaacf301000-2aaacf336000 r-xp 00000000 00:14 12297815         matlab_graphics_ui/mwuixloader.so
+2aaace620000-2aaace820000 ---p 00006000 00:14 12326067                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/matlab_graphics_ui/mwuixloader.so
+2aaace820000-2aaace821000 rw-p 00006000 00:14 12326067                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/matlab_startup_plugins/matlab_graphics_ui/mwuixloader.so
+2aaace821000-2aaace864000 r-xp 00000000 00:14 12329870                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwuix.so
+2aaace864000-2aaacea63000 ---p 00043000 00:14 12329870                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwuix.so
+2aaacea63000-2aaacea68000 rw-p 00042000 00:14 12329870                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwuix.so
+2aaacea68000-2aaacebdd000 r-xp 00000000 00:14 12328374                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgui.so
+2aaacebdd000-2aaaceddc000 ---p 00175000 00:14 12328374                   /cm/shared/hyalit
+------------------------------------------------------------------------
+       Segmentation violation detected at Thu Jun  4 21:55:15 2020
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : UTF-8
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : compute072
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3197943
+  MATLAB Root         : /cm/shared/hyalite/apps/matlab/R2017a
+  MATLAB Version      : 9.2.0.556344 (R2017a)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Virtual Machine     : Java 1.7.0_60-b19 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  Window System       : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00002aab4fec7fef  RBX = 00002aab4fec86a0
+  RCX = 000580154d7c8490  RDX = 00055569fd8ffe00
+  RSP = 00002aabe83ffd50  RBP = 0000000000000001
+  RSI = 0000000000000000  RDI = 00002aabbf6dcc88
+
+   R8 = 00000000ffffffff   R9 = 0000000000000020
+  R10 = 00002aabe83ffa00  R11 = 0000000000000000
+  R12 = 00002aaacdfb382c  R13 = 00002aaacdfb3800
+  R14 = 00002aabe83ffdd0  R15 = 00002aaacdfb3000
+
+  RIP = 00002aaaacfb68e5  EFL = 0000000000010212
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002aaaacfb68e5                                   /lib64/libc.so.6+00219365 exit+00000053
+[  1] 0x00002aaab2d3129e /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00111262
+[  2] 0x00002aaab2d30fcd /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00110541
+[  3] 0x00002aaab2d30d56 /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtbb.so.2+00109910
+[  4] 0x00002aaaacd6baa1                             /lib64/libpthread.so.0+00031393
+[  5] 0x00002aaaad069bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[  6] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/alexander.salois/matlab_crash_dump.38700-1 **
+
+
+e/apps/matlab/R2017a/bin/glnxa64/libmwgui.so
+2aaaceddc000-2aaacee1e000 rw-p 00174000 00:14 12328374                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgui.so
+2aaacee37000-2aaacee96000 r-xp 00000000 08:01 983965                     /usr/lib64/libXt.so.6.0.0
+2aaacee96000-2aaacf095000 ---p 0005f000 08:01 983965                     /usr/lib64/libXt.so.6.0.0
+2aaacf095000-2aaacf09b000 rw-p 0005e000 08:01 983965                     /usr/lib64/libXt.so.6.0.0
+2aaacf09b000-2aaacf09c000 rw-p 00000000 00:00 0 
+2aaacf09c000-2aaacf0fa000 r-xp 00000000 00:14 12324547                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_util.so
+2aaacf0fa000-2aaacf2fa000 ---p 0005e000 00:14 12324547                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_util.so
+2aaacf2fa000-2aaacf301000 rw-p 0005e000 00:14 12324547                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwgraphics_util.so
+2aaacf301000-2aaacf336000 r-xp 00000000 00:14 12297815                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtex_base.so
+2aaacf336000-2aaacf535000 ---p 00035000 00:14 12297815                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtex_base.so
+2aaacf535000-2aaacf537000 rw-p 00034000 00:14 12297815                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtex_base.so
+2aaacf537000-2aaacf5b1000 rw-p 00000000 00:00 0 
+2aaacf5b1000-2aaacf5b5000 r-xp 00000000 08:01 262423                     /lib64/libuuid.so.1.3.0
+2aaacf5b5000-2aaacf7b4000 ---p 00004000 08:01 262423                     /lib64/libuuid.so.1.3.0
+2aaacf7b4000-2aaacf7b5000 rw-p 00003000 08:01 262423                     /lib64/libuuid.so.1.3.0
+2aaad0000000-2aaad0027000 rw-p 00000000 00:00 0 
+2aaad0027000-2aaad4000000 ---p 00000000 00:00 0 
+2aaad4000000-2aaad4003000 ---p 00000000 00:00 0 
+2aaad4003000-2aaad8001000 rwxp 00000000 00:00 0 
+2aaad8001000-2aaad800c000 r-xp 00000000 00:14 12288098                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlxrcsc.          /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtex_base.so
+2aaacf336000-2aaacf535000 ---p 00035000 00:14 12297815                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtex_base.so
+2aaacf535000-2aaacf537000 rw-p 00034000 00:14 12297815                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libtex_base.so
+2aaacf537000-2aaacf5b1000 rw-p 00000000 00:00 0 
+2aaacf5b1000-2aaacf5b5000 r-xp 00000000 08:01 262423                     /lib64/libuuid.so.1.3.0
+2aaacf5b5000-2aaacf7b4000 ---p 00004000 08:01 262423                     /lib64/libuuid.so.1.3.0
+2aaacf7b4000-2aaacf7b5000 rw-p 00003000 08:01 262423                     /lib64/libuuid.so.1.3.0
+2aaad0000000-2aaad0027000 rw-p 00000000 00:00 0 
+2aaad0027000-2aaad4000000 ---p 00000000 00:00 0 
+2aaad4000000-2aaad4003000 ---p 00000000 00:00 0 
+2aaad4003000-2aaad8001000 rwxp 00000000 00:00 0 
+2aaad8001000-2aaad800c000 r-xp 00000000 00:14 12288098                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlxrcsc.so
+2aaad800c000-2aaad820c000 ---p 0000b000 00:14 12288098                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlxrcsc.so
+2aaad820c000-2aaad820e000 rw-p 0000b000 00:14 12288098                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlxrcsc.so
+2aaad820e000-2aaad82b3000 r-xp 00000000 00:14 12327255                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_mi.so
+2aaad82b3000-2aaad84b2000 ---p 000a5000 00:14 12327255                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_mi.so
+2aaad84b2000-2aaad84be000 rw-p 000a4000 00:14 12327255                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_mi.so
+2aaad84be000-2aaad8651000 r-xp 00000000 00:14 12328320                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwjmi.so
+2aaad8651000-2aaad8850000 ---p 00193000 00:14 12328320                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwjmi.so
+2aaad8850000-2aaad8866000 rw-p 00192000 00:14 12328320   
+MATLAB is exiting because of fatal error
+                /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwjmi.so
+2aaad8866000-2aaad886b000 rw-p 00000000 00:00 0 
+2aaad886b000-2aaad8870000 r-xp 00000000 00:14 12247368                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativejava_services.so
+2aaad8870000-2aaad8a6f000 ---p 00005000 00:14 12247368                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativejava_services.so
+2aaad8a6f000-2aaad8a70000 rw-p 00004000 00:14 12247368                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwnativejava_services.so
+2aaad8a70000-2aaad8ae5000 r-xp 00000000 00:14 12324958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_jmi.so
+2aaad8ae5000-2aaad8ce5000 ---p 00075000 00:14 12324958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_jmi.so
+2aaad8ce5000-2aaad8cef000 rw-p 00075000 00:14 12324958                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_jmi.so
+2aaad8cef000-2aaad913a000 rso
+2aaad800c000-2aaad820c000 ---p 0000b000 00:14 12288098                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlxrcsc.so
+2aaad820c000-2aaad820e000 rw-p 0000b000 00:14 12288098                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwxmlxrcsc.so
+2aaad820e000-2aaad82b3000 r-xp 00000000 00:14 12327255                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_mi.so
+2aaad82b3000-2aaad84b2000 ---p 000a5000 00:14 12327255                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_mi.so
+2aaad84b2000-2aaad84be000 rw-p 000a4000 00:14 12327255                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwudd_mi.so
+2aaad84be000-2aaad8651000 r-xp 00000000 00:14 12328320                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwjmi.so
+2aaad8651000-2aaad8850000 ---p 00193000 00:14 12328320                   /cm/shared/hyalite/apps/matlab/R2017a/bin/glnxa64/libmwjmi.so
+2aaad8850000-2aaad8866000 rw-p 00192000 00:14 12328320   /cm/local/apps/slurm/var/spool/job1371337/slurm_script: line 21: 38700 Killed                  matlab -nodesktop -nodisplay -nosplash -r "run_sims(${SLURM_ARRAY_TASK_ID}); exit;"

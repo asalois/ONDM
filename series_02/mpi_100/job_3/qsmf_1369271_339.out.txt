@@ -1,0 +1,4 @@
+Wed Jun  3 14:53:25 MDT 2020
+Hello from compute067.
+339
+Run a matlab script
