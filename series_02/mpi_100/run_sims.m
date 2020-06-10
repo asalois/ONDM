@@ -16,5 +16,5 @@ for i = 1:11
         m =[m makeTable(laser_power(:,i)', span(i), step(i), comp, alpha1, alpha2, aeff1, aeff2)];
     end
 end
-qsmf_simulation_fft2(indx, m(1, indx), m(2, indx), m(3, indx), m(4, indx), m(5, indx), m(6, indx), m(7, indx), m(8, indx))
+%qsmf_simulation_fft2(indx, m(1, indx), m(2, indx), m(3, indx), m(4, indx), m(5, indx), m(6, indx), m(7, indx), m(8, indx))
 end
