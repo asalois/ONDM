@@ -5492,3 +5492,57 @@ ans =
 To get started, type doc.
 For product information, visit www.mathworks.com.
  
+
+ans =
+
+   -5.0000    4.3597
+
+Elapsed time is 1420.774668 seconds.
+
+ans =
+
+    4.3597
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -4.0000    5.1109
+
+Elapsed time is 1409.910367 seconds.
+
+ans =
+
+    5.1109
+
+[?1l>[?1h=
+                                                          < M A T L A B (R) >
+                                                Copyright 1984-2020 The MathWorks, Inc.
+                                            R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                              May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+   -3.0000    5.6789
+
+Elapsed time is 1417.801906 seconds.
+
+ans =
+
+    5.6789
+
+[?1l>
