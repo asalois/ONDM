@@ -1,0 +1,6 @@
+{Subscript indices must either be real positive integers or logicals.
+
+Error in single_run_sims (line 19)
+	qsmf_simulation_fft2(indx*10 + i, m(1, indx), m(2, indx), m(3, indx),
+        m(4, indx), m(5, indx), m(6, indx), m(7, indx), m(8, indx))
+} 

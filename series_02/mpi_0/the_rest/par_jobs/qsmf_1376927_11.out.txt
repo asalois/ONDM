@@ -1,0 +1,201 @@
+Thu Jun 11 10:21:44 MDT 2020
+Hello from compute036.
+11
+Run a matlab script
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Starting parallel pool (parpool) using the 'local' profile ...
+[Warning: The cluster failed to cancel the job execution. The error was: Unable
+to read file '/home/v16b915/.matlab/local_cluster_jobs/R2017a/Job39.in.mat'. No
+such file or directory.] 
+[> In parallel.internal.cluster.CJSJobMethods.cancelOneJob (line 53)
+  In parallel.job.CJSCommunicatingJob/cancelOneJob (line 101)
+  In parallel.Job/cancel (line 1229)
+  In parallel.Cluster/hDeleteOneJob (line 887)
+  In parallel.internal.pool.InteractiveClient>iDeleteJobs (line 847)
+  In parallel.internal.pool.InteractiveClient/pRemoveOldJobs (line 472)
+  In parallel.internal.pool.InteractiveClient/start (line 311)
+  In parallel.Pool>iStartClient (line 593)
+  In parallel.Pool.hBuildPool (line 472)
+  In parallel.internal.pool.doParpool (line 18)
+  In parpool (line 89)
+  In parallel.internal.pool.PoolArrayManager.getOrAutoCreateWithCleanup (line 49)
+  In pctTryCreatePoolIfNecessary (line 23)
+  In distcomp.remoteparfor.tryRemoteParfor
+  In parallel_function (line 433)
+  In run_sims (line 19)] 
+[Warning: The cluster reported an error while deleting an unavailable job.  This
+job may already have been deleted.] 
+[> In parallel.internal.cluster.CJSJobMethods.destroyOneJob (line 77)
+  In parallel.job.CJSCommunicatingJob/destroyOneJob (line 96)
+  In parallel.Job/delete (line 1163)
+  In parallel.Cluster/hDeleteOneJob (line 902)
+  In parallel.internal.pool.InteractiveClient>iDeleteJobs (line 847)
+  In parallel.internal.pool.InteractiveClient/pRemoveOldJobs (line 472)
+  In parallel.internal.pool.InteractiveClient/start (line 311)
+  In parallel.Pool>iStartClient (line 593)
+  In parallel.Pool.hBuildPool (line 472)
+  In parallel.internal.pool.doParpool (line 18)
+  In parpool (line 89)
+  In parallel.internal.pool.PoolArrayManager.getOrAutoCreateWithCleanup (line 49)
+  In pctTryCreatePoolIfNecessary (line 23)
+  In distcomp.remoteparfor.tryRemoteParfor
+  In parallel_function (line 433)
+  In run_sims (line 19)] 
+[Warning: The cluster failed to cancel the job execution. The error was: Unable
+to read file '/home/v16b915/.matlab/local_cluster_jobs/R2017a/Job45.in.mat'. No
+such file or directory.] 
+[> In parallel.internal.cluster.CJSJobMethods.cancelOneJob (line 53)
+  In parallel.job.CJSCommunicatingJob/cancelOneJob (line 101)
+  In parallel.Job/cancel (line 1229)
+  In parallel.Cluster/hDeleteOneJob (line 887)
+  In parallel.internal.pool.InteractiveClient>iDeleteJobs (line 847)
+  In parallel.internal.pool.InteractiveClient/pRemoveOldJobs (line 472)
+  In parallel.internal.pool.InteractiveClient/start (line 311)
+  In parallel.Pool>iStartClient (line 593)
+  In parallel.Pool.hBuildPool (line 472)
+  In parallel.internal.pool.doParpool (line 18)
+  In parpool (line 89)
+  In parallel.internal.pool.PoolArrayManager.getOrAutoCreateWithCleanup (line 49)
+  In pctTryCreatePoolIfNecessary (line 23)
+  In distcomp.remoteparfor.tryRemoteParfor
+  In parallel_function (line 433)
+  In run_sims (line 19)] 
+[Warning: The cluster reported an error while deleting an unavailable job.  This
+job may already have been deleted.] 
+[> In parallel.internal.cluster.CJSJobMethods.destroyOneJob (line 77)
+  In parallel.job.CJSCommunicatingJob/destroyOneJob (line 96)
+  In parallel.Job/delete (line 1163)
+  In parallel.Cluster/hDeleteOneJob (line 902)
+  In parallel.internal.pool.InteractiveClient>iDeleteJobs (line 847)
+  In parallel.internal.pool.InteractiveClient/pRemoveOldJobs (line 472)
+  In parallel.internal.pool.InteractiveClient/start (line 311)
+  In parallel.Pool>iStartClient (line 593)
+  In parallel.Pool.hBuildPool (line 472)
+  In parallel.internal.pool.doParpool (line 18)
+  In parpool (line 89)
+  In parallel.internal.pool.PoolArrayManager.getOrAutoCreateWithCleanup (line 49)
+  In pctTryCreatePoolIfNecessary (line 23)
+  In distcomp.remoteparfor.tryRemoteParfor
+  In parallel_function (line 433)
+  In run_sims (line 19)] 
+connected to 12 workers.
+
+ans =
+
+    4.0000   -1.7200
+
+Elapsed time is 11709.524955 seconds.
+
+ans =
+
+   -1.7200
+
+
+ans =
+
+    4.0000   -0.9005
+
+Elapsed time is 11720.972784 seconds.
+
+ans =
+
+   -0.9005
+
+
+ans =
+
+    4.0000   -1.4625
+
+Elapsed time is 11769.973022 seconds.
+
+ans =
+
+   -1.4625
+
+
+ans =
+
+    4.0000   -1.7200
+
+Elapsed time is 12148.768294 seconds.
+
+ans =
+
+   -1.7200
+
+
+ans =
+
+    4.0000   -1.7200
+
+Elapsed time is 12154.734163 seconds.
+
+ans =
+
+   -1.7200
+
+
+ans =
+
+    4.0000   -0.8472
+
+Elapsed time is 12196.027443 seconds.
+
+ans =
+
+   -0.8472
+
+
+ans =
+
+    4.0000   -1.7200
+
+Elapsed time is 12196.164689 seconds.
+
+ans =
+
+   -1.7200
+
+
+ans =
+
+    4.0000   -0.1339
+
+Elapsed time is 12538.602990 seconds.
+
+ans =
+
+   -0.1339
+
+
+ans =
+
+    4.0000   -0.8472
+
+Elapsed time is 12715.202913 seconds.
+
+ans =
+
+   -0.8472
+
+
+ans =
+
+    4.0000   -1.0424
+
+Elapsed time is 12764.266167 seconds.
+
+ans =
+
+   -1.0424
+
+Ended batch processing at Thu Jun 11 13:55:24 MDT 2020.

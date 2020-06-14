@@ -1,0 +1,127 @@
+Fri Jun 12 02:34:16 MDT 2020
+Hello from compute004.
+52
+Run a matlab script
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Starting parallel pool (parpool) using the 'local' profile ...
+connected to 12 workers.
+
+ans =
+
+   -3.0000    6.9630
+
+Elapsed time is 11759.272071 seconds.
+
+ans =
+
+    6.9630
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 11767.477102 seconds.
+
+ans =
+
+    6.9201
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 11773.145949 seconds.
+
+ans =
+
+    6.9201
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 11940.483359 seconds.
+
+ans =
+
+    6.9201
+
+
+ans =
+
+   -3.0000    6.8401
+
+Elapsed time is 12221.122562 seconds.
+
+ans =
+
+    6.8401
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 12231.471267 seconds.
+
+ans =
+
+    6.9201
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 12243.669883 seconds.
+
+ans =
+
+    6.9201
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 12268.303763 seconds.
+
+ans =
+
+    6.9201
+
+
+ans =
+
+   -3.0000    6.8401
+
+Elapsed time is 12439.486762 seconds.
+
+ans =
+
+    6.8401
+
+
+ans =
+
+   -3.0000    6.9201
+
+Elapsed time is 12983.874184 seconds.
+
+ans =
+
+    6.9201
+
+Ended batch processing at Fri Jun 12 06:11:18 MDT 2020.

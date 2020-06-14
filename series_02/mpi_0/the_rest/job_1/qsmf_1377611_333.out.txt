@@ -1,0 +1,26 @@
+Fri Jun 12 21:09:43 MDT 2020
+Hello from compute072.
+333
+Run a matlab script
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+ans =
+
+    5.0000    4.7709
+
+Elapsed time is 18611.606865 seconds.
+
+ans =
+
+    4.7709
+
+Ended batch processing at Sat Jun 13 02:20:21 MDT 2020.
