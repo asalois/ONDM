@@ -1,0 +1,2 @@
+slurmstepd: *** JOB 1378488 ON compute027 CANCELLED AT 2020-06-16T00:57:38 DUE TO TIME LIMIT ***
+slurmstepd: proctrack_p_wait: Unable to destroy container 30977 in pgid plugin, giving up after 128 sec
