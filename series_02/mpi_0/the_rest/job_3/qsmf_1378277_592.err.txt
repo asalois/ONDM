@@ -1,0 +1,12 @@
+License checkout failed.
+License Manager Error -139
+Timeout.
+
+Troubleshoot this issue by visiting: 
+http://www.mathworks.com/support/lme/R2017a/139
+
+Diagnostic Information:
+Feature: MATLAB 
+License path: /home/alexander.salois/.matlab/R2017a_licenses:/cm/shared/hyalite/apps/matlab/R2017a/licenses/licens
+e.dat:/cm/shared/hyalite/apps/matlab/R2017a/licenses/network.lic 
+Licensing error: -139,11603.
