@@ -24,3 +24,15 @@ for i = 1:num_modes
     ylabel('X(t)')
 end
 hold off
+
+
+%%
+
+Wo = 0.9; Wt = 0.8;
+[AllpassNum, AllpassDen] = allpassshift(Wo, Wt);
+
+[h, f] = freqz(AllpassNum, AllpassDen, 'whole');
+
+plot(f/pi, abs(angle(h))/pi, Wt, Wo, 'ro');
+title('Mapping Function Wo(Wt)');
+xlabel('New Frequency, Wt'); ylabel('Old Frequency, Wo');
