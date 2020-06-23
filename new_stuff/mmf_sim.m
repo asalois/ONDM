@@ -1,33 +1,46 @@
 clc;
 close all;
-Fs = 2^15;          % Sampling frequency
+clear all;
+Fs = 256*10^3;% Sampling frequency
 t = -1:1/Fs:1;      % Time vector 
 L = length(t);      % Signal length
 Ak = 1;
-To = 1/Fs;
+To = 1/10;
 wo = 2*pi*Fs;
-X = exp(-t.^2/(2*To^2)); % Gausian Pulse
+X = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
 n = 2^nextpow2(L);  % for better fft perf
 Y = fft(X,n);   % the fft of the pulse
-num_modes = 1;
+Z = [Y;Y];
+Z = Z';
+num_modes = 2;
+inl = [To To];
 y = zeros(num_modes,n);
-u = rand(num_modes,n);
+
 for i = 1:length(Y) 
     w = 2*pi/i;
-    l = lamda([pi/2], w);
+    l = lamda(inl, w);
     u = rand(num_modes);
     m = l*u;
-    y(i) = Y(i)*m;
+    y(:, i) = Z(i,:)*m;
+    y(:, i) = ifft(y(:, i));
 end
-y = ifft(y);
+
+
 
 % plot
 figure()
+plot(t,X(1:length(t)) )
+title('Gaussian Pulse in Time Domain')
+xlabel('Time (t)')
+ylabel('X(t)')
+
+
+figure()
 hold on
 for i = 1:num_modes
-    plot(t,abs(y(i,(1:length(t)))))
-    title('Gaussian Pulse in Time Domain')
-    xlabel('Time (t)')
-    ylabel('X(t)')
+    plot(t,abs(y(i,(1:length(t)))) )
 end
+title('Gaussian Pulse in Time Domain')
+xlabel('Time (t)')
+ylabel('X(t)')
 hold off
