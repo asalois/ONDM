@@ -1,18 +1,25 @@
 clc;
 close all;
-Fs = 2^12;          % Sampling frequency
+Fs = 2^15;          % Sampling frequency
 t = -1:1/Fs:1;      % Time vector 
 L = length(t);      % Signal length
-X = 1/(4*sqrt(2*pi*0.01))*(exp(-t.^2/(2*0.01))); % Gausian Pulse
+Ak = 1;
+To = 1/Fs;
+wo = 2*pi*Fs;
+X = exp(-t.^2/(2*To^2)); % Gausian Pulse
 n = 2^nextpow2(L);  % for better fft perf
 Y = fft(X,n);   % the fft of the pulse
-num_modes = 100;
+num_modes = 1;
 y = zeros(num_modes,n);
-fiber = rand(num_modes,n);
-parfor i = 1:num_modes
-    Z = Y.*fiber(i,:);
-    y(i,:) = ifft(Z);
+u = rand(num_modes,n);
+for i = 1:length(Y) 
+    w = 2*pi/i;
+    l = lamda([pi/2], w);
+    u = rand(num_modes);
+    m = l*u;
+    y(i) = Y(i)*m;
 end
+y = ifft(y);
 
 % plot
 figure()
@@ -24,15 +31,3 @@ for i = 1:num_modes
     ylabel('X(t)')
 end
 hold off
-
-
-%%
-
-Wo = 0.9; Wt = 0.8;
-[AllpassNum, AllpassDen] = allpassshift(Wo, Wt);
-
-[h, f] = freqz(AllpassNum, AllpassDen, 'whole');
-
-plot(f/pi, abs(angle(h))/pi, Wt, Wo, 'ro');
-title('Mapping Function Wo(Wt)');
-xlabel('New Frequency, Wt'); ylabel('Old Frequency, Wo');
