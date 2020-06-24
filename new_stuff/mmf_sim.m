@@ -1,11 +1,12 @@
 clc;
 close all;
 clear all;
-Fs = 256*10^1;% Sampling frequency
-t = -1:1/Fs:1;      % Time vector 
+Fs = 2^13 -1;% Sampling frequency
+str_end= 2;
+t = -str_end:1/Fs:str_end;      % Time vector 
 L = length(t);      % Signal length
 Ak = 1;
-To = 1/10;
+To = 1/1000;
 wo = 2*pi*Fs;
 X = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
 n = 2^nextpow2(L);  % for better fft perf
@@ -38,7 +39,6 @@ toc
 x = ifft(y,[],2);
 %x = x';
 
-%%
 figure()
 hold on
 for i = 1:num_runs
