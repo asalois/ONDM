@@ -1,4 +1,5 @@
 %% small pulse
+
 clc;
 close all;
 clear all;
@@ -6,11 +7,12 @@ clear all;
 tic
 start_stuff();
 To = 1/1000;
-pulse = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
-Y = fft(pulse,n);   % the fft of the pulse
+X = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
+n = 2^nextpow2(L);  % for better fft perf
+Y = fft(X,n);   % the fft of the pulse
 Z = [Y;Y];
 num_modes = 2;
-num_runs = 1000;
+num_runs = 100;
 inl = [1 1];
 y = zeros(num_runs, num_modes,n);
 parfor j = 1:num_runs
@@ -24,24 +26,29 @@ parfor j = 1:num_runs
 end
 x = ifft(y,[],2);
 toc
-plot_it(t,pulse)
-plot_it(t,x)
 
-
+plot_it()
 
 %% long pulse
+
 clc;
 close all;
 clear all;
 
 tic
-start_stuff();
-To = 1/4;
-pulse = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
-Y = fft(pulse,n);   % the fft of the pulse
+Fs = 2^12 -1;% Samplingfrequency
+str_end= 2;
+t = -str_end:1/Fs:str_end;      % Time vector 
+L = length(t);      % Signal length
+Ak = 1;
+To = 1/5;
+wo = 2*pi*Fs;
+X = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
+n = 2^nextpow2(L);  % for better fft perf
+Y = fft(X,n);   % the fft of the pulse
 Z = [Y;Y];
 num_modes = 2;
-num_runs = 1000;
+num_runs = 100;
 inl = [1 1];
 y = zeros(num_runs, num_modes,n);
 parfor j = 1:num_runs
@@ -55,16 +62,20 @@ parfor j = 1:num_runs
 end
 x = ifft(y,[],2);
 toc
-plot_it(t,pulse)
-plot_it(t,x)
 
+plot_it()
 
+function plot_it()
+% plot
+    figure()
+    plot(t,X(1:length(t)) )
+    title('Gaussian Pulse in Time Domain')
+    xlabel('Time (t)')
+    ylabel('X(t)')
 
-
-function plot_it(t, x)
     figure()
     hold on
-    for i = 1:size(x,1)
+    for i = 1:num_runs
         plot(t,abs(x(i,(1:length(t)))) )
     end
     title('Gaussian Pulse in Time Domain')
@@ -74,16 +85,11 @@ function plot_it(t, x)
 end
 
 function start_stuff()
-    Fs = 2^10 -1;% Samplingfrequency
-    str_end= 5;
+    Fs = 2^12 -1;% Samplingfrequency
+    str_end= 2;
     t = -str_end:1/Fs:str_end;      % Time vector 
     L = length(t);      % Signal length
-    n = 2^nextpow2(L);  % for better fft perf
     Ak = 1;
     wo = 2*pi*Fs;
-    assignin('base','Fs', Fs)
-    assignin('base','t', t)
-    assignin('base','n', n)
-    assignin('base','Ak', Ak)
-    assignin('base','wo', wo)
+    assignin('BaseFs)
 end
