@@ -1,5 +1,5 @@
 function [y] = mmf_MD(runs,Y,diag,modes)
-% multimode fiber simultion of Modal Dispersion
+% Multimode fiber simultion of Modal Dispersion using matrix concatantion
     if modes == length(diag)
         len = length(Y);
         zz = Y(ones(1,modes),:);
