@@ -4,15 +4,15 @@ close all;
 clear all;
 
 tic
-Fs = 2^13 -1;% Samplingfrequency
+Fs = 2^12 -1;% Samplingfrequency
 str_end= 2;
 t = -str_end:1/Fs:str_end;      % Time vector
 L = length(t);      % Signal length
 Ak = 1;
-wo = 2*pi*Fs;
-num_modes =6; % number of modes in fiber
-num_runs = 100; % number of runs to compute
-TTo = 0.001:0.001:0.01; % Guasian spread vector
+C = [0.97; 0.2];
+num_modes =2; % number of modes in fiber
+num_runs = 1; % number of runs to compute
+TTo = 0.001:0.001:0.001; % Guasian spread vector
 inl = ones(1,floor(num_modes/2)); % create half
 inl = [inl inl.*-1]; % half with neg
 inl = inl.*1/num_modes; % normailze
@@ -31,9 +31,10 @@ inl = inl.*1/num_modes; % normailze
     pulse = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
     n = 2^nextpow2(length(pulse));  % for better fft perf
     Y = fft(pulse,n);
-    y = mmf_MD(num_runs,Y,inl,num_modes);
+    y = mmf_MD(num_runs,Y,inl,num_modes,Fs,C);
+    plot_it(t,y,To,i)
     x = ifft(y,[],2);
-    plot_it(t,x,To,i)
+    %plot_it(t,x,To,i)
     toc
 end
 
