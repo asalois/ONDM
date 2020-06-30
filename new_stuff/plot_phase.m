@@ -1,18 +1,17 @@
-function plot_it(t, x, To, k)
-% plot a 2d vector of magnitudes
+ function plot_phase(t, x, To, k)
+% plot a 2d vector of phases
     figure()
     hold on
     for i = 1:size(x,1)
-        plot(t,abs(x(i,(1:length(t)))) )
+        plot(t,angle(x(i,(1:length(t)))) )
     end
-    formatSpec = 'Gaussian Pulse w/ To = %5.4f in Time Domain\n';
+    formatSpec = 'Gaussian Pulse w/ To = %5.4f in F Domain\n';
     ttl = sprintf(formatSpec,To);
     title(ttl);
     xlabel('Time (t)')
     ylabel('X(t)')
-    formatSpec = 'to_%d';
+    formatSpec = 'toangle_%d';
     name =  sprintf(formatSpec,k);
     hold off
     saveas(gcf,name,'png');
-end
-
+ end
