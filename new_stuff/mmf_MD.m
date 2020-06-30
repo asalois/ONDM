@@ -9,11 +9,11 @@ function [y] = mmf_MD(runs,Y,diag,modes,Fs,C)
         zz = C.*zz;
         y = zeros(runs,modes,len);
         parfor j = 1:runs
-            u = rand(modes);
+            %u = rand(modes);
             for i = 1:run
                 l = lamda(diag, w(i));
-                m = l*u;
-                y(j,:,i) = m*zz(:,i);
+                %m = l*u;
+                y(j,:,i) = l*zz(:,i);
             end
         end
     else
