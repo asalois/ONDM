@@ -15,17 +15,14 @@ Y = fft(pulse,n);               % frequency domain
 phy = pi/8;                    
 C = [cos(phy); sin(phy); cos(phy); sin(phy); cos(phy); sin(phy)];
 
+% repeat Y on all rows and then multply by C
 zz = Y(ones(1,6),:);
 zz = C.*zz;
 
-M = [1 0; 0 1];
-
-% MMF sim
-
-f = Fs*(0:(n-1))/n;
-delay = 1:1:6;
+f = Fs*(0:(n-1))/n; % frequncy vector
+delay = 1:1:6; % dealy vector
 r = runit(zz,delay', f);
-x = ifft(r,[],2);
+x = ifft(r,[],2); % take ifft by rows
 
 figure();
 plot(t,pulse)
