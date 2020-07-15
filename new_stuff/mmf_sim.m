@@ -3,39 +3,49 @@ clc;
 close all;
 clear all;
 
-tic
-Fs = 2^10 -1;% Samplingfrequency
-str_end= 2;
+Fs = 2^10 -1;                   % Sampling frequency
+str_end= 10;                     % How long to make time vector
 t = -str_end:1/Fs:str_end;      % Time vector
-L = length(t);      % Signal length
-Ak = 1;
-C = [0.97; 0.2];
-num_modes =2; % number of modes in fiber
-num_runs = 2; % number of runs to compute
-TTo = 0.001:0.001:0.001; % Guasian spread vector
-inl = ones(1,floor(num_modes/2)); % create half
-inl = [inl inl.*-1]; % half with neg
-inl = inl.*1/num_modes; % normailze
+To = 1/4;                       % Guasian spread
+pulse = exp(-t.^2/(2*To^2));    % Gaussian Pulse
+n = 2^nextpow2(length(pulse));  % for better fft perf
+Y = fft(pulse,n);               % frequency domain
 
+% create constants with c1^2 + c2^2 = 1 property
+phy = pi/8;                    
+C = [cos(phy); sin(phy); cos(phy); sin(phy); cos(phy); sin(phy)];
 
-% plot the Guassians without changing them
-% for i = 1:length(TTo) 
-%     To = TTo(i);
-%     pulse = Ak*exp(-t.^2/(2*To^2)); % Gausian Pulse
-%     plot_it(t,pulse,To,i)
-% end
+zz = Y(ones(1,6),:);
+zz = C.*zz;
+
+M = [1 0; 0 1];
 
 % MMF sim
- for i = 1:length(TTo) 
-    To = TTo(i);
-    pulse = Ak*exp(-t.^2/(2*To^2)); % Gaussian Pulse
-    plot_it(t,pulse,To,i)
-    n = 2^nextpow2(length(pulse));  % for better fft perf
-    Y = fft(pulse,n);
-    plot_phase(t,Y,To,i)
-%     plot_it(t,x,To,i)
-%     x = ifft(y,[],2);
-%     plot_it(t,x,To,i)
-    toc
-end
 
+f = Fs*(0:(n-1))/n;
+delay = 1:1:6;
+r = runit(zz,delay', f);
+x = ifft(r,[],2);
+
+figure();
+plot(t,pulse)
+title('Gaussian Before')
+xlabel('Time (s)')
+ylabel('angle(P1(f))')
+
+% plot a 2d vector of magnitudes
+figure()
+hold on
+for i = 1:size(x,1)
+    plot(t,abs(x(i,(1:length(t)))) )
+end
+title('Guassians after launch');
+xlabel('Time (t)')
+ylabel('X(t)')
+hold off
+
+
+function [r] = runit(Y, delay,f)
+    ees = exp(-j*2*pi*delay.*f);
+    r = Y.*ees;
+end
