@@ -28,7 +28,7 @@ figure();
 plot(t,pulse)
 title('Gaussian Before')
 xlabel('Time (s)')
-ylabel('angle(P1(f))')
+ylabel('s(t)')
 
 % plot a 2d vector of magnitudes
 figure()
@@ -37,8 +37,8 @@ for i = 1:size(x,1)
     plot(t,abs(x(i,(1:length(t)))) )
 end
 title('Guassians after launch');
-xlabel('Time (t)')
-ylabel('X(t)')
+xlabel('Time (s)')
+ylabel('r(t)')
 hold off
 
 
