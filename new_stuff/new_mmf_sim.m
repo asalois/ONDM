@@ -1,4 +1,7 @@
-% start over
+% Start over and make Multi mode dispersion simulation
+% by Alexander Salois w/ help from Dr. Roudas at
+% Montana State University in the Electrical & Computer Engineering Department
+
 close all;
 clear all;
 clc; 
@@ -31,7 +34,7 @@ s = Y(ones(1,modes),:); % copy y to both modes
 s = launch_power.*s; % multply by launch power
 out = s; % make a vector for output
 
-% the fiber is frequncy dependant so run this per frequncy 
+% the fiber is frequncy dependant so run this per frequency 
 for k = 1:length(w)
     fiber = make_fiber(w(k),modes,fiber_sections,delay);
     out(:,k) = fiber*s(:,k); % write it to the output
