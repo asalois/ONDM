@@ -1,4 +1,4 @@
-function [fiber] = make_fiber(w, modes, fiber_sections,delay)
+function [fiber] = make_fiber(w, fiber_sections,delay)
 % Makes a fiber matrix
 %   multiplies each section and output a modes x modes transfer matrix
     m = diag([exp(-j*w*delay(1)) exp(-j*w*delay(2))]); % factor in each delay

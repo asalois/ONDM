@@ -36,7 +36,7 @@ out = s; % make a vector for output
 
 % the fiber is frequncy dependant so run this per frequency 
 for k = 1:length(w)
-    fiber = make_fiber(w(k),modes,fiber_sections,delay);
+    fiber = make_fiber(w(k),fiber_sections,delay);
     out(:,k) = fiber*s(:,k); % write it to the output
 end
 
