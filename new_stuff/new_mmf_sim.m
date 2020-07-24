@@ -9,37 +9,37 @@ Fs = 1/Ts; % sampling frequency
 num_samples = 2^5; % number of samples to take
 T = num_samples * Ts; 
 Tsim = 2*T; % sample time
-nsim = Tsim / Ts;
-df = 1/Tsim;
+dt = 1/Tsim; % change in t
 
+% signal setup
 To = 1 ; % Guasian spread
-t = -Tsim/2:df:Tsim/2 -df;
-g = exp(-t.^2/(2*To^2));
-Y = fft(g);
-n = length(Y);
-f = Fs*(0:(n-1))/n;
-w = f.*2*pi;
-w = w';
+t = -Tsim/2:dt:Tsim/2 -dt; % time vector
+g = exp(-t.^2/(2*To^2)); % guassian vector
+Y = fft(g); % take fft
+n = length(Y); % length of fft
+f = Fs*(0:(n-1))/n; % frequncy vector
+w = f.*2*pi; % omega vector 
 
 % Model Setup
-modes = 2;
-fibers = 1;
-fiber_sections = 100;
-delay = [2 4];
-phy = pi/8; 
-C = [cos(phy); sin(phy)];
-s = Y(ones(1,modes),:);
-s = C.*s; 
-out = s; 
+modes = 2; % number of modes that includes polarizations (smf w/ x y)
+fibers = 1; % number of fibers to make
+fiber_sections = 100; %number of fiber sections
+delay = [2 4]; % delay in x and y 
+phy = pi/8; % Launch power 
+launch_power = [cos(phy); sin(phy)]; % launch power x^2 +y^2 = 1
+s = Y(ones(1,modes),:); % copy y to both modes
+s = launch_power.*s; % multply by launch power
+out = s; % make a vector for output
 
-
+% the fiber is frequncy dependant so run this per frequncy 
 for k = 1:length(w)
     fiber = make_fiber(w(k),modes,fiber_sections,delay);
-    out(:,k) = fiber*s(:,k);
+    out(:,k) = fiber*s(:,k); % write it to the output
 end
-x = ifft(out,[],2);
-out = x(1,:) + x(2,:);
-x = [x; out];
+
+x = ifft(out,[],2); % inverse fft by rows
+out = x(1,:) + x(2,:); % add the rows
+x = [x; out]; % concatante to see the addition
 
 
 
@@ -54,14 +54,3 @@ xlabel('Time (s)')
 ylabel('r(t)')
 hold off
 
-
-
-function [fiber] = make_fiber(w, modes, fiber_sections,delay)
-    %fiber = zeros(modes,modes,fiber_sections);
-    m = diag([exp(-j*w*delay(1)) exp(-j*w*delay(2))]);
-    f = repmat(m,[1 1 fiber_sections]);
-    fiber = f(:,:,1);
-    for slice = 2:fiber_sections
-        fiber = fiber*f(:,:,slice);
-    end
-end
