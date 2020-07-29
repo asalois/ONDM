@@ -1,0 +1,232 @@
+                                                                                             < M A T L A B (R) >
+                                                                                   Copyright 1984-2020 The MathWorks, Inc.
+                                                                              R2020a Update 2 (9.8.0.1380330) 64-bit (glnxa64)
+                                                                                                 May 5, 2020
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+Starting parallel pool (parpool) using the 'local' profile ...
+Connected to the parallel pool (number of workers: 8).
+
+ans =
+
+         0    5.0840
+
+Elapsed time is 6191.996566 seconds.
+
+ans =
+
+    5.0840
+
+
+ans =
+
+         0    5.0941
+
+Elapsed time is 6199.612695 seconds.
+
+ans =
+
+    5.0941
+
+
+ans =
+
+         0    5.0974
+
+Elapsed time is 6203.641191 seconds.
+
+ans =
+
+    5.0974
+
+
+ans =
+
+         0    5.1613
+
+Elapsed time is 6207.097777 seconds.
+
+ans =
+
+    5.1613
+
+
+ans =
+
+         0    5.1109
+
+Elapsed time is 6255.915906 seconds.
+
+ans =
+
+    5.1109
+
+
+ans =
+
+         0    5.1225
+
+Elapsed time is 6259.888350 seconds.
+
+ans =
+
+    5.1225
+
+
+ans =
+
+         0    5.1032
+
+Elapsed time is 6275.911494 seconds.
+
+ans =
+
+    5.1032
+
+
+ans =
+
+         0    5.1225
+
+Elapsed time is 6438.833282 seconds.
+
+ans =
+
+    5.1225
+
+
+ans =
+
+         0    5.1056
+
+
+ans =
+
+         0    5.1191
+
+Elapsed time is 6243.620247 seconds.
+
+ans =
+
+    5.1191
+
+
+ans =
+
+         0    5.1056
+
+
+ans =
+
+         0    5.0706
+
+
+ans =
+
+         0    5.0897
+
+Elapsed time is 6216.116901 seconds.
+
+ans =
+
+    5.0897
+
+
+ans =
+
+         0    5.1061
+
+Elapsed time is 6231.804552 seconds.
+
+ans =
+
+    5.1061
+
+
+ans =
+
+         0    5.1331
+
+Elapsed time is 6222.901786 seconds.
+
+ans =
+
+    5.1331
+
+
+ans =
+
+         0    5.0492
+
+Elapsed time is 6214.751126 seconds.
+
+ans =
+
+    5.1056
+
+
+ans =
+
+         0    5.0955
+
+Elapsed time is 3779.471573 seconds.
+
+ans =
+
+    5.0955
+
+Elapsed time is 6245.344086 seconds.
+
+ans =
+
+    5.1056
+
+
+ans =
+
+         0    5.1075
+
+Elapsed time is 3780.366708 seconds.
+
+ans =
+
+    5.1075
+
+Elapsed time is 6256.647324 seconds.
+
+ans =
+
+    5.0706
+
+
+ans =
+
+         0    5.0969
+
+Elapsed time is 3782.650792 seconds.
+
+ans =
+
+    5.0969
+
+Elapsed time is 6158.556314 seconds.
+
+ans =
+
+    5.0492
+
+
+ans =
+
+         0    5.0840
+
+Elapsed time is 3744.908822 seconds.
+
+ans =
+
+    5.0840
+
+[?1l>
