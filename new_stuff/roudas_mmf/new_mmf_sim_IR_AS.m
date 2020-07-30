@@ -3,7 +3,7 @@
 % Montana State University 
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
-% Modeified by Ioannis Roudas (7/27/20)
+% Modified by Ioannis Roudas (7/29/20)
 
 %% Preliminary commands 
 
@@ -16,7 +16,7 @@ clc;
 % Signal parameters
 Ts = 1; % sampling period
 Fs = 1/Ts; % sampling frequency 
-num_samples_To = 4; % number of samples per To time interval
+num_samples_To = 32; % number of samples per To time interval
 To = num_samples_To * Ts; % Gaussian pulse std deviation
 num_To_intervals = 64; % number of To time intervals to be simulated
 Tsim = num_To_intervals * To; % Total simulation time
@@ -27,11 +27,11 @@ df = 1 / Tsim; % Frequency spacing in the frequency domain
 num_modes = 2; % number of modes that includes polarizations (smf w/ x y)
 num_fibers = 1; % number of fibers to simulate
 num_fiber_sections = 100; %number of fiber sections
-tau = To/10; % Differential group delay (DGD) between x,y SOPs per segment
+tau = To/4; % Differential group delay (DGD) between x,y SOPs per segment
 
 % Launch conditions
 
-phi = pi/8; % Phase difference between x,y SOPs 
+phi = pi/4; % Phase difference between x,y SOPs 
 launch_jones_vector = [cos(phi); sin(phi)]; % Launch Jones vector
 
 
@@ -67,8 +67,9 @@ f = ((-nfft/2+1/2):(nfft/2-1/2))*df; % zero-centered frequency range
 
 % You can make the transfer matrix generation into an *.m file
 
-%rng(0,'twister'); % Initialize the random number generator
+% rng(0,'twister'); % Initialize the random number generator
 theta = 2*pi*rand(num_fiber_sections+1,1); %Generate random phases
+% theta = zeros(num_fiber_sections+1,1); % No rotations
 
 % We will create nfft 2x2 random matrices
 
@@ -90,33 +91,28 @@ end
 % You can multiply the transfer matrix at each frequency with the input
 % Jones vector. This will give us an output Jones vector per frequency.
 % Each Jones vector is scaled by the pulse spectrum G(f(k))
-clc
-out_pulse = zeros(2,256);
+
+out_pulse = zeros(2,nfft);
 for k = 1:nfft
-    m = launch_jones_vector .* G(k);
-    m = output_matrix(:,:,k) * m;
-    out_pulse(:,k) = m;
+    out_pulse(:,k) = G(k)* output_matrix(:,:,k) * launch_jones_vector;
 end
-pulse = out_pulse(1,:) + out_pulse(2,:);
 
-% figure()
-% hold on
-% plot(f/Fs,abs(out_pulse(1,:)))
-% plot(f/Fs,abs(out_pulse(2,:)))
-% plot(f/Fs,abs(pulse))
-% xlabel('Frequency (fs)'), ylabel('G (f)')
-% title('Transmitted Gaussian pulse')
-% hold off
+% Output electric fields x,y SOPs
+ex = ifft(fftshift(out_pulse(1,:)));
+ey = ifft(fftshift(out_pulse(2,:)));
 
-p0 = ifft(pulse);
-p1 = ifft(out_pulse(1,:));
-p2 = ifft(out_pulse(2,:));
-p3 = p1 + p2;
-figure()
+% Input and output powers
+pin = g.^2;
+pout = abs(ex).^2 + abs(ey).^2;
+
+%Plot input and output directly-detected pulses
+figure('Name','Input and output directly-detected pulses')
 hold on
-plot(abs(p0))
-plot(abs(p1))
-plot(abs(p2))
-plot(abs(p3))
+plot(t/To,pin)
+plot(t/To,abs(pout))
+xlim([-6 6])
+legend('Input Pulse','Output Pulse')
+xlabel('Time (To)'), ylabel('power (t)')
+title('PMD impact on Gaussian pulse')
 hold off
 
