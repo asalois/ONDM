@@ -1,0 +1,36 @@
+%% make a unitary matrix of NxN
+
+% Montana State University 
+% Electrical & Computer Engineering Department
+% Created by Alexander Salois
+
+%% Preliminary commands 
+
+close all;
+clear all;
+clc; 
+
+%% gebnerate random numbers from normal dist
+N = 6; % matrix size
+round_to = 10; % rounding to this number of digits
+rrM = normrnd(0,1,N,N); % make a NxN matrix of random numbers from Normal Distrubtion
+rrM = rrM + rrM*1i; % make complex
+U = orth(rrM); % orthangonalize
+U1 = U'*U; % tran
+U2 = U*U';
+U1 = round(U1,round_to);
+U2 = round(U2,round_to);
+% U1 = abs(U1);
+% U2 = abs(U2);
+id = eye(N);
+
+if U1 == U2
+    disp("First check: success");
+    if U1 == id
+        disp("Second check: success");
+    else
+        disp("Second check: failed");
+    end
+else
+    disp("First check: failed");
+end
