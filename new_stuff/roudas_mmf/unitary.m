@@ -1,4 +1,4 @@
-%% make a unitary matrix of NxN
+%% Make a Unitary Matrix of NxN using Ozol's Method
 
 % Montana State University 
 % Electrical & Computer Engineering Department
@@ -10,13 +10,30 @@ close all;
 clear all;
 clc; 
 
-%% gebnerate random numbers from normal dist
-N = 500;
-rr = normrnd(0,1);
-ri = rr + rr*i;
-rrM = normrnd(0,1,N,N);
-rrM = rrM + rrM*i;
-U = orth(rrM);
-U1 = U'*U; 
-U2 = U*U';
-id = eye(N);
+%% Generate Random Numbers from Normal Distribution
+
+N = 6; % matrix size
+rrM = normrnd(0,1,N,N); % make a NxN matrix of random numbers from normal distribution
+rrM = rrM + rrM*1i; % make complex
+
+
+%% Tests
+
+U = orth(rrM); % orthangonalize
+U1 = U'*U; % transposed times orginal
+U2 = U*U'; % orginal times transposed
+round_to = 10; % rounding to this number of digits
+U1 = round(U1,round_to); % round off to get rid of - zeros
+U2 = round(U2,round_to);% round off to get rid of - zeros
+id = eye(N); % identity matrix
+
+if U1 == U2
+    fprintf("First check: success\n U1 = U2\n\n");
+    if U1 == id
+        fprintf("Second check: success\n U1 = Identity Matrix\n\n");
+    else
+        fprintf("Second check: failed\n U1 =/= Identity Matrix\n\n");
+    end
+else
+    fprintf("First check: failed\n U1 =/= U2\n\n");
+end
