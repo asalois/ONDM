@@ -11,12 +11,12 @@ clear all;
 clc; 
 
 %% gebnerate random numbers from normal dist
-N = 2;
+N = 500;
 rr = normrnd(0,1);
 ri = rr + rr*i;
 rrM = normrnd(0,1,N,N);
 rrM = rrM + rrM*i;
 U = orth(rrM);
-U'*U
-U*U'
-eye(N)
+U1 = U'*U; 
+U2 = U*U';
+id = eye(N);
