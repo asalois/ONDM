@@ -15,13 +15,13 @@ clc;
 N = 2; % matrix size
 rr = normrnd(0,1,N,N); % make a NxN matrix of random numbers from normal distribution
 ri = normrnd(0,1,N,N);
-M = rr + ri*1i % make complex
+M = rr + ri*1i; % make complex
 
 
 %% Tests
 
 U = orth(M); % orthangonalize
-U1 = U'*U % transposed times orginal
+U1 = U'*U; % transposed times orginal
 U2 = U*U'; % orginal times transposed
 round_to = 10; % rounding to this number of digits
 U1 = round(U1,round_to); % round off to get rid of - zeros
