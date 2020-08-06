@@ -1,4 +1,4 @@
-% Gaussian pulse distortion due to polarization mode dispersion
+% QAM-16 with polarization mode dispersion
 
 % Montana State University 
 % Electrical & Computer Engineering Department
@@ -12,50 +12,55 @@ clc;
 
 %% Simulation parameters
 % Signal parameters
-Ts = 1; % sampling period
-Fs = 1/Ts; % sampling frequency 
-num_samples_To = 32; % number of samples per To time interval
-To = num_samples_To * Ts; % Gaussian pulse std deviation
-num_To_intervals = 64; % number of To time intervals to be simulated
-Tsim = num_To_intervals * To; % Total simulation time
-nfft = num_samples_To * num_To_intervals; % Number of simulated samples
-df = 1 / Tsim; % Frequency spacing in the frequency domain
+M = 16; % Modulation order
+k = log2(M); % Bits/symbol
+n = 2000; % Transmitted bits
+nSamp = 4; % Samples per symbol
+EbNo = 10; % Eb/No (dB)
 
 % Fiber parameters
 num_modes = 2; % number of modes that includes polarizations (smf w/ x y)
 num_fibers = 1; % number of fibers to simulate
 num_fiber_sections = 100; %number of fiber sections
-tau = To/4; % Differential group delay (DGD) between x,y SOPs per segment
+tau = 1/1000000; % Differential group delay (DGD) between x,y SOPs per segment
 
 % Launch conditions
-
 phi = pi/4; % Phase difference between x,y SOPs 
 launch_jones_vector = [cos(phi); sin(phi)]; % Launch Jones vector
 
 
-%% Gaussian pulse generation
-t = (-Tsim/2 + Ts/2):Ts:(Tsim/2 - Ts/2); % time vector
-g = exp(-t.^2/(2*To^2)); % Gaussian vector
+%% Filter Paramters
+span = 10; % Filter span in symbols
+rolloff = 0.25; % Rolloff factor
 
-%% Plot a Gaussian pulse
-% figure()
-% plot(t/To,g), 
-% legend('Transmitted pulse')
-% xlabel('Time (To)'), ylabel('s (t)')
-% title('Transmitted Gaussian pulse')
 
-%% Gaussian pulse spectrum
-Y = fft(g); %  fft
+%% Create the raised cosine transmit and receive filters using the previously defined parameters.
+txfilter = comm.RaisedCosineTransmitFilter('RolloffFactor',rolloff, ...
+    'FilterSpanInSymbols',span,'OutputSamplesPerSymbol',nSamp);
+
+rxfilter = comm.RaisedCosineReceiveFilter('RolloffFactor',rolloff, ...
+    'FilterSpanInSymbols',span,'InputSamplesPerSymbol',nSamp, ...
+    'DecimationFactor',nSamp);
+
+%% Plot the impulse response of hTxFilter.
+%fvtool(txfilter,'impulse')
+
+%% Make Tx signal
+% Calculate the delay through the matched filters. 
+% The group delay is half of the filter span through one filter and is, 
+% therefore, equal to the filter span for both filters. 
+% Multiply by the number of bits per symbol to get the delay in bits.
+filtDelay = k*span; 
+errorRate = comm.ErrorRate('ReceiveDelay',filtDelay); % set error rate
+x = randi([0 1],n,1); % random bit stream 
+modSig = qammod(x,M,'InputType','bit'); % modulate
+txSig = txfilter(modSig); % filter modulted signal
+
+%% Tx spectrum
+nfft = 2^nextpow2(length(txSig));
+Y = fft(txSig,nfft); %  fft
 G = fftshift(Y); % zero-centered spectrum
-f = ((-nfft/2+1/2):(nfft/2-1/2))*df; % zero-centered frequency range
-
-%% Plot a Gaussian pulse spectrum
-% figure()
-% plot(f/Fs,abs(G)), 
-% legend('Transmitted pulse spectrum')
-% xlabel('Frequency (fs)'), ylabel('G (f)')
-% title('Transmitted Gaussian pulse')
-
+f = ((-nfft/2+1/2):(nfft/2-1/2))*nSamp; % zero-centered frequency range
 
 %% Transfer matrix of the SMF
 % You can make the transfer matrix generation into an *.m file
@@ -96,17 +101,14 @@ ex = ifft(fftshift(out_pulse(1,:)));
 ey = ifft(fftshift(out_pulse(2,:)));
 
 % Input and output powers
-pin = g.^2;
+pin = txSig.^2;
 pout = abs(ex).^2 + abs(ey).^2;
 
-%Plot input and output directly-detected pulses
-figure('Name','Input and output directly-detected pulses')
-hold on
-plot(t/To,pin)
-plot(t/To,abs(pout))
-xlim([-6 6])
-legend('Input Pulse','Output Pulse')
-xlabel('Time (To)'), ylabel('power (t)')
-title('PMD impact on Gaussian pulse')
-hold off
+%%
+rxSig = rxfilter(ex');
+scatterplot(rxSig)
+
+rxSig = rxfilter(ey');
+scatterplot(rxSig)
+
 
