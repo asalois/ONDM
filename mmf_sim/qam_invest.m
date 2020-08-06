@@ -48,11 +48,11 @@ txSig = txfilter(modSig); % filter modulted signal
 eyediagram(txSig(1:1000),nSamp) % show an eye diagram
 
 %% Calc SNR
-SNR = EbNo + 10*log10(k) - 10*log10(nSamp);
-noisySig = awgn(txSig,SNR,'measured');
+% SNR = EbNo + 10*log10(k) - 10*log10(nSamp);
+% noisySig = awgn(txSig,SNR,'measured');
 
 %%
-rxSig = rxfilter(noisySig);
+rxSig = rxfilter(txSig);
 scatterplot(rxSig)
 
 %%

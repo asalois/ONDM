@@ -6,13 +6,11 @@
 % Modified by Ioannis Roudas (7/29/20)
 
 %% Preliminary commands 
-
 close all;
 clear all;
 clc; 
 
 %% Simulation parameters
-
 % Signal parameters
 Ts = 1; % sampling period
 Fs = 1/Ts; % sampling frequency 
@@ -36,12 +34,10 @@ launch_jones_vector = [cos(phi); sin(phi)]; % Launch Jones vector
 
 
 %% Gaussian pulse generation
-
 t = (-Tsim/2 + Ts/2):Ts:(Tsim/2 - Ts/2); % time vector
 g = exp(-t.^2/(2*To^2)); % Gaussian vector
 
 %% Plot a Gaussian pulse
-
 % figure()
 % plot(t/To,g), 
 % legend('Transmitted pulse')
@@ -49,13 +45,11 @@ g = exp(-t.^2/(2*To^2)); % Gaussian vector
 % title('Transmitted Gaussian pulse')
 
 %% Gaussian pulse spectrum
-
 Y = fft(g); %  fft
 G = fftshift(Y); % zero-centered spectrum
 f = ((-nfft/2+1/2):(nfft/2-1/2))*df; % zero-centered frequency range
 
 %% Plot a Gaussian pulse spectrum
-
 % figure()
 % plot(f/Fs,abs(G)), 
 % legend('Transmitted pulse spectrum')
@@ -64,11 +58,11 @@ f = ((-nfft/2+1/2):(nfft/2-1/2))*df; % zero-centered frequency range
 
 
 %% Transfer matrix of the SMF
-
 % You can make the transfer matrix generation into an *.m file
 
 % rng(0,'twister'); % Initialize the random number generator
 theta = 2*pi*rand(num_fiber_sections+1,1); %Generate random phases
+%theta = theta + 1i*2*pi*rand(num_fiber_sections+1,1); %Generate random phases
 % theta = zeros(num_fiber_sections+1,1); % No rotations
 
 % We will create nfft 2x2 random matrices
@@ -79,15 +73,15 @@ for k=1:nfft % For all frequencies
     
     d = delay_matrix(f(k), tau);
     output_matrix(:,:,k) = rotation_matrix(theta(1));
-    
+    %U = make_unitary(2);
+    %output_matrix(:,:,k) = U;
     for i=1:num_fiber_sections
         output_matrix(:,:,k) = rotation_matrix(theta(i+1))*d*output_matrix(:,:,k);
+        %output_matrix(:,:,k) = U*d*output_matrix(:,:,k);
     end
-    
 end
 
 %% Signal propagation through the SMF
-
 % You can multiply the transfer matrix at each frequency with the input
 % Jones vector. This will give us an output Jones vector per frequency.
 % Each Jones vector is scaled by the pulse spectrum G(f(k))
