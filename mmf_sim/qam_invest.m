@@ -13,9 +13,12 @@ clc;
 %% Set the simulation parameters.
 M = 16; % Modulation order
 k = log2(M); % Bits/symbol
-n = 20000; % Transmitted bits
+n = 2000; % Transmitted bits
 nSamp = 4; % Samples per symbol
 EbNo = 10; % Eb/No (dB)
+
+phi = pi/4; % Phase difference between x,y SOPs 
+launch_jones_vector = [cos(phi); sin(phi)]; % Launch Jones vector
 
 %% Filter Paramters
 span = 10; % Filter span in symbols
@@ -45,19 +48,35 @@ modSig = qammod(x,M,'InputType','bit'); % modulate
 txSig = txfilter(modSig); % filter modulted signal
 
 %% Plot 
-eyediagram(txSig(1:1000),nSamp) % show an eye diagram
+% eyediagram(txSig(1:1000),nSamp) % show an eye diagram
+
+%% send through fiber
+n= nextpow2(length(txSig));
+nfft = 2^n;
+Y = fft(txSig,nfft); %  fft
+G = fftshift(Y); % zero-centered spectrum
+
+out_pulse = zeros(2,nfft);
+for k = 1:nfft
+    out_pulse(:,k) = G(k)* eye(2) * launch_jones_vector;
+end
+
+% Output electric fields x,y SOPs
+ex = ifft(fftshift(out_pulse(1,:)));
+ey = ifft(fftshift(out_pulse(2,:)));
+
 
 %% Calc SNR
 % SNR = EbNo + 10*log10(k) - 10*log10(nSamp);
 % noisySig = awgn(txSig,SNR,'measured');
 
 %%
-rxSig = rxfilter(txSig);
+rxSig = rxfilter(ey');
 scatterplot(rxSig)
 
-%%
-z = qamdemod(rxSig,M,'OutputType','bit');
-
-errStat = errorRate(x,z);
-fprintf('\nBER = %5.2e\nBit Errors = %d\nBits Transmitted = %d\n',...
-    errStat)
+%% BER
+% z = qamdemod(rxSig,M,'OutputType','bit');
+% 
+% errStat = errorRate(x,z);
+% fprintf('\nBER = %5.2e\nBit Errors = %d\nBits Transmitted = %d\n',...
+%     errStat)
