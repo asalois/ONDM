@@ -4,12 +4,6 @@
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
 
-% message_size = 8;
-% m = 2^4;
-% data_in = randi(15,1,message_size)
-% modded = qammod(data_in,m)
-% rec = qamdemod(modded,m)
-
 %% Preliminary commands 
 
 close all;
@@ -37,4 +31,33 @@ rxfilter = comm.RaisedCosineReceiveFilter('RolloffFactor',rolloff, ...
     'DecimationFactor',nSamp);
 
 %% Plot the impulse response of hTxFilter.
-fvtool(txfilter,'impulse')
+%fvtool(txfilter,'impulse')
+
+%% 
+% Calculate the delay through the matched filters. 
+% The group delay is half of the filter span through one filter and is, 
+% therefore, equal to the filter span for both filters. 
+% Multiply by the number of bits per symbol to get the delay in bits.
+filtDelay = k*span; 
+errorRate = comm.ErrorRate('ReceiveDelay',filtDelay); % set error rate
+x = randi([0 1],n,1); % random bit stream 
+modSig = qammod(x,M,'InputType','bit'); % modulate
+txSig = txfilter(modSig); % filter modulted signal
+
+%% Plot 
+eyediagram(txSig(1:1000),nSamp) % show an eye diagram
+
+%% Calc SNR
+SNR = EbNo + 10*log10(k) - 10*log10(nSamp);
+noisySig = awgn(txSig,SNR,'measured');
+
+%%
+rxSig = rxfilter(noisySig);
+scatterplot(rxSig)
+
+%%
+z = qamdemod(rxSig,M,'OutputType','bit');
+
+errStat = errorRate(x,z);
+fprintf('\nBER = %5.2e\nBit Errors = %d\nBits Transmitted = %d\n',...
+    errStat)
