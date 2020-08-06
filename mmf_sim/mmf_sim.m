@@ -94,17 +94,13 @@ end
 out_pulse = zeros(2,nfft);
 for k = 1:nfft
     out_pulse(:,k) = G(k)* output_matrix(:,:,k) * launch_jones_vector;
+    %out_pulse(:,k) = G(k)* eye(2)* launch_jones_vector;
 end
 
 % Output electric fields x,y SOPs
 ex = ifft(fftshift(out_pulse(1,:)));
 ey = ifft(fftshift(out_pulse(2,:)));
 
-% Input and output powers
-pin = txSig.^2;
-pout = abs(ex).^2 + abs(ey).^2;
-
-%%
 rxSig = rxfilter(ex');
 scatterplot(rxSig)
 
