@@ -14,7 +14,7 @@ clc;
 % Signal parameters
 M = 16; % Modulation order
 k = log2(M); % Bits/symbol
-n = 2000; % Transmitted bits
+n = 20000; % Transmitted bits
 nSamp = 4; % Samples per symbol
 EbNo = 10; % Eb/No (dB)
 
@@ -22,7 +22,7 @@ EbNo = 10; % Eb/No (dB)
 num_modes = 2; % number of modes that includes polarizations (smf w/ x y)
 num_fibers = 1; % number of fibers to simulate
 num_fiber_sections = 100; %number of fiber sections
-tau = 1/1000000; % Differential group delay (DGD) between x,y SOPs per segment
+tau = 1/100000; % Differential group delay (DGD) between x,y SOPs per segment
 
 % Launch conditions
 phi = pi/4; % Phase difference between x,y SOPs 
@@ -30,7 +30,7 @@ launch_jones_vector = [cos(phi); sin(phi)]; % Launch Jones vector
 
 
 %% Filter Paramters
-span = 10; % Filter span in symbols
+span = 50; % Filter span in symbols
 rolloff = 0.25; % Rolloff factor
 
 

@@ -21,7 +21,7 @@ phi = pi/4; % Phase difference between x,y SOPs
 launch_jones_vector = [cos(phi); sin(phi)]; % Launch Jones vector
 
 %% Filter Paramters
-span = 10; % Filter span in symbols
+span = 100; % Filter span in symbols
 rolloff = 0.25; % Rolloff factor
 
 
@@ -51,19 +51,19 @@ txSig = txfilter(modSig); % filter modulted signal
 % eyediagram(txSig(1:1000),nSamp) % show an eye diagram
 
 %% send through fiber
-n= nextpow2(length(txSig));
-nfft = 2^n;
-Y = fft(txSig,nfft); %  fft
-G = fftshift(Y); % zero-centered spectrum
-
-out_pulse = zeros(2,nfft);
-for k = 1:nfft
-    out_pulse(:,k) = G(k)* eye(2) * launch_jones_vector;
-end
-
-% Output electric fields x,y SOPs
-ex = ifft(fftshift(out_pulse(1,:)));
-ey = ifft(fftshift(out_pulse(2,:)));
+% n= nextpow2(length(txSig));
+% nfft = 2^n;
+% Y = fft(txSig,nfft); %  fft
+% G = fftshift(Y); % zero-centered spectrum
+% 
+% out_pulse = zeros(2,nfft);
+% for k = 1:nfft
+%     out_pulse(:,k) = G(k)* eye(2) * launch_jones_vector;
+% end
+% 
+% % Output electric fields x,y SOPs
+% ex = ifft(fftshift(out_pulse(1,:)));
+% ey = ifft(fftshift(out_pulse(2,:)));
 
 
 %% Calc SNR
@@ -71,8 +71,8 @@ ey = ifft(fftshift(out_pulse(2,:)));
 % noisySig = awgn(txSig,SNR,'measured');
 
 %%
-rxSig = rxfilter(ey');
-scatterplot(rxSig)
+rxSig = rxfilter(txSig);
+scatterplot(rxSig(400:500))
 
 %% BER
 % z = qamdemod(rxSig,M,'OutputType','bit');
