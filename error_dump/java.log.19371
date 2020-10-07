@@ -1,9 +1,0 @@
-  Operating System: Linux 2.6.32-642.3.1.el6.x86_64 #1 SMP Tue Jul 12 18:30:56 UTC 2016 x86_64
-  Processor ID:     x86 Family 6 Model 63 Stepping 2, GenuineIntel
-  Host Name:        compute046
-Error occurred during initialization of VM
-java.lang.OutOfMemoryError: unable to create new native thread
-	at java.lang.Thread.start0(Native Method)
-	at java.lang.Thread.start(Unknown Source)
-	at java.lang.ref.Reference.<clinit>(Unknown Source)
-
