@@ -1,2 +1,0 @@
-thread_monitor Resource temporarily unavailable in pthread_create
-/cm/local/apps/slurm/var/spool/job1357414/slurm_script: line 21:  1683 Segmentation fault      matlab -nodesktop -nodisplay -nosplash -r "qsmf_simulation_fft2(${SLURM_ARRAY_TASK_ID}); exit;"

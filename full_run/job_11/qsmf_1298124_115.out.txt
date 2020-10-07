@@ -1,4 +1,0 @@
-Wed Mar 18 17:47:49 MDT 2020
-Hello from compute062.
-115 + 1000
-Run a matlab script

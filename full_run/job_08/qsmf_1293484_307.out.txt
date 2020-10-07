@@ -1,4 +1,0 @@
-Sun Mar 15 00:56:12 MDT 2020
-Hello from compute030.
-307
-Run a matlab script
