@@ -12,9 +12,9 @@ clc;
 
 %% Simulation parameters
 % Signal parameters
-M = 16; % Modulation order
+M = 8; % Modulation order
 k = log2(M); % Bits/symbol
-n = 20000; % Transmitted bits
+n = 2000*k; % Transmitted bits
 nSamp = 4; % Samples per symbol
 EbNo = 10; % Eb/No (dB)
 
@@ -53,7 +53,7 @@ rxfilter = comm.RaisedCosineReceiveFilter('RolloffFactor',rolloff, ...
 filtDelay = k*span; 
 errorRate = comm.ErrorRate('ReceiveDelay',filtDelay); % set error rate
 x = randi([0 1],n,1); % random bit stream 
-modSig = qammod(x,M,'InputType','bit'); % modulate
+modSig = qammod(x, M,'InputType','bit'); % modulate
 txSig = txfilter(modSig); % filter modulted signal
 
 %% Tx spectrum
