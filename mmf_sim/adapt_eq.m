@@ -1,5 +1,8 @@
 % Matlab implentmation of adaptive equilzers using Com toolbox
-% by Alex Salois 
+
+% Montana State University 
+% Electrical & Computer Engineering Department
+% Created by Alexander Salois based on https://www.mathworks.com/help/comm/ug/adaptive-equalizers.html#a1049736245
 
 %% prelim comands
 clc;
