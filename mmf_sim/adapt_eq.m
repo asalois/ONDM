@@ -1,11 +1,12 @@
 % Matlab implentmation of adaptive equilzers using Com toolbox
+% by Alex Salois 
 
-
-%% system setup
+%% prelim comands
 clc;
 clear;
 close all;
 
+%% system setup
 M = 4;
 numTrainSymbols = 200;
 numDataSymbols = 2000;
@@ -15,8 +16,8 @@ numPkts = 10;
 lineq = comm.LinearEqualizer('Algorithm','LMS', ...
     'NumTaps',4,'StepSize',0.01);
 
-%%
-% Train the Equalizer at the Beginning of Each Packet With Reset
+%% system test with equalizer
+% train the equalizer at the beginning of each packet with reset
 jj = 1;
 figure()
 title('With Reset')
@@ -65,7 +66,7 @@ for ii = 1:numPkts
 end
 
 
-%% New System to test
+%% add to system to test periodic changes
 M = 4;
 Rs = 1e6;
 fd = 20;
@@ -95,9 +96,7 @@ xlabel('Symbols')
 ylabel('Error Magnitude')
 grid on
 title('Time-Varying Channel Without Retraining')
-
 scatterplot(y)
-
 
 release(lineq)
 lineq.TrainingFlagInputPort = true;
