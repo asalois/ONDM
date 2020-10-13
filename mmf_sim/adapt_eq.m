@@ -14,7 +14,7 @@ SNR = 20;
 trainingSymbols = pskmod(randi([0 M-1],numTrainSymbols,1),M,pi/4);
 numPkts = 10;
 lineq = comm.LinearEqualizer('Algorithm','LMS', ...
-    'NumTaps',4,'StepSize',0.01);
+    'NumTaps',10,'StepSize',0.01);
 
 %% system test with equalizer
 % train the equalizer at the beginning of each packet with reset
@@ -67,7 +67,6 @@ end
 
 
 %% add to system to test periodic changes
-M = 4;
 Rs = 1e6;
 fd = 20;
 spp = 200; % Symbols per packet
@@ -84,6 +83,7 @@ lineq.AdaptAfterTraining = false;
 
 [y,err] = lineq(rx,trainingSymbols);
 
+% plot results 
 figure()
 subplot(2,1,1)
 plot(tx, unwrap(angle(channel)))
@@ -98,6 +98,8 @@ grid on
 title('Time-Varying Channel Without Retraining')
 scatterplot(y)
 
+
+% perodic training
 release(lineq)
 lineq.TrainingFlagInputPort = true;
 symbolCnt = 0;
@@ -117,6 +119,8 @@ for p=1:numPackets
         trainFlag = false;
     end
 end
+
+% plot results
 figure
 subplot(2,1,1)
 plot(tx, unwrap(angle(channel)))
