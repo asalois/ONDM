@@ -12,11 +12,11 @@ clc;
 
 %% Simulation parameters
 % Signal parameters
-M = 8; % Modulation order
+M = 16; % Modulation order
 k = log2(M); % Bits/symbol
-n = 2000*k; % Transmitted bits
+n = 5000*k; % Transmitted bits
 nSamp = 4; % Samples per symbol
-EbNo = 10; % Eb/No (dB)
+EbNo = 20; % Eb/No (dB)
 
 % Fiber parameters
 num_modes = 2; % number of modes that includes polarizations (smf w/ x y)
@@ -67,14 +67,14 @@ f = ((-nfft/2+1/2):(nfft/2-1/2))*nSamp; % zero-centered frequency range
 
 % rng(0,'twister'); % Initialize the random number generator
 theta = 2*pi*rand(num_fiber_sections+1,1); %Generate random phases
-%theta = theta + 1i*2*pi*rand(num_fiber_sections+1,1); %Generate random phases
+% theta = theta + 1i*2*pi*rand(num_fiber_sections+1,1); %Generate random phases
 % theta = zeros(num_fiber_sections+1,1); % No rotations
 
 % We will create nfft 2x2 random matrices
 
 output_matrix = zeros(2,2,nfft); % Fiber transfer matrix initialization
 
-for k=1:nfft % For all frequencies
+parfor k=1:nfft % For all frequencies
     
     d = delay_matrix(f(k), tau);
     output_matrix(:,:,k) = rotation_matrix(theta(1));
