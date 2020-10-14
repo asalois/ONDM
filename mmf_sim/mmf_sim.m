@@ -12,7 +12,7 @@ clc;
 
 %% Simulation parameters
 % Signal parameters
-M = 16; % Modulation order
+M = 8; % Modulation order
 k = log2(M); % Bits/symbol
 n = 5000*k; % Transmitted bits
 nSamp = 4; % Samples per symbol
