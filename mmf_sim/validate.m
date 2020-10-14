@@ -3,7 +3,6 @@
 % Montana State University 
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
-% Modified by Ioannis Roudas (7/29/20)
 
 %% Preliminary commands 
 close all;
