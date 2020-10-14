@@ -50,6 +50,10 @@
 % information is retained between data blocks.
 %
 
+%% prelim comands
+clc;
+clear;
+close all;
 
 %% Signal and Channel Parameters
 % Set parameters related to the signal and channel. Use BPSK without any
