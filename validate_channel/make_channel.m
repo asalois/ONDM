@@ -70,7 +70,7 @@ close all;
 
 % System simulation parameters
 Fs = 1;           % sampling frequency (notional)
-nBits = 2048;     % number of BPSK symbols per vector
+nBits = 4096;     % number of BPSK symbols per vector
 maxErrs = 200;    % target number of errors at each Eb/No
 maxBits = 1e6;    % maximum number of symbols at each Eb/No
 
@@ -83,7 +83,7 @@ Rb = Rs*log2(M);           % bit rate
 % Channel parameters
 chnl = [0.227 0.460 0.688 0.460 0.227]';  % channel impulse response
 chnlLen = length(chnl);                   % channel length, in samples
-EbNo = 0:14;                              % in dB
+EbNo = 0:24;                              % in dB
 BER = zeros(size(EbNo));                  % initialize values
 
 % Create BPSK modulator
