@@ -33,3 +33,35 @@ bpskMod = comm.BPSKModulator;
 
 % Specify a seed for the random number generators to ensure repeatability.
 rng(12345)
+
+% Linear equalizer parameters
+nWts = 31;               % number of weights
+algType = 'RLS';         % RLS algorithm
+forgetFactor = 0.999999; % parameter of RLS algorithm
+const = constellation(bpskMod);    % signal constellation
+
+% The RLS update algorithm is used to adapt the equalizer tap weights and
+% reference tap is set to center tap.
+linEq = comm.LinearEqualizer('Algorithm',algType, ...
+    'ForgettingFactor',forgetFactor, ...
+    'NumTaps',nWts, ...
+    'Constellation',const, ...
+    'ReferenceTap',round(nWts/2), ...
+    'TrainingFlagInputPort',true);
+
+%% Linear Equalizer
+% Run the linear equalizer, and plot the equalized signal spectrum, the
+% BER, and the burst error performance for each data block. Note that as
+% the Eb/No increases, the linearly equalized signal spectrum has a
+% progressively deeper null. This highlights the fact that a linear
+% equalizer must have many more taps to adequately equalize a channel with
+% a deep null. Note also that the errors occur with small inter-error
+% intervals, which is to be expected at such a high error rate.
+%
+% See <matlab:openExample('comm/BERPerformanceOfDifferentEqualizerExample','supportingFile','eqber_adaptive.m') eqber_adaptive.m> for a listing of the simulation code for the
+% adaptive equalizers.
+firstRun = true;  % flag to ensure known initial states for noise and data
+eqType = 'linear';
+eqber_adaptive;
+
+
