@@ -3,7 +3,6 @@
 % Montana State University 
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
-% Based on BER example from Mathworks
 
 % prelim comands
 clc;
@@ -11,31 +10,56 @@ clear;
 close all;
 
 %% Signal and Channel Parameters
-% Set parameters related to the signal and channel. Use BPSK without any
-% pulse shaping, and a 5-tap real-valued symmetric channel impulse
-% response. (See section 10.2.3 of Digital Communications by J. Proakis,
-% 4th Ed., for more details on the channel.)  Set initial states of data
-% and noise generators. Set the Eb/No range.
 
 % System simulation parameters
-Fs = 1;           % sampling frequency (notional)
-nBits = 4096;     % number of BPSK symbols per vector
-maxErrs = 200;    % target number of errors at each Eb/No
-maxBits = 1e7;    % maximum number of symbols at each Eb/No
+Fs = 1; % sampling frequency (notional)
+nb = 10; % number of BPSK symbols per vector
+Tb=1; % Bit period
+Rb=1/Tb; % Bit rate
+fc=2; % Carrier frequency
+Tc=1/fc; % Carrier period
+nsb=32; % Number of samples per bit
+fs=nsb*Rb; % Sampling frequency
+Ts=1/fs; % Sampling period
+Ttot=nb*Tb; % Total simulation time
+
 
 % Modulated signal parameters
 M = 2;                     % order of modulation
-Rs = Fs;                   % symbol rate
-nSamp = Fs/Rs;             % samples per symbol
-Rb = Rs*log2(M);           % bit rate
 
 % Channel parameters
 chnl = [0.227 0.460 0.688 0.460 0.227]';  % channel impulse response
 chnlLen = length(chnl);                   % channel length, in samples
 EbNo = 0:24;                              % in dB
-BER = zeros(size(EbNo));                  % initialize values
 
 % Specify a seed for the random number generators to ensure repeatability.
 rng(12345)
 
-rxSig = sigGen(M,nBits,chnl,EbNo(1))
+% Generate a PSK signal
+msg = randi([0 M-1],nb,1);
+symbols = pskmod(msg, M);
+
+% Pass the signal through the channel
+%filtSig = filter(chnl,1,symbols);
+
+% Make rectangular pulses
+%pulseSig = rectpulse(filtSig, nsb);
+pulseSig = rectpulse(symbols, nsb);
+
+% Add AWGN to the signal
+%SNR = EbNo(1) + 10*log10(Rb/fs);
+%niosySig = awgn(pulseSig,SNR,'measured');
+niosySig = pulseSig;
+t=0:Ts:Ttot-Ts; % Sampling the time axis
+carrier=sin(2*pi*fc*t); % Generate the carrier
+
+figure()
+stem(real(niosySig))
+
+figure()
+plot(t,carrier)
+
+figure()
+plot(t,real(niosySig.*carrier))
+
+
