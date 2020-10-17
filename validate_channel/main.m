@@ -40,26 +40,31 @@ msg = randi([0 M-1],nb,1);
 symbols = pskmod(msg, M);
 
 % Pass the signal through the channel
-%filtSig = filter(chnl,1,symbols);
+filtSig = filter(chnl,1,symbols);
 
 % Make rectangular pulses
-%pulseSig = rectpulse(filtSig, nsb);
-pulseSig = rectpulse(symbols, nsb);
+pulseSig = rectpulse(filtSig, nsb);
+%pulseSig = rectpulse(symbols, nsb);
+
+span = 10;        % Filter span in symbols
+rolloff = 0.75;   % Roloff factor of filter
+% Create a square-root, raised cosine filter using the rcosdesign function.
+
+rrcFilter = rcosdesign(rolloff, span, nsb);
+txSig = upfirdn(pulseSig, rrcFilter, nsb, 1);
 
 % Add AWGN to the signal
-%SNR = EbNo(1) + 10*log10(Rb/fs);
-%niosySig = awgn(pulseSig,SNR,'measured');
-niosySig = pulseSig;
+SNR = 20 + 10*log10(Rb/fs);
+%niosySig = awgn(txSig,SNR,'measured');
+niosySig = txSig;
 t=0:Ts:Ttot-Ts; % Sampling the time axis
 carrier=sin(2*pi*fc*t); % Generate the carrier
+plotIt = niosySig.*carrier;
 
 figure()
 stem(real(niosySig))
 
 figure()
-plot(t,carrier)
-
-figure()
-plot(t,real(niosySig.*carrier))
+plot(t,real(plotIt(1:length(t))))
 
 
