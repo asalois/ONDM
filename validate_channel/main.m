@@ -14,7 +14,7 @@ tic
 
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^20; % number of BPSK symbols per vector
+nb = 2^16; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -45,7 +45,7 @@ filtSig = filter(chnl,1,symbols);
 
 best = 1;
 
-for i =1:40
+for i =1:30
     
 rxLMS = lmsEq(filtSig,i);
 
@@ -68,10 +68,10 @@ peb = 0.5*erfc(sqrt(EbNo));
 
 [numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
 
-% fprintf('\n The number taps = %d', i)
-% 
-% fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
-%     ber,numErrors)
+fprintf('\n The number taps = %d', i)
+
+fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
+    ber,numErrors)
 
     if ber < best
         best = ber;
@@ -80,7 +80,6 @@ peb = 0.5*erfc(sqrt(EbNo));
     end
 
 end
-
 fprintf('\n The best number of taps = %d', besti)
 
 fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
