@@ -14,7 +14,7 @@ tic
 
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^16; % number of BPSK symbols per vector
+nb = 2^18; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -49,18 +49,12 @@ for i =1:30
     
 rxLMS = lmsEq(filtSig,i);
 
-% Create a square-root, raised cosine filter using the rcosdesign function.
-span = 10;        % Filter span in symbols
-rolloff = 0.75;   % Roloff factor of filter
-rrcFilter = rcosdesign(rolloff, span, nsb);
-txSig = upfirdn(rxLMS, rrcFilter, nsb, 1);
 
 % Add AWGN to the signal
-niosySig = awgn(txSig,SNR,'measured');
-rxSig = niosySig;
-rxFiltSig = upfirdn(rxSig,rrcFilter,1,nsb);   % Downsample and filter
-rxFiltSig = rxFiltSig(span+1:end-span);  % Account for delay
-bkEst = pskdemod(rxFiltSig,M);
+% niosySig = awgn(rxLMS,SNR,'measured');
+% rxSig = niosySig;
+rxSig = rxLMS;
+bkEst = pskdemod(rxSig,M);
 
 
 %% Print BER
@@ -68,10 +62,10 @@ peb = 0.5*erfc(sqrt(EbNo));
 
 [numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
 
-fprintf('\n The number taps = %d', i)
-
-fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
-    ber,numErrors)
+% fprintf('\n The number taps = %d', i)
+% 
+% fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
+%     ber,numErrors)
 
     if ber < best
         best = ber;
@@ -85,14 +79,12 @@ fprintf('\n The best number of taps = %d', besti)
 fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
     best,numErrs)
 
-txSig = upfirdn(filtSig, rrcFilter, nsb, 1);
 
 % Add AWGN to the signal
-niosySig = awgn(txSig,SNR,'measured');
-rxSig = niosySig;
-rxFiltSig = upfirdn(rxSig,rrcFilter,1,nsb);   % Downsample and filter
-rxFiltSig = rxFiltSig(span+1:end-span);  % Account for delay
-bkEstNoLMS = pskdemod(rxFiltSig,M);
+% niosySig = awgn(filtSig,SNR,'measured');
+% rxSig = niosySig;
+rxSig = filtSig;
+bkEstNoLMS = pskdemod(rxSig,M);
 fprintf('\n No LMS')
 
 [numErrors,ber] = biterr(msg(1:nb),bkEstNoLMS(1:nb));
