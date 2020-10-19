@@ -42,7 +42,6 @@ chnlLen = length(chnl);                   % channel length, in samples
 
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
-
 best = 1;
 
 for i =1:30
@@ -57,11 +56,10 @@ rxSig = rxLMS;
 bkEst = pskdemod(rxSig,M);
 
 
-%% Print BER
-peb = 0.5*erfc(sqrt(EbNo));
 
 [numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
 
+% Print BER
 % fprintf('\n The number taps = %d', i)
 % 
 % fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
@@ -79,15 +77,18 @@ fprintf('\n The best number of taps = %d', besti)
 fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
     best,numErrs)
 
+% Theoretical error probability
+peb = 0.5*erfc(sqrt(EbNo));
 
 % Add AWGN to the signal
 % niosySig = awgn(filtSig,SNR,'measured');
 % rxSig = niosySig;
 rxSig = filtSig;
 bkEstNoLMS = pskdemod(rxSig,M);
-fprintf('\n No LMS')
 
 [numErrors,ber] = biterr(msg(1:nb),bkEstNoLMS(1:nb));
+
+fprintf('\n No LMS')
 
 fprintf('\n Bit error rate = %5.2e, based on %d errors', ...
     ber,numErrors)
