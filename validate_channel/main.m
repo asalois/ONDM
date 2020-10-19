@@ -9,6 +9,7 @@ clc;
 clear;
 close all;
 
+tic
 %% Signal and Channel Parameters
 
 % System simulation parameters
@@ -67,10 +68,10 @@ peb = 0.5*erfc(sqrt(EbNo));
 
 [numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
 
-fprintf('\n The number taps = %d', i)
-
-fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
-    ber,numErrors)
+% fprintf('\n The number taps = %d', i)
+% 
+% fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
+%     ber,numErrors)
 
     if ber < best
         best = ber;
@@ -102,4 +103,4 @@ fprintf('\n Bit error rate = %5.2e, based on %d errors', ...
 
 fprintf('\n Theoretical error probability Peb = %5.2e\n', ...
     peb)
-
+toc
