@@ -9,6 +9,7 @@ clc;
 clear;
 close all;
 
+tic
 %% Signal and Channel Parameters
 
 % System simulation parameters
@@ -42,8 +43,12 @@ chnlLen = length(chnl);                   % channel length, in samples
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
 
-parfor 1 :
-lmsEq;
+best = 1;
+bestArr = zeros(1,40);
+
+for i =1:40
+    
+rxLMS = lmsEq(filtSig,i);
 
 % Create a square-root, raised cosine filter using the rcosdesign function.
 span = 10;        % Filter span in symbols
@@ -59,6 +64,30 @@ rxFiltSig = rxFiltSig(span+1:end-span);  % Account for delay
 bkEst = pskdemod(rxFiltSig,M);
 
 
+%% Print BER
+peb = 0.5*erfc(sqrt(EbNo));
+
+[numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
+bestArr = 
+
+% fprintf('\n The number taps = %d', i)
+% 
+% fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
+%     ber,numErrors)
+
+    if ber < best
+        best = ber;
+        besti = i;
+        numErrs = numErrors;
+    end
+
+end
+bestArr
+fprintf('\n The best number of taps = %d', besti)
+
+fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
+    best,numErrs)
+
 txSig = upfirdn(filtSig, rrcFilter, nsb, 1);
 
 % Add AWGN to the signal
@@ -67,29 +96,13 @@ rxSig = niosySig;
 rxFiltSig = upfirdn(rxSig,rrcFilter,1,nsb);   % Downsample and filter
 rxFiltSig = rxFiltSig(span+1:end-span);  % Account for delay
 bkEstNoLMS = pskdemod(rxFiltSig,M);
-
-
-
-%% Print BER
-peb = 0.5*erfc(sqrt(EbNo));
-
-[numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
-
-fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
-    ber,numErrors)
-
-fprintf('\n Theoretical error probability Peb = %5.2e\n', ...
-    peb)
-
 fprintf('\n No LMS')
+
 [numErrors,ber] = biterr(msg(1:nb),bkEstNoLMS(1:nb));
 
-fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
+fprintf('\n Bit error rate = %5.2e, based on %d errors', ...
     ber,numErrors)
 
 fprintf('\n Theoretical error probability Peb = %5.2e\n', ...
     peb)
-
-
-
-
+toc
