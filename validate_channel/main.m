@@ -35,7 +35,14 @@ rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
-symbols = pskmod(msg, M);
+hPSKMod   = comm.PSKModulator(2, ...
+    'PhaseOffset',0, ...
+    'SymbolMapping','Binary');
+hPSKDemod = comm.PSKDemodulator(2, ...
+    'PhaseOffset',0, ...
+    'SymbolMapping','Binary');
+symbols = hPSKMod(msg);
+PSKConstellation = constellation(hPSKMod)'; % PSK constellation
 
 % Channel parameters
 chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
@@ -55,9 +62,9 @@ for i =2:25
 
 % Use LMS     
 % rxLMS = lmsEq(niosySig,i,2000);
-rxLMS = lmsEq(filtSig,i,2000);
+rxLMS = lmsEq(filtSig,i,2000,PSKConstellation);
 rxSig = rxLMS;
-bkEst = pskdemod(rxSig,M);
+bkEst = hPSKDemod(rxSig);
 
 % find BER
 [numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
