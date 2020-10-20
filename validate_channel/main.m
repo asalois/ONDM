@@ -9,6 +9,7 @@ clc;
 clear;
 close all;
 
+% time simulation
 tic
 %% Signal and Channel Parameters
 
@@ -38,26 +39,27 @@ symbols = pskmod(msg, M);
 
 % Channel parameters
 chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
-%chnl = [0.25 0.5 0.25];
+%chnl = [0.25 0.5 0.25]; % another channel for testiing
 chnlLen = length(chnl);                   % channel length, in samples
 
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
+
+% Add AWGN to the signal
+% niosySig = awgn(filtSig,SNR,'measured');
+
+% variable used in loop below
 best = 1;
 
 for i =2:25
-    
-rxLMS = lmsEq(filtSig,i,M);
 
-
-% Add AWGN to the signal
-% niosySig = awgn(rxLMS,SNR,'measured');
-% rxSig = niosySig;
+% Use LMS     
+% rxLMS = lmsEq(niosySig,i,2000);
+rxLMS = lmsEq(filtSig,i,2000);
 rxSig = rxLMS;
 bkEst = pskdemod(rxSig,M);
 
-
-
+% find BER
 [numErrors,ber] = biterr(msg(1:nb),bkEst(1:nb));
 
 % Print BER
@@ -66,6 +68,7 @@ bkEst = pskdemod(rxSig,M);
 % fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
 %     ber,numErrors)
 
+    % check of the performance of equalizer improved
     if ber < best
         best = ber;
         besti = i;
@@ -73,22 +76,25 @@ bkEst = pskdemod(rxSig,M);
     end
 
 end
+
+% print the best result of the loop
 fprintf('\n The best number of taps = %d', besti)
 
 fprintf('\n Bit error rate = %5.2e, based on %d errors\n', ...
     best,numErrs)
 
+
 % Theoretical error probability
 peb = 0.5*erfc(sqrt(EbNo));
 
-% Add AWGN to the signal
-% niosySig = awgn(filtSig,SNR,'measured');
-% rxSig = niosySig;
+% run with out LMS Equalizer
 rxSig = filtSig;
 bkEstNoLMS = pskdemod(rxSig,M);
 
+% BER with out LMS
 [numErrors,ber] = biterr(msg(1:nb),bkEstNoLMS(1:nb));
 
+% print results
 fprintf('\n No LMS')
 
 fprintf('\n Bit error rate = %5.2e, based on %d errors', ...
