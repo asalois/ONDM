@@ -64,7 +64,7 @@ bkEst = hPSKDemod(rxSig);
 delay = 3;
 [numErrors,berLMS] = biterr(msg(2000:nb-delay),bkEst(2000+delay:nb));
 
-fprintf('LMS Bit error rate = %5.2e, based on %d errors\n', ...
+fprintf('LMS EQ Bit error rate = %5.2e, based on %d errors\n', ...
     berLMS,numErrors)
 
 %% Use DFE   
@@ -74,7 +74,7 @@ bkEst = hPSKDemod(rxSig);
 % find BER
 [numErrors,berDFE] = biterr(msg(2000:nb-delay),bkEst(2000+delay:nb));
 
-fprintf('DFE Bit error rate = %5.2e, based on %d errors\n', ...
+fprintf('DF EQ  Bit error rate = %5.2e, based on %d errors\n', ...
     berDFE,numErrors)
 
 % Theoretical error probability
@@ -90,7 +90,7 @@ delay = delay -1;
 
 % print results
 
-fprintf('No EQ Bit error rate = %5.2e, based on %d errors\n', ...
+fprintf('No EQ  Bit error rate = %5.2e, based on %d errors\n', ...
     ber,numErrors)
 
 fprintf('Theoretical error probability Peb = %5.2e\n\n', ...
