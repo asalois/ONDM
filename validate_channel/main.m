@@ -14,7 +14,7 @@ tic
 
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^18; % number of BPSK symbols per vector
+nb = 2^19; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -23,7 +23,7 @@ nsb=32; % Number of samples per bit
 fs=nsb*Rb; % Sampling frequency
 Ts=1/fs; % Sampling period
 Ttot=nb*Tb; % Total simulation time
-EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
+EbNo = 10; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
 SNR = 10*log10(EbNo); % + 10*log10(m) - 10*log10(ns); % Noise SNR per sample in (dB)
 
 % Modulated signal parameters
@@ -37,16 +37,17 @@ msg = randi([0 M-1],nb,1);
 symbols = pskmod(msg, M);
 
 % Channel parameters
-chnl = [0.227 0.460 0.688 0.460 0.227]';  % channel impulse response
+chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
+%chnl = [0.25 0.5 0.25];
 chnlLen = length(chnl);                   % channel length, in samples
 
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
 best = 1;
 
-for i =1:30
+for i =2:25
     
-rxLMS = lmsEq(filtSig,i);
+rxLMS = lmsEq(filtSig,i,M);
 
 
 % Add AWGN to the signal
