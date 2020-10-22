@@ -6,8 +6,8 @@
 
 % prelim comands
 clc;
-clear;
-close all;
+% clear;
+% close all;
 
 % time simulation
 tic
@@ -15,7 +15,7 @@ tic
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
 nb = 2^16; % number of BPSK symbols per vector
-SNR = 20;
+SNR = 200;
 
 % Modulated signal parameters
 M = 2; % order of modulation
@@ -50,9 +50,19 @@ rxSig = channel(msg1,chnl,SNR,delay);
 % top = numel(right);
 % frac = top / length(rxMsg)
 
-
+load('nn_results.mat')
+nnet = results.net;
 rxMsgCheck = msg2(1:end-(delay-1));
 rxSigCheck = channel(msg2,chnl,SNR,delay);
+x1 = rxSigCheck(6:end)';
+xi1 = rxSigCheck(1:6)';
+x2 = rxMsgCheck(6:end)';
+xi2 = rxMsgCheck(1:6)';
+
+% [y1,xf1,xf2] = myNeuralNetworkFunctionMatrixNiose(x1,x2,xi1,xi2);
+% right = (y1 == x2);
+% top = numel(right);
+% frac = top / length(x2)
 
 
 toc
