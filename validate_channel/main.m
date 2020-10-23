@@ -20,7 +20,7 @@ Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
 Tc=1/fc; % Carrier period
 nsb=32; % Number of samples per bit
-fs=nsb*Rb; % Sampling frequency
+fs=nsb*Rb; % Sampling frequency 
 Ts=1/fs; % Sampling period
 Ttot=nb*Tb; % Total simulation time
 EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
@@ -33,14 +33,7 @@ rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
-hPSKMod   = comm.PSKModulator(2, ...
-    'PhaseOffset',0, ...
-    'SymbolMapping','Binary');
-hPSKDemod = comm.PSKDemodulator(2, ...
-    'PhaseOffset',0, ...
-    'SymbolMapping','Binary');
-symbols = hPSKMod(msg); % symbols created
-PSKConstellation = constellation(hPSKMod)'; % PSK constellation
+symbols = pskmod(msg,M);
 
 % Channel parameters
 %chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
@@ -67,8 +60,8 @@ inputSig = niosySig;
 %% Use LMS
 trainNum = 2000;
 taps = 5;
-rxSig = lmsEq(inputSig,taps,trainNum,PSKConstellation);
-bkEst = hPSKDemod(rxSig);
+rxSig = lmsEq(inputSig,taps,trainNum);
+bkEst = pskdemod(rxSig,M);
 
 % find BER
 delay = 3;
@@ -76,8 +69,8 @@ delay = 3;
 
 
 %% Use DFE   
-rxSig = dfEq(inputSig,taps,trainNum,PSKConstellation);
-bkEst = hPSKDemod(rxSig);
+rxSig = dfEq(inputSig,taps,trainNum);
+bkEst = pskdemod(rxSig,M);
 
 % find BER
 [numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
@@ -87,7 +80,7 @@ peb = 0.5*erfc(sqrt(10^SNR/10));
 
 %% run with out LMS Equalizer
 rxSig = inputSig;
-bkEstNoLMS =  hPSKDemod(rxSig);
+bkEstNoLMS =  pskdemod(rxSig,M);
 
 % BER with out LMS
 delay = delay -1;
