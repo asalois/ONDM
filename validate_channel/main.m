@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^20; % number of BPSK symbols per vector
+nb = 2^18; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -44,10 +44,10 @@ chnlLen = length(chnl); % channel length, in samples
 filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
-runTo = 20;
+runTo = 15;
 step = 0.5;
 runs = runTo/step;
-berR = zeros(5,runs);
+berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
@@ -73,7 +73,6 @@ rx2Sig = rlsEq(inputSig,taps,trainNum);
 bkEst = pskdemod(rx2Sig,M);
 
 % find BER
-delay = 3;
 [numErrors,berRLS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
 
 
@@ -84,8 +83,12 @@ bkEst = pskdemod(rx3Sig,M);
 % find BER
 [numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
 
-% Theoretical error probability
-peb = 0.5*erfc(sqrt(10^SNR/10));
+%% Use NN
+rx5Sig = nnEq(inputSig,symbols(delay:trainNum+delay),trainNum)';
+bkEst = pskdemod(rx5Sig,M);
+
+% find BER
+[numErrors,berNN] = biterr(msg(trainNum:nb-delay),bkEst(1:end-(delay-1)));
 
 %% run with out LMS Equalizer
 rx4Sig = inputSig;
@@ -95,22 +98,25 @@ bkEstNoLMS =  pskdemod(rx4Sig,M);
 delay = delay -1;
 [numErrors,ber] = biterr(msg(trainNum:nb-delay),bkEstNoLMS(trainNum+delay:nb));
 
+% Theoretical error probability
+peb = 0.5*erfc(sqrt(10^SNR/10));
+
 % hold values in berR
-berR(:,i) = [ber,berLMS,berRLS,berDFE,peb];
+berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
 end
 toc
 
 %%
 figure()
-plot(snrPlot,berR(1,:),snrPlot,berR(2,:),snrPlot,berR(3,:),snrPlot,berR(4,:),snrPlot,berR(5,:))
-legend('No EQ','LMS EQ','RLS EQ','DFE EQ','Theoretical');
+plot(snrPlot,berR(1,:),snrPlot,berR(2,:),snrPlot,berR(3,:),snrPlot,berR(4,:),snrPlot,berR(5,:),snrPlot,berR(6,:))
+legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ','Theoretical');
 xlabel('SNR (dB)');
 ylabel('BER');
 saveas(gcf,'BER.png');
 
 figure()
-semilogy(snrPlot,berR(1,:),snrPlot,berR(2,:),snrPlot,berR(3,:),snrPlot,berR(4,:));
-legend('No EQ','LMS EQ','RLS EQ','DFE EQ');
+semilogy(snrPlot,berR(1,:),snrPlot,berR(2,:),snrPlot,berR(3,:),snrPlot,berR(4,:),snrPlot,berR(5,:));
+legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ');
 xlabel('SNR (dB)');
 ylabel('BER');
 saveas(gcf,'BERlogy.png');
