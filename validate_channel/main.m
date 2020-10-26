@@ -52,6 +52,7 @@ snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
 SNR = i*step; % Noise SNR per sample in (dB)
+%SNR = 200;
 
 % Add AWGN to the signal
 niosySig = awgn(filtSig,SNR,'measured');
@@ -84,7 +85,7 @@ bkEst = pskdemod(rx3Sig,M);
 [numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
 
 %% Use NN
-rx5Sig = nnEq(inputSig,symbols(delay:trainNum+delay),trainNum)';
+rx5Sig = nnEq(inputSig(delay:trainNum+delay),symbols(1:trainNum+1),trainNum);
 bkEst = pskdemod(rx5Sig,M);
 
 % find BER
