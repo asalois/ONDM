@@ -4,17 +4,15 @@
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
 function output = nnEq(input,target,numTrain)
-inR = real(input);
-inC = imag(input);
-trainingSymbols = [inR(1:numTrain), inC(1:numTrain)];
+trainingSymbols = makeInputMat(input,4,numTrain);
 target = [real(target(1:numTrain)), imag(target(1:numTrain))];
-testData = [inR(numTrain+1:end), inC(numTrain+1:end)];
+testData = makeInputMat(input,4,(length(input) - numTrain));
 
-Eqnet = patternnet(3);
+Eqnet = patternnet(15);
 % Train the Network
-[Eqnet,TT] = train(Eqnet,trainingSymbols',target');
+[Eqnet,TT] = train(Eqnet,trainingSymbols,target');
 
 % Test the Network
-output = Eqnet(testData');
+output = Eqnet(testData);
 output = [output(1,:) + output(2,:)*1i]';
 end

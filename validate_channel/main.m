@@ -46,14 +46,13 @@ filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
 runTo = 22;
-step = 0.5;
+step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
 SNR = i*step; % Noise SNR per sample in (dB)
-%SNR = 200;
 
 % Add AWGN to the signal
 niosySig = awgn(filtSig,SNR,'measured');
@@ -61,7 +60,7 @@ inputSig = niosySig;
 
 %% Use LMS
 trainNum = 2000;
-taps = 3;
+taps = 4;
 rx1Sig = lmsEq(inputSig,taps,trainNum);
 bkEst = pskdemod(rx1Sig,M);
 
@@ -111,14 +110,14 @@ toc
 
 %%
 figure()
-plot(snrPlot,berR(1,:),snrPlot,berR(2,:),snrPlot,berR(3,:),snrPlot,berR(4,:),snrPlot,berR(5,:),snrPlot,berR(6,:))
+plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
 legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ','Theoretical');
 xlabel('SNR (dB)');
 ylabel('BER');
 saveas(gcf,'BER.png');
 
 figure()
-semilogy(snrPlot,berR(1,:),snrPlot,berR(2,:),snrPlot,berR(3,:),snrPlot,berR(4,:),snrPlot,berR(5,:));
+semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-');
 legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ');
 xlabel('SNR (dB)');
 ylabel('BER');
