@@ -85,11 +85,13 @@ bkEst = pskdemod(rx3Sig,M);
 [numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
 
 %% Use NN
-rx5Sig = nnEq(inputSig(delay:trainNum+delay),symbols(1:trainNum+1),trainNum);
+trainNN = 2000;
+delayNN = 3;
+rx5Sig = nnEq(inputSig(delay:end),symbols,trainNN);
 bkEst = pskdemod(rx5Sig,M);
 
 % find BER
-[numErrors,berNN] = biterr(msg(trainNum:nb-delay),bkEst(1:end-(delay-1)));
+[numErrors,berNN] = biterr(msg(trainNN+delayNN:end),bkEst);
 
 %% run with out LMS Equalizer
 rx4Sig = inputSig;
