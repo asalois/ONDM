@@ -6,8 +6,8 @@
 function output = nnEq(input,target,numTrain)
 inR = real(input);
 inC = imag(input);
-trainingSymbols = [inR(1:numTrain+1), inC(1:numTrain+1)];
-target = [real(target), imag(target)];
+trainingSymbols = [inR(1:numTrain), inC(1:numTrain)];
+target = [real(target(1:numTrain)), imag(target(1:numTrain))];
 testData = [inR(numTrain+1:end), inC(numTrain+1:end)];
 
 Eqnet = patternnet(3);
@@ -16,5 +16,5 @@ Eqnet = patternnet(3);
 
 % Test the Network
 output = Eqnet(testData');
-output = [output(1,:) + output(2,:)*i];
+output = [output(1,:) + output(2,:)*1i]';
 end
