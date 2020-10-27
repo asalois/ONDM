@@ -4,13 +4,15 @@
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
 function output = nnEq(input,target,numTrain)
-trainingSymbols = makeInputMat(input,4,numTrain);
-target = [real(target(1:numTrain)), imag(target(1:numTrain))];
-testData = makeInputMat(input,4,(length(input) - numTrain));
+size = 14;
+trainingSymbols = makeInputMat(input,size,numTrain);
+target = [real(target(size:numTrain+size)), imag(target(size:numTrain+size))];
+testData = makeInputMat(input,size,(length(input) - numTrain));
 
-Eqnet = patternnet(15);
+Eqnet = feedforwardnet(70,'traingd');
 % Train the Network
-[Eqnet,TT] = train(Eqnet,trainingSymbols,target');
+[Eqnet,TT] = train(Eqnet,trainingSymbols,target','useGPU', 'yes');
+%[Eqnet,TT] = train(Eqnet,trainingSymbols,target','useParallel','yes');
 
 % Test the Network
 output = Eqnet(testData);

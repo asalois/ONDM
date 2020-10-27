@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^20; % number of BPSK symbols per vector
+nb = 2^22; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -60,7 +60,7 @@ inputSig = niosySig;
 
 %% Use LMS
 trainNum = 2000;
-taps = 4;
+taps = 5;
 rx1Sig = lmsEq(inputSig,taps,trainNum);
 bkEst = pskdemod(rx1Sig,M);
 
@@ -70,6 +70,7 @@ delay = 2;
 
 
 %% Use RLS
+taps = 4;
 rx2Sig = rlsEq(inputSig,taps,trainNum);
 bkEst = pskdemod(rx2Sig,M);
 
@@ -85,12 +86,14 @@ bkEst = pskdemod(rx3Sig,M);
 [numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
 
 %% Use NN
-trainNN = 2000;
+trainNN = 50000;
 delayNN = 2;
+del = 0;
 rx5Sig = nnEq(inputSig(delay:end),symbols,trainNN);
 bkEst = pskdemod(rx5Sig,M);
+
 % find BER
-[numErrors,berNN] = biterr(msg(trainNN+delayNN:end),bkEst);
+[numErrors,berNN] = biterr(msg(trainNN+delayNN+del:end),bkEst(1:end-del));
 
 %% run with out LMS Equalizer
 rx4Sig = inputSig;
