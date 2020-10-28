@@ -15,7 +15,7 @@ tic
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
 nb = 2^16; % number of BPSK symbols per vector
-SNR = 200;
+SNR = 100;
 
 % Modulated signal parameters
 M = 2; % order of modulation
@@ -59,10 +59,11 @@ xi1 = rxSigCheck(1:6)';
 x2 = rxMsgCheck(6:end)';
 xi2 = rxMsgCheck(1:6)';
 
-% [y1,xf1,xf2] = myNeuralNetworkFunctionMatrixNiose(x1,x2,xi1,xi2);
-% right = (y1 == x2);
-% top = numel(right);
-% frac = top / length(x2)
-
+[y1,xf1,xf2] = myNeuralNetworkFunctionMatrixNiose(x1,x2,xi1,xi2);
+right = (y1 == x2);
+top = numel(right);
+frac = top / length(x2)
+y = (y1 -0.5)*2;
+scatterplot(y(end-2000:end))
 
 toc

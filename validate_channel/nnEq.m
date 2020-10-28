@@ -6,10 +6,11 @@
 function output = nnEq(input,target,numTrain)
 size = 14;
 trainingSymbols = makeInputMat(input,size,numTrain);
-target = [real(target(size:numTrain+size)), imag(target(size:numTrain+size))];
+target = [real(target(size+1:numTrain+size)), imag(target(size+1:numTrain+size))];
 testData = makeInputMat(input,size,(length(input) - numTrain));
 
-Eqnet = feedforwardnet(70,'traingd');
+% Eqnet = feedforwardnet(70,'traingd');
+Eqnet = patternnet(70);
 % Train the Network
 [Eqnet,TT] = train(Eqnet,trainingSymbols,target','useGPU', 'yes');
 %[Eqnet,TT] = train(Eqnet,trainingSymbols,target','useParallel','yes');
