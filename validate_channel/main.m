@@ -52,7 +52,8 @@ berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
-SNR = i*step; % Noise SNR per sample in (dB)
+% SNR = i*step; % Noise SNR per sample in (dB)
+SNR = 200;
 
 % Add AWGN to the signal
 niosySig = awgn(filtSig,SNR,'measured');
@@ -86,14 +87,19 @@ bkEst = pskdemod(rx3Sig,M);
 [numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
 
 %% Use NN
-trainNN = 50000;
+trainNN = 2^16;
 delayNN = 2;
-del = 0;
 rx5Sig = nnEq(inputSig(delay:end),symbols,trainNN);
 bkEst = pskdemod(rx5Sig,M);
-
+%%
+%shiftCheck(msg(trainNN-1024:end),bkEst,2^14)
+x = msg(trainNN:end-2);
+y = bkEst(1:end);
+size(x)
+size(y)
+%%
 % find BER
-[numErrors,berNN] = biterr(msg(trainNN+delayNN+del:end),bkEst(1:end-del));
+[numErrors,berNN] = biterr(x,y)
 
 %% run with out LMS Equalizer
 rx4Sig = inputSig;
