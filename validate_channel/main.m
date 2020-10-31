@@ -88,14 +88,12 @@ for i = 1:runs
     
     %% Use NN
     trainNN = 2^15;
-    delayNN = 2;
     % shift = 1;
     rx5Sig = nnEq(inputSig(delay:end),symbols,trainNN);
     bkEst = pskdemod(rx5Sig,M);
-    %%
     % shiftCheck(msg(trainNN-100:end),bkEst,200)
-    shiftTo = 100;
-    berNNN = zeros(shiftTo,1);
+    % shiftTo = 100;
+    % berNNN = zeros(shiftTo,1);
     shift = 0;
     % for shift = 1:shiftTo
     x = msg(trainNN+shift:end-2);
