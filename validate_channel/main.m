@@ -1,6 +1,6 @@
 %% Proakis Synthetic Channel Equilization
 
-% Montana State University 
+% Montana State University
 % Electrical & Computer Engineering Department
 % Created by Alexander Salois
 
@@ -20,7 +20,7 @@ Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
 Tc=1/fc; % Carrier period
 nsb=32; % Number of samples per bit
-fs=nsb*Rb; % Sampling frequency 
+fs=nsb*Rb; % Sampling frequency
 Ts=1/fs; % Sampling period
 Ttot=nb*Tb; % Total simulation time
 EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
@@ -52,68 +52,75 @@ berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
-% SNR = i*step; % Noise SNR per sample in (dB)
-SNR = 200;
-
-% Add AWGN to the signal
-niosySig = awgn(filtSig,SNR,'measured');
-inputSig = niosySig;
-
-%% Use LMS
-trainNum = 2000;
-taps = 5;
-rx1Sig = lmsEq(inputSig,taps,trainNum);
-bkEst = pskdemod(rx1Sig,M);
-
-% find BER
-delay = 2;
-[numErrors,berLMS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
-
-
-%% Use RLS
-taps = 4;
-rx2Sig = rlsEq(inputSig,taps,trainNum);
-bkEst = pskdemod(rx2Sig,M);
-
-% find BER
-[numErrors,berRLS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
-
-
-%% Use DFE   
-rx3Sig = dfEq(inputSig,taps,trainNum);
-bkEst = pskdemod(rx3Sig,M);
-
-% find BER
-[numErrors,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
-
-%% Use NN
-trainNN = 2^16;
-delayNN = 2;
-rx5Sig = nnEq(inputSig(delay:end),symbols,trainNN);
-bkEst = pskdemod(rx5Sig,M);
-%%
-%shiftCheck(msg(trainNN-1024:end),bkEst,2^14)
-x = msg(trainNN:end-2);
-y = bkEst(1:end);
-size(x)
-size(y)
-%%
-% find BER
-[numErrors,berNN] = biterr(x,y)
-
-%% run with out LMS Equalizer
-rx4Sig = inputSig;
-bkEstNoLMS =  pskdemod(rx4Sig,M);
-
-% BER with out LMS
-delay = delay -1;
-[numErrors,ber] = biterr(msg(trainNum:nb-delay),bkEstNoLMS(trainNum+delay:nb));
-
-% Theoretical error probability
-peb = 0.5*erfc(sqrt(10^SNR/10));
-
-% hold values in berR
-berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
+    SNR = i*step; % Noise SNR per sample in (dB)
+    % SNR = 200;
+    
+    % Add AWGN to the signal
+    niosySig = awgn(filtSig,SNR,'measured');
+    inputSig = niosySig;
+    
+    %% Use LMS
+    trainNum = 2000;
+    taps = 5;
+    rx1Sig = lmsEq(inputSig,taps,trainNum);
+    bkEst = pskdemod(rx1Sig,M);
+    
+    % find BER
+    delay = 2;
+    [~,berLMS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
+    
+    
+    %% Use RLS
+    taps = 4;
+    rx2Sig = rlsEq(inputSig,taps,trainNum);
+    bkEst = pskdemod(rx2Sig,M);
+    
+    % find BER
+    [~,berRLS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
+    
+    
+    %% Use DFE
+    rx3Sig = dfEq(inputSig,taps,trainNum);
+    bkEst = pskdemod(rx3Sig,M);
+    
+    % find BER
+    [~,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
+    
+    %% Use NN
+    trainNN = 2^15;
+    delayNN = 2;
+    % shift = 1;
+    rx5Sig = nnEq(inputSig(delay:end),symbols,trainNN);
+    bkEst = pskdemod(rx5Sig,M);
+    %%
+    % shiftCheck(msg(trainNN-100:end),bkEst,200)
+    shiftTo = 100;
+    berNNN = zeros(shiftTo,1);
+    shift = 0;
+    % for shift = 1:shiftTo
+    x = msg(trainNN+shift:end-2);
+    y = bkEst(1:end-shift);
+    % size(x)
+    % size(y)
+    %%
+    % find BER
+    [~,berNN] = biterr(x,y);
+    % berNNN(shift) = berNN;
+    % end
+    % [x,i] = min(berNNN)
+    %% run with out LMS Equalizer
+    rx4Sig = inputSig;
+    bkEstNoLMS =  pskdemod(rx4Sig,M);
+    
+    % BER with out LMS
+    delay = delay -1;
+    [~,ber] = biterr(msg(trainNum:nb-delay),bkEstNoLMS(trainNum+delay:nb));
+    
+    % Theoretical error probability
+    peb = 0.5*erfc(sqrt(10^SNR/10));
+    
+    % hold values in berR
+    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
 end
 toc
 
