@@ -16,6 +16,9 @@ parfor i = 1:runTo
     test = circshift(gpu1,i);
     n = dot(test,gpu2);
     x(i) = n;
+    if ~ mod(i,2^13)
+        i
+    end
 end
 [m,shift] = max(x)
 end
