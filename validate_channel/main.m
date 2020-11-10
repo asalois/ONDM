@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^20; % number of BPSK symbols per vector
+nb = 2^22; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -46,7 +46,7 @@ chnlLen = length(chnl); % channel length, in samples
 filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
-runTo = 20;
+runTo = 24;
 step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
@@ -61,7 +61,7 @@ for i = 1:runs
     inputSig = niosySig;
     
     %% Use LMS
-    trainNum = 2^11;
+    trainNum = 2^12;
     taps = 5;
     rx1Sig = lmsEq(inputSig,taps,trainNum);
     bkEst = pskdemod(rx1Sig,M);
@@ -88,14 +88,16 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
     
     %% Use NN
-    trainNN =2*trainNum;
-    rx5Sig = nnEq(symbols,symbols,trainNN);
+    trainNN = length(symbols)/4;
+    perCent = trainNN/length(symbols)
+    rx5Sig = nnEq(inputSig,symbols,trainNN);
     bkEst = pskdemod(rx5Sig,M);
-    shift = shiftCheck(msg(trainNN:end),bkEst,2^10)
-    x = msg(trainNN:end-1);
+%     shift = shiftCheck(msg(trainNN+29:end-1),bkEst,2^10)
+    shift = 14;
+    x = msg(trainNN+29:end-1);
     y = circshift(bkEst,-shift);
-    % size(x)
-    % size(y)
+    size(x)
+    size(y)
     % find BER
     [~,berNN] = biterr(x,y)
     % berNNN(shift) = berNN;
