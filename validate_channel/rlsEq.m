@@ -10,7 +10,7 @@ trainingSymbols = filtSig(1:numTrainSymbols);
 
 % eq setup
 lineq = comm.LinearEqualizer('Algorithm','LMS', 'NumTaps',taps,'ReferenceTap',floor(taps/2),...
-    'InputSamplesPerSymbol',1,'Constellation',pskmod(0:1,2));
+    'InputSamplesPerSymbol',1,'Constellation',pskmod(0:3,4));
 
 % Use LMS Equalizer
 [rxRLS] = lineq(filtSig,trainingSymbols);
