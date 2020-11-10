@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^18; % number of BPSK symbols per vector
+nb = 2^20; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -26,7 +26,7 @@ Ttot=nb*Tb; % Total simulation time
 EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
 
 % Modulated signal parameters
-M = 2; % order of modulation
+M = 4; % order of modulation
 
 % Specify a seed for the random number generators to ensure repeatability.
 rng(12345)
@@ -37,15 +37,16 @@ symbols = pskmod(msg,M);
 
 % Channel parameters
 %chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
-%chnl = [ 0.1 0.2 1 0.2 0.1]; % another channel for testiing
-chnl = [0.41 0.81 0.41];
+%chnl = [0.04 -0.05 0.07 -0.21 -0.5 0.72 0.36 0.21 0.03 0.07]; % another channel for testing
+%chnl = [ 0.1 0.2 1 0.2 0.1]; % another channel for testing
+chnl = [0.407 0.815 0.407];
 chnlLen = length(chnl); % channel length, in samples
 
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
-runTo = 22;
+runTo = 20;
 step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
@@ -90,9 +91,9 @@ for i = 1:runs
     trainNN =2*trainNum;
     rx5Sig = nnEq(symbols,symbols,trainNN);
     bkEst = pskdemod(rx5Sig,M);
-    shift = shiftCheck(msg(trainNN:end),bkEst)
-    x = msg(trainNN+shift:end-1);
-    y = bkEst(1:end-shift);
+    shift = shiftCheck(msg(trainNN:end),bkEst,2^10)
+    x = msg(trainNN:end-1);
+    y = circshift(bkEst,-shift);
     % size(x)
     % size(y)
     % find BER
