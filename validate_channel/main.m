@@ -53,7 +53,7 @@ berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
-    SNR = i*step; % Noise SNR per sample in (dB)
+    SNR = i*step % Noise SNR per sample in (dB)
 %     SNR = 200;
     
     % Add AWGN to the signal
@@ -61,7 +61,7 @@ for i = 1:runs
     inputSig = niosySig;
     
     %% Use LMS
-    trainNum = 2^12;
+    trainNum = 2^14;
     taps = 5;
     rx1Sig = lmsEq(inputSig,taps,trainNum);
     bkEst = pskdemod(rx1Sig,M);
@@ -89,15 +89,15 @@ for i = 1:runs
     
     %% Use NN
     trainNN = length(symbols)/4;
-    perCent = trainNN/length(symbols)
+    perCent = trainNN/length(symbols);
     rx5Sig = nnEq(inputSig,symbols,trainNN);
     bkEst = pskdemod(rx5Sig,M);
 %     shift = shiftCheck(msg(trainNN+29:end-1),bkEst,2^10)
     shift = 14;
     x = msg(trainNN+29:end-1);
     y = circshift(bkEst,-shift);
-    size(x)
-    size(y)
+%     size(x)
+%     size(y)
     % find BER
     [~,berNN] = biterr(x,y)
     % berNNN(shift) = berNN;
