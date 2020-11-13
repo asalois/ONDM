@@ -12,8 +12,8 @@ test = input(numTrain+1:end);
 target = [real(target(shift:numTrain+shift-1)), imag(target(shift:numTrain+shift-1))];
 testData = makeInputMat(test,size,length(test)-(2*size+1));
 load Eqnet
-% Eqnet = feedforwardnet(hLayers,'traingd');
-% Eqnet.layers{1}.transferFcn = 'purelin';
+Eqnet = feedforwardnet(hLayers,'traingd');
+Eqnet.layers{1}.transferFcn = 'purelin';
 
 % Train the Network
 [Eqnet,TT] = train(Eqnet,trainingSymbols,target','useGPU', 'yes');
