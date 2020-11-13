@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^22; % number of BPSK symbols per vector
+nb = 2^21; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -29,7 +29,7 @@ EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
 M = 4; % order of modulation
 
 % Specify a seed for the random number generators to ensure repeatability.
-rng(12345)
+% rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
@@ -46,15 +46,15 @@ chnlLen = length(chnl); % channel length, in samples
 filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
-runTo = 24;
+runTo = 30;
 step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
-    SNR = i*step % Noise SNR per sample in (dB)
-%     SNR = 200;
+%     SNR = i*step % Noise SNR per sample in (dB)
+    SNR = 30;
     
     % Add AWGN to the signal
     niosySig = awgn(filtSig,SNR,'measured');
