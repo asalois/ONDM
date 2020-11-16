@@ -9,7 +9,9 @@ clc;
 clear;
 close all;
 
-nb = 2^22;
+tic
+
+nb = 2^20;
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -44,3 +46,4 @@ writematrix(target, 'target.csv');
 % niosySig = awgn(filtSig,SNR,'measured');
 % inputSig = niosySig;
 
+toc
