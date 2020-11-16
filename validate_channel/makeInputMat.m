@@ -1,4 +1,4 @@
-function mat = makeInputMat(input,numSamples,numTrain);
+function mat = makeInputMat(input,numSamples,numTrain)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 l = 2*numSamples + 1;
