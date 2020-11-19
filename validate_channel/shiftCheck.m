@@ -13,10 +13,11 @@ gpu2 = in2;
 x = zeros(length(in1),1);
 
 parfor i = 1:runTo
-    test = circshift(gpu1,i);
+    test = circshift(gpu1,i-1);
     n = dot(test,gpu2);
     x(i) = n;
 end
 [m,shift] = max(x);
+shift = shift -1;
 end
 
