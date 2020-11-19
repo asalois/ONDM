@@ -10,7 +10,7 @@ shift = size+1;
 trainingSymbols = makeInputMat(input,size,numTrain);
 test = input(numTrain+1:end);
 target = [real(target(shift:numTrain+shift-1)), imag(target(shift:numTrain+shift-1))];
-testData = makeInputMat(test,size,length(test)-(2*size+1));
+testData = makeInputMat(test,size,length(test));
 % load Eqnet
 Eqnet = feedforwardnet(hLayers,'traingd');
 Eqnet.layers{1}.transferFcn = 'purelin';
