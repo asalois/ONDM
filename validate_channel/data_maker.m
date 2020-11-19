@@ -36,8 +36,9 @@ filtSig = filter(chnl,1,symbols);
 numSamples = 14;
 
 data = makeInputMat(filtSig,numSamples,nb);
-target = [real(symbols) imag(symbols)]';
-target = circshift(target,numSamples+1);
+data = data(:,1:end-numSamples);
+target = [real(symbols(numSamples:end-1)) imag(symbols(numSamples:end-1))]';
+diff  = length(data) - length(target)
 
 writematrix(data, 'data.csv');
 writematrix(target, 'target.csv');
