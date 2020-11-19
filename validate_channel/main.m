@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^21; % number of BPSK symbols per vector
+nb = 2^22; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -53,8 +53,8 @@ berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
-%     SNR = i*step % Noise SNR per sample in (dB)
-    SNR = 30;
+    SNR = i*step % Noise SNR per sample in (dB)
+%     SNR = 30;
     
     % Add AWGN to the signal
     niosySig = awgn(filtSig,SNR,'measured');
