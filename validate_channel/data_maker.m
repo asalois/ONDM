@@ -11,7 +11,7 @@ close all;
 
 tic
 
-nb = 2^20;
+nb = 2^15;
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -35,8 +35,9 @@ filtSig = filter(chnl,1,symbols);
 
 numSamples = 14;
 
-data = makeInputMat(filtSig,numSamples,nb - (2*numSamples+1));
-target = [real(symbols(numSamples:end)) imag(symbols(numSamples:end))]';
+data = makeInputMat(filtSig,numSamples,nb);
+target = [real(symbols) imag(symbols)]';
+target = circshift(target,numSamples+1);
 
 writematrix(data, 'data.csv');
 writematrix(target, 'target.csv');
