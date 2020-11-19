@@ -4,7 +4,7 @@ function mat = makeInputMat(input,numSamples,numTrain)
 l = 2*numSamples + 1;
 mat = zeros(l,numTrain);
 for i = 1:l
-    mat(i,:) = circshift(input(1:numTrain),i);
+    mat(i,:) = circshift(input(1:numTrain),-i);
 end
 mat = [real(mat); imag(mat)];
 end
