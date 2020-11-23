@@ -12,11 +12,11 @@ close all;
 % time simulation
 tic
 
-checkData = readmatrix('KallaPointsMMSE.csv')
+checkData = readmatrix('KallaPointsMMSE.csv');
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^17; % number of BPSK symbols per vector
+nb = 2^20; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -48,8 +48,8 @@ chnlLen = length(chnl); % channel length, in samples
 filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
-runTo = 20;
-step = 0.25;
+runTo = 22;
+step = 0.5;
 runs = runTo/step;
 berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
@@ -74,7 +74,7 @@ for i = 1:runs
     
     
     %% Use RLS
-    taps = 4;
+%     taps = 4;
     rx2Sig = rlsEq(inputSig,taps,trainNum);
     bkEst = pskdemod(rx2Sig,M);
     
