@@ -11,10 +11,12 @@ close all;
 
 % time simulation
 tic
+
+checkData = readmatrix('KallaPointsMMSE.csv')
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^22; % number of BPSK symbols per vector
+nb = 2^17; % number of BPSK symbols per vector
 Tb=1; % Bit period
 Rb=1/Tb; % Bit rate
 fc=2; % Carrier frequency
@@ -46,8 +48,8 @@ chnlLen = length(chnl); % channel length, in samples
 filtSig = filter(chnl,1,symbols);
 
 % Loop Set up
-runTo = 30;
-step = 1;
+runTo = 20;
+step = 0.25;
 runs = runTo/step;
 berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
@@ -61,8 +63,8 @@ for i = 1:runs
     inputSig = niosySig;
     
     %% Use LMS
-    trainNum = 2^14;
-    taps = 5;
+    trainNum = nb/4;
+    taps = 4;
     rx1Sig = lmsEq(inputSig,taps,trainNum);
     bkEst = pskdemod(rx1Sig,M);
     
@@ -88,21 +90,21 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
     
     %% Use NN
-    trainNN = length(symbols)/4;
-    perCent = trainNN/length(symbols);
-    rx5Sig = nnEq(inputSig,symbols,trainNN);
-    bkEst = pskdemod(rx5Sig,M);
-%     shift = shiftCheck(msg(trainNN+29:end-1),bkEst,2^10)
-    shift = 14;
-    x = msg(trainNN+29:end-1);
-    y = circshift(bkEst,-shift);
-%     size(x)
-%     size(y)
-    % find BER
-    [~,berNN] = biterr(x,y)
-    % berNNN(shift) = berNN;
-    % end
-    % [x,i] = min(berNNN)
+%     trainNN = length(symbols)/4;
+%     perCent = trainNN/length(symbols);
+%     rx5Sig = nnEq(inputSig,symbols,trainNN);
+%     bkEst = pskdemod(rx5Sig,M);
+% %     shift = shiftCheck(msg(trainNN+29:end-1),bkEst,2^10)
+%     shift = 14;
+%     x = msg(trainNN+29:end-1);
+%     y = circshift(bkEst,-shift);
+% %     size(x)
+% %     size(y)
+%     % find BER
+%     [~,berNN] = biterr(x,y)
+%     % berNNN(shift) = berNN;
+%     % end
+%     % [x,i] = min(berNNN)
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
     bkEstNoLMS =  pskdemod(rx4Sig,M);
@@ -115,21 +117,29 @@ for i = 1:runs
     peb = 0.5*erfc(sqrt(10^SNR/10));
     
     % hold values in berR
-    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
+    berR(:,i) = [ber,berLMS,berRLS,berDFE,0,peb];
 end
 toc
 
 %%
 figure()
-plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
-legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ','Theoretical');
+hold on
+% plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
+plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-')
+plot(checkData(:,1),checkData(:,2),'*-')
+legend('No EQ','LMS EQ','RLS EQ','DFE EQ', 'From Paper');
+xlim([5 20]);
 xlabel('SNR (dB)');
 ylabel('BER');
+hold off
 saveas(gcf,'BER.png');
 
-figure()
-semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-');
-legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ');
-xlabel('SNR (dB)');
-ylabel('BER');
-saveas(gcf,'BERlogy.png');
+% figure()
+% hold on
+% semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-');
+% semilogy(checkData(:,1),checkData(:,2),'*-')
+% legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ');
+% xlabel('SNR (dB)');
+% ylabel('BER');
+% hold off
+% saveas(gcf,'BERlogy.png');
