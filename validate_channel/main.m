@@ -127,19 +127,21 @@ hold on
 % plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
 plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-')
 plot(checkData(:,1),checkData(:,2),'*-')
+hold off
 legend('No EQ','LMS EQ','RLS EQ','DFE EQ', 'From Paper');
 xlim([5 20]);
 xlabel('SNR (dB)');
 ylabel('BER');
-hold off
 saveas(gcf,'BER.png');
 
 % figure()
 % hold on
-% semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-');
+% % semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-');
+% semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-');
 % semilogy(checkData(:,1),checkData(:,2),'*-')
-% legend('No EQ','LMS EQ','RLS EQ','DFE EQ','NN EQ');
+% hold off
+% legend('No EQ','LMS EQ','RLS EQ','DFE EQ','From Paper');
+% xlim([5 20]);
 % xlabel('SNR (dB)');
 % ylabel('BER');
-% hold off
 % saveas(gcf,'BERlogy.png');
