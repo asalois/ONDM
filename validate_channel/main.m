@@ -17,15 +17,15 @@ checkData = readmatrix('KallaPointsMMSE.csv');
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
 nb = 2^20; % number of BPSK symbols per vector
-Tb=1; % Bit period
-Rb=1/Tb; % Bit rate
-fc=2; % Carrier frequency
-Tc=1/fc; % Carrier period
-nsb=32; % Number of samples per bit
-fs=nsb*Rb; % Sampling frequency
-Ts=1/fs; % Sampling period
-Ttot=nb*Tb; % Total simulation time
-EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
+% Tb=1; % Bit period
+% Rb=1/Tb; % Bit rate
+% fc=2; % Carrier frequency
+% Tc=1/fc; % Carrier period
+% nsb=32; % Number of samples per bit
+% fs=nsb*Rb; % Sampling frequency
+% Ts=1/fs; % Sampling period
+% Ttot=nb*Tb; % Total simulation time
+% EbNo = 1; % Signal-to-noise energy ratio per bit Eb/N0 in linear units
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -63,7 +63,7 @@ for i = 1:runs
     inputSig = niosySig;
     
     %% Use LMS
-    trainNum = nb/4;
+    trainNum = nb/8;
     taps = 4;
     rx1Sig = lmsEq(inputSig,taps,trainNum);
     bkEst = pskdemod(rx1Sig,M);
@@ -122,26 +122,22 @@ end
 toc
 
 %%
-figure()
-hold on
-% plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
-plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-')
-plot(checkData(:,1),checkData(:,2),'*-')
-hold off
-legend('No EQ','LMS EQ','RLS EQ','DFE EQ', 'From Paper');
-xlim([5 20]);
-xlabel('SNR (dB)');
-ylabel('BER');
-saveas(gcf,'BER.png');
-
 % figure()
 % hold on
-% % semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-');
-% semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-');
-% semilogy(checkData(:,1),checkData(:,2),'*-')
+% % plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
+% plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-')
+% plot(checkData(:,1),checkData(:,2),'*-')
 % hold off
-% legend('No EQ','LMS EQ','RLS EQ','DFE EQ','From Paper');
+% legend('No EQ','LMS EQ','RLS EQ','DFE EQ', 'From Paper');
 % xlim([5 20]);
 % xlabel('SNR (dB)');
 % ylabel('BER');
+% saveas(gcf,'BER.png');
+
+figure()
+semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',checkData(:,1),checkData(:,2),'*-');
+legend('No EQ','LMS EQ','RLS EQ','DFE EQ','From Paper');
+xlim([5 20]);
+xlabel('SNR (dB)');
+ylabel('BER');
 % saveas(gcf,'BERlogy.png');
