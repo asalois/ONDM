@@ -14,6 +14,7 @@ testData = makeInputMat(test,size,length(test));
 % load Eqnet
 Eqnet = feedforwardnet(hLayers,'traingd');
 Eqnet.layers{1}.transferFcn = 'purelin';
+Eqnet.layers{2}.transferFcn = 'purelin';
 
 % Train the Network
 [Eqnet,TT] = train(Eqnet,trainingSymbols,target','useGPU', 'yes');
