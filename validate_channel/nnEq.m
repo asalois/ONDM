@@ -12,7 +12,8 @@ test = input(numTrain+1:end);
 target = [real(target(shift:numTrain+shift-1)), imag(target(shift:numTrain+shift-1))];
 testData = makeInputMat(test,size,length(test));
 % load Eqnet
-Eqnet = feedforwardnet(hLayers,'traingd');
+% Eqnet = feedforwardnet(hLayers,'traingd');
+Eqnet = patternnet(hLayers,'traingd');
 Eqnet.layers{1}.transferFcn = 'purelin';
 Eqnet.layers{2}.transferFcn = 'purelin';
 

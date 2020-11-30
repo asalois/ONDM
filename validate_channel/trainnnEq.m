@@ -14,7 +14,7 @@ tic
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^14; % number of BPSK symbols per vector
+nb = 2^15; % number of symbols per vector
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -23,8 +23,8 @@ M = 4; % order of modulation
 rng(12345)
 berNN = 1;
 
-while berNN > 0.25
-    % Generate a PSK signal
+while berNN > 0.5
+    % Generate a signal
     msg = randi([0 M-1],nb,1);
     symbols = qammod(msg,M);
     
@@ -33,7 +33,7 @@ while berNN > 0.25
     %chnl = [0.04 -0.05 0.07 -0.21 -0.5 0.72 0.36 0.21 0.03 0.07]; % another channel for testing
     chnl = [0 1 0]; % another channel for testing
     %chnl = [0.407 0.815 0.407];
-    chnlLen = length(chnl); % channel length, in samples
+%     chnlLen = length(chnl); % channel length, in samples
     
     % Pass the signal through the channel
     filtSig = filter(chnl,1,symbols);
@@ -48,8 +48,8 @@ while berNN > 0.25
     perCent = trainNN/length(symbols);
     rx5Sig = nnEq(filtSig,symbols,trainNN);
     bkEst = qamdemod(rx5Sig,M);
-    shift = shiftCheck(msg(trainNN:end-1),bkEst, 2^12)
-%     shift = 1;
+%     shift = shiftCheck(msg(trainNN:end-1),bkEst, 2^12)
+    shift = 0;
     x = msg(trainNN:end-1);
     y = circshift(bkEst,shift);
     diff = length(x) - length(y);
