@@ -11,7 +11,7 @@ close all;
 
 tic
 
-nb = 2^6;
+nb = 2^20;
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -27,8 +27,8 @@ symbols = pskmod(msg,M,pi/4);
 %chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
 %chnl = [0.04 -0.05 0.07 -0.21 -0.5 0.72 0.36 0.21 0.03 0.07]; % another channel for testing
 %chnl = [ 0.1 0.2 1 0.2 0.1]; % another channel for testing
-chnl = [0.407 0.815 0.407];
-chnlLen = length(chnl); % channel length, in samples
+% chnl = [0.407 0.815 0.407];
+chnl = [0 1 0]; % another channel for testing
 
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
@@ -37,7 +37,8 @@ numSamples = 14;
 
 data = makeInputMat(filtSig,numSamples,nb);
 data = data(:,1:end-numSamples);
-target = round([real(symbols(numSamples:end-1)) imag(symbols(numSamples:end-1))],3)';
+% symbols = circshift(symbols, 1);
+target = round([real(symbols(numSamples+1:end)) imag(symbols(numSamples+1:end))],3)';
 diff  = length(data) - length(target)
 
 writematrix(data, 'data.csv');
