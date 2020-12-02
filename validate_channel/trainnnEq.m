@@ -23,7 +23,7 @@ M = 4; % order of modulation
 rng(12345)
 berNN = 1;
 
-while berNN > 0.5
+while berNN > 0.49
     % Generate a signal
     msg = randi([0 M-1],nb,1);
     symbols = qammod(msg,M);
@@ -46,9 +46,10 @@ while berNN > 0.5
     % Use NN
     trainNN = length(symbols)/2;
     perCent = trainNN/length(symbols);
+%     symbols = circshift(symbols,-2);
     rx5Sig = nnEq(filtSig,symbols,trainNN);
     bkEst = qamdemod(rx5Sig,M);
-%     shift = shiftCheck(msg(trainNN:end-1),bkEst, 2^12)
+%     shift = shiftCheck(msg(trainNN:end-1),bkEst, 2^8)
     shift = 0;
     x = msg(trainNN:end-1);
     y = circshift(bkEst,shift);
