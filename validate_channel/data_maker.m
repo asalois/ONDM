@@ -42,6 +42,10 @@ symbols = circshift(symbols, 0);
 target = round([real(symbols(numSamples+1:end)) imag(symbols(numSamples+1:end))],3)';
 diff  = length(data) - length(target)
 
+save('data','data');
+save('target','target');
+
+%%
 writematrix(data, 'data.csv');
 writematrix(target, 'target.csv');
 

@@ -16,8 +16,8 @@ tic
 rng(12345)
 berNN = 1;
 
-data = csvread('data.csv');
-target = csvread('target.csv');
+d = load('data.mat');
+t = load('target.mat');
 
 %%
 % Define network
@@ -26,15 +26,16 @@ Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
 Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
 
 % Train the Network
-% [Eqnet,TT] = train(Eqnet,trainingSymbols,target','useGPU', 'yes'); % use when gpu
-[Eqnet,TT] = train(Eqnet,data,target); % use when no gpu and small data
-% [Eqnet,TT] = train(Eqnet,data,target,'useParallel','yes'); % use when no gpu and large data
+% [Eqnet,TT] = train(Eqnet,d.data,t.target','useGPU', 'yes'); % use when gpu
+% [Eqnet,TT] = train(Eqnet,d.data,t.target); % use when no gpu and small data
+[Eqnet,TT] = train(Eqnet,d.data,t.target,'useParallel','yes'); % use when no gpu and large data
 
 % Test the Network
 output = Eqnet(testData);
 output = [output(1,:) + output(2,:)*1i]';
 save Eqnet
 
+%%
 while berNN > 0.49
 
     % Use NN
