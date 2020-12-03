@@ -11,7 +11,7 @@ close all;
 
 tic
 
-nb = 2^18;
+nb = 2^20;
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -21,7 +21,8 @@ rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
-symbols = pskmod(msg,M,pi/4);
+%symbols = pskmod(msg,M,pi/4);
+symbols = qammod(msg,M);
 
 % Channel parameters
 %chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
@@ -37,7 +38,7 @@ numSamples = 14;
 
 data = makeInputMat(filtSig,numSamples,nb);
 data = data(:,1:end-numSamples);
-symbols = circshift(symbols, -2);
+symbols = circshift(symbols, 0);
 target = round([real(symbols(numSamples+1:end)) imag(symbols(numSamples+1:end))],3)';
 diff  = length(data) - length(target)
 
