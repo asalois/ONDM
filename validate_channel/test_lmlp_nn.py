@@ -27,7 +27,7 @@ epochs = 1000
 
 
 # Load the data
-mat = spio.loadmat('tensorflow_comm.mat', squeeze_me=True)
+mat = spio.loadmat('tensorflow_comm_debug.mat', squeeze_me=True)
 x_train = mat['x_train']
 x_valid = mat['x_valid']
 x_test = mat['x_test']
@@ -96,8 +96,7 @@ print('Test RMSE:', score[1])
 
 predictions = model.predict(x_test)
 weight = model.get_weights()
-#np.savetxt('weight.csv' , weight , fmt='%s', delimiter=',')
+np.savetxt('weight.csv' , weight , fmt='%s', delimiter=',')
 print(predictions.shape)
 print(predictions[0:9])
 print(y_test[0:9])
-model.save("lmlp_model.h5")
