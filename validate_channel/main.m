@@ -35,7 +35,7 @@ M = 4; % order of modulation
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
-symbols = pskmod(msg,M);
+symbols = qammod(msg,M);
 
 % Channel parameters
 %chnl = [0.227 0.460 0.688 0.460 0.227];% channel impulse response
@@ -66,7 +66,7 @@ for i = 1:runs
     trainNum = nb/8;
     taps = 4;
     rx1Sig = lmsEq(inputSig,taps,trainNum);
-    bkEst = pskdemod(rx1Sig,M);
+    bkEst = qamdemod(rx1Sig,M);
     
     % find BER
     delay = 2;
@@ -76,7 +76,7 @@ for i = 1:runs
     %% Use RLS
 %     taps = 4;
     rx2Sig = rlsEq(inputSig,taps,trainNum);
-    bkEst = pskdemod(rx2Sig,M);
+    bkEst = qamdemod(rx2Sig,M);
     
     % find BER
     [~,berRLS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
@@ -84,7 +84,7 @@ for i = 1:runs
     
     %% Use DFE
     rx3Sig = dfEq(inputSig,taps,trainNum);
-    bkEst = pskdemod(rx3Sig,M);
+    bkEst = qamdemod(rx3Sig,M);
     
     % find BER
     [~,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
@@ -105,9 +105,16 @@ for i = 1:runs
 %     % berNNN(shift) = berNN;
 %     % end
 %     % [x,i] = min(berNNN)
+
+w = load('w.mat');
+rx5Sig = filter(w.w,1,inputSig);
+bkEst = qamdemod(rx5Sig,M);
+shift = shiftCheck(bkEst,msg,2^8)
+[~,berNN] = biterr(bkEst,msg)
+
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
-    bkEstNoLMS =  pskdemod(rx4Sig,M);
+    bkEstNoLMS =  qamdemod(rx4Sig,M);
     
     % BER with out LMS
     delay = delay -1;
@@ -117,7 +124,7 @@ for i = 1:runs
     peb = 0.5*erfc(sqrt(10^SNR/10));
     
     % hold values in berR
-    berR(:,i) = [ber,berLMS,berRLS,berDFE,0,peb];
+    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
 end
 toc
 
@@ -135,7 +142,7 @@ toc
 % saveas(gcf,'BER.png');
 
 figure()
-semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',checkData(:,1),checkData(:,2),'*-');
+semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(5,:),'*-',checkData(:,1),checkData(:,2),'*-');
 legend('No EQ','LMS EQ','RLS EQ','DFE EQ','From Paper');
 xlim([5 20]);
 xlabel('SNR (dB)');
