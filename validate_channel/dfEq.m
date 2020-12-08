@@ -10,7 +10,7 @@ trainingSymbols = filtSig(1:numTrainSymbols);
 
 dfe = comm.DecisionFeedbackEqualizer('Algorithm','LMS','NumForwardTaps',taps, ...
     'NumFeedbackTaps', taps-1,'ReferenceTap',floor(taps/2),...
-     'Constellation',pskmod(0:3,4));
+     'Constellation',qammod(0:3,4));
    
 % USE DFE 
 [rxDFE] =  dfe(filtSig,trainingSymbols);
