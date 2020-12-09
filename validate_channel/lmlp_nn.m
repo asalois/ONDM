@@ -47,7 +47,9 @@ msg = qamdemod([t.target(1,end-test:end) + t.target(2,end-test:end)*1i],4);
 [num_wrong,berNN] = biterr(msg,msg_test)
 save('Eqnet','Eqnet')
 x = cell2mat(Eqnet.LW(2));
+b = cell2mat(Eqnet.b(2));
 w = [x(1,:) + x(2,:)*1i];
+w = w + b(1) + b(2)*1i;
 save('w','w');
 toc
 
