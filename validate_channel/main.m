@@ -31,7 +31,7 @@ nb = 2^20; % number of BPSK symbols per vector
 M = 4; % order of modulation
 
 % Specify a seed for the random number generators to ensure repeatability.
-% rng(12345)
+rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
@@ -90,27 +90,12 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
     
     %% Use NN
-%     trainNN = length(symbols)/4;
-%     perCent = trainNN/length(symbols);
-%     rx5Sig = nnEq(inputSig,symbols,trainNN);
-%     bkEst = pskdemod(rx5Sig,M);
-% %     shift = shiftCheck(msg(trainNN+29:end-1),bkEst,2^10)
-%     shift = 14;
-%     x = msg(trainNN+29:end-1);
-%     y = circshift(bkEst,-shift);
-% %     size(x)
-% %     size(y)
-%     % find BER
-%     [~,berNN] = biterr(x,y)
-%     % berNNN(shift) = berNN;
-%     % end
-%     % [x,i] = min(berNNN)
-
-w = load('w.mat');
-rx5Sig = filter(w.w,1,inputSig);
-bkEst = qamdemod(rx5Sig,M);
-shift = shiftCheck(bkEst,msg,2^8)
-[~,berNN] = biterr(bkEst,msg)
+    w = load('w.mat');
+    z = w.w;
+    rx5Sig = filter(z,1,inputSig);
+    bkEst = qamdemod(rx5Sig,M);
+    % shift = shiftCheck(bkEst,msg,2^8)
+    [~,berNN] = biterr(bkEst,msg)
 
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
@@ -143,7 +128,7 @@ toc
 
 figure()
 semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(5,:),'*-',checkData(:,1),checkData(:,2),'*-');
-legend('No EQ','LMS EQ','RLS EQ','DFE EQ','From Paper');
+legend('No EQ','LMS EQ','RLS EQ','NN EQ','From Paper');
 xlim([5 20]);
 xlabel('SNR (dB)');
 ylabel('BER');

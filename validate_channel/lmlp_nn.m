@@ -28,9 +28,10 @@ Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
 Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
 
 % Train the Network
-[Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
-% [Eqnet,TT] = train(Eqnet,d.data,t.target); % use when no gpu and small data
-% [Eqnet,TT] = train(Eqnet,d.data,t.target,'useParallel','yes'); % use when no gpu and large data
+% [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
+% Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test)); % use when no gpu and small data
+Eqnet.trainParam.epochs=2000;
+[Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
 
 %% Test the Network
 output = Eqnet(d.data(:,end-test:end));
@@ -41,12 +42,8 @@ msg_test = qamdemod(output,4);
 msg = qamdemod([t.target(1,end-test:end) + t.target(2,end-test:end)*1i],4); 
 [num_wrong,berNN] = biterr(msg,msg_test)
 save('Eqnet','Eqnet')
-x = cell2mat(Eqnet.LW(2))
-w = [x(1,:) x(2,:)*1i]
+x = cell2mat(Eqnet.LW(2));
+w = [x(1,:) + x(2,:)*1i];
 save('w','w');
-
-
-
-
 toc
 
