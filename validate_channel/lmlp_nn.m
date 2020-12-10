@@ -26,7 +26,7 @@ size(t.target)
 hLayers = 70; % hidden layer size
 Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
 Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
-Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
+% Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
 
 Eqnet.trainParam.showWindow=false;
 Eqnet.trainParam.showCommandLine=true;

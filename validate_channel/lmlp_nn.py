@@ -23,7 +23,7 @@ from keras.losses import MeanSquaredError
 
 num_classes = 2
 batch_size = 1000
-epochs = 1000 
+epochs = 3000 
 
 
 # Load the data
