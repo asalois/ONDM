@@ -46,6 +46,7 @@ chnlLen = length(chnl); % channel length, in samples
 
 % Pass the signal through the channel
 filtSig = filter(chnl,1,symbols);
+filtSig = filtSig(2:end);
 
 % Loop Set up
 runTo = 22;
@@ -70,7 +71,7 @@ for i = 1:runs
     
     % find BER
     delay = 2;
-    [~,berLMS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
+    [~,berLMS] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     
     %% Use RLS
@@ -79,7 +80,7 @@ for i = 1:runs
     bkEst = qamdemod(rx2Sig,M);
     
     % find BER
-    [~,berRLS] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
+    [~,berRLS] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     
     %% Use DFE
@@ -87,15 +88,16 @@ for i = 1:runs
     bkEst = qamdemod(rx3Sig,M);
     
     % find BER
-    [~,berDFE] = biterr(msg(trainNum:nb-delay),bkEst(trainNum+delay:nb));
+    [~,berDFE] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     %% Use NN
     w = load('w.mat');
     z = w.w;
+    z = [real(z) imag(z)*1i] ;
     rx5Sig = filter(z,1,inputSig);
     bkEst = qamdemod(rx5Sig,M);
     % shift = shiftCheck(bkEst,msg,2^8)
-    [~,berNN] = biterr(bkEst,msg)
+    [~,berNN] = biterr(msg(2:end),bkEst)
 
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
@@ -103,7 +105,7 @@ for i = 1:runs
     
     % BER with out LMS
     delay = delay -1;
-    [~,ber] = biterr(msg(trainNum:nb-delay),bkEstNoLMS(trainNum+delay:nb));
+    [~,ber] = biterr(msg(trainNum:end-delay),bkEstNoLMS(trainNum+delay-1:end));
     
     % Theoretical error probability
     peb = 0.5*erfc(sqrt(10^SNR/10));
@@ -132,4 +134,4 @@ legend('No EQ','LMS EQ','RLS EQ','NN EQ','From Paper');
 xlim([5 20]);
 xlabel('SNR (dB)');
 ylabel('BER');
-% saveas(gcf,'BERlogy.png');
+saveas(gcf,'BERlogy.png');
