@@ -30,12 +30,12 @@ Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
 
 Eqnet.trainParam.showWindow=false;
 Eqnet.trainParam.showCommandLine=true;
-Eqnet.trainParam.epochs=2000;
+Eqnet.trainParam.epochs=3000;
 %
 % Train the Network
-[Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
-% Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test)); % use when no gpu and small data
-% [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
+% [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
+% [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test)); % use when no gpu and small data
+[Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
 
 %% Test the Network
 output = Eqnet(d.data(:,end-test:end));
