@@ -36,9 +36,9 @@ filtSig = filter(chnl,1,symbols);
 shift = 1;
 filtSig = filtSig(1+shift:end);
 % % Add AWGN to the signal
-SNR = 10;
-niosySig = awgn(filtSig,SNR,'measured');
-inputSig = niosySig;
+% SNR = 10;
+% niosySig = awgn(filtSig,SNR,'measured');
+% inputSig = niosySig;
 
 numSamples = 14;
 
@@ -53,9 +53,9 @@ save('data','data');
 save('target','target');
 
 %%
-writematrix(data, 'data.csv');
-writematrix(target, 'target.csv');
-
+% writematrix(data, 'data.csv');
+% writematrix(target, 'target.csv');
+% 
 prepare_data_for_tensorflow
 
 toc

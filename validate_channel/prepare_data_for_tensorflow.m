@@ -1,16 +1,18 @@
 %% Convert .csv to .mat for tensorflow
 
-close all; clear all; clc;
+% close all; clear all; clc;
 
 %% Load .csv files
 
-y = csvread('target.csv');
-N = length(y)/2;
-y = reshape(y,N,2);
+% y = csvread('target.csv');
+y = target';
+% N = length(y)/2;
+% y = reshape(y,N,2);
 y(abs(y)<1e-10) = 0;
 
-x = csvread('data.csv');
-x = reshape(x,N,58);
+% x = csvread('data.csv');
+x = data';
+% x = reshape(x,N,58);
 x(abs(x)<1e-10) = 0;
 
 %% Randomly generate training, validation, and test data
