@@ -14,12 +14,29 @@ tic
 
 % Specify a seed for the random number generators to ensure repeatability.
 rng(12345)
-d = load('data.mat');
-t = load('target.mat');
-test = 2^18;
-% diff  = length(d.data) - length(t.target)
-%size(d.data)
-%size(t.target)
+
+
+% Generate a PSK signal
+nb = 2^23;
+M = 4; % modulation order
+msg = randi([0 M-1],nb,1);
+symbols = qammod(msg,M);
+
+% Channel parameters
+chnl = [0.407 0.815 0.407];
+
+% Pass the signal through the channel
+filtSig = filter(chnl,1,symbols);
+shift = 1;
+filtSig = filtSig(1+shift:end);
+
+numSamples = 14;
+
+data = makeInputMat(filtSig,numSamples,nb-shift);
+data = data(:,1:end-numSamples);
+symbols = circshift(symbols, 0);
+target = round([real(symbols(numSamples+1:end-shift)) imag(symbols(numSamples+1:end-shift))],3)';
+test = 2^12;
 
 %%
 % Define network
@@ -30,20 +47,20 @@ Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
 
 Eqnet.trainParam.showWindow=false;
 Eqnet.trainParam.showCommandLine=true;
-Eqnet.trainParam.epochs=3500;
+Eqnet.trainParam.epochs=5000;
 %
 % Train the Network
 % [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
 % [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test)); % use when no gpu and small data
-[Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
+[Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
 
 %% Test the Network
-output = Eqnet(d.data(:,end-test:end));
+output = Eqnet(data(:,end-test:end));
 output = [output(1,:) + output(2,:)*1i];
 msg_test = qamdemod(output,4);
 
 %%
-msg = qamdemod([t.target(1,end-test:end) + t.target(2,end-test:end)*1i],4); 
+msg = qamdemod([target(1,end-test:end) + target(2,end-test:end)*1i],M); 
 [num_wrong,berNN] = biterr(msg,msg_test)
 save('Eqnet','Eqnet')
 x = cell2mat(Eqnet.LW(2));
