@@ -11,7 +11,7 @@ close all;
 
 tic
 
-nb = 2^20;
+nb = 2^22;
 
 % Modulated signal parameters
 M = 4; % order of modulation
