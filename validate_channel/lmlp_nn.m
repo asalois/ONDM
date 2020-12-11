@@ -17,7 +17,7 @@ rng(12345)
 
 
 % Generate a PSK signal
-nb = 2^23;
+nb = 2^18;
 M = 4; % modulation order
 msg = randi([0 M-1],nb,1);
 symbols = qammod(msg,M);
