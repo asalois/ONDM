@@ -16,7 +16,7 @@ checkData = readmatrix('KallaPointsMMSE.csv');
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^20; % number of BPSK symbols per vector
+nb = 2^18; % number of BPSK symbols per vector
 % Tb=1; % Bit period
 % Rb=1/Tb; % Bit rate
 % fc=2; % Carrier frequency
@@ -49,11 +49,14 @@ filtSig = filter(chnl,1,symbols);
 filtSig = filtSig(2:end);
 
 % Loop Set up
-runTo = 22;
-step = 0.5;
+runTo = 20;
+step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
+
+w = load('w.mat');
+load('Eqnet.mat');
 
 for i = 1:runs
     SNR = i*step % Noise SNR per sample in (dB)
@@ -91,16 +94,22 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     %% Use NN
-    w = load('w.mat');
     z = w.w;
-    rx5Sig = filter(z,1,inputSig);
+%     rx5Sig = filter(z,1,inputSig);
+    
+    numSamples = 14;
+    data = makeInputMat(inputSig,numSamples,length(inputSig));
+    output = Eqnet(data);
+    output = [output(1,:) + output(2,:)*1i];
+%   shift = shiftCheck(symbols,rx5Sig,nb/4)
+%   rx5Sig = filter(z,1,rx5Sig);
     %rx5Sig_real = filter(real(z),1,real(inputSig));
     %rx5Sig_imag = filter(imag(z),1,imag(inputSig));
     %rx5Sig = [rx5Sig_real + rx5Sig_imag*1i];
-    bkEst = qamdemod(rx5Sig,M);
-    %shift = shiftCheck(msg,bkEst,nb/2)
-    bkEst = circshift(bkEst,-5);
-    [~,berNN] = biterr(msg(2:end),bkEst)
+    bkEst = qamdemod(output,M);
+%     shift = shiftCheck(bkEst,msg(2:end),nb/2)
+    bkEst = circshift(bkEst,13);
+    [~,berNN] = biterr(msg(2:end),bkEst')
 
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
