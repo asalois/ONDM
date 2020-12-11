@@ -16,21 +16,21 @@ tic
 rng(12345)
 d = load('data.mat');
 t = load('target.mat');
-test = 2^15;
+test = 2^18;
 % diff  = length(d.data) - length(t.target)
-size(d.data)
-size(t.target)
+%size(d.data)
+%size(t.target)
 
 %%
 % Define network
 hLayers = 70; % hidden layer size
 Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
 Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
-% Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
+Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
 
 Eqnet.trainParam.showWindow=false;
 Eqnet.trainParam.showCommandLine=true;
-Eqnet.trainParam.epochs=3000;
+Eqnet.trainParam.epochs=3500;
 %
 % Train the Network
 % [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
@@ -47,9 +47,12 @@ msg = qamdemod([t.target(1,end-test:end) + t.target(2,end-test:end)*1i],4);
 [num_wrong,berNN] = biterr(msg,msg_test)
 save('Eqnet','Eqnet')
 x = cell2mat(Eqnet.LW(2));
+x = x';
+b = cell2mat(Eqnet.b(1));
+z = [x(:,1)+b x(:,2)+b];
 b = cell2mat(Eqnet.b(2));
-w = [x(1,:) + x(2,:)*1i];
-w = w + b(1) + b(2)*1i;
+z = [x(:,1)+b(1) x(:,2)+b(2)];
+w = [x(:,1) + x(:,2)*1i];
 save('w','w');
 toc
 
