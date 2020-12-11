@@ -64,7 +64,7 @@ for i = 1:runs
     inputSig = niosySig;
     
     %% Use LMS
-    trainNum = nb/8;
+    trainNum = nb/16;
     taps = 4;
     rx1Sig = lmsEq(inputSig,taps,trainNum);
     bkEst = qamdemod(rx1Sig,M);
@@ -93,10 +93,13 @@ for i = 1:runs
     %% Use NN
     w = load('w.mat');
     z = w.w;
-    z = [real(z) imag(z)*1i] ;
     rx5Sig = filter(z,1,inputSig);
+    %rx5Sig_real = filter(real(z),1,real(inputSig));
+    %rx5Sig_imag = filter(imag(z),1,imag(inputSig));
+    %rx5Sig = [rx5Sig_real + rx5Sig_imag*1i];
     bkEst = qamdemod(rx5Sig,M);
-    % shift = shiftCheck(bkEst,msg,2^8)
+    %shift = shiftCheck(msg,bkEst,nb/2)
+    bkEst = circshift(bkEst,-5);
     [~,berNN] = biterr(msg(2:end),bkEst)
 
     %% run with out LMS Equalizer
