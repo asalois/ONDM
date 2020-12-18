@@ -9,9 +9,6 @@ clc;
 clear;
 close all;
 
-% time simulation
-tic
-
 checkData = readmatrix('KallaPointsMMSE.csv');
 %% Signal and Channel Parameters
 % System simulation parameters
@@ -125,8 +122,6 @@ for i = 1:runs
     % hold values in berR
     berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
 end
-toc
-
 %%
 % figure()
 % hold on
