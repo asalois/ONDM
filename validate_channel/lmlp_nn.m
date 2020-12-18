@@ -17,7 +17,7 @@ rng(12345)
 
 
 % Generate a PSK signal
-nb = 2^18;
+nb = 2^22;
 M = 4; % modulation order
 msg = randi([0 M-1],nb,1);
 symbols = qammod(msg,M);
@@ -36,7 +36,7 @@ data = makeInputMat(filtSig,numSamples,nb-shift);
 data = data(:,1:end-numSamples);
 symbols = circshift(symbols, 0);
 target = round([real(symbols(numSamples+1:end-shift)) imag(symbols(numSamples+1:end-shift))],3)';
-test = 2^12;
+test = 2^10;
 
 %%
 % Define network
@@ -50,8 +50,8 @@ Eqnet.trainParam.showCommandLine=true;
 Eqnet.trainParam.epochs=5000;
 %
 % Train the Network
-% [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test),'useGPU', 'yes'); % use when gpu
-% [Eqnet,TT] = train(Eqnet,d.data(:,1:end-test),t.target(:,1:end-test)); % use when no gpu and small data
+% [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useGPU', 'yes'); % use when gpu
+% [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test)); % use when no gpu and small data
 [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
 
 %% Test the Network
@@ -71,5 +71,6 @@ b = cell2mat(Eqnet.b(2));
 z = [x(:,1)+b(1) x(:,2)+b(2)];
 w = [x(:,1) + x(:,2)*1i];
 save('w','w');
+main
 toc
 
