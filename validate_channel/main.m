@@ -10,6 +10,8 @@ clear;
 close all;
 
 checkData = readmatrix('KallaPointsMMSE.csv');
+checkData(:,1) = checkData(:,1)+2.5;
+
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
@@ -28,7 +30,7 @@ nb = 2^18; % number of BPSK symbols per vector
 M = 4; % order of modulation
 
 % Specify a seed for the random number generators to ensure repeatability.
-rng(12345)
+% rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
@@ -46,7 +48,7 @@ filtSig = filter(chnl,1,symbols);
 filtSig = filtSig(2:end);
 
 % Loop Set up
-runTo = 20;
+runTo = 30
 step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
@@ -138,7 +140,7 @@ end
 figure()
 semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(5,:),'*-',checkData(:,1),checkData(:,2),'*-');
 legend('No EQ','LMS EQ','RLS EQ','NN EQ','From Paper');
-xlim([5 20]);
+xlim([5 24]);
 xlabel('SNR (dB)');
 ylabel('BER');
 saveas(gcf,'BERlogy.png');
