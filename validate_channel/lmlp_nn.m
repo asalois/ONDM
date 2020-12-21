@@ -17,7 +17,7 @@ rng(12345)
 
 
 % Generate a PSK signal
-nb = 2^22;
+nb = 2^20;
 M = 4; % modulation order
 msg = randi([0 M-1],nb,1);
 symbols = qammod(msg,M);
@@ -39,15 +39,16 @@ target = round([real(symbols(numSamples+1:end-shift)) imag(symbols(numSamples+1:
 test = 2^10;
 
 %%
+load('Eqnet_test.mat');
 % Define network
-hLayers = 70; % hidden layer size
-Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
-Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
-Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
+% hLayers = 70; % hidden layer size
+% Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
+% Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
+% Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
 
-Eqnet.trainParam.showWindow=false;
-Eqnet.trainParam.showCommandLine=true;
-Eqnet.trainParam.epochs=5000;
+Eqnet.trainParam.showWindow=true;
+Eqnet.trainParam.showCommandLine=false;
+Eqnet.trainParam.epochs=79000;
 %
 % Train the Network
 % [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useGPU', 'yes'); % use when gpu
@@ -62,7 +63,7 @@ msg_test = qamdemod(output,4);
 %%
 msg = qamdemod([target(1,end-test:end) + target(2,end-test:end)*1i],M); 
 [num_wrong,berNN] = biterr(msg,msg_test)
-save('Eqnet','Eqnet')
+save('Eqnet_test','Eqnet')
 x = cell2mat(Eqnet.LW(2));
 x = x';
 b = cell2mat(Eqnet.b(1));
