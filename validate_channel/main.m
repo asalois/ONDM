@@ -30,7 +30,7 @@ nb = 2^18; % number of BPSK symbols per vector
 M = 4; % order of modulation
 
 % Specify a seed for the random number generators to ensure repeatability.
-% rng(12345)
+rng(12345)
 
 % Generate a PSK signal
 msg = randi([0 M-1],nb,1);
@@ -48,7 +48,7 @@ filtSig = filter(chnl,1,symbols);
 filtSig = filtSig(2:end);
 
 % Loop Set up
-runTo = 30
+runTo = 25
 step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
