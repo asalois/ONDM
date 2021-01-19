@@ -17,7 +17,7 @@ rng(12345)
 
 
 % Generate a PSK signal
-nb = 2^24;
+nb = 2^20;
 M = 4; % modulation order
 msg = randi([0 M-1],nb,1);
 symbols = qammod(msg,M);
@@ -39,21 +39,22 @@ target = round([real(symbols(numSamples+1:end-shift)) imag(symbols(numSamples+1:
 test = 2^10;
 
 %%
-load('Eqnet_test.mat');
+% load('Eqnet_test.mat');
 % Define network
-% hLayers = 70; % hidden layer size
-% Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
-% Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
-% Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
+hLayers = 70; % hidden layer size
+Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
+Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
+Eqnet.layers{2}.transferFcn = 'purelin'; % have the actuvation be linear
 
 Eqnet.trainParam.showWindow=false;
 Eqnet.trainParam.showCommandLine=true;
 Eqnet.trainParam.epochs=1000;
 %
 % Train the Network
-% [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useGPU', 'yes'); % use when gpu
+[Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useGPU', 'yes'); % use when gpu
 % [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test)); % use when no gpu and small data
-[Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
+% [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useParallel','yes'); % use when no gpu and large data
+% [Eqnet,TT] = train(Eqnet,data(:,1:end-test),target(:,1:end-test),'useGPU', 'yes','useParallel','yes'); % use when gpu
 
 %% Test the Network
 output = Eqnet(data(:,end-test:end));
