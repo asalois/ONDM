@@ -11,7 +11,7 @@ close all;
 
 tic
 
-nb = 2^22;
+nb = 2^23;
 
 % Modulated signal parameters
 M = 4; % order of modulation
@@ -40,7 +40,7 @@ filtSig = filtSig(1+shift:end);
 % niosySig = awgn(filtSig,SNR,'measured');
 % inputSig = niosySig;
 
-numSamples = 14;
+numSamples = 4;
 
 data = makeInputMat(filtSig,numSamples,nb-shift);
 data = data(:,1:end-numSamples);
