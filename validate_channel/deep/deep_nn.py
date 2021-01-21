@@ -23,7 +23,7 @@ from keras.losses import MeanSquaredError
 
 num_classes = 2
 batch_size = 1000
-epochs = 1000 
+epochs = 3000 
 
 
 # Load the data
@@ -67,8 +67,9 @@ fmtLen = int(math.ceil(math.log(max(batch_size, y_valid.shape[0]),10)))
 
 # Define the network
 model = Sequential()
-model.add(Dense(70, activation='linear', input_shape=(x_train.shape[1],)))
-model.add(Dense(num_classes, activation='linear'))
+model.add(Dense(50, activation='tanh', input_shape=(x_train.shape[1],)))
+model.add(Dense(50, activation='tanh'))
+model.add(Dense(num_classes, activation='tanh'))
 
 model.summary()
 
@@ -100,4 +101,4 @@ weight = model.get_weights()
 print(predictions.shape)
 print(predictions[0:9])
 print(y_test[0:9])
-model.save("lmlp_model.h5")
+model.save("deep_model.h5")
