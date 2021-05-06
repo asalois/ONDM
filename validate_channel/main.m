@@ -15,7 +15,7 @@ checkData(:,1) = checkData(:,1)+2.5;
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^18; % number of BPSK symbols per vector
+nb = 2^19; % number of BPSK symbols per vector
 % Tb=1; % Bit period
 % Rb=1/Tb; % Bit rate
 % fc=2; % Carrier frequency
@@ -48,18 +48,16 @@ filtSig = filter(chnl,1,symbols);
 filtSig = filtSig(2:end);
 
 % Loop Set up
-runTo = 25
+runTo = 30
 step = 1;
 runs = runTo/step;
 berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
-w = load('w.mat');
-load('Eqnet.mat');
-
 for i = 1:runs
+    tic
     SNR = i*step % Noise SNR per sample in (dB)
-%     SNR = 30;
+    %     SNR = 30
     
     % Add AWGN to the signal
     niosySig = awgn(filtSig,SNR,'measured');
@@ -77,7 +75,7 @@ for i = 1:runs
     
     
     %% Use RLS
-%     taps = 4;
+    %     taps = 4;
     rx2Sig = rlsEq(inputSig,taps,trainNum);
     bkEst = qamdemod(rx2Sig,M);
     
@@ -93,23 +91,17 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     %% Use NN
-    z = w.w;
-%     rx5Sig = filter(z,1,inputSig);
-    
+    Eqnet = lmlpnnEq(SNR,2000);
     numSamples = 14;
-    data = makeInputMat(inputSig,numSamples,length(inputSig));
+    data = makeInputMat(inputSig,numSamples);
+    data = data(:,1:end-numSamples);
     output = Eqnet(data);
     output = [output(1,:) + output(2,:)*1i];
-%   shift = shiftCheck(symbols,rx5Sig,nb/4)
-%   rx5Sig = filter(z,1,rx5Sig);
-    %rx5Sig_real = filter(real(z),1,real(inputSig));
-    %rx5Sig_imag = filter(imag(z),1,imag(inputSig));
-    %rx5Sig = [rx5Sig_real + rx5Sig_imag*1i];
     bkEst = qamdemod(output,M);
-%     shift = shiftCheck(bkEst,msg(2:end),nb/2)
-    bkEst = circshift(bkEst,13);
-    [~,berNN] = biterr(msg(2:end),bkEst')
-
+    x = msg(1+numSamples:end-1);
+    y = bkEst(1:end)';
+    [~,berNN] = biterr(x,y)
+    
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
     bkEstNoLMS =  qamdemod(rx4Sig,M);
@@ -122,7 +114,8 @@ for i = 1:runs
     peb = 0.5*erfc(sqrt(10^SNR/10));
     
     % hold values in berR
-    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb];
+    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb]';
+    toc
 end
 %%
 % figure()
@@ -137,10 +130,15 @@ end
 % ylabel('BER');
 % saveas(gcf,'BER.png');
 
+
+
 figure()
-semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(5,:),'*-',checkData(:,1),checkData(:,2),'*-');
-legend('No EQ','LMS EQ','RLS EQ','NN EQ','From Paper');
-xlim([5 24]);
+% semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',checkData(:,1),checkData(:,2),'*-');
+semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:), '*-', snrPlot,berR(4,:), '*-',snrPlot,berR(5,:), '*-',checkData(:,1),checkData(:,2),'*-');
+legend('No EQ','LMS EQ','RLS EQ','DFE Eq','LMLP EQ','From CLEO Paper', 'Location','southwest');
+xlim([1 30]);
 xlabel('SNR (dB)');
 ylabel('BER');
-saveas(gcf,'BERlogy.png');
+title('SNR vs BER for Different Eqs')
+saveas(gcf,'BER_lmlpnnEq.png')
+
