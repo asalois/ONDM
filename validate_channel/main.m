@@ -8,6 +8,7 @@
 clc;
 clear;
 close all;
+tic
 
 checkData = readmatrix('KallaPointsMMSE.csv');
 checkData(:,1) = checkData(:,1)+2.5;
@@ -55,9 +56,7 @@ berR = zeros(6,runs);
 snrPlot =  1*step:step:runTo;
 
 for i = 1:runs
-    tic
     SNR = i*step % Noise SNR per sample in (dB)
-    %     SNR = 30
     
     % Add AWGN to the signal
     niosySig = awgn(filtSig,SNR,'measured');
@@ -75,7 +74,6 @@ for i = 1:runs
     
     
     %% Use RLS
-    %     taps = 4;
     rx2Sig = rlsEq(inputSig,taps,trainNum);
     bkEst = qamdemod(rx2Sig,M);
     
@@ -91,7 +89,7 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     %% Use NN
-    Eqnet = lmlpnnEq(SNR,2000);
+    Eqnet = lmlpnnEq(SNR,5000);
     numSamples = 14;
     data = makeInputMat(inputSig,numSamples);
     data = data(:,1:end-numSamples);
@@ -100,7 +98,7 @@ for i = 1:runs
     bkEst = qamdemod(output,M);
     x = msg(1+numSamples:end-1);
     y = bkEst(1:end)';
-    [~,berNN] = biterr(x,y)
+    [~,berNN] = biterr(x,y);
     
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
@@ -115,25 +113,10 @@ for i = 1:runs
     
     % hold values in berR
     berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb]';
-    toc
 end
-%%
-% figure()
-% hold on
-% % plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-',snrPlot,berR(5,:),'*-',snrPlot,berR(6,:),'*-')
-% plot(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(4,:),'*-')
-% plot(checkData(:,1),checkData(:,2),'*-')
-% hold off
-% legend('No EQ','LMS EQ','RLS EQ','DFE EQ', 'From Paper');
-% xlim([5 20]);
-% xlabel('SNR (dB)');
-% ylabel('BER');
-% saveas(gcf,'BER.png');
 
-
-
+%% Plot SNR vs BER
 figure()
-% semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',checkData(:,1),checkData(:,2),'*-');
 semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:), '*-', snrPlot,berR(4,:), '*-',snrPlot,berR(5,:), '*-',checkData(:,1),checkData(:,2),'*-');
 legend('No EQ','LMS EQ','RLS EQ','DFE Eq','LMLP EQ','From CLEO Paper', 'Location','southwest');
 xlim([1 30]);
@@ -141,4 +124,4 @@ xlabel('SNR (dB)');
 ylabel('BER');
 title('SNR vs BER for Different Eqs')
 saveas(gcf,'BER_lmlpnnEq.png')
-
+toc
