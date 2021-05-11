@@ -89,7 +89,7 @@ for i = 1:runs
     [~,berDFE] = biterr(msg(trainNum:end-delay),bkEst(trainNum+delay-1:end));
     
     %% Use NN
-    Eqnet = lmlpnnEq(SNR,5000);
+    Eqnet = lmlpnnEq(SNR,100);
     numSamples = 14;
     data = makeInputMat(inputSig,numSamples);
     data = data(:,1:end-numSamples);
@@ -124,4 +124,5 @@ xlabel('SNR (dB)');
 ylabel('BER');
 title('SNR vs BER for Different Eqs')
 saveas(gcf,'BER_lmlpnnEq.png')
+save('proakis_NN', 'berR', 'snrPlot', 'nb', 'chnl', 'M') 
 toc
