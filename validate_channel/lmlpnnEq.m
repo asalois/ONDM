@@ -10,14 +10,15 @@ Eqnet.trainParam.epochs = 10000;
 Eqnet.trainParam.min_grad = 1E-8;
 
 % inital training
-[train_data, target] = get_train_data(10,SNR);
+samples = 14;
+[train_data, target] = get_train_data(10,SNR,samples);
 % [Eqnet,TT] = train(Eqnet,train_data,target,'useParallel','yes'); % use when no gpu and small data
 [Eqnet,TT] = train(Eqnet,train_data,target,'useGPU', 'yes'); % use when gpu
 % [Eqnet,TT] = train(Eqnet,train_data,target); % use when no gpu and small data
 
 % Train in a Loop
 for iter = 1:loopTo
-    [train_data, target] = get_train_data(10,SNR);
+    [train_data, target] = get_train_data(10,SNR,samples);
     % Train the Network
     [Eqnet,TT] = train(Eqnet,train_data,target); % use when no gpu and small data
 end

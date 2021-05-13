@@ -1,4 +1,4 @@
-function [train_data,target] = get_train_data(pow,snr)
+function [train_data,target] = get_train_data(pow,snr,samples)
 %get_train_data makes training data and target data based on channel
 %   Detailed explanation goes here
 
@@ -28,7 +28,6 @@ symbols = symbols(1:end-shift);
 % Add AWGN to the signal
 niosySig = awgn(filtSig,snr,'measured');
 
-samples =14;
 train_data = makeInputMat(niosySig,samples);
 train_data = train_data(:,1:end-samples);
 symbols = symbols(1+samples:end);
