@@ -49,13 +49,13 @@ filtSig = filter(chnl,1,symbols);
 filtSig = filtSig(2:end);
 
 % Loop Set up
-runTo = 30
+runTo = 25;
 step = 1;
 runs = runTo/step;
-berR = zeros(6,runs);
+berR = zeros(7,runs);
 snrPlot =  1*step:step:runTo;
 
-for i = 1:runs
+for i = 19:25
     SNR = i*step % Noise SNR per sample in (dB)
     
     % Add AWGN to the signal
@@ -98,7 +98,19 @@ for i = 1:runs
     bkEst = qamdemod(output,M);
     x = msg(1+numSamples:end-1);
     y = bkEst(1:end)';
-    [~,berNN] = biterr(x,y);
+    [~,berNN] = biterr(x,y)
+    
+    %% Use Deep NN
+    deepnet = deepnnEq(SNR,1e3,50);
+    numSamples = 4;
+    data = makeInputMat(inputSig,numSamples);
+    data = data(:,1:end-numSamples);
+    output = predict(deepnet, data')';
+    output = [output(1,:) + output(2,:)*1i];
+    bkEst = qamdemod(output,M);
+    x = msg(1+numSamples:end-1);
+    y = bkEst(1:end)';
+    [~,berDNN] = biterr(x,y)
     
     %% run with out LMS Equalizer
     rx4Sig = inputSig;
@@ -112,7 +124,7 @@ for i = 1:runs
     peb = 0.5*erfc(sqrt(10^SNR/10));
     
     % hold values in berR
-    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,peb]';
+    berR(:,i) = [ber,berLMS,berRLS,berDFE,berNN,berDNN,peb]';
 end
 
 %% Plot SNR vs BER
