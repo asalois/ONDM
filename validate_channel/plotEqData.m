@@ -22,10 +22,13 @@ load berRDNN
 
 % plot
 figure()
-semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(3,:),'*-',snrPlot,berR(5,:), '*-',snrPlot,berR(6,:), '*-',checkData(:,1),checkData(:,2),'*-');
-legend('No EQ','RLS EQ','LMLP NN EQ','Deep NN EQ','LMLP from CLEO', 'Location','southwest');
+semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-'...
+    , snrPlot,berR(4,:), '*-',snrPlot,berR(5,:), '*-',snrPlot,berR(6,:),...
+    '*-',checkData(:,1),checkData(:,2),'*-');
+legend('No EQ','LMS EQ','DFE Eq','LMLP EQ','DeepNN EQ','From CLEO Paper',...
+    'Location','southwest');
 xlim([5 25]);
 xlabel('SNR (dB)');
 ylabel('BER');
 title('SNR vs BER for Different Eqs')
-saveas(gcf,'BER_lmlpnnEq.png')
+saveas(gcf,'BER_nnEqs.png')

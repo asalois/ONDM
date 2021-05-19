@@ -6,7 +6,7 @@
 
 % prelim comands
 clc;
-clear;
+% clear;
 close all;
 tic
 
@@ -16,7 +16,7 @@ checkData(:,1) = checkData(:,1)+2.5;
 %% Signal and Channel Parameters
 % System simulation parameters
 Fs = 1; % sampling frequency (notional)
-nb = 2^19; % number of BPSK symbols per vector
+nb = 2^21; % number of BPSK symbols per vector
 % Tb=1; % Bit period
 % Rb=1/Tb; % Bit rate
 % fc=2; % Carrier frequency
@@ -49,13 +49,13 @@ filtSig = filter(chnl,1,symbols);
 filtSig = filtSig(2:end);
 
 % Loop Set up
-runTo = 25;
+runTo = 30;
 step = 1;
 runs = runTo/step;
 berR = zeros(7,runs);
 snrPlot =  1*step:step:runTo;
 
-for i = 19:25
+for i = [14 20:30]
     SNR = i*step % Noise SNR per sample in (dB)
     
     % Add AWGN to the signal
@@ -98,7 +98,7 @@ for i = 19:25
     bkEst = qamdemod(output,M);
     x = msg(1+numSamples:end-1);
     y = bkEst(1:end)';
-    [~,berNN] = biterr(x,y)
+    [~,berNN] = biterr(x,y);
     
     %% Use Deep NN
     deepnet = deepnnEq(SNR,1e3,50);
@@ -129,12 +129,14 @@ end
 
 %% Plot SNR vs BER
 figure()
-semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:), '*-', snrPlot,berR(4,:), '*-',snrPlot,berR(5,:), '*-',checkData(:,1),checkData(:,2),'*-');
-legend('No EQ','LMS EQ','RLS EQ','DFE Eq','LMLP EQ','From CLEO Paper', 'Location','southwest');
+semilogy(snrPlot,berR(1,:),'*-',snrPlot,berR(2,:),'*-',snrPlot,berR(3,:),'*-',...
+    snrPlot,berR(4,:), '*-',snrPlot,berR(5,:), '*-',snrPlot,berR(6,:),'*-'...
+    ,checkData(:,1),checkData(:,2),'*-');
+legend('No EQ','LMS EQ','RLS EQ','DFE Eq','LMLP EQ','Deep NN','From CLEO Paper', 'Location','southwest');
 xlim([1 30]);
 xlabel('SNR (dB)');
 ylabel('BER');
 title('SNR vs BER for Different Eqs')
 saveas(gcf,'BER_lmlpnnEq.png')
-save('proakis_NN', 'berR', 'snrPlot', 'nb', 'chnl', 'M') 
+save('proakis_NN_next', 'berR', 'snrPlot', 'nb', 'chnl', 'M') 
 toc
