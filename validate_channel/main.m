@@ -6,12 +6,13 @@
 
 % prelim comands
 clc;
-% clear;
+clear;
 close all;
 tic
 
 checkData = readmatrix('KallaPointsMMSE.csv');
 checkData(:,1) = checkData(:,1)+2.5;
+load proakis_NN
 
 %% Signal and Channel Parameters
 % System simulation parameters

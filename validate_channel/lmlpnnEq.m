@@ -8,6 +8,9 @@ Eqnet = fitnet(hLayers,'traingd'); % make a fitnet
 Eqnet.layers{1}.transferFcn = 'purelin'; % have the actuvation be linear
 Eqnet.trainParam.epochs = 10000;
 Eqnet.trainParam.min_grad = 1E-8;
+Eqnet.trainParam.showWindow = false;
+Eqnet.trainParam.show = 500;
+Eqnet.trainParam.showCommandLine = true;
 
 % inital training
 samples = 14;
