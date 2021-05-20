@@ -17,17 +17,17 @@ nb = 2^21; % number of symbols per vector
 rng(12345)
 
 % Loop Set up
-runTo = 30;
+runTo = 25;
 step = 1;
 runs = runTo/step;
 berR = zeros(7,runs);
 snrPlot =  1*step:step:runTo;
 
-for i = 1:30
+for i = 5:25
     SNR = i*step % Noise SNR per sample in (dB)
 
     % hold values in berR
-    berR(:,i) = oneSNRset(SNR,nb,10,10);
+    berR(:,i) = oneSNRset(SNR,nb,2.5e3,100);
 end
 
 save('proakis_NN_next', 'berR', 'snrPlot', 'nb', 'chnl', 'M')

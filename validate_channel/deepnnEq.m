@@ -30,7 +30,7 @@ for iter = 1:chunks
     end
 end
 
-miniBatchSize = 2^9;
+miniBatchSize = 2^8;
 valFrequency = floor(size(train_data,2)/(2*miniBatchSize));
 options = trainingOptions('sgdm', ...
     'MiniBatchSize',miniBatchSize, ...
@@ -45,4 +45,3 @@ options = trainingOptions('sgdm', ...
 
 net = trainNetwork(train_data',train_target',layers,options);
 end
-

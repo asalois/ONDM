@@ -96,6 +96,7 @@ delay = delay -1;
 peb = 0.5*erfc(sqrt(10^SNR/10));
 
 out = [ber,berLMS,berRLS,berDFE,berNN,berDNN,peb]';
+toc
 
 end
 
