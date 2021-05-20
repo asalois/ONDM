@@ -16,6 +16,7 @@ checkData(:,3) = checkData(:,3)+0;
 snrPlot = 1:30;
 % load berRDNN
 load proakis_NN
+% load proakis_NN_next
 % newBerR = berR;
 % load berR118
 % newBerR = newBerR + berR;
