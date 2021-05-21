@@ -2,7 +2,6 @@ function [x,y,x_val,y_val] = make_data_deep(SNR,chunks)
 %deepnnEq Make and train an Deep NN EQ
 %   Detailed explanation goes here
 
-
 samples = 4;
 num_pow = 10;
 val_size = floor(log2( (chunks * (2^num_pow)) /8 ));
@@ -20,5 +19,10 @@ for iter = 1:chunks
         [data, target] = get_train_data(num_pow,SNR,samples);
     end
 end
+x = x';
+y = y';
+x_val = x_val';
+y_val = y_val';
+
 
 end
